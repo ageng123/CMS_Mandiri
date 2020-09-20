@@ -1,1 +1,1 @@
-console.log('ok');
+$('.datepicker').datetimepicker({format: 'yyyy-mm-dd'});
