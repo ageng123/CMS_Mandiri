@@ -24,6 +24,9 @@ class Admin extends CI_Controller {
 	}
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$model = new Admin_model();
+		$user = $model->findBy(['is_active' => '1']);
+		var_dump($user);
+		// $this->load->view('welcome_message');
 	}
 }
