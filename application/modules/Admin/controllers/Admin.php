@@ -30,4 +30,11 @@ class Admin extends CI_Controller {
 		landing_parse($content, null);
 		// $this->load->view('welcome_message');
 	}
+	public function save_data()
+	{
+		$model = new Admin_model();
+		$model->nama = 'Nofri Willis 2';
+		$model->is_active = 1;
+		$model->delete(4);
+	}
 }

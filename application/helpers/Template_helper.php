@@ -14,4 +14,25 @@
     function admin_parse(){
 
     }
+    function encode($msg){
+        $CI =& get_instance();
+        $CI->encryption->initialize(array(
+            'cipher' => 'blowfish',
+            'mode' => 'cbc',
+            'key' => $CI->config->item('encryption_key')
+        ));
+        $encoded = $CI->encryption->encrypt($msg);
+        return base64_encode($encoded);
+    }
+    function decode($msg){
+        $CI =& get_instance();
+        $code = base64_decode($msg);
+        $CI->encryption->initialize(array(
+            'cipher' => 'blowfish',
+            'mode' => 'cbc',
+            'key' => $CI->config->item('encryption_key')
+        ));
+        $decoded = $CI->encryption->decrypt($code);
+        return $decoded;
+    }
 ?>
