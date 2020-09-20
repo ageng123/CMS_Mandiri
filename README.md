@@ -1,14 +1,5 @@
-# CodeIgniter Composer Installer
 
-[![Latest Stable Version](https://poser.pugx.org/kenjis/codeigniter-composer-installer/v/stable)](https://packagist.org/packages/kenjis/codeigniter-composer-installer) [![Total Downloads](https://poser.pugx.org/kenjis/codeigniter-composer-installer/downloads)](https://packagist.org/packages/kenjis/codeigniter-composer-installer) [![Latest Unstable Version](https://poser.pugx.org/kenjis/codeigniter-composer-installer/v/unstable)](https://packagist.org/packages/kenjis/codeigniter-composer-installer) [![License](https://poser.pugx.org/kenjis/codeigniter-composer-installer/license)](https://packagist.org/packages/kenjis/codeigniter-composer-installer)
-
-This package installs the offical [CodeIgniter](https://github.com/bcit-ci/CodeIgniter) (version `3.1.*`) with secure folder structure via Composer.
-
-**Note:** If you want to install CodeIgniter4 (under development), see <https://github.com/kenjis/codeigniter-composer-installer/tree/4.x>.
-
-You can update CodeIgniter system folder to latest version with one command.
-
-## Folder Structure
+# Folder Structure
 
 ```
 codeigniter/
@@ -33,27 +24,18 @@ codeigniter/
 ## How to Use
 
 ### Install CodeIgniter
-
+1. Pull github from repository : 
 ```
-$ composer create-project kenjis/codeigniter-composer-installer codeigniter
+$ git clone git@github.com:ageng123/CMS_Mandiri.git
 ```
-
-Above command installs `public/.htaccess` to remove `index.php` in your URL. If you don't need it, please remove it.
-
-And it changes `application/config/config.php`:
-
-~~~
-$config['composer_autoload'] = FALSE;
-↓
-$config['composer_autoload'] = realpath(APPPATH . '../vendor/autoload.php');
-~~~
-
-~~~
-$config['index_page'] = 'index.php';
-↓
-$config['index_page'] = '';
-~~~
-
+or 
+```
+$ git clone https://github.com/ageng123/CMS_Mandiri.git
+```
+2. Then Update with :
+```
+$ composer update
+```
 #### Install Translations for System Messages
 
 If you want to install translations for system messages:
@@ -112,28 +94,3 @@ $ php bin/install.php codeigniter-develbar master
 $ cd /path/to/codeigniter
 $ bin/server.sh
 ```
-
-### Update CodeIgniter
-
-```
-$ cd /path/to/codeigniter
-$ composer update
-```
-
-You must update files manually if files in `application` folder or `index.php` change. Check [CodeIgniter User Guide](http://www.codeigniter.com/user_guide/installation/upgrading.html).
-
-## Reference
-
-* [Composer Installation](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
-* [CodeIgniter](https://github.com/bcit-ci/CodeIgniter)
-* [Translations for CodeIgniter System](https://github.com/bcit-ci/codeigniter3-translations)
-
-## Related Projects for CodeIgniter 3.x
-
-* [Cli for CodeIgniter 3.0](https://github.com/kenjis/codeigniter-cli)
-* [ci-phpunit-test](https://github.com/kenjis/ci-phpunit-test)
-* [CodeIgniter Simple and Secure Twig](https://github.com/kenjis/codeigniter-ss-twig)
-* [CodeIgniter Doctrine](https://github.com/kenjis/codeigniter-doctrine)
-* [CodeIgniter Deployer](https://github.com/kenjis/codeigniter-deployer)
-* [CodeIgniter3 Filename Checker](https://github.com/kenjis/codeigniter3-filename-checker)
-* [CodeIgniter Widget (View Partial) Sample](https://github.com/kenjis/codeigniter-widgets)
