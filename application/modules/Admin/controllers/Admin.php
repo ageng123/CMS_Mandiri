@@ -26,8 +26,8 @@ class Admin extends CI_Controller {
 	{
 		$model = new Admin_model();
 		$user = $model->findBy(['is_active' => '1']);
-		var_dump($user);
-		echo indonesiaFullDate('2020-08-11');
+		$content = 'welcome_message';
+		landing_parse($content, null);
 		// $this->load->view('welcome_message');
 	}
 }
