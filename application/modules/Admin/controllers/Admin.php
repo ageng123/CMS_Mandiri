@@ -12,11 +12,12 @@ class Admin extends CI_Controller {
 	{
 		$model = new Admin_model();
 		$user = $model->findBy(['is_active' => '1']);
-		$content = 'welcome_message';
+		$content = 'index';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS'
 		];
-		landing_parse($content, null);
+		// landing_parse($content, null);
+		admin_parse($content, null);
 		// $this->load->view('welcome_message');
 	}
 	public function save_data()

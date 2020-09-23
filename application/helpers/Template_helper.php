@@ -11,8 +11,19 @@
         ];
         $CI->parser->parse($template, $data);
     }
-    function admin_parse(){
-
+    function admin_parse($content, $data){
+        $CI =& get_instance();
+        $header = $CI->load->view('Templates/Admin/_header.php', $data, TRUE);
+        $foter = $CI->load->view('Templates/Admin/_footer.php', $data, TRUE);
+        $sidebar = $CI->load->view('Templates/Admin/_sidebar.php', $data, TRUE);
+        $template = 'Templates/Admin/__quick-template.php';
+        $data = [
+            '_footer_' => $foter,
+            '_header_' => $header,
+            '_sidebar_' => $sidebar,
+            '_content_' => $CI->load->view($content, $data, true)
+        ];
+        $CI->parser->parse($template, $data);
     }
     function encode($msg){
         $CI =& get_instance();
