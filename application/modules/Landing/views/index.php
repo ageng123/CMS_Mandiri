@@ -265,23 +265,38 @@
     }
   }); /*ready*/
 </script>
-<div class="modal" id="welcome-modal" tabindex="-1"  role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-<div class="modal-body" style="display: flex; flex-direction: column">
-        <button type="button" style="align-self: end;background: white !important;border: 1px solid black;border-radius: 50%;width: 50px;height: 50px; margin-bottom: 1vh; cursor: pointer" class="modal-close">
-          <span aria-hidden="true" >&times;</span>
-        </button>
-        <img src="<?= base_url('assets/img/') ?>header.png" style="height: auto ; width: auto" alt="">
-      </div>
+<div class="modal" id="welcome-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+  aria-hidden="true">
+  <div class="modal-body" style="display: flex; flex-direction: column">
+    <button type="button"
+      style="align-self: end;background: white !important;border: 1px solid black;border-radius: 50%;width: 50px;height: 50px; margin-bottom: 1vh; cursor: pointer"
+      class="modal-close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <img src="<?= base_url('assets/img/') ?>header.png" style="height: auto ; width: auto" alt="">
+  </div>
 </div>
 <script>
-  $(document).ready(function(){
+  $(document).ready(function () {
     $('#welcome-modal').modal('show');
-    $('.modal-close').on('click', function(){
+    $('.modal-close').on('click', function () {
       $('#welcome-modal').modal('hide');
       console.log('modal');
     })
   })
 </script>
+<section class="padding-tb-100px">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div style="background-color: black; width: 100%; height: 100%"></div>
+      </div>
+      <div class="col-md-4">
+        <div style="background-color: black; width: 100%; height: 100%"></div>
+      </div>
+    </div>
+  </div>
+</section>
 <div class="padding-tb-100px">
   <div class="container">
     <div class="row">
@@ -329,8 +344,6 @@
 
   </div>
 </div>
-
-
 <div class="container">
   <div class="row">
     <div class="col-lg-6 background-white">
@@ -393,8 +406,6 @@
     </div>
   </div>
 </div>
-
-
 <section class="padding-tb-100px">
   <div class="container">
     <div class="text-center margin-bottom-35px wow fadeInUp">
@@ -429,8 +440,6 @@
     </ul>
   </div>
 </section>
-
-
 <section class="padding-tb-100px background-light-grey">
   <div class="container">
     <div class="text-center margin-bottom-35px wow fadeInUp">
@@ -516,8 +525,6 @@
 
   </div>
 </section>
-
-
 <section class="padding-tb-100px background-main-color">
   <div class="container">
     <!-- section title -->
@@ -613,16 +620,12 @@
     <!-- // row -->
   </div>
 </section>
-
-
 <section class="padding-tb-100px background-light-grey">
-
   <div class="container">
     <div class="text-center margin-bottom-35px fadeInUp">
       <h1 class="font-weight-300 text-title-large font-3">Last News</h1>
       <span class="opacity-7">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elitdunt</span>
     </div>
-
     <div class="row">
       <div class="col-lg-4 col-md-6 sm-mb-30px wow fadeInUp">
         <div class="blog-item thum-hover background-white hvr-float hvr-sh2">
@@ -688,8 +691,6 @@
 
   <!-- //container -->
 </section>
-
-
 <section class="background-main-color">
   <div class="row no-gutters margin-0px padding-0px">
     <div class="col-lg-6 col-md-6 wow fadeInUp">
@@ -762,10 +763,7 @@
     </div>
   </div>
 </section>
-
-
 <section class="padding-tb-100px">
-
   <div class="container">
     <div class="text-center margin-bottom-35px wow fadeInUp">
       <h1 class="font-weight-300 text-title-large font-3">Our Team</h1>
@@ -880,8 +878,6 @@
   </div>
 
 </section>
-
-
 <section class="video wow fadeInUp">
   <div class="text-grey  background-overlay fixed background-img-dark"
     style="background-image: url('http://placehold.it/1600x1050');">
@@ -899,8 +895,6 @@
     </div>
   </div>
 </section>
-
-
 <section class="padding-tb-100px">
   <div class="container">
     <div class="row">
