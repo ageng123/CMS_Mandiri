@@ -24,6 +24,7 @@ class Main extends CI_Model{
         $query = $this->db->where($primaryKey, $params)->get($this->table)->row_object();
         return $query;
     }
+    
     public function findBy($array_params){
         $query = $this->db->where($array_params)->get($this->table)->result_object();
         return $query;
