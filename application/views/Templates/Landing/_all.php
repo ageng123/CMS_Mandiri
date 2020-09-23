@@ -11,54 +11,7 @@
 	<meta name="description" content="HTML5 Multipurpose Template, Create a website fast">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- google fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800%7CPoppins:300i,400,700,400i,500%7CDosis:300" rel="stylesheet">
-	<!-- animate -->
-	<link rel="stylesheet" href="assets/css/animate.css" />
-	<!-- owl Carousel assets -->
-	<link href="assets/css/owl.carousel.css" rel="stylesheet">
-	<link href="assets/css/owl.theme.css" rel="stylesheet">
-	<!-- bootstrap -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<!-- hover anmation -->
-	<link rel="stylesheet" href="assets/css/hover-min.css">
-	<!-- flag icon -->
-	<link rel="stylesheet" href="assets/css/flag-icon.min.css">
-	<!-- main style -->
-	<link rel="stylesheet" href="assets/css/style.css">
-	<!-- colors -->
-	<link rel="stylesheet" href="assets/css/colors/main.css">
-	<!-- elegant icon -->
-	<link rel="stylesheet" href="assets/css/elegant_icon.css">
-
-	<!-- jquery library  -->
-	<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
-	<!-- fontawesome  -->
-	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-	<!-- google maps api  -->
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-	<script type="text/javascript" src="assets/js/jquery.gomap-1.3.3.min.js"></script>
-
-	<!-- REVOLUTION STYLE SHEETS -->
-	<link rel="stylesheet" type="text/css" href="assets/revslider/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
-	<link rel="stylesheet" type="text/css" href="assets/revslider/fonts/font-awesome/css/font-awesome.css">
-	<link rel="stylesheet" type="text/css" href="assets/revslider/css/settings.css">
-	<!-- REVOLUTION LAYERS STYLES -->
-
-	<!-- REVOLUTION JS FILES -->
-	<script type="text/javascript" src="assets/revslider/js/jquery.themepunch.tools.min.js"></script>
-	<script type="text/javascript" src="assets/revslider/js/jquery.themepunch.revolution.min.js"></script>
-
-	<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
-	<script type="text/javascript" src="assets/revslider/js/extensions/revolution.extension.actions.min.js"></script>
-	<script type="text/javascript" src="assets/revslider/js/extensions/revolution.extension.carousel.min.js"></script>
-	<script type="text/javascript" src="assets/revslider/js/extensions/revolution.extension.kenburn.min.js"></script>
-	<script type="text/javascript" src="assets/revslider/js/extensions/revolution.extension.layeranimation.min.js"></script>
-	<script type="text/javascript" src="assets/revslider/js/extensions/revolution.extension.migration.min.js"></script>
-	<script type="text/javascript" src="assets/revslider/js/extensions/revolution.extension.navigation.min.js"></script>
-	<script type="text/javascript" src="assets/revslider/js/extensions/revolution.extension.parallax.min.js"></script>
-	<script type="text/javascript" src="assets/revslider/js/extensions/revolution.extension.slideanims.min.js"></script>
-	<script type="text/javascript" src="assets/revslider/js/extensions/revolution.extension.video.min.js"></script>
-
+	{_header_}
 </head>
 
 <body class="background-white">
@@ -114,7 +67,7 @@
 			<div class="container header-in">
 				<div class="row">
 					<div class="col-xl-2 col-lg-2">
-						<a id="logo" href="index.html" class="d-inline-block margin-tb-10px"><img src="assets/img/logo-1.png" alt=""></a>
+						<a id="logo" href="index.html" class="d-inline-block margin-tb-10px"><img src="<?= base_url('assets/landing_template/') ?>assets/img/logo-1.png" alt=""></a>
 						<a class="mobile-toggle padding-15px background-main-color" href="#"><i class="fas fa-bars"></i></a>
 					</div>
 					<div class="col-xl-8 col-lg-9 position-inherit">
@@ -526,7 +479,7 @@
 		<div id="rev_slider_18_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
 			<ul>
 				<!-- SLIDE  -->
-				<li data-index="rs-64" data-transition="3dcurtain-horizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="assets/revslider/assets/100x50_a033c-1.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+				<li data-index="rs-64" data-transition="3dcurtain-horizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="<?= base_url('assets/landing_template/') ?>assets/revslider/assets/100x50_a033c-1.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 					<!-- MAIN IMAGE -->
 					<img src="http://placehold.it/1600x1070" alt="" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110" data-rotatestart="0" data-rotateend="0" data-blurstart="-2" data-blurend="0" data-offsetstart="2 2" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
 					<!-- LAYERS -->
@@ -544,7 +497,7 @@
 					<div class="tp-caption rev-btn rev-withicon " id="slide-64-layer-3" data-x="['left','left','left','center']" data-hoffset="['651','568','257','0']" data-y="['top','top','top','top']" data-voffset="['439','439','381','381']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":1590,"speed":790,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0,0,0,1);bg:rgba(255,255,255,1);bs:solid;bw:0 0 0 0;"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]" data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]" style="z-index: 8; white-space: nowrap; font-size: 14px; line-height: 17px; font-weight: 300; color: rgba(255,255,255,1);font-family:Poppins;background-color:rgba(8, 100, 178, 0.75);border-color:rgba(0,0,0,1);border-radius:30px 30px 30px 30px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Buy Now<i class="fa-icon-chevron-right"></i> </div>
 				</li>
 				<!-- SLIDE  -->
-				<li data-index="rs-65" data-transition="3dcurtain-horizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="assets/revslider/assets/100x50_ee46e-2.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+				<li data-index="rs-65" data-transition="3dcurtain-horizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="<?= base_url('assets/landing_template/') ?>assets/revslider/assets/100x50_ee46e-2.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 					<!-- MAIN IMAGE -->
 					<img src="http://placehold.it/1600x1070" alt="" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Power0.easeIn" data-scalestart="115" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="2 3" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
 					<!-- LAYERS -->
@@ -562,7 +515,7 @@
 					<div class="tp-caption rev-btn rev-withicon " id="slide-65-layer-3" data-x="['left','left','left','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['439','439','381','381']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":1420,"speed":920,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0,0,0,1);bg:rgba(255,255,255,1);bs:solid;bw:0 0 0 0;"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]" data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]" style="z-index: 8; white-space: nowrap; font-size: 14px; line-height: 17px; font-weight: 300; color: rgba(255,255,255,1);font-family:Poppins;background-color:rgba(8, 100, 178, 0.75);border-color:rgba(0,0,0,1);border-radius:30px 30px 30px 30px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Buy Now<i class="fa-icon-chevron-right"></i> </div>
 				</li>
 				<!-- SLIDE  -->
-				<li data-index="rs-67" data-transition="3dcurtain-vertical" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="assets/revslider/assets/100x50_dfb1b-3.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+				<li data-index="rs-67" data-transition="3dcurtain-vertical" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="<?= base_url('assets/landing_template/') ?>assets/revslider/assets/100x50_dfb1b-3.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 					<!-- MAIN IMAGE -->
 					<img src="http://placehold.it/1600x1070" alt="" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="2 3" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
 					<!-- LAYERS -->
@@ -1048,7 +1001,7 @@
 									maptype: 'ROADMAP',
 									markers: [{
 										address: '39.605247,-104.615413',
-										icon: 'assets/img/icon_marker_1.png'
+										icon: '<?= base_url('assets/landing_template/') ?>assets/img/icon_marker_1.png'
 									}, ],
 									hideByClick: true
 								});
@@ -1226,7 +1179,7 @@
 		<div class="text-grey  background-overlay fixed background-img-dark" style="background-image: url('http://placehold.it/1600x1050');">
 			<div class="text-center">
 				<div class="container padding-tb-150px z-index-2 position-relative">
-					<a href="https://youtu.be/cASsC-MsJ1A" id="yt-preview"><img src="assets/img/play-button-light.png" alt=""></a>
+					<a href="https://youtu.be/cASsC-MsJ1A" id="yt-preview"><img src="<?= base_url('assets/landing_template/') ?>assets/img/play-button-light.png" alt=""></a>
 					<h1 class="font-weight-700 margin-top-30px">Creative Website Template</h1>
 					<div class="row justify-content-md-center">
 						<div class="col-lg-6 text-grey-2">pixel perfect creative multi purpose HTML5 Template designed with great attention to details, flexibility and performance. It is ultra professional, smooth and sleek, with a clean modern layout. </div>
@@ -1271,107 +1224,7 @@
 			</div>
 		</div>
 	</section>
-
-
-	<footer class="padding-top-60px background-dark">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-md-6 sm-mb-30px wow fadeInUp">
-					<div class="logo margin-bottom-10px"><img src="assets/img/logo-light.png" alt=""></div>
-					<div class="text-grey-2  font-weight-300">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy .</div>
-					<ul class="list-inline text-left margin-tb-20px margin-lr-0px text-white">
-						<li class="list-inline-item"><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
-						<li class="list-inline-item"><a class="youtube" href="#"><i class="fab fa-youtube"></i></a></li>
-						<li class="list-inline-item"><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
-						<li class="list-inline-item"><a class="google" href="#"><i class="fab fa-google-plus"></i></a></li>
-						<li class="list-inline-item"><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-						<li class="list-inline-item"><a class="rss" href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-					</ul>
-					<!-- // Social -->
-				</div>
-
-				<div class="col-lg-3  col-md-6 sm-mb-30px wow fadeInUp" data-wow-delay="0.2s">
-					<ul class="last-posts margin-0px padding-0px">
-						<li>
-							<a href="#" class="float-left margin-right-15px d-block width-50px"><img src="http://placehold.it/400x400" alt=""></a>
-							<a href="#" class="d-block text-capitalize text-grey-2">Be willing to share the sorrows of others</a>
-							<span class="text-extra-small text-grey-3">Date :  <a href="#" class="text-grey-3">July 15, 2016</a></span>
-							<hr class="border-grey-4">
-							<div class="clearfix"></div>
-						</li>
-						<li>
-							<a href="#" class="float-left margin-right-15px d-block width-50px"><img src="http://placehold.it/400x400" alt=""></a>
-							<a href="#" class="d-block  text-capitalize text-grey-2">Time will soon teach you what you ...</a>
-							<span class="text-extra-small text-grey-3">Date :  <a href="#" class="text-grey-3">July 15, 2016</a></span>
-							<div class="clearfix"></div>
-						</li>
-					</ul>
-				</div>
-				<div class="col-lg-3  col-md-6 sm-mb-30px wow fadeInUp" data-wow-delay="0.4s">
-					<ul class="footer-menu-2 row margin-0px padding-0px list-unstyled">
-						<li class="col-6  padding-tb-5px"><a href="#" class="text-grey-2">Home</a></li>
-						<li class="col-6  padding-tb-5px"><a href="#" class="text-grey-2">Featured</a></li>
-						<li class="col-6  padding-tb-5px"><a href="#" class="text-grey-2">Feedback</a></li>
-						<li class="col-6  padding-tb-5px"><a href="#" class="text-grey-2">Ask a Question</a></li>
-						<li class="col-6  padding-tb-5px"><a href="#" class="text-grey-2">Team</a></li>
-						<li class="col-6  padding-tb-5px"><a href="#" class="text-grey-2">Maintenance</a></li>
-						<li class="col-6  padding-tb-5px"><a href="#" class="text-grey-2">Get a Quote</a></li>
-						<li class="col-6  padding-tb-5px"><a href="#" class="text-grey-2">Contact Us</a></li>
-					</ul>
-				</div>
-				<div class="col-lg-3 col-md-6 sm-mb-30px wow fadeInUp" data-wow-delay="0.6s">
-					<ul class="images-feed row no-gutters margin-0px padding-0px list-unstyled">
-						<li class="col-4 padding-tb-5px">
-							<a href="#" class="padding-lr-5px hvr-bounce-out d-block"><img src="http://placehold.it/400x400" alt=""></a>
-						</li>
-						<li class="col-4 padding-tb-5px">
-							<a href="#" class="padding-lr-5px hvr-bounce-out d-block"><img src="http://placehold.it/400x400" alt=""></a>
-						</li>
-						<li class="col-4 padding-tb-5px">
-							<a href="#" class="padding-lr-5px hvr-bounce-out d-block"><img src="http://placehold.it/400x400" alt=""></a>
-						</li>
-						<li class="col-4 padding-tb-5px">
-							<a href="#" class="padding-lr-5px hvr-bounce-out d-block"><img src="http://placehold.it/400x400" alt=""></a>
-						</li>
-						<li class="col-4 padding-tb-5px">
-							<a href="#" class="padding-lr-5px hvr-bounce-out d-block"><img src="http://placehold.it/400x400" alt=""></a>
-						</li>
-						<li class="col-4 padding-tb-5px">
-							<a href="#" class="padding-lr-5px hvr-bounce-out d-block"><img src="http://placehold.it/400x400" alt=""></a>
-						</li>
-					</ul>
-				</div>
-
-			</div>
-			<hr class="border-grey-4">
-			<div class="row padding-bottom-30px padding-top-10px wow fadeInUp">
-				<div class="col-lg-8">
-					<ul class="footer-menu margin-0px padding-0px list-unstyled">
-						<li><a href="#" class="text-grey-2">Home</a></li>
-						<li><a href="#" class="text-grey-2">Featured</a></li>
-						<li><a href="#" class="text-grey-2">Feedback</a></li>
-						<li><a href="#" class="text-grey-2">Ask a Question</a></li>
-						<li><a href="#" class="text-grey-2">Team</a></li>
-					</ul>
-				</div>
-				<div class="col-lg-4">
-					<span class="text-sm-center text-lg-right text-grey-2 d-block padding-top-5px">
-                        TheNile | @2018 All copy rights reserved
-                    </span>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-	<!--  <script type="text/javascript" src="assets/js/numscroller-1.0.js"></script> -->
-	<script type="text/javascript" src="assets/js/sticky-sidebar.js"></script>
-	<script type="text/javascript" src="assets/js/YouTubePopUp.jquery.js"></script>
-	<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
-	<script type="text/javascript" src="assets/js/imagesloaded.min.js"></script>
-	<script type="text/javascript" src="assets/js/wow.min.js"></script>
-	<script type="text/javascript" src="assets/js/custom.js"></script>
-	<script type="text/javascript" src="assets/js/popper.min.js"></script>
-	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+{_footer_}	
 </body>
 
 </html>
