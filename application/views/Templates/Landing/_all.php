@@ -67,7 +67,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="header-output">
+		<div class="header-output" style="border-image: url(<?= base_url('assets/img/list.png') ?>); border-top: 0px; border-right: 0px; border-left: 0px;">
 			<div class="container header-in">
 				<div class="row">
 					<div class="col-xl-2 col-lg-2">
@@ -147,6 +147,7 @@
 				</div>
 			</div>
 		</div>
+		<div class="" style="background-image: url(<?= base_url('assets/img/list.png') ?>)"></div>
 	</header>
 	<!-- // header -->
 	<style type="text/css">
