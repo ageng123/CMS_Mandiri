@@ -290,91 +290,99 @@
     <div class="row">
       <div class="col-md-8">
         <div style="background-color: transparent; width: 100%; height: 100%">
-        <div class="d-flex flex-column container">
-          <div class="row" style="padding-top: 50px">
-            <div class="col-12 row" style="border-bottom: 2px solid red">
-            <div class="col-4 p-2"><img class="pl-4" src="<?= base_url('assets/img/pb.png') ?>" alt=""></div>
-            <div class="col-8 p-2"><p class="text-black pt-2">Sudah check panen bersama </p></div>
-            </div>
-            <div class="col-12 p-2">
-              Sudah Check Panen Bersama atau belum
-            </div>
-            <style>
-            .price-list{
-              display: flex;
-              flex-direction: column;
-              text-align: center;
-              justify-content: middle;
-            }
-            .price-list > h4{
-              margin-top: 15px;
-            }
-            .card-product{
-              border: 0px transparent;
-            }
-            </style>
-            <div class="col-12 p-2 pl-4 row">
-              <?php for($i = 1; $i <= 6; $i++){
+          <div class="d-flex flex-column container">
+            <div class="row" style="padding-top: 50px">
+              <div class="col-12 row" style="border-bottom: 2px solid red">
+                <div class="col-4 p-2"><img class="pl-4" src="<?= base_url('assets/img/pb.png') ?>" alt=""></div>
+                <div class="col-8 p-2">
+                  <p class="text-black pt-2">Sudah check panen bersama </p>
+                </div>
+              </div>
+              <div class="col-12 p-2">
+                Sudah Check Panen Bersama atau belum
+              </div>
+              <style>
+                .price-list {
+                  display: flex;
+                  flex-direction: column;
+                  text-align: center;
+                  justify-content: middle;
+                }
+
+                .price-list>h4 {
+                  margin-top: 15px;
+                }
+
+                .card-product {
+                  border: 0px transparent;
+                }
+              </style>
+              <div class="col-12 p-2 pl-4 row">
+                <?php for($i = 1; $i <= 6; $i++){
               ?>
                 <div class="col-6"><a href="">
-                <div class="card card-product">
-                  <div class="card-body">
-                    <img src="<?= base_url('assets/img/header.png') ?>" height="150" alt="">
-                    <div class="price-list">
-                    <h4>Sepeda Gunung</h4>
-                    <h3>$30.000</h3>
+                    <div class="card card-product">
+                      <div class="card-body">
+                        <img src="<?= base_url('assets/img/header.png') ?>" height="150" alt="">
+                        <div class="price-list">
+                          <h4>Sepeda Gunung</h4>
+                          <h3>$30.000</h3>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div> </a>
+                  </a>
                 </div>
 
-              <?php
+                <?php
               } ?>
-            </div>
-            <div class="col-12 row">
-              <h3>Latest Product</h3>
-            </div>
-            <div class="col-12 row">
-            <?php for($i = 1; $i <= 6; $i++){
+              </div>
+              <div class="col-12 row">
+                <h3>Latest Product</h3>
+              </div>
+              <div class="col-12 row">
+                <?php for($i = 1; $i <= 6; $i++){
               ?>
                 <div class="col-2"><a href="">
-                <div class="card card-product">
-                  <div class="card-boy" style="padding: 0px; background: black">
-                    <img src="<?= base_url('assets/img/header.png') ?>" height="75" alt="">
-                  </div>
-                </div> </a>
+                    <div class="card card-product">
+                      <div class="card-boy" style="padding: 0px; background: black">
+                        <img src="<?= base_url('assets/img/header.png') ?>" height="75" alt="">
+                      </div>
+                    </div>
+                  </a>
                 </div>
 
-              <?php
+                <?php
               } ?>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="col-12 mb-3" style="">
           <div class="card">
-          <div class="card-header landing-login-form">
-          <ul class="nav nav-pils" id="myTab" role="tablist">
-              <style>
-                .nav-item{
-                  background: #603913;
-                  width: 50%;
-                  padding: 2px 5px;
-                  text-align: center;
-                  
-                }
-                .nav-item >  a{
-                  color: #ffe276;
-                }
-                .landing-login-form {
-                  background: transparent !important;
-                  border-bottom: 0px;
-                  padding-left: 0px;
-                  padding-right: 0px;
-                }
-              </style>
+            <div class="card-header landing-login-form">
+              <ul class="nav nav-pils" id="myTab" role="tablist">
+                <style>
+                  .nav-item {
+                    background: #603913;
+                    width: 50%;
+                    padding: 2px 5px;
+                    text-align: center;
+
+                  }
+
+                  .nav-item>a {
+                    color: #ffe276;
+                  }
+
+                  .landing-login-form {
+                    background: transparent !important;
+                    border-bottom: 0px;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                  }
+                </style>
                 <li class="nav-item">
                   <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
                     aria-controls="home" aria-selected="true">Login</a>
@@ -383,15 +391,17 @@
                   <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
                     aria-controls="profile" aria-selected="false">Register</a>
                 </li>
-              </ul></div>
+              </ul>
+            </div>
             <div class="card-body">
-              
+
               <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                   <form action="" style="border: 6px solid #fcb11a; border-radius: 2%; overflow: hidden">
-                  <input type="text" name="username" class="form-control" placeholder="username" id="">
-                  <input type="password" name="pass" class="form-control" placeholder="password" id="">
-                  <button class="btn btn-danger btn-block" style="border-radius: 2% !Important; background: #603913; color: #fcb11a">Continue</button>
+                    <input type="text" name="username" class="form-control" placeholder="username" id="">
+                    <input type="password" name="pass" class="form-control" placeholder="password" id="">
+                    <button class="btn btn-danger btn-block"
+                      style="border-radius: 2% !Important; background: #603913; color: #fcb11a">Continue</button>
                   </form>
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
@@ -400,20 +410,31 @@
           </div>
         </div>
         <div class="col-12">
-            <h2>Kategori Berita Populer</h2>
+          <h2>Kategori Berita Populer</h2>
         </div>
         <div class="col-12 row">
-            <?php for($i = 0; $i < 23; $i++){?>
-              <div class="p-1">
-              <button class="btn btn-sm btn-danger">Tags berita</button>
-              </div>
-            <?php } ?>
+          <?php for($i = 0; $i < 23; $i++){?>
+          <div class="p-1">
+            <button class="btn btn-sm btn-danger">Tags berita</button>
+          </div>
+          <?php } ?>
         </div>
         <div class="col-12">
-            <h2>Kategori Berita Populer</h2>
+          <h2>Berita Populer</h2>
         </div>
         <div class="col-12">
-            <h2>Kategori Berita Populer</h2>
+          <?php for($i = 0; $i < 3; $i++){?>
+          <div class="col-12 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s"
+            style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+            <div class="text-left hvr-bob opacity-hover-7">
+              <h2 class="text-extra-large  margin-tb-10px">
+                 Powerful Website
+              </h2>
+              <p class="opacity-7">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard</p>
+            </div>
+          </div>
+          <?php } ?>
         </div>
       </div>
     </div>
