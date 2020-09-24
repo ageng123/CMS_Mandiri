@@ -331,12 +331,29 @@
               <?php
               } ?>
             </div>
+            <div class="col-12 row">
+              <h3>Latest Product</h3>
+            </div>
+            <div class="col-12 row">
+            <?php for($i = 1; $i <= 6; $i++){
+              ?>
+                <div class="col-2"><a href="">
+                <div class="card card-product">
+                  <div class="card-boy" style="padding: 0px; background: black">
+                    <img src="<?= base_url('assets/img/header.png') ?>" height="75" alt="">
+                  </div>
+                </div> </a>
+                </div>
+
+              <?php
+              } ?>
+            </div>
           </div>
         </div>
         </div>
       </div>
       <div class="col-md-4">
-        <div style="">
+        <div class="col-12 mb-3" style="">
           <div class="card">
           <div class="card-header landing-login-form">
           <ul class="nav nav-pils" id="myTab" role="tablist">
@@ -381,6 +398,22 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="col-12">
+            <h2>Kategori Berita Populer</h2>
+        </div>
+        <div class="col-12 row">
+            <?php for($i = 0; $i < 23; $i++){?>
+              <div class="p-1">
+              <button class="btn btn-sm btn-danger">Tags berita</button>
+              </div>
+            <?php } ?>
+        </div>
+        <div class="col-12">
+            <h2>Kategori Berita Populer</h2>
+        </div>
+        <div class="col-12">
+            <h2>Kategori Berita Populer</h2>
         </div>
       </div>
     </div>
