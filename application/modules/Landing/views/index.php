@@ -428,7 +428,7 @@
             style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
             <div class="text-left hvr-bob opacity-hover-7">
               <h2 class="text-extra-large  margin-tb-10px">
-                 Powerful Website
+                Powerful Website
               </h2>
               <p class="opacity-7">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard</p>
@@ -1039,36 +1039,66 @@
   </div>
 </section>
 <section class="padding-tb-100px">
+  <style>
+    .no-border {
+      border-color: transparent;
+    }
+
+    .no-bg {
+      background-color: transparent;
+    }
+  </style>
   <div class="container">
+    <h1 class="kontak-heading">Keluarga</h1>
     <div class="row">
-      <div class="col-lg-3 col-md-6 sm-mb-30px text-center hvr-float wow fadeInUp">
-        <i class="icon_lightbulb_alt icon-large text-main-color"></i>
-        <h1 class="number font-2 margin-tb-15px text-main-color">
-          <span class='numscroller' data-min='1' data-max='1256' data-delay='5' data-increment='10'>1256</span>
-        </h1>
-        <h6 class="title font-weight-300">New Idea</h6>
+      <div class="col-4">
+        <div class="card no-border">
+          <div class="card-header no-border no-bg">
+            <img src="<?= base_url('assets/img/pb.png') ?>" alt="">
+          </div>
+          <div class="card-body no-border">
+            <div class="container">TEsting</div>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-3 col-md-6 sm-mb-30px text-center hvr-float wow fadeInUp" data-wow-delay="0.2s">
-        <i class="icon_cart_alt icon-large text-main-color"></i>
-        <h1 class="number font-2 margin-tb-15px text-main-color">
-          <span class='numscroller' data-min='1' data-max='3256' data-delay='5' data-increment='10'>3256</span>
-        </h1>
-        <h6 class="title font-weight-300">Items for Sale</h6>
+      <div class="col-4">
+      <div class="card no-border">
+          <div class="card-header no-border no-bg">
+            <img src="<?= base_url('assets/img/pb.png') ?>" alt="">
+          </div>
+          <div class="card-body no-border">
+            <div class="container">TEsting</div>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-3 col-md-6 sm-mb-30px text-center hvr-float wow fadeInUp" data-wow-delay="0.4s">
-        <i class="icon_heart_alt icon-large text-main-color"></i>
-        <h1 class="number font-2 margin-tb-15px text-main-color">
-          <span class='numscroller' data-min='1' data-max='4256' data-delay='5' data-increment='10'>4256</span>
-        </h1>
-        <h6 class="title font-weight-300">Happy Customers</h6>
+      <div class="col-4">
+      <div class="card no-border">
+          <div class="card-header no-border no-bg">
+            <img src="<?= base_url('assets/img/pb.png') ?>" alt="">
+          </div>
+          <div class="card-body no-border">
+            <div class="container">TEsting</div>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-3 col-md-6 sm-mb-30px text-center hvr-float wow fadeInUp" data-wow-delay="0.6s">
-        <i class="icon_toolbox_alt icon-large text-main-color"></i>
-        <h1 class="number font-2 margin-tb-15px text-main-color">
-          <span class='numscroller' data-min='1' data-max='1256' data-delay='5' data-increment='10'>1256</span>
-        </h1>
-        <h6 class="title font-weight-300">Completed Services</h6>
+    </div>
+</section>
+<section style="background-image: url(<?= base_url('assets/img/map.png') ?>)" class="padding-tb-100px">
+  <div class="container">
+    <style>
+      .kontak-heading {
+        border-bottom: 4px solid yellow;
+        width: min-content;
+      }
+    </style>
+    <h1 class="text-white kontak-heading">Kontak</h1>
+    <div class="row text-center">
+      <div class="col-12 sm-mb-30px text-center hvr-float wow fadeInUp">
+        <span class="fa fa-map-marker" style="font-size: 72px; color: yellow" aria-hidden="true"></span>
+        <br>
+        <button style="margin-top: 2vh" class="btn btn-lg btn-default"> Show on Map</button>
       </div>
+
     </div>
   </div>
 </section>
