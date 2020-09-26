@@ -1,8 +1,8 @@
-<footer class="padding-top-60px background-dark">
+<footer class="padding-top-60px section-bg2">
 		<div class="container">
 			<div class="row">
 				<div class="col-5">
-					<h2 class="text-white">Subscribe to Our Newsletter ... </h2>
+					<h2 class="text-primary">Subscribe to Our Newsletter ... </h2>
 					<form action="">
 						<div class="form-group">
 							<input type="text" placeholder="Enter Your Email Address." class="form-control">
@@ -10,12 +10,12 @@
 					</form>
 				</div>
 				<div class="col-4">
-					<h2 class="text-white">Contact Us</h2>
-					<h4 class="text-white">Rukan Gading Bukit Indah</h4>
-					<p class="text-white">Alamat rukan gading bukit indah</p>
+					<h2 class="text-primary">Contact Us</h2>
+					<h4 class="text-primary">Rukan Gading Bukit Indah</h4>
+					<p class="text-primary">Alamat rukan gading bukit indah</p>
 				</div>
 				<div class="col-3">
-					<h2 class='text-white'>Get Connected !</h2>
+					<h2 class='text-primary'>Get Connected !</h2>
 				<ul class="list-inline margin-0px text-black">
 							<li class="list-inline-item"><a class="facebook" href="#"><img
 										src="<?= base_url('assets/img/facebook.png') ?>"
