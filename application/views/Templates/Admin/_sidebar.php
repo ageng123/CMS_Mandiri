@@ -29,7 +29,7 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
 
-            <!-- MENU COLLAPSE -->
+            <!-- MENU COLLAPSE/DI KLIK MENUNYA TURUN KE BAWAH -->
             <!-- <li class="nav-item">
               <a class="nav-link active" href="#navbar-dashboards" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
                 <i class="ni ni-shop text-primary"></i>
