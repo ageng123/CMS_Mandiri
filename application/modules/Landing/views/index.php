@@ -428,7 +428,7 @@
             style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
             <div class="text-left hvr-bob opacity-hover-7">
               <h2 class="text-extra-large  margin-tb-10px">
-                 Powerful Website
+                Powerful Website
               </h2>
               <p class="opacity-7">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard</p>
@@ -1021,54 +1021,152 @@
   </div>
 
 </section>
-<section class="video wow fadeInUp">
-  <div class="text-grey  background-overlay fixed background-img-dark"
-    style="background-image: url('http://placehold.it/1600x1050');">
-    <div class="text-center">
-      <div class="container padding-tb-150px z-index-2 position-relative">
-        <a href="https://youtu.be/cASsC-MsJ1A" id="yt-preview"><img
-            src="<?= base_url('assets/landing_template/') ?>assets/img/play-button-light.png" alt=""></a>
-        <h1 class="font-weight-700 margin-top-30px">Creative Website Template</h1>
-        <div class="row justify-content-md-center">
-          <div class="col-lg-6 text-grey-2">pixel perfect creative multi purpose HTML5 Template designed
-            with great attention to details, flexibility and performance. It is ultra professional,
-            smooth and sleek, with a clean modern layout. </div>
+<section class="padding-tb-100px">
+  <div class="container">
+    <h1 class="kontak-heading text-primary">Berita Update</h1>
+    <div class="row">
+      <div class="col-12">
+        <div class="col-3">
+          Forum Diskusi Berbagi Berita dari dalam dan luar negeri. Mulai dari Ideologi Politik dan lain sebagainya
+        </div>
+      </div>
+      <div class="col-12">
+        
+      </div>
+      <div class="col-4">
+        <div class="card no-border no-bg">
+          <div class="card-header no-border no-bg">
+            <img src="<?= base_url('assets/img/panens.png') ?>" alt="">
+          </div>
+          <div class="card-body no-border no-bg">
+            <div class="container">TEsting</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+      <div class="card no-border no-bg">
+          <div class="card-header no-border no-bg">
+            <img src="<?= base_url('assets/img/panen.png') ?>" alt="">
+          </div>
+          <div class="card-body no-border bo-bg">
+            <div class="container">TEsting</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+      <div class="card no-border no-bg">
+          <div class="card-header no-border no-bg">
+            <img src="<?= base_url('assets/img/radio.png') ?>" alt="">
+          </div>
+          <div class="card-body no-border no-bg">
+            <div class="container">TEsting</div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </section>
-<section class="padding-tb-100px">
-  <div class="container">
+<!-- <section class="video wow fadeInUp">
+  <h1 class="kontak-heading text-primary">Keluarga</h1>
     <div class="row">
-      <div class="col-lg-3 col-md-6 sm-mb-30px text-center hvr-float wow fadeInUp">
-        <i class="icon_lightbulb_alt icon-large text-main-color"></i>
-        <h1 class="number font-2 margin-tb-15px text-main-color">
-          <span class='numscroller' data-min='1' data-max='1256' data-delay='5' data-increment='10'>1256</span>
-        </h1>
-        <h6 class="title font-weight-300">New Idea</h6>
+      <div class="col-4">
+        <div class="card no-border no-bg">
+          <div class="card-header no-border no-bg">
+            <img src="<?= base_url('assets/img/panens.png') ?>" alt="">
+          </div>
+          <div class="card-body no-border no-bg">
+            <div class="container">TEsting</div>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-3 col-md-6 sm-mb-30px text-center hvr-float wow fadeInUp" data-wow-delay="0.2s">
-        <i class="icon_cart_alt icon-large text-main-color"></i>
-        <h1 class="number font-2 margin-tb-15px text-main-color">
-          <span class='numscroller' data-min='1' data-max='3256' data-delay='5' data-increment='10'>3256</span>
-        </h1>
-        <h6 class="title font-weight-300">Items for Sale</h6>
+      <div class="col-4">
+      <div class="card no-border no-bg">
+          <div class="card-header no-border no-bg">
+            <img src="<?= base_url('assets/img/panen.png') ?>" alt="">
+          </div>
+          <div class="card-body no-border bo-bg">
+            <div class="container">TEsting</div>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-3 col-md-6 sm-mb-30px text-center hvr-float wow fadeInUp" data-wow-delay="0.4s">
-        <i class="icon_heart_alt icon-large text-main-color"></i>
-        <h1 class="number font-2 margin-tb-15px text-main-color">
-          <span class='numscroller' data-min='1' data-max='4256' data-delay='5' data-increment='10'>4256</span>
-        </h1>
-        <h6 class="title font-weight-300">Happy Customers</h6>
+      <div class="col-4">
+      <div class="card no-border no-bg">
+          <div class="card-header no-border no-bg">
+            <img src="<?= base_url('assets/img/radio.png') ?>" alt="">
+          </div>
+          <div class="card-body no-border no-bg">
+            <div class="container">TEsting</div>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-3 col-md-6 sm-mb-30px text-center hvr-float wow fadeInUp" data-wow-delay="0.6s">
-        <i class="icon_toolbox_alt icon-large text-main-color"></i>
-        <h1 class="number font-2 margin-tb-15px text-main-color">
-          <span class='numscroller' data-min='1' data-max='1256' data-delay='5' data-increment='10'>1256</span>
-        </h1>
-        <h6 class="title font-weight-300">Completed Services</h6>
+    </div>
+</section> -->
+<section class="padding-tb-100px section-bg2">
+  <style>
+    .no-border {
+      border-color: transparent;
+    }
+
+    .no-bg {
+      background-color: transparent;
+    }
+    .section-bg2{
+      background-color: #efebe8;
+    }
+  </style>
+  <div class="container">
+    <h1 class="kontak-heading text-primary">Keluarga</h1>
+    <div class="row">
+      <div class="col-4">
+        <div class="card no-border no-bg">
+          <div class="card-header no-border no-bg">
+            <img src="<?= base_url('assets/img/panens.png') ?>" alt="">
+          </div>
+          <div class="card-body no-border no-bg">
+            <div class="container">TEsting</div>
+          </div>
+        </div>
       </div>
+      <div class="col-4">
+      <div class="card no-border no-bg">
+          <div class="card-header no-border no-bg">
+            <img src="<?= base_url('assets/img/panen.png') ?>" alt="">
+          </div>
+          <div class="card-body no-border bo-bg">
+            <div class="container">TEsting</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+      <div class="card no-border no-bg">
+          <div class="card-header no-border no-bg">
+            <img src="<?= base_url('assets/img/radio.png') ?>" alt="">
+          </div>
+          <div class="card-body no-border no-bg">
+            <div class="container">TEsting</div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<section style="background-image: url(<?= base_url('assets/img/map.png') ?>)" class="padding-tb-100px">
+  <div class="container">
+    <style>
+      .kontak-heading {
+        border-bottom: 4px solid #ddaa37;
+        width: max-content;
+      }
+      .text-primary{
+        color: #795839 !important;
+      }
+    </style>
+    <h1 class="text-white kontak-heading">Kontak</h1>
+    <div class="row text-center">
+      <div class="col-12 sm-mb-30px text-center hvr-float wow fadeInUp">
+        <span class="fa fa-map-marker" style="font-size: 72px; color: yellow" aria-hidden="true"></span>
+        <br>
+        <button style="margin-top: 2vh" class="btn btn-lg btn-default"> Show on Map</button>
+      </div>
+
     </div>
   </div>
 </section>
