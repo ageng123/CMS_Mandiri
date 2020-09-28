@@ -456,47 +456,53 @@
   <div class="container">
     <h1 class="kontak-heading text-primary">Produk</h1>
     <div class="row">
-      <div class="col-4">
+      <div class="col-12">
         <div class="card no-border no-bg">
-          <div class="card-header no-border no-bg">
-            <img src="<?= base_url('assets/img/panens.png') ?>" alt="">
-          </div>
           <div class="card-body no-border no-bg">
-            <div class="container">TEsting</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-8">
-        <div class="card no-border no-bg">
-          <div class="card-header no-border no-bg">
             <img src="<?= base_url('assets/img/panen.png') ?>" alt="">
           </div>
-          <div class="card-body no-border bo-bg">
-            <div class="container">TEsting</div>
-          </div>
         </div>
       </div>
-      <div class="col-12 text-center" style="border-bottom: 4px solid red; border-top: 4px solid red;display: flex;justify-content: center;text-align: center;padding-top: 1.5vh;padding-bottom: revert; margin-bottom: 1.5vh">
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <style>
+        .product-tabs .product-link.active{
+          background-color: transparent !important;
+          font-weight: bold !important;
+          color: brown;
+        }
+        .product-tabs .product-link{
+          color: brown;
+          font-weight: 100;
+        }
+        .product-tabs .product-link > h2{
+          color: brown;
+          font-weight: 100 !Important;
+        }
+        .product-tabs .product-link.active > h2{
+          color: brown;
+          font-weight: bolder !Important;
+        }
+      </style>
+      <div class="col-12 text-center" style="border-bottom: 4px solid red; border-top: 4px solid red;display: flex;justify-content: space-around;text-align: center;padding-top: 1.5vh;padding-bottom: revert; margin-bottom: 1.5vh">
+        <ul class="nav nav-pills product-tabs mb-3" id="pills-tab" role="tablist" style="width: 100%;display: flex;justify-content: inherit;">
           <li class="nav-item">
-            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
-              aria-controls="pills-home" aria-selected="true">Semua</a>
+            <a class="nav-link product-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+              aria-controls="pills-home" aria-selected="true"><h2>Semua</h2></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
-              aria-controls="pills-profile" aria-selected="false">Komersial</a>
+            <a class="nav-link product-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+              aria-controls="pills-profile" aria-selected="false"><h2>Komersial</h2></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-              aria-controls="pills-contact" aria-selected="false">Housing</a>
+            <a class="nav-link product-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+              aria-controls="pills-contact" aria-selected="false"><h2>Housing</h2></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-              aria-controls="pills-contact" aria-selected="false">Khusus</a>
+            <a class="nav-link product-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+              aria-controls="pills-contact" aria-selected="false"><h2>Khusus</h2></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-              aria-controls="pills-contact" aria-selected="false">Keluarga</a>
+            <a class="nav-link product-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+              aria-controls="pills-contact" aria-selected="false"><h2>Khusus</h2></a>
           </li>
         </ul>
       </div>
