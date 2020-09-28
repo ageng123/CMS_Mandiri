@@ -43,3 +43,4 @@
 	<script type="text/javascript" src="<?= base_url('assets/landing_template/') ?>assets/js/custom.js"></script>
 	<script type="text/javascript" src="<?= base_url('assets/landing_template/') ?>assets/js/popper.min.js"></script>
 	<script type="text/javascript" src="<?= base_url('assets/landing_template/') ?>assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="<?= base_url('assets/') ?>/js/app.js"></script>
