@@ -1,27 +1,28 @@
-$('.datepicker').datetimepicker({format: 'yyyy-mm-dd'});
+// $('.datepicker').datetimepicker({format: 'yyyy-mm-dd'});
 const DatatableServices = {
     dataUri: '',
-    data: new Array(),
-    setDataUri: (uri) => {
-        DatatableServices.dataUri = uri;
-    },
-    getJSON: (uri) => {
-        $.ajax({
-            type: 'GET',
-            method: 'GET',
-            contentType: 'jsonp',
-            dataType: 'application/json',
-            url: uri,
-            success: (resp) => {
-                DatatableServices.data.push(resp.array);
+    container: '',
+    initDT: () => {
+        $(DatatableServices.container).DataTable({
+            "processing": true,
+            "serverSide": false,
+            "ajax": {
+                "url": DatatableServices.dataUri,
+                "type": "POST"
             }
-        })
+        });
     },
-    initDT: (container) => {
-        if(empty(DatatableServices.data)){
-            console.error('Error Data : DatatableServices.data is empty')
-        } else {
-            $('#'+container).DataTable({"data" : DatatableServices.data});
-        }
+    setContainer: (id) => {
+        console.log(id);
+        DatatableServices.container = '#' + id;
     }
 }
+$(document).ready(function () {
+    $('.init-DataTable').each(function () {
+        let container = $(this).attr('id');
+        let uri = $(this).data('url');
+        DatatableServices.setContainer(container);
+        DatatableServices.dataUri = uri;
+        DatatableServices.initDT();
+    })
+})
