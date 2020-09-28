@@ -1025,42 +1025,32 @@
   <div class="container">
     <h1 class="kontak-heading text-primary">Berita Update</h1>
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 row">
         <div class="col-3">
           Forum Diskusi Berbagi Berita dari dalam dan luar negeri. Mulai dari Ideologi Politik dan lain sebagainya
         </div>
-      </div>
-      <div class="col-12">
-        
-      </div>
-      <div class="col-4">
-        <div class="card no-border no-bg">
-          <div class="card-header no-border no-bg">
-            <img src="<?= base_url('assets/img/panens.png') ?>" alt="">
+        <div class="col-9 row">
+          <div class="card col-8">
+            <div class="card-body">
+              <img src="<?= base_url('assets/img/panens.png') ?>" alt="" srcset="">
+            </div>
           </div>
-          <div class="card-body no-border no-bg">
-            <div class="container">TEsting</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-4">
-      <div class="card no-border no-bg">
-          <div class="card-header no-border no-bg">
-            <img src="<?= base_url('assets/img/panen.png') ?>" alt="">
-          </div>
-          <div class="card-body no-border bo-bg">
-            <div class="container">TEsting</div>
+          <div class="card col-4">
+            <div class="card-body">
+              <img src="<?= base_url('assets/img/panens.png') ?>" alt="" srcset="">
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-4">
-      <div class="card no-border no-bg">
-          <div class="card-header no-border no-bg">
-            <img src="<?= base_url('assets/img/radio.png') ?>" alt="">
+      <div class="col-12" style="margin-top: 3vh">
+        <div class="row">
+          <?php for($i = 1; $i <= 8 ; $i++): ?>
+          <div class="card col-3">
+            <div class="card-body">
+              <img src="<?= base_url('assets/img/panens.png') ?>" alt="" srcset="">
+            </div>
           </div>
-          <div class="card-body no-border no-bg">
-            <div class="container">TEsting</div>
-          </div>
+          <?php endfor; ?>
         </div>
       </div>
     </div>
@@ -1109,7 +1099,8 @@
     .no-bg {
       background-color: transparent;
     }
-    .section-bg2{
+
+    .section-bg2 {
       background-color: #efebe8;
     }
   </style>
@@ -1127,7 +1118,7 @@
         </div>
       </div>
       <div class="col-4">
-      <div class="card no-border no-bg">
+        <div class="card no-border no-bg">
           <div class="card-header no-border no-bg">
             <img src="<?= base_url('assets/img/panen.png') ?>" alt="">
           </div>
@@ -1137,7 +1128,7 @@
         </div>
       </div>
       <div class="col-4">
-      <div class="card no-border no-bg">
+        <div class="card no-border no-bg">
           <div class="card-header no-border no-bg">
             <img src="<?= base_url('assets/img/radio.png') ?>" alt="">
           </div>
@@ -1155,7 +1146,8 @@
         border-bottom: 4px solid #ddaa37;
         width: max-content;
       }
-      .text-primary{
+
+      .text-primary {
         color: #795839 !important;
       }
     </style>
