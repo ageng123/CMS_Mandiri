@@ -364,18 +364,16 @@
             <div class="card-header landing-login-form">
               <ul class="nav nav-pils" id="myTab" role="tablist">
                 <style>
-                  .nav-item {
+                  .login-button {
                     background: #603913;
                     width: 50%;
                     padding: 2px 5px;
                     text-align: center;
 
                   }
-
-                  .nav-item>a {
-                    color: #ffe276;
+                  .login-button > a {
+                    color: #ffe276; 
                   }
-
                   .landing-login-form {
                     background: transparent !important;
                     border-bottom: 0px;
@@ -383,11 +381,11 @@
                     padding-right: 0px;
                   }
                 </style>
-                <li class="nav-item">
+                <li class="nav-item login-button">
                   <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
                     aria-controls="home" aria-selected="true">Login</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item login-button">
                   <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
                     aria-controls="profile" aria-selected="false">Register</a>
                 </li>
@@ -424,8 +422,21 @@
         </div>
         <div class="col-12">
           <?php for($i = 0; $i < 3; $i++){?>
+          <?php if($i == 0): ?>
           <div class="col-12 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s"
-            style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+            style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp; border-bottom: 1px solid red;">
+            <div class="text-left hvr-bob opacity-hover-7">
+              <img src="<?= base_url('assets/img/pb.png') ?>" alt="">
+              <h2 class="text-extra-large  margin-tb-10px">
+                Powerful Website
+              </h2>
+              <p class="opacity-7">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard</p>
+            </div>
+          </div>
+          <?php else: ?>
+          <div class="col-12 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s"
+            style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp; border-bottom: 2px solid red;">
             <div class="text-left hvr-bob opacity-hover-7">
               <h2 class="text-extra-large  margin-tb-10px">
                 Powerful Website
@@ -434,592 +445,139 @@
                 Lorem Ipsum has been the industry's standard</p>
             </div>
           </div>
+          <?php endif; ?>
           <?php } ?>
         </div>
       </div>
     </div>
   </div>
 </section>
-<div class="padding-tb-100px">
+<section class="padding-tb-100px section-bg2">
   <div class="container">
+    <h1 class="kontak-heading text-primary">Produk</h1>
     <div class="row">
-
-      <div class="col-lg-3 col-sm-6 sm-mb-30px wow fadeInUp">
-        <div class="text-center hvr-grow opacity-hover-7">
-          <i class="far fa-gem text-icon-large text-main-color"></i>
-          <h2 class="text-extra-large text-main-color margin-tb-10px">Responsive &amp; Retina</h2>
-          <p class="opacity-7">Responsive &amp; Raw Multi-Purpose Multi-Page &amp; One-Page HTML5
-            Template. Build whatever you like with this Template.</p>
-        </div>
-      </div>
-
-
-      <div class="col-lg-3 col-sm-6 sm-mb-30px wow fadeInUp" data-wow-delay="0.2s">
-        <div class="text-center hvr-grow opacity-hover-7">
-          <i class="fas fa-sync text-icon-large text-main-color"></i>
-          <h2 class="text-extra-large text-main-color margin-tb-10px">Sliders &amp; Carousels</h2>
-          <p class="opacity-7">Responsive &amp; Raw Multi-Purpose Multi-Page &amp; One-Page HTML5
-            Template. Build whatever you like with this Template.</p>
-        </div>
-      </div>
-
-
-      <div class="col-lg-3 col-sm-6 sm-mb-30px wow fadeInUp" data-wow-delay="0.4s">
-        <div class="text-center hvr-grow opacity-hover-7">
-          <i class="fas fa-code text-icon-large text-main-color"></i>
-          <h2 class="text-extra-large text-main-color margin-tb-10px">Clean &amp; nice code</h2>
-          <p class="opacity-7">Responsive &amp; Raw Multi-Purpose Multi-Page &amp; One-Page HTML5
-            Template. Build whatever you like with this Template.</p>
-        </div>
-      </div>
-
-
-      <div class="col-lg-3 col-sm-6 sm-mb-30px wow fadeInUp" data-wow-delay="0.6s">
-        <div class="text-center hvr-grow opacity-hover-7">
-          <i class="far fa-newspaper text-icon-large text-main-color"></i>
-          <h2 class="text-extra-large text-main-color margin-tb-10px">Extensive Docs</h2>
-          <p class="opacity-7">Responsive &amp; Raw Multi-Purpose Multi-Page &amp; One-Page HTML5
-            Template. Build whatever you like with this Template.</p>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col-lg-6 background-white">
-      <div class="">
-        <div class="margin-bottom-40px font-weight-300 wow fadeInUp">
-          <small class="text-main-color">Since 1991</small>
-          <h1 class="font-weight-300 text-title-large font-3">Our History</h1>
-          <div class="opacity-7">Responsive and Raw Multi-Purpose Multi-Page and One-Page HTML5 Template.
-            Build whatever you like with this Template</div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6 margin-bottom-30px wow fadeInUp">
-            <div class="text-left opacity-hover-7 hvr-bob">
-              <h3 class="margin-tb-10px">
-                <i class="fas fa-chess text-icon-large d-inlin-block margin-right-20px"></i>
-                Extensive Docs
-              </h3>
-              <p class="opacity-7">Responsive &amp; Raw Multi-Purpose Multi-Page &amp; One-Page HTML5
-                Template. Build whatever you like with this Template.</p>
-            </div>
+      <div class="col-4">
+        <div class="card no-border no-bg">
+          <div class="card-header no-border no-bg">
+            <img src="<?= base_url('assets/img/panens.png') ?>" alt="">
           </div>
-          <div class="col-lg-6 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s">
-            <div class="text-left opacity-hover-7 hvr-bob">
-              <h3 class="margin-tb-10px">
-                <i class="fab fa-codepen text-icon-large d-inlin-block margin-right-20px"></i>
-                Graphic Designs
-              </h3>
-              <p class="opacity-7">Responsive &amp; Raw Multi-Purpose Multi-Page &amp; One-Page HTML5
-                Template. Build whatever you like with this Template.</p>
-            </div>
-          </div>
-          <div class="col-lg-6 margin-bottom-30px wow fadeInUp">
-            <div class="text-left opacity-hover-7 hvr-bob">
-              <h3 class="margin-tb-10px">
-                <i class="fab fa-fly text-icon-large d-inlin-block margin-right-20px"></i> New
-                Designs
-              </h3>
-              <p class="opacity-7">Responsive &amp; Raw Multi-Purpose Multi-Page &amp; One-Page HTML5
-                Template. Build whatever you like with this Template.</p>
-            </div>
-          </div>
-          <div class="col-lg-6 margin-bottom-30px  wow fadeInUp" data-wow-delay="0.2s">
-            <div class="text-left opacity-hover-7 hvr-bob">
-              <h3 class="margin-tb-10px">
-                <i class="far fa-lightbulb text-icon-large d-inlin-block margin-right-20px"></i>
-                Distinctive ideas
-              </h3>
-              <p class="opacity-7">Responsive &amp; Raw Multi-Purpose Multi-Page &amp; One-Page HTML5
-                Template. Build whatever you like with this Template.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-    <div class="col-lg-6 background-overlay border-radius-500 wow fadeInUp"
-      style="background-image: url('http://placehold.it/1012x765');">
-    </div>
-  </div>
-</div>
-<section class="padding-tb-100px">
-  <div class="container">
-    <div class="text-center margin-bottom-35px wow fadeInUp">
-      <h1 class="font-weight-300 text-title-large font-3">Our Clients</h1>
-      <span class="opacity-7">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elitdunt</span>
-    </div>
-    <ul class="row clients-border no-gutters padding-0px margin-0px list-unstyled text-center">
-      <li class="col-md-3 col-6 padding-tb-30px hvr-bounce-out wow fadeInUp">
-        <a class="hvr-bounce-out" href="#"><img src="http://placehold.it/140x90" alt=""></a>
-      </li>
-      <li class="col-md-3 col-6 padding-tb-30px wow fadeInUp" data-wow-delay="0.2s">
-        <a class="hvr-bounce-out" href="#"><img src="http://placehold.it/140x90" alt=""></a>
-      </li>
-      <li class="col-md-3 col-6 padding-tb-30px wow fadeInUp" data-wow-delay="0.4s">
-        <a class="hvr-bounce-out" href="#"><img src="http://placehold.it/140x90" alt=""></a>
-      </li>
-      <li class="col-md-3 col-6 padding-tb-30px wow fadeInUp" data-wow-delay="0.6s">
-        <a class="hvr-bounce-out" href="#"><img src="http://placehold.it/140x90" alt=""></a>
-      </li>
-      <li class="col-md-3 col-6 padding-tb-30px wow fadeInUp">
-        <a class="hvr-bounce-out" href="#"><img src="http://placehold.it/140x90" alt=""></a>
-      </li>
-      <li class="col-md-3 col-6 padding-tb-30px wow fadeInUp" data-wow-delay="0.2s">
-        <a class="hvr-bounce-out" href="#"><img src="http://placehold.it/140x90" alt=""></a>
-      </li>
-      <li class="col-md-3 col-6 padding-tb-30px wow fadeInUp" data-wow-delay="0.4s">
-        <a class="hvr-bounce-out" href="#"><img src="http://placehold.it/140x90" alt=""></a>
-      </li>
-      <li class="col-md-3 col-6 padding-tb-30px wow fadeInUp" data-wow-delay="0.6s">
-        <a class="hvr-bounce-out" href="#"><img src="http://placehold.it/140x90" alt=""></a>
-      </li>
-    </ul>
-  </div>
-</section>
-<section class="padding-tb-100px background-light-grey">
-  <div class="container">
-    <div class="text-center margin-bottom-35px wow fadeInUp">
-      <h1 class="font-weight-300 text-title-large font-3">Testimonial</h1>
-      <span class="opacity-7">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elitdunt</span>
-    </div>
-
-    <div class="testimonial-carousel owl-carousel owl-theme wow fadeInUp">
-      <div class="item margin-lr-15px">
-        <div class="background-white opacity-hover-7 padding-30px">
-          <div class="float-left width-50px margin-right-20px">
-            <img src="http://placehold.it/80x80" alt="">
-          </div>
-          <h4 class="margin-bottom-0px">Rabie Elkheir</h4>
-          <small>Web Designer</small>
-          <hr>
-          <p class="text-grey-2">Lorem Ipsum has been the industry's standard dummy text ever since the
-            1500s, when an unknown printer took a galley of type and scrambled</p>
-        </div>
-      </div>
-      <div class="item margin-lr-15px">
-        <div class="background-white opacity-hover-7 padding-30px">
-          <div class="float-left width-50px margin-right-20px">
-            <img src="http://placehold.it/80x80" alt="">
-          </div>
-          <h4 class="margin-bottom-0px">Firdous Fadlalla</h4>
-          <small>Web Designer</small>
-          <hr>
-          <p class="text-grey-2">The point of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using 'Content here, content here'</p>
-        </div>
-      </div>
-      <div class="item margin-lr-15px">
-        <div class="background-white opacity-hover-7 padding-30px">
-          <div class="float-left width-50px margin-right-20px">
-            <img src="http://placehold.it/80x80" alt="">
-          </div>
-          <h4 class="margin-bottom-0px">Moh Elkheir</h4>
-          <small>Web Designer</small>
-          <hr>
-          <p class="text-grey-2">Lorem Ipsum has been the industry's standard dummy text ever since the
-            1500s, when an unknown printer took a galley of type and scrambled</p>
-        </div>
-      </div>
-      <div class="item margin-lr-15px">
-        <div class="background-white opacity-hover-7 padding-30px">
-          <div class="float-left width-50px margin-right-20px">
-            <img src="http://placehold.it/80x80" alt="">
-          </div>
-          <h4 class="margin-bottom-0px">Moh Elkheir</h4>
-          <small>Web Designer</small>
-          <hr>
-          <p class="text-grey-2">Lorem Ipsum has been the industry's standard dummy text ever since the
-            1500s, when an unknown printer took a galley of type and scrambled</p>
-        </div>
-      </div>
-      <div class="item margin-lr-15px">
-        <div class="background-white opacity-hover-7 padding-30px">
-          <div class="float-left width-50px margin-right-20px">
-            <img src="http://placehold.it/80x80" alt="">
-          </div>
-          <h4 class="margin-bottom-0px">Moh Elkheir</h4>
-          <small>Web Designer</small>
-          <hr>
-          <p class="text-grey-2">Lorem Ipsum has been the industry's standard dummy text ever since the
-            1500s, when an unknown printer took a galley of type and scrambled</p>
-        </div>
-      </div>
-      <div class="item margin-lr-15px">
-        <div class="background-white opacity-hover-7 padding-30px">
-          <div class="float-left width-50px margin-right-20px">
-            <img src="http://placehold.it/80x80" alt="">
-          </div>
-          <h4 class="margin-bottom-0px">Moh Elkheir</h4>
-          <small>Web Designer</small>
-          <hr>
-          <p class="text-grey-2">Lorem Ipsum has been the industry's standard dummy text ever since the
-            1500s, when an unknown printer took a galley of type and scrambled</p>
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-</section>
-<section class="padding-tb-100px background-main-color">
-  <div class="container">
-    <!-- section title -->
-    <div class="row justify-content-center wow fadeInUp">
-      <div class="col-md-8">
-        <div class="text-center margin-bottom-55px text-white">
-          <h1 class="font-weight-300 text-title-large font-3">What We Do ?</h1>
-          <span class="opacity-7">Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-            1500s</span>
-        </div>
-      </div>
-    </div>
-    <!-- // section title -->
-
-    <div class="row text-white">
-      <div class="col-lg-3 col-md-6 margin-bottom-30px wow fadeInUp">
-        <div class="text-left hvr-bob opacity-hover-7">
-          <h2 class="text-extra-large  margin-tb-10px">
-            <i class="fas fa-paint-brush text-icon-large d-inlin-block margin-right-20px"></i> Unlimited
-            Colors
-          </h2>
-          <p class="opacity-7">Responsive &amp; Raw Multi-Purpose Multi-Page &amp; One-Page HTML5
-            Template. Build whatever you like with this Template.</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s">
-        <div class="text-left hvr-bob opacity-hover-7">
-          <h2 class="text-extra-large  margin-tb-10px">
-            <i class="fas fa-desktop text-icon-large d-inlin-block margin-right-20px"></i> Powerful
-            Website
-          </h2>
-          <p class="opacity-7">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 margin-bottom-30px wow fadeInUp" data-wow-delay="0.4s">
-        <div class="text-left hvr-bob opacity-hover-7">
-          <h2 class="text-extra-large  margin-tb-10px">
-            <i class="fab fa-fly text-icon-large d-inlin-block margin-right-20px"></i> Responsive Design
-          </h2>
-          <p class="opacity-7">Responsive &amp; Raw Multi-Purpose Multi-Page &amp; One-Page HTML5
-            Template. Build whatever you like with this Template.</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 margin-bottom-30px wow fadeInUp" data-wow-delay="0.6s">
-        <div class="text-left hvr-bob opacity-hover-7">
-          <h2 class="text-extra-large  margin-tb-10px">
-            <i class="fas fa-rocket text-icon-large d-inlin-block margin-right-20px"></i> High Speed
-          </h2>
-          <p class="opacity-7">Responsive &amp; Raw Multi-Purpose Multi-Page &amp; One-Page HTML5
-            Template. Build whatever you like with this Template.</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 margin-bottom-30px wow fadeInUp">
-        <div class="text-left hvr-bob opacity-hover-7">
-          <h2 class="text-extra-large  margin-tb-10px">
-            <i class="fas fa-chess text-icon-large d-inlin-block margin-right-20px"></i> Extensive Docs
-          </h2>
-          <p class="opacity-7">when an unknown printer took a galley of type and scrambled it to make a
-            type specimen book. It has survived not only five centuries</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s">
-        <div class="text-left hvr-bob opacity-hover-7">
-          <h2 class="text-extra-large  margin-tb-10px">
-            <i class="fab fa-sass text-icon-large d-inlin-block margin-right-20px"></i> Sass Language
-          </h2>
-          <p class="opacity-7">Responsive &amp; Raw Multi-Purpose Multi-Page &amp; One-Page HTML5
-            Template. Build whatever you like with this Template.</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 margin-bottom-30px wow fadeInUp" data-wow-delay="0.4s">
-        <div class="text-left hvr-bob opacity-hover-7">
-          <h2 class="text-extra-large  margin-tb-10px">
-            <i class="far fa-smile text-icon-large d-inlin-block margin-right-20px"></i> Happy Cstomers
-          </h2>
-          <p class="opacity-7">Responsive &amp; Raw Multi-Purpose Multi-Page &amp; One-Page HTML5
-            Template. Build whatever you like with this Template.</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 margin-bottom-30px wow fadeInUp" data-wow-delay="0.6s">
-        <div class="text-left hvr-bob opacity-hover-7">
-          <h2 class="text-extra-large  margin-tb-10px">
-            <i class="fas fa-trophy text-icon-large d-inlin-block margin-right-20px"></i> Web
-            Interactive
-          </h2>
-          <p class="opacity-7">Responsive &amp; Raw Multi-Purpose Multi-Page &amp; One-Page HTML5
-            Template. Build whatever you like with this Template.</p>
-        </div>
-      </div>
-    </div>
-    <!-- // row -->
-  </div>
-</section>
-<section class="padding-tb-100px background-light-grey">
-  <div class="container">
-    <div class="text-center margin-bottom-35px fadeInUp">
-      <h1 class="font-weight-300 text-title-large font-3">Last News</h1>
-      <span class="opacity-7">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elitdunt</span>
-    </div>
-    <div class="row">
-      <div class="col-lg-4 col-md-6 sm-mb-30px wow fadeInUp">
-        <div class="blog-item thum-hover background-white hvr-float hvr-sh2">
-          <div class="position-relative">
-            <div
-              class="date z-index-10 width-50px padding-10px background-main-color text-white text-center position-absolute top-20px left-20px">
-              17/2 2018
-            </div>
-            <a href="#">
-              <div class="item-thumbnail background-dark"><img src="http://placehold.it/850x600" alt=""></div>
-            </a>
-          </div>
-          <a href="#" class="text-extra-large margin-tb-20px d-block padding-lr-30px">Don’t spend time
-            beating on a wall, hoping to trans ...</a>
-          <hr>
-          <div class="padding-lr-30px">
-            <span class="margin-right-30px">By : <a href="#">Rabie Elkheir</a></span>
-            <span class="margin-right-30px">In : <a href="#">News</a> , <a href="#">Articles</a></span>
-          </div>
-          <hr class="margin-bottom-0px border-white">
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 sm-mb-30px wow fadeInUp" data-wow-delay="0.4s">
-        <div class="blog-item background-main-color padding-40px text-center hvr-float hvr-sh2">
-          <a href="#" class="text-extra-large margin-tb-20px d-block text-white">He who makes no mistakes
-            makes nothing</a>
-          <hr><span class="margin-right-30px text-white opacity-5">By : <a href="#">Rabie
-              Elkheir</a></span>
-          <hr>
-          <span class="margin-right-30px text-white  opacity-5">In : <a href="#">News</a> , <a
-              href="#">Articles</a></span>
-          <hr>
-          <div class="text-grey-2 text-white  opacity-6">There are many variations of passages of Lorem
-            Ipsum available, but the majority have suffered alteration in some form, by injected humour
-            ...</div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 sm-mb-30px wow fadeInUp" data-wow-delay="0.2s">
-        <div class="blog-item thum-hover background-white hvr-float hvr-sh2">
-          <a href="#" class="text-extra-large d-block padding-top-20px padding-lr-30px">Believe not all
-            that you see nor half what you hear...</a>
-          <hr>
-          <div class="padding-lr-30px">
-            <span class="margin-right-30px">By : <a href="#">Rabie Elkheir</a></span>
-            <span class="margin-right-30px">In : <a href="#">News</a> , <a href="#">Articles</a></span>
-          </div>
-          <hr class="margin-bottom-0px">
-          <div class="position-relative">
-            <div
-              class="date z-index-10 width-50px padding-10px background-main-color text-white text-center position-absolute top-20px left-20px">
-              17/2 2018
-            </div>
-            <a href="#">
-              <div class="item-thumbnail background-dark"><img src="http://placehold.it/850x600" alt=""></div>
-            </a>
+          <div class="card-body no-border no-bg">
+            <div class="container">TEsting</div>
           </div>
         </div>
       </div>
-
-    </div>
-  </div>
-
-  <!-- //container -->
-</section>
-<section class="background-main-color">
-  <div class="row no-gutters margin-0px padding-0px">
-    <div class="col-lg-6 col-md-6 wow fadeInUp">
-      <!-- Map -->
-      <div class="map-distributors-in">
-        <div id="map-distributors">
-          <script type="text/javascript">
-            $(function () {
-              $("#map-distributors").goMap({
-                zoom: 6,
-                maptype: 'ROADMAP',
-                markers: [{
-                  address: '39.605247,-104.615413',
-                  icon: '<?= base_url('
-                  assets / landing_template / ') ?>assets/img/icon_marker_1.png'
-                }, ],
-                hideByClick: true
-              });
-              $("#default").click(function () {
-                $("#dump").html($.dump($.goMap.getMarkers()));
-              });
-              $("#clearall").click(function () {
-                $.goMap.clearMarkers();
-              });
-              $("#json").click(function () {
-                $("#dump").html($.goMap.getMarkers("json"));
-              });
-              $("#data").click(function () {
-                $("#dump").html($.goMap.getMarkers("data"));
-              });
-              $('.gm-style-iw').parent().css('width', 'auto');
-            });
-          </script>
-
+      <div class="col-8">
+        <div class="card no-border no-bg">
+          <div class="card-header no-border no-bg">
+            <img src="<?= base_url('assets/img/panen.png') ?>" alt="">
+          </div>
+          <div class="card-body no-border bo-bg">
+            <div class="container">TEsting</div>
+          </div>
         </div>
       </div>
-      <!-- //  Map -->
-
-
-    </div>
-    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-      <div class="padding-100px sm-padding-30px">
-        <div class="margin-bottom-40px font-weight-300 text-white">
-          <h1 class="font-weight-300 text-title-large font-3">Contact Us</h1>
-          <span>Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elitdunt</span>
-        </div>
-        <form action="/" class="dark-form">
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label>Full Name</label>
-              <input type="text" class="form-control" autocomplete="text">
-            </div>
-            <div class="form-group col-md-6">
-              <label>Email</label>
-              <input type="email" class="form-control" autocomplete="email" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Address</label>
-            <input type="text" class="form-control" autocomplete="text" required>
-          </div>
-          <div class="form-group">
-            <label>Message</label>
-            <textarea class="form-control" rows="3" autocomplete="textarea" required>></textarea>
-          </div>
-          <a href="#"
-            class="btn-sm hvr-shutter-in-horizontal btn-lg btn-block border-2 border-white text-dark text-center font-weight-bold text-uppercase rounded-0 padding-15px">Send</a>
-        </form>
+      <div class="col-12 text-center" style="border-bottom: 4px solid red; border-top: 4px solid red;display: flex;justify-content: center;text-align: center;padding-top: 1.5vh;padding-bottom: revert; margin-bottom: 1.5vh">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+              aria-controls="pills-home" aria-selected="true">Semua</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+              aria-controls="pills-profile" aria-selected="false">Komersial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+              aria-controls="pills-contact" aria-selected="false">Housing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+              aria-controls="pills-contact" aria-selected="false">Khusus</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+              aria-controls="pills-contact" aria-selected="false">Keluarga</a>
+          </li>
+        </ul>
       </div>
-    </div>
-  </div>
-</section>
-<section class="padding-tb-100px">
-  <div class="container">
-    <div class="text-center margin-bottom-35px wow fadeInUp">
-      <h1 class="font-weight-300 text-title-large font-3">Our Team</h1>
-      <span class="opacity-7">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elitdunt</span>
-    </div>
-    <div class="row">
-      <div class="col-lg-3 col-md-6 sm-mb-30px wow fadeInUp">
-        <div class="team with-hover text-center hvr-float">
-          <div class="margin-bottom-20px position-relative overflow-hidden">
-            <img src="http://placehold.it/700x800" alt="">
-            <div class="hover-option bag-dark text-center padding-top-n-20">
-              <div class="position-relative hight-full">
-                <ul class="social-list light bottom-30px position-absolute">
-                  <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a class="youtube" href="#"><i class="fab fa-youtube"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
-                  <li><a class="google" href="#"><i class="fab fa-google-plus"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss" aria-hidden="true"></i></a>
-                  </li>
-                </ul>
+      <div class="col-12">
+        <div class="testimonial-carousel owl-carousel owl-theme wow fadeInUp">
+          <div class="item margin-lr-15px">
+            <div class="background-white opacity-hover-7 padding-30px">
+              <div class="float-left width-50px margin-right-20px">
+                <img src="http://placehold.it/80x80" alt="">
               </div>
-              <!-- // Social -->
+              <h4 class="margin-bottom-0px">Rabie Elkheir</h4>
+              <small>Web Designer</small>
+              <hr>
+              <p class="text-grey-2">Lorem Ipsum has been the industry's standard dummy text ever since the
+                1500s, when an unknown printer took a galley of type and scrambled</p>
             </div>
           </div>
-          <h4 class="margin-bottom-0px"><a href="#">Sara Elshakh</a></h4>
-          <small>Web Designer</small>
-          <p class="text-grey-2 margin-top-10px">
-            There are many variations of passages of Lorem Ipsum available
-          </p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 sm-mb-30px wow fadeInUp" data-wow-delay="0.2s">
-        <div class="team with-hover text-center hvr-float">
-          <div class="margin-bottom-20px position-relative overflow-hidden">
-            <img src="http://placehold.it/700x800" alt="">
-            <div class="hover-option bag-dark text-center padding-top-n-20">
-              <div class="position-relative hight-full">
-                <ul class="social-list light bottom-30px position-absolute">
-                  <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a class="youtube" href="#"><i class="fab fa-youtube"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
-                  <li><a class="google" href="#"><i class="fab fa-google-plus"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss" aria-hidden="true"></i></a>
-                  </li>
-                </ul>
+          <div class="item margin-lr-15px">
+            <div class="background-white opacity-hover-7 padding-30px">
+              <div class="float-left width-50px margin-right-20px">
+                <img src="http://placehold.it/80x80" alt="">
               </div>
-              <!-- // Social -->
+              <h4 class="margin-bottom-0px">Firdous Fadlalla</h4>
+              <small>Web Designer</small>
+              <hr>
+              <p class="text-grey-2">The point of using Lorem Ipsum is that it has a more-or-less normal
+                distribution of letters, as opposed to using 'Content here, content here'</p>
             </div>
           </div>
-          <h4 class="margin-bottom-0px"><a href="#">Amar Salah</a></h4>
-          <small>Programmer</small>
-          <p class="text-grey-2 margin-top-10px">
-            There are many variations of passages of Lorem Ipsum available
-          </p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 sm-mb-30px wow fadeInUp" data-wow-delay="0.4s">
-        <div class="team with-hover text-center hvr-float">
-          <div class="margin-bottom-20px position-relative overflow-hidden">
-            <img src="http://placehold.it/700x800" alt="">
-            <div class="hover-option bag-dark text-center padding-top-n-20">
-              <div class="position-relative hight-full">
-                <ul class="social-list light bottom-30px position-absolute">
-                  <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a class="youtube" href="#"><i class="fab fa-youtube"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
-                  <li><a class="google" href="#"><i class="fab fa-google-plus"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss" aria-hidden="true"></i></a>
-                  </li>
-                </ul>
+          <div class="item margin-lr-15px">
+            <div class="background-white opacity-hover-7 padding-30px">
+              <div class="float-left width-50px margin-right-20px">
+                <img src="http://placehold.it/80x80" alt="">
               </div>
-              <!-- // Social -->
+              <h4 class="margin-bottom-0px">Moh Elkheir</h4>
+              <small>Web Designer</small>
+              <hr>
+              <p class="text-grey-2">Lorem Ipsum has been the industry's standard dummy text ever since the
+                1500s, when an unknown printer took a galley of type and scrambled</p>
             </div>
           </div>
-          <h4 class="margin-bottom-0px"><a href="#">Moh Elkheir</a></h4>
-          <small>Sales Manager</small>
-          <p class="text-grey-2 margin-top-10px">
-            There are many variations of passages of Lorem Ipsum available
-          </p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 sm-mb-30px wow fadeInUp" data-wow-delay="0.6s">
-        <div class="team with-hover text-center hvr-float">
-          <div class="margin-bottom-20px position-relative overflow-hidden">
-            <img src="http://placehold.it/700x800" alt="">
-            <div class="hover-option bag-dark text-center padding-top-n-20">
-              <div class="position-relative hight-full">
-                <ul class="social-list light bottom-30px position-absolute">
-                  <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a class="youtube" href="#"><i class="fab fa-youtube"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
-                  <li><a class="google" href="#"><i class="fab fa-google-plus"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss" aria-hidden="true"></i></a>
-                  </li>
-                </ul>
+          <div class="item margin-lr-15px">
+            <div class="background-white opacity-hover-7 padding-30px">
+              <div class="float-left width-50px margin-right-20px">
+                <img src="http://placehold.it/80x80" alt="">
               </div>
-              <!-- // Social -->
+              <h4 class="margin-bottom-0px">Moh Elkheir</h4>
+              <small>Web Designer</small>
+              <hr>
+              <p class="text-grey-2">Lorem Ipsum has been the industry's standard dummy text ever since the
+                1500s, when an unknown printer took a galley of type and scrambled</p>
             </div>
           </div>
-          <h4 class="margin-bottom-0px"><a href="#">Sana Ali</a></h4>
-          <small>Web Designer</small>
-          <p class="text-grey-2 margin-top-10px">
-            There are many variations of passages of Lorem Ipsum available
-          </p>
+          <div class="item margin-lr-15px">
+            <div class="background-white opacity-hover-7 padding-30px">
+              <div class="float-left width-50px margin-right-20px">
+                <img src="http://placehold.it/80x80" alt="">
+              </div>
+              <h4 class="margin-bottom-0px">Moh Elkheir</h4>
+              <small>Web Designer</small>
+              <hr>
+              <p class="text-grey-2">Lorem Ipsum has been the industry's standard dummy text ever since the
+                1500s, when an unknown printer took a galley of type and scrambled</p>
+            </div>
+          </div>
+          <div class="item margin-lr-15px">
+            <div class="background-white opacity-hover-7 padding-30px">
+              <div class="float-left width-50px margin-right-20px">
+                <img src="http://placehold.it/80x80" alt="">
+              </div>
+              <h4 class="margin-bottom-0px">Moh Elkheir</h4>
+              <small>Web Designer</small>
+              <hr>
+              <p class="text-grey-2">Lorem Ipsum has been the industry's standard dummy text ever since the
+                1500s, when an unknown printer took a galley of type and scrambled</p>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
-  </div>
-
 </section>
 <section class="padding-tb-100px">
   <div class="container">
