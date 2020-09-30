@@ -11,7 +11,7 @@ class Landing extends CI_Controller {
 	public function index()
 	{
 		$model = new Landing_model();
-		$user = $model->findBy(['is_active' => '1']);
+		$user = $model->findBy(['active' => '1']);
 		$content = 'index';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS'
@@ -24,7 +24,7 @@ class Landing extends CI_Controller {
 	{
 		$model = new Landing_model();
 		$model->nama = 'Nofri Willis 2';
-		$model->is_active = 1;
+		$model->active = 1;
 		$model->delete(4);
 	}
 }
