@@ -26,14 +26,17 @@ const DatatableServices = {
                   previous: '<i class="fa fa-angle-left">'  
                 }
               },
+              dom: 'Bfrtip',
               buttons: [
                 {
-                    text: 'Get selected data',
+                    text: '<i class="fa fa-trash"></i> Delete',
                     action: function () {
-                        var count = table.rows( { selected: true } ).count();
-     
-                        events.prepend( '<div>'+count+' row(s) selected</div>' );
-                    }
+                        var count = DT.rows('.selected').data();
+                        count.each(function(index){
+                            console.log(index[0]);
+                        })
+                    },
+                    className: 'btn btn-danger'
                 }
             ]
         });
