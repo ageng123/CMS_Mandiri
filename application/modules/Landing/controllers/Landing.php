@@ -24,7 +24,7 @@ class Landing extends CI_Controller {
 	{
 		$model = new Landing_model();
 		$model->nama = 'Nofri Willis 2';
-		$model->is_active = 1;
+		$model->active = 1;
 		$model->delete(4);
 	}
 }

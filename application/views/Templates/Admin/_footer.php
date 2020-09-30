@@ -59,6 +59,10 @@
 
   <script>
 
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
     // Facebook Pixel Code Don't Delete
     ! function(f, b, e, v, n, t, s) {
       if (f.fbq) return;
