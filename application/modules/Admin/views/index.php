@@ -29,6 +29,7 @@
           <thead class="thead-light">
             <tr>
               <th></th>
+              <th></th>
               <th>No</th>
               <th>Kolom A</th>
               <th>Kolom B</th>

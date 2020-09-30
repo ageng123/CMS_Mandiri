@@ -13,13 +13,13 @@ const DatatableServices = {
             "columnDefs": [ {
                 orderable: false,
                 className: 'select-checkbox',
-                targets:   0
+                targets:   1
             } ],
             "select": {
                 style:    'multi',
                 selector: 'td:first-child'
             },
-            "order": [[ 0, 'asc' ]],
+            "order": [[ 1, 'asc' ]],
             language: {
                 paginate: {
                   next: '<i class="fa fa-angle-right">',
@@ -40,6 +40,7 @@ const DatatableServices = {
                 }
             ]
         });
+        DT.column(0).visible(false);
         console.log(DT);
     },
     setContainer: (id) => {
