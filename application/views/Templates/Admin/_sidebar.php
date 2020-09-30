@@ -59,7 +59,7 @@
             </a>
           </li>
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="#">
               <i class="ni ni-archive-2 text-green"></i>
               <span class="nav-link-text">Menu A</span>
@@ -79,8 +79,72 @@
               <i class="ni ni-planet text-info"></i>
               <span class="nav-link-text">Menu C</span>
             </a>
-          </li>
+          </li> -->
+
           <li class="nav-item">
+              <a class="nav-link" href="#navbar-content" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
+                <i class="ni ni-archive-2 text-green"></i>
+                <span class="nav-link-text">Content</span>
+              </a>
+              <div class="collapse" id="navbar-content">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">Berita</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="alternative.html" class="nav-link">Product</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#navbar-category" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
+                <i class="ni ni-spaceship text-pink"></i>
+                <span class="nav-link-text">Kategory</span>
+              </a>
+              <div class="collapse" id="navbar-category">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">Berita</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="alternative.html" class="nav-link">Product</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#navbar-admin" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
+                <i class="ni ni-planet text-info"></i>
+                <span class="nav-link-text">Administration</span>
+              </a>
+              <div class="collapse" id="navbar-admin">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">User</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="alternative.html" class="nav-link">Role</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="alternative.html" class="nav-link">Assign Role</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="alternative.html" class="nav-link">Menu List</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="alternative.html" class="nav-link">Access List</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="alternative.html" class="nav-link">Contact List</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+          <!-- <li class="nav-item">
             <h6 class="navbar-heading p-2 text-mmuted">
               <span class="docs-normal"> <i class="fa fa-folder-open"></i> Content</span>
             </h6>
@@ -107,7 +171,7 @@
           <li class="nav-item"><a href="" class="nav-link text-template-primary"> <i class="fa fa-user-cog"></i> Assign Role</a></li>
           <li class="nav-item"><a href="" class="nav-link text-template-primary"><i class="fa fa-bars"></i>Menu List</a></li>
           <li class="nav-item"><a href="" class="nav-link text-template-primary"><i class="fa fa-user-lock"></i>Access List</a></li>
-          <li class="nav-item"><a href="" class="nav-link text-template-primary"><i class="fa fa-address-card"></i>Contact List</a></li>
+          <li class="nav-item"><a href="" class="nav-link text-template-primary"><i class="fa fa-address-card"></i>Contact List</a></li> -->
         </ul>
 
       </div>
