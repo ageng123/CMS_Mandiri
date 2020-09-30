@@ -82,11 +82,19 @@
           </li>
           <li class="nav-item">
             <h6 class="navbar-heading p-2 text-mmuted">
-              <span class="docs-normal">Content</span>
+              <span class="docs-normal"> <i class="fa fa-folder-open"></i> Content</span>
             </h6>
           </li>
-          <li class="nav-item"><a href="" class="nav-link text-template-primary">Berita</a></li>
-          <li class="nav-item"><a href="" class="nav-link text-template-primary">Product</a></li>
+          <li class="nav-item"><a href="" class="nav-link text-template-primary"> <i class="fa fa-newspaper"></i> Berita</a></li>
+          <li class="nav-item"><a href="" class="nav-link text-template-primary"> <i class="fa fa-cart-plus"></i> Product</a></li>
+          <hr class="my-3">
+          <li class="nav-item">
+            <h6 class="navbar-heading p-2 text-mmuted">
+              <span class="docs-normal"> <i class="fa fa-bookmark"></i> Kategory</span>
+            </h6>
+          </li>
+          <li class="nav-item"><a href="" class="nav-link text-template-primary"> <i class="fa fa-newspaper"></i> Berita</a></li>
+          <li class="nav-item"><a href="" class="nav-link text-template-primary"> <i class="fa fa-cart-plus"></i> Product</a></li>
           <hr class="my-3">
           <li class="nav-item">
             <h6 class="navbar-heading p-2 text-mmuted">
