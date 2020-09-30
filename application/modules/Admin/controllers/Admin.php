@@ -45,6 +45,8 @@ class Admin extends CI_Controller {
 			$row[] = $key+1;
 			$row[] = $val->username;
 			$row[] = $val->password;
+			$row[] = $val->active == 0 ? 'aktif' : 'tidak aktif';
+			$row[] = '<a href='.base_url('admin').' class="btn btn-success btn-sm">Edit</a><a href='.base_url('admin').' class="btn btn-danger btn-sm">Hapus</a>';
 			$result[] = $row;
 		endforeach;
 		$data = $this->msg(200, null, $result);
