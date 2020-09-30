@@ -2,8 +2,9 @@
 const DatatableServices = {
     dataUri: '',
     container: '',
+    table : new Array(),
     initDT: () => {
-        let DT = $(DatatableServices.container).DataTable({
+        DatatableServices.table = $(DatatableServices.container).DataTable({
             "processing": true,
             "serverSide": false,
             "ajax": {
@@ -12,12 +13,15 @@ const DatatableServices = {
             },
             "columnDefs": [ {
                 orderable: false,
-                className: 'select-checkbox',
-                targets:   1
+                className: 'select-checkbox form-check-input',
+                targets:   1,
+                'checkboxes': {
+                    'selectRow': true
+                 }
             } ],
             "select": {
                 style:    'multi',
-                selector: 'td:first-child'
+                selector: 'td:first-child',
             },
             "order": [[ 1, 'asc' ]],
             language: {
@@ -31,7 +35,7 @@ const DatatableServices = {
                 {
                     text: '<i class="fa fa-trash"></i> Delete',
                     action: function () {
-                        var count = DT.rows('.selected').data();
+                        var count = DatatableServices.table.rows('.selected').data();
                         count.each(function(index){
                             console.log(index[0]);
                         })
@@ -40,8 +44,7 @@ const DatatableServices = {
                 }
             ]
         });
-        DT.column(0).visible(false);
-        console.log(DT);
+        DatatableServices.table.column(0).visible(false);
     },
     setContainer: (id) => {
         console.log(id);
@@ -55,5 +58,14 @@ $(document).ready(function () {
         DatatableServices.setContainer(container);
         DatatableServices.dataUri = uri;
         DatatableServices.initDT();
+    })
+    $('.all-checkbox-dt').on('click', function(){
+        console.log(DatatableServices.table)
+        $(this).toggleClass('select');
+        if($(this).hasClass('select')){
+            DatatableServices.table.rows().select();
+        } else {
+            DatatableServices.table.rows().deselect();
+        }
     })
 })

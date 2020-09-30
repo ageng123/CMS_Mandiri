@@ -29,7 +29,7 @@
           <thead class="thead-light">
             <tr>
               <th></th>
-              <th></th>
+              <th class="text-center" style="padding: 1.3vh"><input type="checkbox" class="form-check-input all-checkbox-dt" style="position: inherit; margin: auto" name="" id=""></th>
               <th>No</th>
               <th>Kolom A</th>
               <th>Kolom B</th>
