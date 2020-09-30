@@ -3,14 +3,32 @@ const DatatableServices = {
     dataUri: '',
     container: '',
     initDT: () => {
-        $(DatatableServices.container).DataTable({
+        let DT = $(DatatableServices.container).DataTable({
             "processing": true,
             "serverSide": false,
             "ajax": {
                 "url": DatatableServices.dataUri,
                 "type": "POST"
-            }
+            },
+            "columnDefs": [ {
+                orderable: false,
+                className: 'select-checkbox',
+                targets:   0
+            } ],
+            "select": {
+                style:    'multi',
+                selector: 'td:first-child'
+            },
+            "order": [[ 0, 'asc' ]],
+            language: {
+                paginate: {
+                  next: '<i class="fa fa-angle-right">',
+                  previous: '<i class="fa fa-angle-left">'  
+                }
+              },
+              button
         });
+        console.log(DT);
     },
     setContainer: (id) => {
         console.log(id);

@@ -42,6 +42,7 @@ class Admin extends CI_Controller {
 		$result = array();
 		foreach($output as $key => $val):
 			$row = array();
+			$row[] = '';
 			$row[] = $key+1;
 			$row[] = $val->username;
 			$row[] = $val->password;

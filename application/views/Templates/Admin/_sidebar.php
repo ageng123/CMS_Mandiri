@@ -85,7 +85,7 @@
               <span class="docs-normal"> <i class="fa fa-folder-open"></i> Content</span>
             </h6>
           </li>
-          <li class="nav-item"><a href="" class="nav-link text-template-primary"> <i class="fa fa-newspaper"></i> Berita</a></li>
+          <li class="nav-item"><a href="" class="nav-link text-template-primary"> <i class="fa fa-newspaper text-primary"></i> Berita</a></li>
           <li class="nav-item"><a href="" class="nav-link text-template-primary"> <i class="fa fa-cart-plus"></i> Product</a></li>
           <hr class="my-3">
           <li class="nav-item">

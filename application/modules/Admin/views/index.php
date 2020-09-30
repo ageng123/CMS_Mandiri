@@ -28,6 +28,7 @@
         <table class="table table-flush init-DataTable" data-url="<?= base_url('Admin/getJSON') ?>" id="userTbl">
           <thead class="thead-light">
             <tr>
+              <th></th>
               <th>No</th>
               <th>Kolom A</th>
               <th>Kolom B</th>
