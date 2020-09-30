@@ -47,7 +47,11 @@
                 </ul>
               </div>
             </li> -->
-
+          <style>
+            .text-template-primary{
+              color: #52291C;
+            }
+          </style>
           <li class="nav-item">
             <a class="nav-link" href="#">
               <i class="ni ni-shop text-primary"></i>
@@ -81,20 +85,21 @@
               <span class="docs-normal">Content</span>
             </h6>
           </li>
-          <li class="nav-item"><a href="" class="nav-link">Berita</a></li>
-          <li class="nav-item"><a href="" class="nav-link">Product</a></li>
+          <li class="nav-item"><a href="" class="nav-link text-template-primary">Berita</a></li>
+          <li class="nav-item"><a href="" class="nav-link text-template-primary">Product</a></li>
           <hr class="my-3">
           <li class="nav-item">
             <h6 class="navbar-heading p-2 text-mmuted">
+              <i class="fa fa-cogs"></i>
               <span class="docs-normal">Administration</span>
             </h6>
           </li>
-          <li class="nav-item"><a href="" class="nav-link">User</a></li>
-          <li class="nav-item"><a href="" class="nav-link">Role</a></li>
-          <li class="nav-item"><a href="" class="nav-link">Assign Role</a></li>
-          <li class="nav-item"><a href="" class="nav-link">Menu List</a></li>
-          <li class="nav-item"><a href="" class="nav-link">Access List</a></li>
-          <li class="nav-item"><a href="" class="nav-link">Contact List</a></li>
+          <li class="nav-item"><a href="" class="nav-link text-template-primary"> <i class="fa fa-user"></i> User</a></li>
+          <li class="nav-item"><a href="" class="nav-link text-template-primary"> <i class="fa fa-address-book"></i>Role</a></li>
+          <li class="nav-item"><a href="" class="nav-link text-template-primary"> <i class="fa fa-user-cog"></i> Assign Role</a></li>
+          <li class="nav-item"><a href="" class="nav-link text-template-primary"><i class="fa fa-bars"></i>Menu List</a></li>
+          <li class="nav-item"><a href="" class="nav-link text-template-primary"><i class="fa fa-user-lock"></i>Access List</a></li>
+          <li class="nav-item"><a href="" class="nav-link text-template-primary"><i class="fa fa-address-card"></i>Contact List</a></li>
         </ul>
 
       </div>
