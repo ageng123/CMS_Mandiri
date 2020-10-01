@@ -78,3 +78,24 @@
     </div>
   </div>
   <!-- //  page output -->
+  
+  <style>
+    .no-border {
+      border-color: transparent;
+    }
+
+    .no-bg {
+      background-color: transparent;
+    }
+    .section-bg2{
+      background-color: #efebe8;
+    }
+    
+      .kontak-heading {
+        border-bottom: 4px solid #ddaa37;
+        width: max-content;
+      }
+      .text-primary{
+        color: #795839 !important;
+      }
+    </style>
