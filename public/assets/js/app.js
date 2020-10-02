@@ -68,4 +68,23 @@ $(document).ready(function () {
             DatatableServices.table.rows().deselect();
         }
     })
+    $('.datepicker').datetimepicker({
+        format: 'YYYY-MM-DD'
+    })
+    $('input[type="file"]').on('change', function(){
+        let preview = $(this).attr('data-preview');
+        console.log(preview);
+        let input = this;
+        console.log(input);
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function(e) {
+              $(preview).attr('src', e.target.result);
+              $(preview).html('<embed src="'+e.target.result+'" type="" id="foto_ahli_waris" class="mt-2 p-2 file-border">');
+            }
+            
+            reader.readAsDataURL(input.files[0]); // convert to base64 string
+          } 
+    })
 })
