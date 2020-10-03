@@ -54,7 +54,6 @@
   <script src="<?= base_url('assets/new_template/') ?>js/demo.min.js"></script>
 
   <!-- JS CUSTOM UNTUK DATATABLE -->
-  <script src="<?= base_url('assets/js/') ?>app.js"></script>
 
 
   <script>
@@ -99,6 +98,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha512-GDey37RZAxFkpFeJorEUwNoIbkTwsyC736KNSYucu1WJWFK9qTdzYub8ATxktr6Dwke7nbFaioypzbDOQykoRg==" crossorigin="anonymous"></script>
   <link href='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/dropzone.css' type='text/css' rel='stylesheet'>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/dropzone.js' type='text/javascript'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/trumbowyg.min.js" integrity="sha512-l6MMck8/SpFCgbJnIEfVsWQ8MaNK/n2ppTiELW3I2BFY5pAm/WjkNHSt+2OD7+CZtygs+jr+dAgzNdjNuCU7kw==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/langs/id.min.js" integrity="sha512-/PIPqv1zRLefHrC80MyrIn1AzLHfmoHY/g4OSIpaWVytX+DmWnX/tBuupyABlPLHzqxztUKpiUWegtKO4cKKZg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/plugins/cleanpaste/trumbowyg.cleanpaste.min.js" integrity="sha512-cDDBhQvC08atXuhAhYPJjzgGUDH8oKtgatdpN7tl6mxBwS+cY9VwOItZVsp4gjptZmUasVXzfYYuhtrLS3Lafg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/plugins/pasteimage/trumbowyg.pasteimage.min.js" integrity="sha512-OQx/CQBZBho4b9cGlA/FnrMeXWj4GPlXfpeWyih9xrogS9hkDg91lGXhoff6LZc8RfSYm1EaMB5dUPeR72Hkvg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/plugins/allowtagsfrompaste/trumbowyg.allowtagsfrompaste.min.js" integrity="sha512-Zuq+wA/YLqIGzMTTwdEx7amSDq7QKEcygLO4S8w1MeUytDQAGGZza/kZxCfwp0QiPdGHQHxl/bYGxmoy1MwdDA==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/plugins/upload/trumbowyg.upload.min.js" integrity="sha512-g5wjYAiDs8BUjvYsS72hTfj1N255lOfulYWK/c+SM5JyldgDD9E5cpUSsCqighP7PiSqX+6FlTW48RI85BDqKw==" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+  <script src="<?= base_url('assets/js/') ?>app.js"></script>
+
 </body>
 
 </html>

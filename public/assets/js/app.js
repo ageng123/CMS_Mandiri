@@ -87,4 +87,22 @@ $(document).ready(function () {
             reader.readAsDataURL(input.files[0]); // convert to base64 string
           } 
     })
+    $('.news-content').trumbowyg({
+        btns: [
+            ['viewHTML'],
+            ['undo', 'redo'], // Only supported in Blink browsers
+            ['formatting'],
+            ['strong', 'em', 'del'],
+            ['superscript', 'subscript'],
+            ['link'],
+            ['insertImage'],
+            ['upload'],
+            ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+            ['unorderedList', 'orderedList'],
+            ['horizontalRule'],
+            ['removeformat'],
+            ['fullscreen']
+        ]
+    });
+    $('.select2').select2();
 })

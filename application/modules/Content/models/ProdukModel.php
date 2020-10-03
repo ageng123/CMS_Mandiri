@@ -1,9 +1,9 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
  require_once(APPPATH.'/models/Main.php');
-    class RoleModel extends Main{
-        protected $table = 'roles_dat';
-        protected $primaryKey = 'id_role';
+    class KategoriModel extends Main{
+        protected $table = 'kategori_list';
+        protected $primaryKey = 'id_kategori';
         
         public function __construct(){
             parent::__construct();
