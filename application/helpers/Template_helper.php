@@ -46,4 +46,12 @@
         $decoded = $CI->encryption->decrypt($code);
         return $decoded;
     }
+    function json_output($status = null, $msg = ' Data Found', $data = []){
+		$result = [
+			'kode' => $status, 
+			'msg' => $msg,
+			'data' => $data
+		];
+		return $result;
+	}
 ?>

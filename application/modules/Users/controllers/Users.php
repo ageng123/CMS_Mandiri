@@ -41,15 +41,13 @@ class Users extends CI_Controller {
 		$result = array();
 		foreach($output as $key => $val):
 			$row = array();
-			$row[] = $val->id_user;
+			$row[] = $val->id_role;
 			$row[] = '';
-			$row[] = $val->username;
-			$row[] = $val->password;
-			$row[] = $val->active == 0 ? 'aktif' : 'tidak aktif';
+			$row[] = $val->nama_role;
 			$row[] = '<a href='.base_url('admin').' class="btn btn-success btn-sm">Edit</a><a href='.base_url('admin').' class="btn btn-danger btn-sm">Hapus</a>';
 			$result[] = $row;
 		endforeach;
-		$data = $this->msg(200, null, $result);
+		$data = json_output(200, null, $result);
 		$data['draw'] = $this->input->post('draw');
 		echo JSON_ENCODE($data, JSON_PRETTY_PRINT);
 	}
