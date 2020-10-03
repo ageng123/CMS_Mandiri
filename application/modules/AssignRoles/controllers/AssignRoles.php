@@ -13,7 +13,7 @@ class AssignRoles extends CI_Controller {
 		$content = 'AssignRoles/list';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
-			'card_title' => "Data Roles"
+			'card_title' => "Data User Roles"
 		];
 		admin_parse($content, $data);
 		// $this->load->view('welcome_message');
