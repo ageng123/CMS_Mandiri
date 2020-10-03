@@ -49,6 +49,30 @@ class Berita extends CI_Controller {
 		return $output->username;
 	}
 	// Form Url
+	private function upload($params){
+		$folder = APPPATH.'../public/resources/Berita/';
+		$config['upload_path']          = $folder;
+		$config['allowed_types']        = '*';
+		// $config['max_size']             = 100;
+		// $config['max_width']            = 1024;
+		// $config['max_height']           = 768;
+
+		$this->load->library('upload', $config);
+		if(!file_exists($folder)):
+			mkdir($folder, 0777);
+		endif;
+		if ( ! $this->upload->do_upload($params))
+		{
+				return $this->upload->display_errors();
+		}
+		else
+		{
+				// $data = array('upload_data' => $this->upload->data());
+				
+				// $this->load->view('upload_success', $data);
+				return (object)$this->upload->data();
+		}
+	}
 	public function add()
 	{
 		$content = 'content/berita/add';
@@ -67,6 +91,8 @@ class Berita extends CI_Controller {
 			$model->content = $this->input->post('isi_berita');
 			$model->tag_id = implode(',',$this->input->post('kategori_berita'));
 			$model->status = $this->input->post('status_berita');
+			$cover = $this->upload('cover_berita');
+			$model->thumbnail = $cover->file_name;
 			$model->view = 0; //must-edit
 			$model->author = 3; //must-edit
 			if($model->save()):
@@ -97,7 +123,10 @@ class Berita extends CI_Controller {
 			$model->content = $this->input->post('isi_berita');
 			$model->tag_id = implode(',',$this->input->post('kategori_berita'));
 			$model->status = $this->input->post('status_berita');
-			$model->view = 0; //must-edit
+			$cover = $this->upload('cover_berita');
+			if(isset($cover->file_name)):
+				$model->thumbnail = $cover->file_name;
+			endif;
 			$model->author = 3; //must-edit
 			if($model->update($id)):
 				return redirect(base_url('content/berita'));

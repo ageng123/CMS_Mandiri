@@ -22,6 +22,15 @@
         <div class="table-responsive card-body py-4">
           <form action="<?= $form_url ?>" class='row' method="POST" enctype="multipart/form-data">
             <div class="form-group col-md-12">
+              <label for="">Cover Berita</label>
+              <input type="file" name="cover_berita" data-preview="#cover_berita" id="" class="form-control">
+              <div class="preview" id="cover_berita">
+                <?php if(isset($form_data) && $form_data->thumbnail != null): ?>
+                  <embed src="<?= base_url('resources/Berita/'.$form_data->thumbnail) ?>" type="" id="foto_ahli_waris" class="mt-2 p-2 file-border">
+                <?php endif; ?>
+              </div>
+            </div>
+            <div class="form-group col-md-12">
               <label for="">Judul Berita</label>
               <input type="text" name="judul" value="<?= isset($form_data) ? $form_data->title : '' ?>" id="" class="form-control">
             </div>
