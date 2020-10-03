@@ -33,7 +33,7 @@
   <link rel="stylesheet" href="<?= base_url('assets/new_template/') ?>vendor/datatables.net-select-bs4/css/select.bootstrap4.min.css">
   <!-- Argon CSS -->
   <link rel="stylesheet" href="<?= base_url('assets/new_template/') ?>css/argon.min-v=1.0.0.css" type="text/css">
-  <!-- <link rel="stylesheet" href="<?= base_url('assets/new_template/') ?>css/css_baru.css" type="text/css"> -->
+  <link rel="stylesheet" href="<?= base_url('assets/') ?>css/custom.css" type="text/css">
   <style type="text/css">
     .bg-primary {
       background-color: #eba502!important;
