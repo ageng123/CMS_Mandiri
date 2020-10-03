@@ -36,14 +36,16 @@ class Users extends CI_Controller {
 	}
 	public function getJSON(){
 		$model = new UserModel;
-		$output = $model->findBy(['active' => 0]);
+		$output = $model->findBy(['active' => 1]);
 		$no = $this->input->post('start');
 		$result = array();
 		foreach($output as $key => $val):
 			$row = array();
-			$row[] = $val->id_role;
+			$row[] = $val->id_user;
 			$row[] = '';
-			$row[] = $val->nama_role;
+			$row[] = $val->username;
+			$row[] = '';
+			$row[] = $val->active == 1 ? 'aktif' : ' tidak aktif';
 			$row[] = '<a href='.base_url('admin').' class="btn btn-success btn-sm">Edit</a><a href='.base_url('admin').' class="btn btn-danger btn-sm">Hapus</a>';
 			$result[] = $row;
 		endforeach;
