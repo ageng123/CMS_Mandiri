@@ -93,10 +93,10 @@
               <label for="">Additional</label>
               <textarea name="additional" id="" cols="30" rows="10" class="form-control"></textarea>
             </div>
-        </div>
-        <div class="card-footer">
-          <button type="submit" class="btn btn-lg btn-success">Simpan</button>
-          <button class="btn btn-lg btn-danger">Cancel</button>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-lg btn-danger" onClick="javascript:history.go(-1)"><i class="fa fa-times"></i> &nbsp;Batal</button>
+              <button type="submit" class="btn btn-lg btn-primary"><i class="fa fa-edit"></i> &nbsp;Update</button>
           </form>
         </div>
       </div>

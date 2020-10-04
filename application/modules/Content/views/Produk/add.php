@@ -36,7 +36,7 @@
             </div>
             <div class="form-group col-md-12">
               <label for="">Harga Produk</label>
-              <input type="text" name="subjudul" value="<?= isset($form_data) ? $form_data->sub : '' ?>" id="" class="form-control">
+              <input type="number" name="subjudul" value="<?= isset($form_data) ? $form_data->sub : '' ?>" id="" class="form-control">
             </div>
             <div class="form-group col-md-12">
               <label for="">Kategori Produk</label>
@@ -61,9 +61,9 @@
               </select>
             </div>
         </div>
-        <div class="card-footer">
-          <button type="submit" class="btn btn-lg btn-success">Simpan</button>
-          <button class="btn btn-lg btn-danger">Cancel</button>
+        <div class="card-footer text-right">
+            <button type="button" class="btn btn-lg btn-danger" onClick="javascript:history.go(-1)"><i class="fa fa-times"></i> &nbsp;Batal</button>
+            <button type="submit" class="btn btn-lg btn-primary"><i class="fa fa-paper-plane"></i> &nbsp;Kirim</button>
           </form>
         </div>
       </div>

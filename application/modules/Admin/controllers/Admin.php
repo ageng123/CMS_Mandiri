@@ -11,6 +11,7 @@ class Admin extends CI_Controller {
 
 
 	public function index(){
+		$location = $this->uri->segment(1);
 		$model = new Admin_model();
 		$user = $model->findBy(['active' => '1']);
 		$content = 'index';

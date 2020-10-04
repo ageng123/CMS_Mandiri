@@ -38,10 +38,9 @@
               </select>
             </div>
         </div>
-        <div class="card-footer">
-          <button type="submit" class="btn btn-lg btn-success">Simpan</button>
-          <button class="btn btn-lg btn-danger">Cancel</button>
-          </form>
+        <div class="card-footer text-right">
+              <button type="button" class="btn btn-lg btn-danger" onClick="javascript:history.go(-1)"><i class="fa fa-times"></i> &nbsp;Batal</button>
+              <button type="submit" class="btn btn-lg btn-primary"><i class="fa fa-edit"></i> &nbsp;Update</button>
         </div>
       </div>
     </div>

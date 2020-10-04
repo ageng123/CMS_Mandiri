@@ -8,6 +8,7 @@ class Users extends CI_Controller {
 		parent::__construct();
 		$this->load->model('UserModel');
 	}
+
 	private function msg($status = null, $msg = ' Data Found', $data = []){
 		$result = [
 			'kode' => $status, 
@@ -16,17 +17,21 @@ class Users extends CI_Controller {
 		];
 		return $result;
 	}
+
 	public function index()
 	{
-		$model = new UserModel();
-		$user = $model->findBy(['active' => '1']);
-		$content = 'list';
+		$content = 'users/list';
+		$this->formUrl = base_url('Users/save');
+
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS'
+			'form_url' => $this->formUrl,
+			'title' => 'Mandiri Sekuritas - CMS',
+			'card_title' => "Master Data User"
 		];
-		admin_parse($content, null);
+		admin_parse($content, $data);
 		// $this->load->view('welcome_message');
 	}
+
 	public function save_data()
 	{
 		$model = new Landing_model();
@@ -34,6 +39,7 @@ class Users extends CI_Controller {
 		$model->active = 1;
 		$model->delete(4);
 	}
+
 	public function getJSON(){
 		$model = new UserModel;
 		$output = $model->findBy(['active' => 1]);
@@ -46,13 +52,18 @@ class Users extends CI_Controller {
 			$row[] = $val->username;
 			$row[] = '';
 			$row[] = $val->active == 1 ? 'aktif' : ' tidak aktif';
-			$row[] = '<a href='.base_url('admin').' class="btn btn-success btn-sm">Edit</a><a href='.base_url('admin').' class="btn btn-danger btn-sm">Hapus</a>';
+			// $row[] = '<a href='.base_url('admin').' class="btn btn-success btn-sm">Edit</a><a href='.base_url('admin').' class="btn btn-danger btn-sm">Hapus</a>';
+			$row[] = '<a href='.base_url('admin').' class="btn btn-secondary btn-sm" data-toggle="tooltip" title="Detail"><i class="fa fa-info"></i></span></a>
+			<a href='.base_url('admin').' class="btn btn-info btn-sm" data-toggle="tooltip" title="Download Word"><i class="fa fa-download"></i></span></a>
+			<a href='.base_url('admin').' class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
+			<a href='.base_url('admin').' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>';
 			$result[] = $row;
 		endforeach;
 		$data = json_output(200, null, $result);
 		$data['draw'] = $this->input->post('draw');
 		echo JSON_ENCODE($data, JSON_PRETTY_PRINT);
 	}
+
 	public function add()
 	{
 		$this->formUrl = base_url('Users/save');
@@ -63,6 +74,7 @@ class Users extends CI_Controller {
 		$content = 'add';
 		admin_parse($content, $data);
 	}
+
 	private function upload($params, $id){
 				$folder = APPPATH.'../public/resources/upload/'.$id;
 				$config['upload_path']          = $folder;
@@ -87,6 +99,7 @@ class Users extends CI_Controller {
 						return (object)$this->upload->data();
                 }
 	}
+
 	public function save()
 	{
 		$model = new UserModel();
@@ -114,6 +127,7 @@ class Users extends CI_Controller {
 		$model->update($id);
 		return redirect(base_url('users'));
 	}
+
 	public function testing()
 	{
 		echo APPPATH.'../public/resources/upload';

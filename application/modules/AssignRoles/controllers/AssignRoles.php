@@ -13,7 +13,10 @@ class AssignRoles extends CI_Controller {
 		$content = 'AssignRoles/list';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
-			'card_title' => "Data User Roles"
+			'form_url' => base_url('assignroles/add'),
+			'user_data' => $this->UserModel->all(),
+			'role_data' => $this->RoleModel->all(),
+			'card_title' => "Master Data User Roles"
 		];
 		admin_parse($content, $data);
 		// $this->load->view('welcome_message');
@@ -30,7 +33,11 @@ class AssignRoles extends CI_Controller {
 			$row[] = '';
 			$row[] = $this->getUserNamaById($val->id_user);
 			$row[] = $this->getRoleNamaById($val->id_role);
-			$row[] = '<a href="'.base_url('assignroles/edit').'?session_id='.encode($val->id_lst_roles).'" class="btn btn-success btn-sm">Edit</a><a href="'.base_url('assignroles/destroy').'?session_id='.encode($val->id_lst_roles).'" class="btn btn-danger btn-sm">Hapus</a>';
+			$row[] = '<a href='.base_url('admin').' class="btn btn-secondary btn-sm" data-toggle="tooltip" title="Detail"><i class="fa fa-info"></i></span></a>
+					  <a href='.base_url('admin').' class="btn btn-info btn-sm" data-toggle="tooltip" title="Download Word"><i class="fa fa-download"></i></span></a>
+					  <a href="'.base_url('assignroles/edit').'?session_id='.encode($val->id_lst_roles).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
+					  <a href="'.base_url('assignroles/destroy').'?session_id='.encode($val->id_lst_roles).'" class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>
+					   ';
 			$result[] = $row;
 		endforeach;
 		$data = json_output(200, null, $result);
@@ -64,6 +71,7 @@ class AssignRoles extends CI_Controller {
 			$model->id_role = $this->input->post('role_id');
 			$model->id_user = $this->input->post('user_id');
 			if($model->save()):
+				$this->session->set_flashdata('message', 'Data User Role Telah Di Input');
 				return redirect(base_url('assignroles'));
 			else:
 				echo $this->db->error();
@@ -77,7 +85,7 @@ class AssignRoles extends CI_Controller {
 		$content = 'assignroles/add';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
-			'card_title' => "Tambah Data Roles",
+			'card_title' => "Edit Data User Roles",
 			'form_url' => base_url('assignroles/edit?session_id='.encode($id)),
 			'form_data' => $model->find($id),
 			'user_data' => $this->UserModel->all(),
@@ -88,6 +96,7 @@ class AssignRoles extends CI_Controller {
 			$model->id_role = $this->input->post('role_id');
 			$model->id_user = $this->input->post('user_id');
 			if($model->update($id)):
+				$this->session->set_flashdata('message', 'Data User Role Telah Di Update');
 				return redirect(base_url('assignroles'));
 			else:
 				echo $this->db->error();
@@ -100,6 +109,7 @@ class AssignRoles extends CI_Controller {
 		$id = decode($_GET['session_id']);
 		$model = new AssignRoleModel;
 		$model->delete($id);
+		$this->session->set_flashdata('message', 'Data User Role Telah Di Hapus');
 		return redirect(base_url('assignroles'));
 	}
 	// Export 

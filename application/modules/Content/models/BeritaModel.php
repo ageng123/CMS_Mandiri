@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     $result = 'Sedang Dipublish';
                 break;
                 case 2:
-                    $result = 'Tidak AKtif';
+                    $result = 'Tidak Aktif';
                 break;
                 case 1:
                     $result = 'Dihapus';
