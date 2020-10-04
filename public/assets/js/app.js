@@ -29,20 +29,7 @@ const DatatableServices = {
                   next: '<i class="fa fa-angle-right">',
                   previous: '<i class="fa fa-angle-left">'  
                 }
-              },
-              dom: 'Bfrtip',
-              buttons: [
-                {
-                    text: '<i class="fa fa-trash"></i> Delete',
-                    action: function () {
-                        var count = DatatableServices.table.rows('.selected').data();
-                        count.each(function(index){
-                            console.log(index[0]);
-                        })
-                    },
-                    className: 'btn btn-danger'
-                }
-            ]
+              }
         });
         DatatableServices.table.column(0).visible(false);
     },
@@ -50,6 +37,32 @@ const DatatableServices = {
         console.log(id);
         DatatableServices.container = '#' + id;
     }
+}
+function ActionMessage(type, e, event)
+{
+    event.preventDefault();
+    let title = '';
+    switch(type){
+        case 1:
+            title = 'Konfirmasi Delete';
+        break;
+        default:
+            title = 'Confirmation ?';
+        break;
+    }
+    let msg = e.getAttribute('data-msg');
+    let confirm = Swal.fire({
+        title: title,
+        text: msg,
+        icon: 'error',
+        confirmButtonText: 'Confirm',
+        showConfirmButton: true,
+        showCancelButton: true,
+        closeOnCancel: true
+      }).then(function(isConfirmed){
+        isConfirmed.value ? window.location.href = e.getAttribute('href') : '';
+      })
+    return confirm;
 }
 $(document).ready(function () {
     $('.init-DataTable').each(function () {
@@ -105,4 +118,15 @@ $(document).ready(function () {
         ]
     });
     $('.select2').select2();
+    $('.btn-delete').on('click', function(e){
+        e.preventDefault()
+        let msg = $(this).attr('data-msg');
+        let uri = $(this).attr('href');
+        console.log($(this));
+        if(confirm(msg)){
+            windor.location.href = uri;
+            
+        }
+    })
+    
 })

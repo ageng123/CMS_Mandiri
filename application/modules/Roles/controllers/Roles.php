@@ -29,7 +29,7 @@ class Roles extends CI_Controller {
 			$row[] = $val->id_role;
 			$row[] = '';
 			$row[] = $val->nama_role;
-			$row[] = '<a href="'.base_url('roles/edit').'?session_id='.encode($val->id_role).'" class="btn btn-success btn-sm">Edit</a><a href="'.base_url('roles/destroy').'?session_id='.encode($val->id_role).'" class="btn btn-danger btn-sm">Hapus</a>';
+			$row[] = '<a href="'.base_url('roles/edit').'?session_id='.encode($val->id_role).'" class="btn btn-success btn-sm">Edit</a><a href="'.base_url('roles/destroy').'?session_id='.encode($val->id_role).'" class="btn btn-danger btn-sm btn-delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Role : '.$val->nama_role.' ? ">Hapus</a>';
 			$result[] = $row;
 		endforeach;
 		$data = json_output(200, null, $result);
