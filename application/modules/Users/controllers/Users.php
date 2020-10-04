@@ -6,7 +6,7 @@ class Users extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		$this->load->model('UserModel');
+		$this->load->model(['UserModel', 'AssignRoles/AssignRoleModel', 'Roles/RoleModel']);
 	}
 	private function msg($status = null, $msg = ' Data Found', $data = []){
 		$result = [
@@ -44,7 +44,7 @@ class Users extends CI_Controller {
 			$row[] = $val->id_user;
 			$row[] = '';
 			$row[] = $val->username;
-			$row[] = '';
+			$row[] = $this->getRoleNamaByIDUser($val->id_user);
 			$row[] = $val->active == 1 ? 'aktif' : ' tidak aktif';
 			$row[] = '<a href='.base_url('admin').' class="btn btn-success btn-sm">Edit</a><a href='.base_url('admin').' class="btn btn-danger btn-sm">Hapus</a>';
 			$result[] = $row;
@@ -117,5 +117,18 @@ class Users extends CI_Controller {
 	public function testing()
 	{
 		echo APPPATH.'../public/resources/upload';
+	}
+	public function getRoleNamaByIDUser($id_user){
+		$roleModel = new AssignRoleModel();
+		$role = $roleModel->findBy(['id_user' => $id_user]);
+		if(count($role) > 0):
+			$role = $role[0];
+			$modelRoleDetail = new RoleModel();
+			$role_detail = $modelRoleDetail->find($role->id_role);
+			$output = $role_detail->nama_role;
+		return $output;
+		else:
+			return 'Jabatan Belum Diisi';
+		endif;
 	}
 }
