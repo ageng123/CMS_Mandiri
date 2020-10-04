@@ -1,5 +1,9 @@
 <!-- Sidenav -->
 <nav class="sidenav navbar navbar-vertical fixed-left navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+    <?php 
+      $location1 = $this->uri->segment(1); 
+      $location2 = $this->uri->segment(2); 
+    ?>
 
   <div class="scrollbar-inner">
 
@@ -53,8 +57,8 @@
             }
           </style>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="ni ni-shop text-primary"></i>
+            <a  class="nav-link" href="#">
+              <i class="ni ni-shop" style="color: #eba502;"></i>
               <span class="nav-link-text">Dashboard</span>
             </a>
           </li>
@@ -82,67 +86,67 @@
           </li> -->
 
           <li class="nav-item">
-              <a class="nav-link" href="#navbar-content" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
-                <i class="ni ni-archive-2 text-green"></i>
-                <span class="nav-link-text">Content</span>
+              <a <?php if($location1 == 'users' OR $location1 == 'roles' OR  $location1 == 'assignroles') { echo 'class="nav-link active" style="color: white;"';} else { echo 'class="nav-link"';} ?> href="#navbar-admin" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
+                <i <?php if($location1 == 'users' OR $location1 == 'roles' OR  $location1 == 'assignroles') { echo 'class="ni ni-archive-2 text-white"';} else { echo 'class="ni ni-archive-2" style="color: #eba502;"';} ?>></i>
+                <span class="nav-link-text">Master Data</span>
               </a>
-              <div class="collapse" id="navbar-content">
-                <ul class="nav nav-sm flex-column">
+              <div <?php if($location1 == 'users' OR $location1 == 'roles' OR  $location1 == 'assignroles') { echo 'class="collapse show"';} else { echo 'class="collapse"';} ?> id="navbar-admin">
+                <ul class="nav nav-sm flex-column
                   <li class="nav-item">
-                    <a href="<?= base_url('content/berita') ?>" class="nav-link">Berita</a>
+                    <a href="<?= base_url('users') ?>" <?php if($location1 == 'users') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>User</a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url('content/product') ?>" class="nav-link">Product</a>
+                    <a href="<?= base_url('roles') ?>" <?php if($location1 == 'roles') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Role</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?= base_url('assignroles') ?>" <?php if( $location1 == 'assignroles') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>User Roles</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Access List</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Contact List</a>
                   </li>
                 </ul>
               </div>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#navbar-category" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
-                <i class="ni ni-spaceship text-pink"></i>
+              <a <?php if($location1 == 'kategori') { echo 'class="nav-link active" style="color: white;"';} else { echo 'class="nav-link"';} ?> href="#navbar-category" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
+                <i <?php if($location1 == 'kategori') { echo 'class="ni ni-archive-2 text-white"';} else { echo 'class="ni ni-archive-2" style="color: #eba502;"';} ?>></i>
                 <span class="nav-link-text">Kategori</span>
               </a>
-              <div class="collapse" id="navbar-category">
+              <div <?php if($location1 == 'kategori') { echo 'class="collapse show"';} else { echo 'class="collapse"';} ?> id="navbar-category">
                 <ul class="nav nav-sm flex-column">
                   <li class="nav-item">
-                    <a href="<?= base_url('kategori/berita') ?>" class="nav-link">Berita</a>
+                    <a href="<?= base_url('kategori/berita') ?>" <?php if($location1 == 'kategori' AND $location2 == 'berita') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Berita</a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url('kategori/product') ?>" class="nav-link">Product</a>
+                    <a href="<?= base_url('kategori/product') ?>" <?php if($location1 == 'kategori' AND $location2 == 'product') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Produk</a>
                   </li>
                 </ul>
               </div>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#navbar-admin" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
-                <i class="ni ni-planet text-info"></i>
-                <span class="nav-link-text">Administration</span>
+              <a <?php if($location1 == 'content') { echo 'class="nav-link active" style="color: white;"';} else { echo 'class="nav-link"';} ?> href="#navbar-content" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
+                <i <?php if($location1 == 'content') { echo 'class="ni ni-archive-2 text-white"';} else { echo 'class="ni ni-archive-2" style="color: #eba502;"';} ?>></i>
+                <span class="nav-link-text">Konten</span>
               </a>
-              <div class="collapse" id="navbar-admin">
+              <div <?php if($location1 == 'content') { echo 'class="collapse show"';} else { echo 'class="collapse"';} ?> id="navbar-content">
                 <ul class="nav nav-sm flex-column">
                   <li class="nav-item">
-                    <a href="<?= base_url('users') ?>" class="nav-link">User</a>
+                    <a href="<?= base_url('content/berita') ?>" <?php if($location1 == 'content' AND $location2 == 'berita') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Berita</a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url('roles') ?>" class="nav-link">Role</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="<?= base_url('AssignRoles') ?>" class="nav-link">Assign Role</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="<?= base_url('menu') ?>" class="nav-link">Menu List</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="alternative.html" class="nav-link">Access List</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="alternative.html" class="nav-link">Contact List</a>
+                    <a href="<?= base_url('content/product') ?>" <?php if($location1 == 'content' AND $location2 == 'product') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Produk</a>
                   </li>
                 </ul>
               </div>
             </li>
+
+
+
 
         </ul>
 

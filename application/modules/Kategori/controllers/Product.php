@@ -13,7 +13,8 @@ class Product extends CI_Controller {
 		$content = 'kategori/produk/list';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
-			'card_title' => "Kategori Produk"
+			'card_title' => "Data Kategori Produk",
+			'form_url' => base_url('kategori/product/add')
 		];
 		admin_parse($content, $data);
 		// $this->load->view('welcome_message');
@@ -29,7 +30,10 @@ class Product extends CI_Controller {
 			$row[] = $val->id_kategori;
 			$row[] = '';
 			$row[] = $val->nama_kategori;
-			$row[] = '<a href="'.base_url('kategori/product/edit').'?session_id='.encode($val->id_kategori).'" class="btn btn-success btn-sm">Edit</a><a href="'.base_url('kategori/product/destroy').'?session_id='.encode($val->id_kategori).'" class="btn btn-danger btn-sm">Hapus</a>';
+			$row[] = '<a href='.base_url('admin').' class="btn btn-secondary btn-sm" data-toggle="tooltip" title="Detail"><i class="fa fa-info"></i></span></a>
+					  <a href='.base_url('admin').' class="btn btn-info btn-sm" data-toggle="tooltip" title="Download Word"><i class="fa fa-download"></i></span></a>
+					  <a href="'.base_url('kategori/product/edit').'?session_id='.encode($val->id_kategori).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
+					  <a href="'.base_url('kategori/product/destroy').'?session_id='.encode($val->id_kategori).'" class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>';
 			$result[] = $row;
 		endforeach;
 		$data = json_output(200, null, $result);
@@ -52,6 +56,7 @@ class Product extends CI_Controller {
 			$model->deskripsi_kategori = $this->input->post('deskripsi_kategori');
 			$model->jenis_kategori = 2;
 			if($model->save()):
+				$this->session->set_flashdata('message', 'Data Kategori Produk Telah Di Input');
 				return redirect(base_url('kategori/product'));
 			else:
 				echo $this->db->error();
@@ -75,6 +80,7 @@ class Product extends CI_Controller {
 			$model->deskripsi_kategori = $this->input->post('deskripsi_kategori');
 			$model->jenis_kategori = 2;
 			if($model->update($id)):
+				$this->session->set_flashdata('message', 'Data Kategori Produk Telah Di Update');
 				return redirect(base_url('kategori/product'));
 			else:
 				echo $this->db->error();
@@ -87,6 +93,7 @@ class Product extends CI_Controller {
 		$id = decode($_GET['session_id']);
 		$model = new KategoriModel;
 		$model->delete($id);
+			$this->session->set_flashdata('message', 'Data Kategori Produk Telah Di Hapus');
 		return redirect(base_url('kategori/product'));
 	}
 	// Export 

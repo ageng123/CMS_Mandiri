@@ -16,7 +16,7 @@ class Berita extends CI_Controller {
 		$content = 'content/berita/list';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
-			'card_title' => "Data Berita"
+			'card_title' => "Data Konten Berita",
 		];
 		admin_parse($content, $data);
 		// $this->load->view('welcome_message');
@@ -36,7 +36,10 @@ class Berita extends CI_Controller {
 			$row[] = '<i class="fa fa-eye"></i> '.$val->view;
 			$row[] = $model->status($val->status);
 			$row[] = '<h4>'.$model->kategori_list($val->tag_id).'</h4>';
-			$row[] = '<a href="'.base_url('content/berita/edit').'?session_id='.encode($val->id_news).'" class="btn btn-success btn-sm">Edit</a><a href="'.base_url('content/berita/destroy').'?session_id='.encode($val->id_news).'" class="btn btn-danger btn-sm">Hapus</a>';
+			$row[] = '<a href='.base_url('admin').' class="btn btn-secondary btn-sm" data-toggle="tooltip" title="Detail"><i class="fa fa-info"></i></span></a>
+					 <a href='.base_url('admin').' class="btn btn-info btn-sm" data-toggle="tooltip" title="Download Word"><i class="fa fa-download"></i></span></a>
+					 <a href="'.base_url('content/berita/edit').'?session_id='.encode($val->id_news).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
+					 <a href="'.base_url('content/berita/destroy').'?session_id='.encode($val->id_news).'" class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>';
 			$result[] = $row;
 		endforeach;
 		$data = json_output(200, null, $result);
@@ -78,7 +81,7 @@ class Berita extends CI_Controller {
 		$content = 'content/berita/add';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
-			'card_title' => "Tambah Data Kategori Berita",
+			'card_title' => "Tambah Data Konten Berita",
 			'form_url' => base_url('content/berita/add'),
 			'kategori_list' => $this->KategoriModel->findBy(['jenis_kategori' => 1]),
 			'status_list' => $this->status
@@ -96,6 +99,7 @@ class Berita extends CI_Controller {
 			$model->view = 0; //must-edit
 			$model->author = 3; //must-edit
 			if($model->save()):
+				$this->session->set_flashdata('message', 'Data Konten Berita Telah Di Input');
 				return redirect(base_url('content/berita'));
 			else:
 				echo $this->db->error();
@@ -109,7 +113,7 @@ class Berita extends CI_Controller {
 		$content = 'content/berita/add';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
-			'card_title' => "Edit Data Kategori Berita",
+			'card_title' => "Edit Data Konten Berita",
 			'form_url' => base_url('content/berita/edit?session_id='.encode($id)),
 			'form_data' => $model->find($id),
 			'kategori_list' => $this->KategoriModel->findBy(['jenis_kategori' => 1]),
@@ -129,6 +133,7 @@ class Berita extends CI_Controller {
 			endif;
 			$model->author = 3; //must-edit
 			if($model->update($id)):
+				$this->session->set_flashdata('message', 'Data Konten Berita Telah Di Update');
 				return redirect(base_url('content/berita'));
 			else:
 				echo $this->db->error();
@@ -141,6 +146,7 @@ class Berita extends CI_Controller {
 		$id = decode($_GET['session_id']);
 		$model = new BeritaModel;
 		$model->delete($id);
+		$this->session->set_flashdata('message', 'Data Konten Berita Telah Di Hapus');
 		return redirect(base_url('content/berita'));
 	}
 	// Export 

@@ -18,11 +18,20 @@
             <h3><?= isset($card_title) ? $card_title : 'Tabel' ?></h3>
             </div>
             <div class="col-6 text-right"> 
-              <a class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="top" title="Tambah Data" href="<?= base_url('content/product/add') ?>"> <span class="btn-inner--text"><i class="fa fa-plus"></i></span>Tambah Data</a>
-              <a class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="top" title="Export Excel" href="#"> <span class="btn-inner--text"><i class="fa fa-file-excel"></i></span>Export Excel</a>
+              <a class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="Tambah Data" href="<?= base_url('content/product/add') ?>"> <i class="fa fa-plus"></i></a>
+              <a href="#" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="top" title="Export Excel"> <span class="btn-inner--text"><i class="fa fa-file-excel"></i></span></a>
             </div>
         </div>
       </div>
+
+      <div class="flash-data" data-flashdata="<?= $this->session->flashdata('message'); ?>"></div>
+        <?php if($this->session->flashdata('message')) : ?>
+        <!-- <div class="alert alert-block alert-success fade in block-inner">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="icon-cancel-circle"></i></button>
+                  <h6><?php echo $this->session->flashdata('message') ?></h6>
+              </div> -->
+        <?php endif; ?>
+
       <div class="table-responsive py-4">
         <table class="table table-flush init-DataTable" data-url="<?= base_url('content/product/getJSON') ?>" id="userTbl">
           <thead class="thead-light">

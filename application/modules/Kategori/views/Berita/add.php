@@ -30,9 +30,9 @@
               <textarea name="deskripsi_kategori" id="" rows="3" class="form-control"><?= isset($form_data) ? $form_data->deskripsi_kategori : '' ?></textarea>
             </div>
         </div>
-        <div class="card-footer">
-          <button type="submit" class="btn btn-lg btn-success">Simpan</button>
-          <button class="btn btn-lg btn-danger">Cancel</button>
+        <div class="card-footer text-right">
+            <button type="button" class="btn btn-lg btn-danger" onClick="javascript:history.go(-1)"><i class="fa fa-times"></i> &nbsp;Batal</button>
+            <button type="submit" class="btn btn-lg btn-primary"><i class="fa fa-paper-plane"></i> &nbsp;Kirim</button>
           </form>
         </div>
       </div>

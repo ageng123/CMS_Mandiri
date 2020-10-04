@@ -16,7 +16,7 @@ class Product extends CI_Controller {
 		$content = 'content/produk/list';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
-			'card_title' => "Data Produk"
+			'card_title' => "Data Konten Produk"
 		];
 		admin_parse($content, $data);
 		// $this->load->view('welcome_message');
@@ -36,7 +36,10 @@ class Product extends CI_Controller {
 			$row[] = '<i class="fa fa-eye"></i> '.$val->view;
 			$row[] = $model->status($val->status);
 			$row[] = '<h4>'.$model->kategori_list($val->tag_id).'</h4>';
-			$row[] = '<a href="'.base_url('content/produk/edit').'?session_id='.encode($val->id_product).'" class="btn btn-success btn-sm">Edit</a><a href="'.base_url('content/produk/destroy').'?session_id='.encode($val->id_product).'" class="btn btn-danger btn-sm">Hapus</a>';
+			$row[] = '<a href='.base_url('admin').' class="btn btn-secondary btn-sm" data-toggle="tooltip" title="Detail"><i class="fa fa-info"></i></span></a>
+					 <a href='.base_url('admin').' class="btn btn-info btn-sm" data-toggle="tooltip" title="Download Word"><i class="fa fa-download"></i></span></a>
+					 <a href="'.base_url('content/product/edit').'?session_id='.encode($val->id_product).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
+					 <a href="'.base_url('content/product/destroy').'?session_id='.encode($val->id_product).'" class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>';
 			$result[] = $row;
 		endforeach;
 		$data = json_output(200, null, $result);
@@ -78,8 +81,8 @@ class Product extends CI_Controller {
 		$content = 'content/produk/add';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
-			'card_title' => "Tambah Data Kategori Produk",
-			'form_url' => base_url('content/produk/add'),
+			'card_title' => "Tambah Data Konten Produk",
+			'form_url' => base_url('content/product/add'),
 			'kategori_list' => $this->KategoriModel->findBy(['jenis_kategori' => 2]),
 			'status_list' => $this->status
 		];
@@ -96,6 +99,7 @@ class Product extends CI_Controller {
 			$model->view = 0; //must-edit
 			$model->author = 3; //must-edit
 			if($model->save()):
+				$this->session->set_flashdata('message', 'Data Konten Produk Telah Di Input');
 				return redirect(base_url('content/product'));
 			else:
 				echo $this->db->error();
@@ -109,8 +113,8 @@ class Product extends CI_Controller {
 		$content = 'content/produk/add';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
-			'card_title' => "Edit Data Kategori Produk",
-			'form_url' => base_url('content/produk/edit?session_id='.encode($id)),
+			'card_title' => "Edit Data Konten Produk",
+			'form_url' => base_url('content/product/edit?session_id='.encode($id)),
 			'form_data' => $model->find($id),
 			'kategori_list' => $this->KategoriModel->findBy(['jenis_kategori' => 2]),
 			'status_list' => $this->status
@@ -129,7 +133,8 @@ class Product extends CI_Controller {
 			endif;
 			$model->author = 3; //must-edit
 			if($model->update($id)):
-				return redirect(base_url('content/produk'));
+				$this->session->set_flashdata('message', 'Data Konten Produk Telah Di Update');
+				return redirect(base_url('content/product'));
 			else:
 				echo $this->db->error();
 			endif;
@@ -141,7 +146,8 @@ class Product extends CI_Controller {
 		$id = decode($_GET['session_id']);
 		$model = new ProdukModel;
 		$model->delete($id);
-		return redirect(base_url('content/produk'));
+		$this->session->set_flashdata('message', 'Data Konten Produk Telah Di Hapus');
+		return redirect(base_url('content/product'));
 	}
 	// Export 
 	public function tes()

@@ -53,6 +53,10 @@
   <!-- Demo JS - remove this in your project -->
   <script src="<?= base_url('assets/new_template/') ?>js/demo.min.js"></script>
 
+<!-- SCRIPT POP UP BERHASIL SWEETALERT -->
+<script src="<?= base_url('assets/new_template/') ?>sweet/sweetalert2.all.min.js"></script>
+<script src="<?= base_url('assets/new_template/') ?>sweet/aspekkompetensi.js"></script>
+
   <!-- JS CUSTOM UNTUK DATATABLE -->
 
 

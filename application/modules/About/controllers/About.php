@@ -10,8 +10,8 @@ class About extends CI_Controller {
 	}
 	public function index()
 	{
-		$model = new About_model();
-		$user = $model->findBy(['is_active' => '1']);
+		// $model = new About_model();
+		// $user = $model->findBy(['is_active' => '1']);
 		$content = 'index';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS'

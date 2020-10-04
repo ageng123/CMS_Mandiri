@@ -22,13 +22,13 @@
         <div class="table-responsive card-body py-4">
           <form action="<?= $form_url ?>" class='row' method="POST" enctype="multipart/form-data">
             <div class="form-group col-md-12">
-              <label for="">Nama Roles</label>
+              <label for="">Nama Role</label>
               <input type="text" name="nama_role" value="<?= isset($form_data) ? $form_data->nama_role : '' ?>" id="" class="form-control">
             </div>
-        </div>
-        <div class="card-footer">
-          <button type="submit" class="btn btn-lg btn-success">Simpan</button>
-          <button class="btn btn-lg btn-danger">Cancel</button>
+            </div>
+            <div class="card-footer text-right">
+              <button type="button" class="btn btn-lg btn-danger" onClick="javascript:history.go(-1)"><i class="fa fa-times"></i> &nbsp;Batal</button>
+              <button type="submit" class="btn btn-lg btn-primary"><i class="fa fa-paper-plane"></i> &nbsp;Kirim</button>
           </form>
         </div>
       </div>
