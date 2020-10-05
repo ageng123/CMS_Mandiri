@@ -5,17 +5,19 @@
 					<h2 class="text-primary">Subscribe to Our Newsletter ... </h2>
 					<form action="">
 						<div class="form-group">
-							<input type="text" placeholder="Enter Your Email Address." class="form-control">
+							<input type="text" placeholder="Enter Your Email Address ..." class="form-control">
 						</div>
 					</form>
 				</div>
+				<div class="col-1"></div>
 				<div class="col-4">
 					<h2 class="text-primary">Contact Us</h2>
-					<h4 class="text-primary">Rukan Gading Bukit Indah</h4>
-					<p class="text-primary">Alamat rukan gading bukit indah</p>
+					<b class="text-primary">Rukan Gading Bukit Indah</b>
+					<br class="text-primary">Blok A No. 27. Kelapa Gading.
+					<br class="text-primary">Jakarta Utara 14240
 				</div>
-				<div class="col-3">
-					<h2 class='text-primary'>Get Connected !</h2>
+				<div class="col-2">
+					<h3 class='text-primary'>Get Connected </h3>
 				<ul class="list-inline margin-0px text-black">
 							<li class="list-inline-item"><a class="facebook" href="#"><img
 										src="<?= base_url('assets/img/facebook.png') ?>"
