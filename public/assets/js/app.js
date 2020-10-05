@@ -124,7 +124,7 @@ $(document).ready(function () {
         let uri = $(this).attr('href');
         console.log($(this));
         if(confirm(msg)){
-            windor.location.href = uri;
+            window.location.href = uri;
             
         }
     })

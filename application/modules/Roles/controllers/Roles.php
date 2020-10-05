@@ -32,15 +32,7 @@ class Roles extends CI_Controller {
 			$row[] = $val->id_role;
 			$row[] = '';
 			$row[] = $val->nama_role;
-<<<<<<< HEAD
 			$row[] = '<a href="'.base_url('roles/edit').'?session_id='.encode($val->id_role).'" class="btn btn-success btn-sm">Edit</a><a href="'.base_url('roles/destroy').'?session_id='.encode($val->id_role).'" class="btn btn-danger btn-sm btn-delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Role : '.$val->nama_role.' ? ">Hapus</a>';
-=======
-			$row[] = '<a href='.base_url('admin').' class="btn btn-secondary btn-sm" data-toggle="tooltip" title="Detail"><i class="fa fa-info"></i></span></a>
-					  <a href='.base_url('admin').' class="btn btn-info btn-sm" data-toggle="tooltip" title="Download Word"><i class="fa fa-download"></i></span></a>
-					  <a href="'.base_url('roles/edit').'?session_id='.encode($val->id_role).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
-					  <a href="'.base_url('roles/destroy').'?session_id='.encode($val->id_role).'" class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>
-					  ';
->>>>>>> 9698d3c60913490a5d8869651fb4d09b3029cb28
 			$result[] = $row;
 		endforeach;
 		$data = json_output(200, null, $result);
