@@ -207,6 +207,9 @@
 		.page_content{
 			max-width: 100vw;
 		}
+		.border-primary{
+			border-bottom: 4px solid #ddaa37;
+		}
 	</style>
 	<div class="page_content">
 		{_content_}

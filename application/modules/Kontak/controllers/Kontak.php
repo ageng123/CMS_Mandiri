@@ -10,8 +10,8 @@ class Kontak extends CI_Controller {
 	}
 	public function index()
 	{
-		$model = new Kontak_model();
-		$user = $model->findBy(['is_active' => '1']);
+		// $model = new Kontak_model();
+		// $user = $model->findBy(['is_active' => '1']);
 		$content = 'index';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS'
