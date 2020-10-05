@@ -84,11 +84,11 @@
 								}
 							</style>
 							<ul id="menu-main" style="font-size: 14pt !important" class="float-lg-left nav-menu link-padding-tb-25px dropdown-dark">
-								<li><a href="">Tentang <span style="color: #f7a91e">KJKPI</span></a></li>
-								<li><a href="">Syarat & Ketentuan</a></li>
-								<li><a href="">FAQ</a></li>
-								<li><a href="">Berita & Media</a></li>
-								<li><a href="">Kontak</a></li>
+								<li><a href="<? base_url();?>About">Tentang <span style="color: #f7a91e">KJKPI</span></a></li>
+								<li><a href="<? base_url();?>Syarat">Syarat & Ketentuan</a></li>
+								<li><a href="<? base_url();?>Syarat">FAQ</a></li>
+								<li><a href="<? base_url();?>Syarat">Berita & Media</a></li>
+								<li><a href="<? base_url();?>Syarat">Kontak</a></li>
 								<li class="has-dropdown"><a href="#"><img
 											src="<?= base_url('assets/img/profil.png') ?>"
 											style="object-fit: cover;width: 24px; height: 24px" alt="" srcset="">&nbsp;Profile</a>
