@@ -2,7 +2,7 @@
 <html lang="en-US">
 
 <head>
-	<title>TheNile HTML5 Multipurpose Travel Template</title>
+	<title><?= $page_title ?></title>
 	<meta name="author" content="Nile-Theme">
 	<meta name="robots" content="index follow">
 	<meta name="googlebot" content="index follow">
