@@ -127,13 +127,13 @@
                 <img src="<?= base_url('assets/new_template/') ?>img/logo.png"> 
               </div>
 
-              <form action="<?= base_url('admin/prosesLogin') ?>" method="POST">
+              <form enctype="multipart/form-data" data-url="<?= base_url('Auth_api/login_api') ?>" id="form-login">
                 <div class="form-group mb-3">
                   <div class="input-group input-group-merge input-group-alternative">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Email" name="email" type="email" required>
+                    <input class="form-control" placeholder="Email" name="identity" type="email" required>
                   </div>
                 </div>
                 <div class="form-group">
@@ -145,15 +145,16 @@
                   </div>
                 </div>
                 <div class="custom-control custom-control-alternative custom-checkbox">
-                  <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
+                  <input class="custom-control-input" name="remember" id=" customCheckLogin" type="checkbox">
                   <label class="custom-control-label" for=" customCheckLogin">
                     <span class="text-muted">Remember me</span>
                   </label>
                 </div>
+                </form>
                 <div class="text-center">
-                  <button type="submit" class="btn btn-secondary my-4" style="background-color : #eba502;">Sign in</button>
+                  <button class="btn btn-secondary my-4 btn-login-ajax" data-form="#form-login" style="background-color : #eba502;">Sign in</button>
+                  <a href="<?php base_url('auth/forgot_password') ?>" class="btn btn-link">Lupa Password</a>
                 </div>
-              </form>
 
             </div>
           </div>
@@ -179,7 +180,22 @@
   <!-- Argon JS -->
   <script src="<?= base_url('assets/new_template/') ?>/js/argon.min-v=1.0.0.js"></script>
   <!-- Demo JS - remove this in your project -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js" integrity="sha512-Izh34nqeeR7/nwthfeE0SI3c8uhFSnqxV0sI9TvTcXiFJkMd6fB644O64BRq2P/LA/+7eRvCw4GmLsXksyTHBg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/locale/id.min.js" integrity="sha512-he8U4ic6kf3kustvJfiERUpojM8barHoz0WYpAUDWQVn61efpm3aVAD8RWL8OloaDDzMZ1gZiubF9OSdYBqHfQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha512-GDey37RZAxFkpFeJorEUwNoIbkTwsyC736KNSYucu1WJWFK9qTdzYub8ATxktr6Dwke7nbFaioypzbDOQykoRg==" crossorigin="anonymous"></script>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/dropzone.css' type='text/css' rel='stylesheet'>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/dropzone.js' type='text/javascript'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/trumbowyg.min.js" integrity="sha512-l6MMck8/SpFCgbJnIEfVsWQ8MaNK/n2ppTiELW3I2BFY5pAm/WjkNHSt+2OD7+CZtygs+jr+dAgzNdjNuCU7kw==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/langs/id.min.js" integrity="sha512-/PIPqv1zRLefHrC80MyrIn1AzLHfmoHY/g4OSIpaWVytX+DmWnX/tBuupyABlPLHzqxztUKpiUWegtKO4cKKZg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/plugins/cleanpaste/trumbowyg.cleanpaste.min.js" integrity="sha512-cDDBhQvC08atXuhAhYPJjzgGUDH8oKtgatdpN7tl6mxBwS+cY9VwOItZVsp4gjptZmUasVXzfYYuhtrLS3Lafg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/plugins/pasteimage/trumbowyg.pasteimage.min.js" integrity="sha512-OQx/CQBZBho4b9cGlA/FnrMeXWj4GPlXfpeWyih9xrogS9hkDg91lGXhoff6LZc8RfSYm1EaMB5dUPeR72Hkvg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/plugins/allowtagsfrompaste/trumbowyg.allowtagsfrompaste.min.js" integrity="sha512-Zuq+wA/YLqIGzMTTwdEx7amSDq7QKEcygLO4S8w1MeUytDQAGGZza/kZxCfwp0QiPdGHQHxl/bYGxmoy1MwdDA==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/plugins/upload/trumbowyg.upload.min.js" integrity="sha512-g5wjYAiDs8BUjvYsS72hTfj1N255lOfulYWK/c+SM5JyldgDD9E5cpUSsCqighP7PiSqX+6FlTW48RI85BDqKw==" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <script src="<?= base_url('assets/new_template/') ?>/js/demo.min.js"></script>
+  <script src="<?= base_url('assets/') ?>/js/app.js"></script>
+
 </body>
 
 </html>
