@@ -16,7 +16,7 @@ class Landing extends CI_Controller {
 		$data = [
 			'page_title' => 'Mandiri Sekuritas - CMS'
 		];
-		landing_parse($content, null);
+		landing_parse($content, $data);
 		// admin_parse($content, null);
 		// $this->load->view('welcome_message');
 	}

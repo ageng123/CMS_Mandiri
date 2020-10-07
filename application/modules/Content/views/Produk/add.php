@@ -19,8 +19,16 @@
             </div>
           </div>
         </div>
+        </div> 	
         <div class="table-responsive card-body py-4">
+        <div class="image_upload_div">
+            <form action="upload.php" class="dropzone" style="display: flex;flex-direction: row">
+            <div class="fallback">
+              <input name="foto_produk[]" type="file" multiple />
+            </div>
+            </form>
           <form action="<?= $form_url ?>" class='row' method="POST" enctype="multipart/form-data">
+          
             <div class="form-group col-md-12">
               <label for="">Foto Produk</label>
               <input type="file" name="foto_produk[]" multiple="multiple" data-preview="#foto_produk" id="" class="form-control">
