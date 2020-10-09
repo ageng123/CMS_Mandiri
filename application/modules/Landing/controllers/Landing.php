@@ -14,9 +14,9 @@ class Landing extends CI_Controller {
 		$user = $model->findBy(['active' => '1']);
 		$content = 'index';
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS'
+			'page_title' => 'Mandiri Sekuritas - CMS'
 		];
-		landing_parse($content, null);
+		landing_parse($content, $data);
 		// admin_parse($content, null);
 		// $this->load->view('welcome_message');
 	}
@@ -26,5 +26,15 @@ class Landing extends CI_Controller {
 		$model->nama = 'Nofri Willis 2';
 		$model->active = 1;
 		$model->delete(4);
+	}
+	public function pendaftaran()
+	{
+		$content = 'form_pendaftaran';
+		$data = [
+			'page_title' => 'Mandiri Sekuritas - CMS',
+			'form_url' => 'users/add'
+		];
+		landing_parse($content, $data);
+
 	}
 }

@@ -38,6 +38,23 @@ const DatatableServices = {
         DatatableServices.container = '#' + id;
     }
 }
+const HttpServices = {
+    FormData: new Array(),
+    PostAjax: (url) => {
+        var response;
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: Object.assign({}, HttpServices.FormData),
+            ContentType: 'multipart/form-data',
+            async : false,
+            success: function(resp){
+                response = resp
+            }
+        });
+        return response;
+    }
+}
 function ActionMessage(type, e, event)
 {
     event.preventDefault();
@@ -126,6 +143,26 @@ $(document).ready(function () {
         if(confirm(msg)){
             window.location.href = uri;
             
+        }
+    })
+    let BaseUri = 'http://localhost:8000'
+    $('.btn-login-ajax').on('click',function(){
+        let form = $(this).attr('data-form');
+        let url = $(form).attr('data-url');
+        $('input').each(function(index, val){
+            if(val.type == 'checkbox'){
+                HttpServices.FormData[val.name] = val.checked;
+            } else {
+                HttpServices.FormData[val.name] = val.value; 
+            }
+        })
+        let postData = HttpServices.PostAjax(url);
+        postData = JSON.parse(postData);
+        console.log(postData.kode);
+        if(postData.kode == 200){
+            window.location.href = BaseUri+'/admin';
+        } else {
+            console.log(postData);
         }
     })
     

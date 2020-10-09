@@ -21,6 +21,12 @@ class Admin extends CI_Controller {
 		admin_parse($content, null);
 		// $this->load->view('login', $data);
 	}
+	public function login(){
+		$data = [
+			'title' => 'Mandiri Sekuritas - CMS'
+		];
+		$this->load->view('login', $data);
+	}
 	private function msg($status = null, $msg = 'Error Data Not Found', $data = []){
 		$result = [
 			'kode' => $status, 
