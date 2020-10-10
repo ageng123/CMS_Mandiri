@@ -34,3 +34,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             return implode(' ',$result);
         }
     }
+    class Attachment_Model extends Main{
+        protected $table = 'attachment_list';
+        protected $primaryKey = 'id_attachment';
+        
+        public function __construct(){
+            parent::__construct();
+            $this->last_update = date('Y-m-d H:i:s');
+        }
+        public function status($params){
+            $result = '';
+             switch($params){
+                 case 1:
+                     $result = 'Sedang Dipublish';
+                 break;
+                 case 2:
+                     $result = 'Tidak AKtif';
+                 break;
+                 case 1:
+                     $result = 'Dihapus';
+                 break;
+             }
+             return $result;
+         }
+    }

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-class Product extends CI_Controller {
+require_once APPPATH.'controllers/Auth_Guard.php';
+class Product extends Auth_Guard {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model(['ProdukModel', 'Users/UserModel', 'Kategori/KategoriModel']);
@@ -53,7 +53,7 @@ class Product extends CI_Controller {
 	}
 	// Form Url
 	private function upload($params){
-		$folder = APPPATH.'../public/resources/produk/';
+		$folder = APPPATH.'../public/resources/produk/'.$this->session->userdata('user_id');
 		$config['upload_path']          = $folder;
 		$config['allowed_types']        = '*';
 		// $config['max_size']             = 100;
@@ -154,7 +154,25 @@ class Product extends CI_Controller {
 	{
 		$model = new ProdukModel();
 		$output = $model->kategori_list('1,3');
-		var_dump($output);
 
+	}
+	public function upload_foto(){
+		$product = $this->upload('file');
+		var_dump($this->session->userdata());
+		die;
+		if($this->session->userdata('seq') !== null ):
+			$seq = $this->session->userdata('seq') + 1;
+		else:
+			$this->session->set_userdata('seq', 1);
+		endif;
+		if(isset($product)){
+			$model = new Attachment_model;
+			$model->nama_file = $product->file_name;
+			$model->mime = $product->file_type;
+			$model->uploader = $this->session->userdata('user_id');
+			$model->seq = $this->session->userdata('seq');
+			$model->tipe_attachment = 2;
+			$model->save();
+		}
 	}
 }

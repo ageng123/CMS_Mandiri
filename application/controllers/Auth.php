@@ -115,7 +115,7 @@ class Auth extends CI_Controller
 
 		// redirect them to the login page
 		$this->session->set_flashdata('message', $this->ion_auth->messages());
-		redirect(base_url('auth/login'), 'refresh');
+		redirect(base_url('admin/login'), 'refresh');
 	}
 
 	/**
