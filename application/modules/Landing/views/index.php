@@ -126,7 +126,7 @@
       class="modal-close">
       <span aria-hidden="true">&times;</span>
     </button>
-    <a href="<?= base_url();?>Pendaftaran"><img src="<?= base_url('assets/img/') ?>opening.jpg" style="height: auto ; width: 120%" alt=""></a>
+    <a href="<?= base_url();?>pendaftaran"><img src="<?= base_url('assets/img/') ?>opening.jpg" style="height: auto ; width: 120%" alt=""></a>
   </div>
 </div>
 <script>

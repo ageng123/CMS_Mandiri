@@ -153,7 +153,7 @@
                 </form>
                 <div class="text-center">
                   <button class="btn btn-secondary my-4 btn-login-ajax" data-form="#form-login" style="background-color : #eba502;">Sign in</button>
-                  <a href="<?php base_url('auth/forgot_password') ?>" class="btn btn-link">Lupa Password</a>
+                  <a href="<?= base_url('auth/forgot_password') ?>" class="btn btn-link">Lupa Password</a>
                 </div>
 
             </div>
