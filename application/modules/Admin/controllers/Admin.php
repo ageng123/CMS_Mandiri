@@ -21,12 +21,14 @@ class Admin extends CI_Controller {
 		admin_parse($content, null);
 		// $this->load->view('login', $data);
 	}
+
 	public function login(){
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS'
 		];
 		$this->load->view('login', $data);
 	}
+
 	private function msg($status = null, $msg = 'Error Data Not Found', $data = []){
 		$result = [
 			'kode' => $status, 
@@ -35,12 +37,14 @@ class Admin extends CI_Controller {
 		];
 		return $result;
 	}
-	public function save_data(){
-		$model = new Admin_model();
-		$model->nama = 'Nofri Willis 2';
-		$model->active = 1;
-		$model->delete(4);
-	}
+
+	// public function save_data(){
+	// 	$model = new Admin_model();
+	// 	$model->nama = 'Nofri Willis 2';
+	// 	$model->active = 1;
+	// 	$model->delete(4);
+	// }
+	
 	// datatable JSON
 	public function getJSON(){
 		$model = new Admin_model;
