@@ -210,6 +210,10 @@ class Auth extends CI_Controller
 			// setup the input
 			$this->data['identity'] = array('name' => 'identity',
 				'id' => 'identity',
+				'type'  => 'email',
+				'placeholder' => 'Email',
+				'required'=>'required',
+				'class' => 'form-control'
 			);
 
 			if ($this->config->item('identity', 'ion_auth') != 'email')
