@@ -34,7 +34,7 @@
   <!-- Argon CSS -->
   <link rel="stylesheet" href="<?= base_url('assets/new_template/') ?>css/argon.min-v=1.0.0.css" type="text/css">
   <link rel="stylesheet" href="<?= base_url('assets/') ?>css/custom.css" type="text/css">
-  <link rel="stylesheet" href="<?= base_url('assets/new_template') ?>sweet/master.css" type="text/css" />
+  <link rel="stylesheet" href="<?= base_url('assets/new_template/') ?>sweet/master.css" type="text/css" />
 
   <style type="text/css">
     .bg-primary {

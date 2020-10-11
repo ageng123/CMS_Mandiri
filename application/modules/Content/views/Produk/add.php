@@ -19,10 +19,10 @@
             </div>
           </div>
         </div>
-        </div> 	
+        <!-- </div> 	 -->
         <div class="table-responsive card-body py-4">
         <div class="image_upload_div">
-            <form action="<?= base_url('content/product/upload_foto') ?>" class="dropzone" style="display: flex;flex-direction: row">
+            <form action="<?= base_url('content/product/upload_foto') ?>" class="dropzone" id="produkDrop" style="display: flex;flex-direction: row">
             <div class="fallback">
               <input name="foto_produk[]" type="file" multiple />
             </div>

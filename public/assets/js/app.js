@@ -82,6 +82,7 @@ function ActionMessage(type, e, event)
     return confirm;
 }
 $(document).ready(function () {
+    console.log('js');
     $('.init-DataTable').each(function () {
         let container = $(this).attr('id');
         let uri = $(this).data('url');
@@ -165,5 +166,21 @@ $(document).ready(function () {
             console.log(postData);
         }
     })
-    
+    Dropzone.autoDiscover = false;
+    Dropzone.options.produkDrop = {
+        accept: function(file, done) {
+            console.warn(done);
+        },
+        init: function() {
+            this.on("addedfile", function(file) {
+                alert("Added file.");
+            });
+        }
+    }
+    Dropzone.options.produkDrop = {
+        success: function(file, response){
+            alert(response);
+        }
+    };
+    console.warn(Dropzone.options.Dropzone);
 })

@@ -158,13 +158,6 @@ class Product extends Auth_Guard {
 	}
 	public function upload_foto(){
 		$product = $this->upload('file');
-		var_dump($this->session->userdata());
-		die;
-		if($this->session->userdata('seq') !== null ):
-			$seq = $this->session->userdata('seq') + 1;
-		else:
-			$this->session->set_userdata('seq', 1);
-		endif;
 		if(isset($product)){
 			$model = new Attachment_model;
 			$model->nama_file = $product->file_name;
@@ -172,7 +165,10 @@ class Product extends Auth_Guard {
 			$model->uploader = $this->session->userdata('user_id');
 			$model->seq = $this->session->userdata('seq');
 			$model->tipe_attachment = 2;
-			$model->save();
+			if($model->save()){
+				json_output(200, 'Success Upload', $data = ['id_upload' => $this->db->insert_id()]);
+			}
 		}
+		
 	}
 }
