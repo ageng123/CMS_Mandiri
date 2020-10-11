@@ -101,12 +101,12 @@
                   <li class="nav-item">
                     <a href="<?= base_url('assignroles') ?>" <?php if( $location1 == 'assignroles') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>User Roles</a>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <a href="#" class="nav-link">Access List</a>
                   </li>
                   <li class="nav-item">
                     <a href="#" class="nav-link">Contact List</a>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </li>

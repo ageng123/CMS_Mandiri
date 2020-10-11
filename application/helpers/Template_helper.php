@@ -52,6 +52,6 @@
 			'msg' => $msg,
 			'data' => $data
 		];
-		echo json_encode($result, JSON_PRETTY_PRINT);
+		return $result;
 	}
 ?>

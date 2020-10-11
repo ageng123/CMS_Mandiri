@@ -31,6 +31,7 @@ class Main extends CI_Model{
     }
     public function save(){
         $query = $this->db->insert($this->table, $this);
+        $this->set_lastId();
         return $query;
     }
     public function update($params){
@@ -44,6 +45,10 @@ class Main extends CI_Model{
         $this->db->where($pk, $params);
         $query = $this->db->delete($this->table);
         return $query;
+    }
+    public function set_lastId(){
+        $this->lastId = $this->db->insert_id();
+        return true;
     }
 
 }
