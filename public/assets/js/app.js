@@ -81,6 +81,7 @@ function ActionMessage(type, e, event)
       })
     return confirm;
 }
+Dropzone.autoDiscover = false;
 $(document).ready(function () {
     console.log('js');
     $('.init-DataTable').each(function () {
@@ -166,21 +167,20 @@ $(document).ready(function () {
             console.log(postData);
         }
     })
-    Dropzone.autoDiscover = false;
-    Dropzone.options.produkDrop = {
-        accept: function(file, done) {
-            console.warn(done);
-        },
-        init: function() {
-            this.on("addedfile", function(file) {
-                alert("Added file.");
-            });
+    var myDropZone = new Dropzone('.produkDrop',{
+        init: function(){
+            this.on('success', function(file, resp){
+                console.warn(file);
+                let parse = JSON.parse(resp);
+                let data = parse.data;
+                let current = $('#attch_list').val();
+                if(current == ''){
+                    $('#attch_list').val(data.id_upload);
+                } else {
+                    $('#attch_list').val(current + ',' + data.id_upload);
+                }
+            })
+                
         }
-    }
-    Dropzone.options.produkDrop = {
-        success: function(file, response){
-            alert(response);
-        }
-    };
-    console.warn(Dropzone.options.Dropzone);
+     })
 })

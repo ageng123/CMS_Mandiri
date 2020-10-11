@@ -22,7 +22,17 @@
         <!-- </div> 	 -->
         <div class="table-responsive card-body py-4">
         <div class="image_upload_div">
-            <form action="<?= base_url('content/product/upload_foto') ?>" class="dropzone" id="produkDrop" style="display: flex;flex-direction: row">
+            <style>
+            .produkDrop{
+              min-height: 150px;
+              border: 2px solid rgba(0, 0, 0, 0.3);
+              background: white;
+              padding: 20px 20px;
+              cursor: pointer
+            }
+            </style>
+            <label for="">Foto Produk</label>
+            <form action="<?= base_url('content/product/upload_foto') ?>" class="produkDrop dropzone" id="produkDrop" style="display: flex;flex-direction: row">
             <div class="fallback">
               <input name="foto_produk[]" type="file" multiple />
             </div>
@@ -30,7 +40,7 @@
           </div>
           <form action="<?= $form_url ?>" class='row' method="POST" enctype="multipart/form-data">
           
-            <div class="form-group col-md-12">
+            <!-- <div class="form-group col-md-12">
               <label for="">Foto Produk</label>
               <input type="file" name="foto_produk[]" multiple="multiple" data-preview="#foto_produk" id="" class="form-control">
               <div class="preview" id="foto_produk">
@@ -38,7 +48,8 @@
                   <embed src="<?= base_url('resources/Produk/'.$form_data->thumbnail) ?>" type="" id="foto_ahli_waris" class="mt-2 p-2 file-border">
                 <?php endif; ?>
               </div>
-            </div>
+            </div> -->
+            <textarea name="attachment" style="display: none" id="attch_list" cols="30" rows="10"></textarea>
             <div class="form-group col-md-12">
               <label for="">Judul Produk</label>
               <input type="text" name="judul" value="<?= isset($form_data) ? $form_data->title : '' ?>" id="" class="form-control">
