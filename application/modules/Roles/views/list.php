@@ -9,48 +9,48 @@
 </div>
 
 <div class="container-fluid mt--6">
-<div class="row">
-  <div class="col">
-    <div class="card">
-      <div class="card-header">
-        <div class="row">
-            <div class="col-6">
-            <h3><?= isset($card_title) ? $card_title : 'Tabel' ?></h3>
-            </div>
-            <div class="col-6 text-right"> 
-              <span data-toggle="modal" data-target="#modal-form">
-                <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" title="Tambah Data"><i class="fa fa-plus"></i></button>
-              </span>
-              <a href="#" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="top" title="Export Excel"> <span class="btn-inner--text"><i class="fa fa-file-excel"></i></span></a>
-            </div>
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <div class="row">
+              <div class="col-6">
+              <h3><?= isset($card_title) ? $card_title : 'Tabel' ?></h3>
+              </div>
+              <div class="col-6 text-right"> 
+                <span data-toggle="modal" data-target="#modal-form">
+                  <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" title="Tambah Data"><i class="fa fa-plus"></i></button>
+                </span>
+                <a href="#" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="top" title="Export Excel"> <span class="btn-inner--text"><i class="fa fa-file-excel"></i></span></a>
+              </div>
+          </div>
         </div>
-      </div>
 
-      <div class="flash-data" data-flashdata="<?= $this->session->flashdata('message'); ?>"></div>
-      <?php if($this->session->flashdata('message')) : ?>
-      <!-- <div class="alert alert-block alert-success fade in block-inner">
-                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="icon-cancel-circle"></i></button>
-                  <h6><?php echo $this->session->flashdata('message') ?></h6>
-              </div> -->
-      <?php endif; ?>
+        <div class="flash-data" data-flashdata="<?= $this->session->flashdata('message'); ?>"></div>
+        <?php if($this->session->flashdata('message')) : ?>
+        <!-- <div class="alert alert-block alert-success fade in block-inner">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="icon-cancel-circle"></i></button>
+                    <h6><?php echo $this->session->flashdata('message') ?></h6>
+                </div> -->
+        <?php endif; ?>
 
-      <div class="table-responsive py-4">
-        <table class="table table-flush init-DataTable" data-url="<?= base_url('Roles/getJSON') ?>" id="userTbl">
-          <thead class="thead-light">
-            <tr>
-              <th></th>
-              <th class="text-center" style="padding: 1.3vh"><input type="checkbox" class="form-check-input all-checkbox-dt" style="position: inherit; margin: auto" name="" id=""></th>
-              <th>Nama Role</th>
-              <th>Aksi</th>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
+        <div class="table-responsive py-4">
+          <table class="table table-flush init-DataTable" data-url="<?= base_url('Roles/getJSON') ?>" id="userTbl">
+            <thead class="thead-light">
+              <tr>
+                <th></th>
+                <th class="text-center" style="padding: 1.3vh"><input type="checkbox" class="form-check-input all-checkbox-dt" style="position: inherit; margin: auto" name="" id=""></th>
+                <th>Nama Role</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
 <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
