@@ -6,6 +6,9 @@
 .daftar-radio > .form-check-inline{
     margin-right: 5rem !important;
 }
+.hide{
+    Display: none !important
+}
 /* JQUERY STEP  */
   ﻿/*
     Common 

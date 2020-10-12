@@ -20,7 +20,14 @@ $(document).ready(function(){
         sukarela = parseInt(biaya);
         $(this).val(Pembayaran_Function.formatRupiah(biaya), '');
         Pembayaran_Function.renderToForm(wajib, sukarela);
-
+    })
+    $('#pekerjaan').on('change', function(){
+        let val = $(this).val();
+        if(val == 'Lainnya'){
+            $('#detail_pekerjaan').removeClass('hide');
+        } else {
+            $('#detail_pekerjaan').addClass("hide");
+        }
     })
 })
 const Pembayaran_Function = {

@@ -179,7 +179,18 @@
           <div class="form-group row">
             <label class="col-form-label col-md-2" for="">Pendidikan</label>
             <div class="col-md-4">
-              <select name="pendidikan" class="form-control" id=""></select>
+              <select name="pendidikan" class="form-control" id="">
+                <option value="Belum Sekolah"></option>
+                <option value="TK">TK</option>
+                <option value="SD">SD</option>
+                <option value="SMP">SMP</option>
+                <option value="SMA">SMA</option>
+                <option value="D3">D3</option>
+                <option value="Akademi">Akademi</option>
+                <option value="S1 Sarjana">S1 Sarjana</option>
+                <option value="S2 Master">S2 Master</option>
+                <option value="S3 Doktor">S3 Doktor</option>
+              </select>
             </div>
           </div>
           <div class="form-group">
@@ -202,17 +213,27 @@
           <div class="form-group row">
             <div class="col-md-6">
               <label for="">Pekerjaan</label>
-              <select class="form-control" name="pekerjaan[jenis]" id="">
-                <option value="">Programmer</option>
-                <option value="">IRT</option>
+              <select class="form-control" name="pekerjaan[jenis]" id="pekerjaan">
+                <option value="Ibu Rumah Tangga">Ibu Rumah Tangga</option>
+                <option value="Wiraswasta">Wiraswasta</option>
+                <option value="PNS">PNS</option>
+                <option value="Pelajar">Pelajar</option>
+                <option value="Mahasiswa">Mahasiswa</option>
+                <option value="Profesional">Profesional</option>
+                <option value="Lainnya">Lainnya</option>
+
               </select>
             </div>
             <div class="col-md-6">
-              <label for="">Nama Perusahaan</label>
-              <input type="text" class="form-control" name="pekerjaan[perusahaan]" id="">
+              <label for=""></label><br>
+              <input type="text" class="form-control hide" id="detail_pekerjaan" placeholder="Isikan nama pekerjaan..." name="pekerjaan[jenis][lain]">
             </div>
           </div>
           <div class="form-group row">
+          <div class="col-md-12">
+              <label for="">Nama Perusahaan</label>
+              <input type="text" class="form-control" name="pekerjaan[perusahaan]" id="">
+            </div>
             <div class="col-md-6">
               <label for="">Divisi</label>
               <input type="text" class="form-control" name="pekerjaan[divisi]" id="">
