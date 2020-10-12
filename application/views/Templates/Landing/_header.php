@@ -19,6 +19,19 @@
 
 	<!-- jquery library  -->
 	<script type="text/javascript" src="<?= base_url('assets/landing_template/') ?>assets/js/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.js" integrity="sha512-z8IfZLl5ZASsWvr1syw5rkpo2HKBexjwzYDaUkIfoWo0aEqL/MgGKniDouh5DmsD9YrisbM+pihyCKIHL9VucQ==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/dropzone.js" integrity="sha512-0QMJSMYaer2wnpi+qbJOy4rOAlE6CbYImSlrgQuf2MBBMqTvK/k6ZJV126/EbdKzMAXaB6PHzdYxOX6Qey7WWw==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.js" integrity="sha512-gH0SqyjTN7WJAtki1UvqOkhWi3WsF9LY05BMwdcSq6QdFDXrXeXy0q8iP0YmBXCqo7OnSgdIPrC5Vqn8/KRu/Q==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/eonasdan-bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha512-GDey37RZAxFkpFeJorEUwNoIbkTwsyC736KNSYucu1WJWFK9qTdzYub8ATxktr6Dwke7nbFaioypzbDOQykoRg==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/trumbowyg.min.js" integrity="sha512-l6MMck8/SpFCgbJnIEfVsWQ8MaNK/n2ppTiELW3I2BFY5pAm/WjkNHSt+2OD7+CZtygs+jr+dAgzNdjNuCU7kw==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/langs/id.min.js" integrity="sha512-/PIPqv1zRLefHrC80MyrIn1AzLHfmoHY/g4OSIpaWVytX+DmWnX/tBuupyABlPLHzqxztUKpiUWegtKO4cKKZg==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/plugins/cleanpaste/trumbowyg.cleanpaste.min.js" integrity="sha512-cDDBhQvC08atXuhAhYPJjzgGUDH8oKtgatdpN7tl6mxBwS+cY9VwOItZVsp4gjptZmUasVXzfYYuhtrLS3Lafg==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/plugins/pasteimage/trumbowyg.pasteimage.min.js" integrity="sha512-OQx/CQBZBho4b9cGlA/FnrMeXWj4GPlXfpeWyih9xrogS9hkDg91lGXhoff6LZc8RfSYm1EaMB5dUPeR72Hkvg==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/plugins/allowtagsfrompaste/trumbowyg.allowtagsfrompaste.min.js" integrity="sha512-Zuq+wA/YLqIGzMTTwdEx7amSDq7QKEcygLO4S8w1MeUytDQAGGZza/kZxCfwp0QiPdGHQHxl/bYGxmoy1MwdDA==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/plugins/upload/trumbowyg.upload.min.js" integrity="sha512-g5wjYAiDs8BUjvYsS72hTfj1N255lOfulYWK/c+SM5JyldgDD9E5cpUSsCqighP7PiSqX+6FlTW48RI85BDqKw==" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 	<!-- fontawesome  -->
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	<!-- google maps api  -->
@@ -45,3 +58,4 @@
 	<script type="text/javascript" src="<?= base_url('assets/landing_template/') ?>assets/revslider/js/extensions/revolution.extension.parallax.min.js"></script>
 	<script type="text/javascript" src="<?= base_url('assets/landing_template/') ?>assets/revslider/js/extensions/revolution.extension.slideanims.min.js"></script>
 	<script type="text/javascript" src="<?= base_url('assets/landing_template/') ?>assets/revslider/js/extensions/revolution.extension.video.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/') ?>landing_custom.css">
