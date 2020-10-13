@@ -81,7 +81,9 @@ function ActionMessage(type, e, event)
       })
     return confirm;
 }
+Dropzone.autoDiscover = false;
 $(document).ready(function () {
+    console.log('js');
     $('.init-DataTable').each(function () {
         let container = $(this).attr('id');
         let uri = $(this).data('url');
@@ -165,5 +167,21 @@ $(document).ready(function () {
             console.log(postData);
         }
     })
-    
+    var myDropZone = new Dropzone('.produkDrop',{
+        init: function(){
+            this.on('success', function(file, resp){
+                console.warn(file);
+                let parse = JSON.parse(resp);
+                let data = parse.data;
+                let current = $('#attch_list').val();
+                if(current == ''){
+                    $('#attch_list').val(data.id_upload);
+                } else {
+                    $('#attch_list').val(current + ',' + data.id_upload);
+                }
+            })
+                
+        }
+     })
+     
 })
