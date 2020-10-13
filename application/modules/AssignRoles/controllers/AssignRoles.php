@@ -40,8 +40,8 @@ class AssignRoles extends CI_Controller {
 					   ';
 			$result[] = $row;
 		endforeach;
+		$result['draw'] = $this->input->post('draw');
 		$data = json_output(200, null, $result);
-		$data['draw'] = $this->input->post('draw');
 		echo JSON_ENCODE($data, JSON_PRETTY_PRINT);
 	}
 	public function getUserNamaById($params){
