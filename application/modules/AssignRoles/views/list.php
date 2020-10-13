@@ -68,7 +68,7 @@
                   <label for="" class="form-control-label">User</label>
                   <select name="user_id" id="" class="form-control">
                     <?php foreach($user_data as $val): ?>
-                      <option value="<?= $val->id_user ?>" <?= isset($form_data) && $form_data->id_user == $val->id_user ? 'Selected' : '';  ?> ><?= $val->username ?></option>
+                      <option value="<?= $val->id ?>" <?= isset($form_data) && $form_data->id_user == $val->id ? 'Selected' : '';  ?> ><?= $val->username ?></option>
                     <?php endforeach; ?>
                   </select>
                 </div>

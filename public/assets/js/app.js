@@ -181,6 +181,7 @@ $(document).ready(function () {
             console.log(postData);
         }
     })
+    
     var myDropZone = new Dropzone('.produkDrop',{
         init: function(){
             this.on('success', function(file, resp){

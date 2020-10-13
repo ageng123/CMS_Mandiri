@@ -39,7 +39,7 @@ class AssignRoles extends CI_Controller {
 					  <a href="'.base_url('assignroles/destroy').'?session_id='.encode($val->id_lst_roles).'" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" title="Delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus User : '.$this->getUserNamaById($val->id_user).' ? "><i class="fa fa-trash"></i></span></a> ';
 			$result[] = $row;
 		endforeach;
-		$result['draw'] = $this->input->post('draw');
+		// $result['draw'] = $this->input->post('draw');
 		$data = json_output(200, null, $result);
 		echo JSON_ENCODE($data, JSON_PRETTY_PRINT);
 	}

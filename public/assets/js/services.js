@@ -30,7 +30,10 @@ const HttpServices = {
     }
 }
 const KotaIndonesia = {
-    provinsiUrl: 'https://dev.farizdotid.com/api/daerahindonesia/provinsi',
-    kotaJSON: 'https://dev.farizdotid.com/api/daerahindonesia/kota?id_provinsi='
+    provinsiJSON: 'https://dev.farizdotid.com/api/daerahindonesia/provinsi',
+    kotaJSON: 'https://dev.farizdotid.com/api/daerahindonesia/kota?id_provinsi=',
+    getProvinsi: () => {
+        
+    }
 
 }
