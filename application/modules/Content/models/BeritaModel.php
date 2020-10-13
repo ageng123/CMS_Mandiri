@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $parameter = explode(',', $params);
             foreach($parameter as $val):
                 $model = $this->db->where('id_kategori', $val)->get('kategori_list')->row_object();
-                array_push($result, '<span class="badge badge-primary">'.$model->nama_kategori.'</span>');
+                array_push($result, '<span class="badge p-2 badge-pill text-white badge-primary">'.$model->nama_kategori.'</span>');
             endforeach;
             return implode(' ',$result);
         }
