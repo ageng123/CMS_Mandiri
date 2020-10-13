@@ -253,7 +253,7 @@
             <div class="col-md-4">
               <div class="form-group">
                 <label for="">Provinsi</label>
-                <select name="pekerjaan[provinsi]" class="form-control" id=""></select>
+                <select name="pekerjaan[provinsi]" class="form-control getProvinsi" id=""></select>
               </div>
               <div class="form-group">
                 <label for="">Kecamatan</label>

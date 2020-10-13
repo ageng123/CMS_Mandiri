@@ -29,6 +29,7 @@ $(document).ready(function(){
             $('#detail_pekerjaan').addClass("hide");
         }
     })
+    console.log(HttpServices.getAjax('https://dev.farizdotid.com/api/daerahindonesia/provinsi'));
 })
 const Pembayaran_Function = {
     renderToForm: function(wajib, sukarela){

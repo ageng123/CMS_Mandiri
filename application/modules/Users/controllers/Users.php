@@ -47,10 +47,10 @@ class Users extends Auth_Guard {
 		$result = array();
 		foreach($output as $key => $val):
 			$row = array();
-			$row[] = $val->id_user;
+			$row[] = $val->id;
 			$row[] = '';
 			$row[] = $val->username;
-			$row[] = $this->getRoleNamaByIDUser($val->id_user);
+			$row[] = $this->getRoleNamaByIDUser($val->id);
 			$row[] = $val->active == 1 ? 'aktif' : ' tidak aktif';
 			// $row[] = '<a href='.base_url('admin').' class="btn btn-success btn-sm">Edit</a><a href='.base_url('admin').' class="btn btn-danger btn-sm">Hapus</a>';
 			$row[] = '<a href='.base_url('admin').' class="btn btn-secondary btn-sm" data-toggle="tooltip" title="Detail"><i class="fa fa-info"></i></span></a>
