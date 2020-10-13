@@ -11,12 +11,14 @@ class AssignRoles extends CI_Controller {
 	public function index()
 	{
 		$content = 'AssignRoles/list';
+		// $user_data = $this->UserModel->all();
+		// echo JSON_ENCODE($user_data); die;
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'form_url' => base_url('assignroles/add'),
 			'user_data' => $this->UserModel->all(),
 			'role_data' => $this->RoleModel->all(),
-			'card_title' => "Master Data User Roles"
+			'card_title' => "Master Data Pengaturan"
 		];
 		admin_parse($content, $data);
 		// $this->load->view('welcome_message');
@@ -33,11 +35,8 @@ class AssignRoles extends CI_Controller {
 			$row[] = '';
 			$row[] = $this->getUserNamaById($val->id_user);
 			$row[] = $this->getRoleNamaById($val->id_role);
-			$row[] = '<a href='.base_url('admin').' class="btn btn-secondary btn-sm" data-toggle="tooltip" title="Detail"><i class="fa fa-info"></i></span></a>
-					  <a href='.base_url('admin').' class="btn btn-info btn-sm" data-toggle="tooltip" title="Download Word"><i class="fa fa-download"></i></span></a>
-					  <a href="'.base_url('assignroles/edit').'?session_id='.encode($val->id_lst_roles).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
-					  <a href="'.base_url('assignroles/destroy').'?session_id='.encode($val->id_lst_roles).'" class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>
-					   ';
+			$row[] = '<a href="'.base_url('assignroles/edit').'?session_id='.encode($val->id_lst_roles).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
+					  <a href="'.base_url('assignroles/destroy').'?session_id='.encode($val->id_lst_roles).'" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" title="Delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus User : '.$this->getUserNamaById($val->id_user).' ? "><i class="fa fa-trash"></i></span></a> ';
 			$result[] = $row;
 		endforeach;
 		$result['draw'] = $this->input->post('draw');
@@ -79,6 +78,7 @@ class AssignRoles extends CI_Controller {
 		endif;
 		admin_parse($content, $data);
 	}
+
 	public function edit(){
 		$model = new AssignRoleModel();
 		$id = decode($_GET['session_id']);
