@@ -4,6 +4,8 @@
 	<!-- owl Carousel assets -->
 	<link href="<?= base_url('assets/landing_template/') ?>assets/css/owl.carousel.css" rel="stylesheet">
 	<link href="<?= base_url('assets/landing_template/') ?>assets/css/owl.theme.css" rel="stylesheet">
+	<!-- icon -->
+	<link rel="icon" href="<?= base_url('assets/new_template/') ?>/img/icon.png" type="image/png">
 	<!-- bootstrap -->
 	<link rel="stylesheet" href="<?= base_url('assets/landing_template/') ?>assets/css/bootstrap.min.css">
 	<!-- hover anmation -->

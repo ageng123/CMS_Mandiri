@@ -21,7 +21,6 @@
                 <span data-toggle="modal" data-target="#modal-form">
                   <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" title="Tambah Data"><i class="fa fa-plus"></i></button>
                 </span>
-                <a href="#" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="top" title="Export Excel"> <span class="btn-inner--text"><i class="fa fa-file-excel"></i></span></a>
               </div>
           </div>
         </div>

@@ -99,13 +99,7 @@
                     <a href="<?= base_url('roles') ?>" <?php if($location1 == 'roles') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Role</a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url('assignroles') ?>" <?php if( $location1 == 'assignroles') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>User Roles</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">Access List</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">Contact List</a>
+                    <a href="<?= base_url('assignroles') ?>" <?php if( $location1 == 'assignroles') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Pengaturan User</a>
                   </li>
                 </ul>
               </div>
