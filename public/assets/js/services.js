@@ -33,7 +33,12 @@ const KotaIndonesia = {
     provinsiJSON: 'https://dev.farizdotid.com/api/daerahindonesia/provinsi',
     kotaJSON: 'https://dev.farizdotid.com/api/daerahindonesia/kota?id_provinsi=',
     getProvinsi: () => {
-        
+        let data = HttpServices.getAjax(KotaIndonesia.provinsiJSON);
+        return data.provinsi;
+    },
+    getKota: (idProvinsi) => {
+        let data = HttpServices.getAjax(KotaIndonesia.kotaJSON + idProvinsi);
+        return data.kota_kabupaten;
     }
 
 }

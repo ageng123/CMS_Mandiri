@@ -97,7 +97,6 @@ function ActionMessage(type, e, event)
 }
 Dropzone.autoDiscover = false;
 $(document).ready(function () {
-    console.log('js');
     $('.init-DataTable').each(function () {
         let container = $(this).attr('id');
         let uri = $(this).data('url');
@@ -181,7 +180,7 @@ $(document).ready(function () {
             console.log(postData);
         }
     })
-    
+
     var myDropZone = new Dropzone('.produkDrop',{
         init: function(){
             this.on('success', function(file, resp){

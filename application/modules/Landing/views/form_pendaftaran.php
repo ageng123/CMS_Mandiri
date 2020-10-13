@@ -11,48 +11,48 @@
             <label for="">Apakah Sudah Menjadi Member Komunitas PanenSaham ?</label><br>
             <div class="w-50 daftar-radio">
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                  value="option1">
+                <input class="form-check-input" type="radio" name="member" id="inlineRadio1"
+                  value="sudah">
                 <label class="form-check-label" for="inlineRadio1">Sudah</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                  value="option2">
+                <input class="form-check-input" type="radio" name="member" id="inlineRadio2"
+                  value="belum">
                 <label class="form-check-label" for="inlineRadio2">Belum</label>
               </div>
             </div>
           </div>
-          <div class="form-group w-50 d-flex flex-row">
-            <label style="min-width: 4vw" for="">Client Id</label>
+          <div class="form-group w-50 d-flex flex-row hide" id="client_id">
+            <label style="min-width: 6vw" for="">Client Id</label>
             <input type="text" name="client_id" id="" class="form-control">
           </div>
           <div class="form-group">
             <label for="">Apakah Sudah Memiliki Kartu Tanda Penduduk (diatas 17 tahun)?</label> <br>
             <div class="w-50 daftar-radio">
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1"
-                  value="option1">
-                <label class="form-check-label" for="inlineRadio1">Sudah</label>
+                <input class="form-check-input" type="radio" name="punya_ktp" id="inlineRadio3"
+                  value="sudah">
+                <label class="form-check-label" for="inlineRadio3">Sudah</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2"
-                  value="option2">
-                <label class="form-check-label" for="inlineRadio2">Belum</label>
+                <input class="form-check-input" type="radio" name="punya_ktp" id="inlineRadio4"
+                  value="belum">
+                <label class="form-check-label" for="inlineRadio4">Belum</label>
               </div>
             </div>
           </div>
           <div class="form-group">
             <table>
               <tr>
-                <td>
+                <td id="ktp" class="hide">
                   <label for="">Upload E-KTP</label>
-                  <input type="file" name="" id=""></td>
-                <td>
+                  <input type="file" name="ktp" id=""></td>
+                <td id="ktp_ahli" class="hide">
                   <label for="">Upload KTP Ahli Waris</label>
-                  <input type="file" name="" id=""></td>
-                <td>
+                  <input type="file" name="ktp_ahli" id=""></td>
+                <td id="kk" class="hide">
                   <label for="">Upload KK</label>
-                  <input type="file" name="" id=""></td>
+                  <input type="file" name="kk" id=""></td>
               </tr>
             </table>
           </div>
@@ -103,13 +103,13 @@
                     <input type="text" name="tempat" placeholder="Tempat" class="form-control">
                   </div>
                   <div class="col-md-2">
-                    <input type="text" name="hari" placeholder="DD" class="form-control">
+                    <input type="text" name="hari" placeholder="DD" class="form-control haripicker">
                   </div>
                   <div class="col-md-2">
-                    <input type="text" name="bulan" placeholder="MM" class="form-control">
+                    <input type="text" name="bulan" placeholder="MM" class="form-control bulanpicker">
                   </div>
                   <div class="col-md-2">
-                    <input type="text" name="tahun" placeholder="YYYY" class="form-control">
+                    <input type="text" name="tahun" placeholder="YYYY" class="form-control tahunpicker">
                   </div>
                 </div>
               </div>
@@ -134,7 +134,7 @@
             <div class="col-md-4">
               <div class="form-group">
                 <label for="">Provinsi</label>
-                <select name="provinsi" class="form-control" id=""></select>
+                <select name="provinsi" class="form-control getProvinsi" id="provinsi" data-kabupatenlist='#kabupaten1'></select>
               </div>
               <div class="form-group">
                 <label for="">Kecamatan</label>
@@ -144,7 +144,7 @@
             <div class="col-md-4">
               <div class="form-group">
                 <label for="">Kabupaten</label>
-                <select name="kabupaten" class="form-control" id=""></select>
+                <select name="kabupaten" class="form-control" id="kabupaten1"></select>
               </div>
               <div class="form-group">
                 <label for="">Kelurahan</label>
@@ -180,7 +180,7 @@
             <label class="col-form-label col-md-2" for="">Pendidikan</label>
             <div class="col-md-4">
               <select name="pendidikan" class="form-control" id="">
-                <option value="Belum Sekolah"></option>
+                <option value="Belum Sekolah">Belum Sekolah</option>
                 <option value="TK">TK</option>
                 <option value="SD">SD</option>
                 <option value="SMP">SMP</option>
@@ -198,8 +198,8 @@
               Rumah
               <div class="daftar-radio">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="alamatradio" id="inlineRadio2" value="option2">
-                  <label class="form-check-label" for="inlineRadio2">Alamat Sama Dengan Alamat E-KTP / KTP Ahli Waris /
+                  <input class="form-check-input" type="radio" name="alamatradio" id="alamat_radio" value="option2">
+                  <label class="form-check-label" for="alamat_radio">Alamat Sama Dengan Alamat E-KTP / KTP Ahli Waris /
                     KK</label>
                 </div>
               </div>
@@ -253,7 +253,7 @@
             <div class="col-md-4">
               <div class="form-group">
                 <label for="">Provinsi</label>
-                <select name="pekerjaan[provinsi]" class="form-control getProvinsi" id=""></select>
+                <select name="pekerjaan[provinsi]" class="form-control getProvinsi" id="provinsi2" data-kabupatenlist='#kabupaten2'></select>
               </div>
               <div class="form-group">
                 <label for="">Kecamatan</label>
@@ -263,7 +263,7 @@
             <div class="col-md-4">
               <div class="form-group">
                 <label for="">Kabupaten</label>
-                <select name="pekerjaan[kabupaten]" class="form-control" id=""></select>
+                <select name="pekerjaan[kabupaten]" class="form-control" id="kabupaten2"></select>
               </div>
               <div class="form-group">
                 <label for="">Kelurahan</label>

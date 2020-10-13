@@ -7,6 +7,27 @@ $(document).ready(function(){
             bodyTag: "section",
             transitionEffect: "slideLeft",
         });
+        $('.haripicker').datetimepicker({
+            format: 'DD',
+            icons: {
+                previous: 'fa fa-chevron-left text-black',
+                next: 'fa fa-chevron-right text-black',
+            }
+        })
+        $('.bulanpicker').datetimepicker({
+            format: 'MM',
+            icons: {
+                previous: 'fa fa-chevron-left text-black',
+                next: 'fa fa-chevron-right text-black',
+            }
+        })
+        $('.tahunpicker').datetimepicker({
+            format: 'YYYY',
+            icons: {
+                previous: 'fa fa-chevron-left text-black',
+                next: 'fa fa-chevron-right text-black',
+            }
+        })
     $('#select_wajib').on('change', function(){
         let biaya = $('#wajib').attr('data-biaya');
         let bulan = $(this).val();
@@ -29,7 +50,46 @@ $(document).ready(function(){
             $('#detail_pekerjaan').addClass("hide");
         }
     })
-    console.log(HttpServices.getAjax('https://dev.farizdotid.com/api/daerahindonesia/provinsi'));
+   $('.getProvinsi').each(function(){
+       let data = KotaIndonesia.getProvinsi();
+       let container = '#'+$(this).attr('id');
+       let content ='';
+       data.map(function(index){
+           content = content + '<option value="'+index.nama+'" data-idProvinsi="'+ index.id +'">'+ index.nama +'</option>'
+       })
+       $(container).html(content);
+   })
+   $('.getProvinsi').on('change', function(){
+       let conten = '#' + $(this).attr('id');
+       let option = $(conten+ ' option:selected').attr('data-idProvinsi');
+       let data = KotaIndonesia.getKota(option);
+       let container = $(this).attr('data-kabupatenlist');
+       let kabupatenlist = '';
+       data.map(function(index){
+        kabupatenlist = kabupatenlist + '<option value="'+index.nama+'">'+index.nama+'</option>'
+       })
+       $(container).html(kabupatenlist);
+   })
+   $('input[name=member]').on('change', function(){
+       let data = $(this).val();
+       if(data === 'belum'){
+           $('#client_id').addClass('hide');
+       } else {
+            $('#client_id').removeClass('hide');
+       }
+   })
+   $('input[name=punya_ktp]').on('change', function(){
+    let data = $(this).val();
+    if(data === 'belum'){
+        $('#ktp').addClass('hide');
+        $('#ktp_ahli').removeClass('hide');
+        $('#kk').removeClass('hide');
+    } else {
+         $('#ktp').removeClass('hide');
+         $('#ktp_ahli').addClass('hide');
+        $('#kk').addClass('hide');
+    }
+})
 })
 const Pembayaran_Function = {
     renderToForm: function(wajib, sukarela){

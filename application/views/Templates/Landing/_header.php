@@ -60,4 +60,5 @@
 	<script type="text/javascript" src="<?= base_url('assets/landing_template/') ?>assets/revslider/js/extensions/revolution.extension.parallax.min.js"></script>
 	<script type="text/javascript" src="<?= base_url('assets/landing_template/') ?>assets/revslider/js/extensions/revolution.extension.slideanims.min.js"></script>
 	<script type="text/javascript" src="<?= base_url('assets/landing_template/') ?>assets/revslider/js/extensions/revolution.extension.video.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" integrity="sha512-63+XcK3ZAZFBhAVZ4irKWe9eorFG0qYsy2CaM5Z+F3kUn76ukznN0cp4SArgItSbDFD1RrrWgVMBY9C/2ZoURA==" crossorigin="anonymous" />
 	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/') ?>landing_custom.css">
