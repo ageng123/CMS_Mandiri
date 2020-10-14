@@ -37,4 +37,18 @@ class Landing extends CI_Controller {
 		landing_parse($content, $data);
 
 	}
+
+	public function proses_add()
+		{
+			$data = [
+				'email'  => $this->input->post('email')
+			];
+		
+			$sqlinsert = $this->Landing_model->simpan($data);
+			if($sqlinsert) {
+				$this->session->set_flashdata('message', 'Pesan Berhasil Dikirim');
+				return redirect(base_url().'landing');
+			}
+
+		}
 }
