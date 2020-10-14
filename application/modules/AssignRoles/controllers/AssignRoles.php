@@ -18,7 +18,7 @@ class AssignRoles extends CI_Controller {
 			'form_url' => base_url('assignroles/add'),
 			'user_data' => $this->UserModel->all(),
 			'role_data' => $this->RoleModel->all(),
-			'card_title' => "Master Data Pengaturan"
+			'card_title' => "Master Data Pengaturan User"
 		];
 		admin_parse($content, $data);
 		// $this->load->view('welcome_message');
@@ -85,7 +85,7 @@ class AssignRoles extends CI_Controller {
 		$content = 'assignroles/add';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
-			'card_title' => "Edit Data User Roles",
+			'card_title' => "Edit Data Pengaturan User",
 			'form_url' => base_url('assignroles/edit?session_id='.encode($id)),
 			'form_data' => $model->find($id),
 			'user_data' => $this->UserModel->all(),
