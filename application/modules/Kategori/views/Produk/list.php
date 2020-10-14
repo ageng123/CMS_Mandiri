@@ -21,7 +21,6 @@
             <span data-toggle="modal" data-target="#modal-form">
                 <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" title="Tambah Data"><i class="fa fa-plus"></i></button>
               </span>
-              <a href="#" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="top" title="Export Excel"> <span class="btn-inner--text"><i class="fa fa-file-excel"></i></span></a>
             </div>
         </div>
       </div>
@@ -40,7 +39,8 @@
             <tr>
               <th></th>
               <th class="text-center" style="padding: 1.3vh"><input type="checkbox" class="form-check-input all-checkbox-dt" style="position: inherit; margin: auto" name="" id=""></th>
-              <th>Nama Kategori</th>
+              <th>Nama Kategori Produk</th>
+              <th>Deskripsi</th>
               <th>Aksi</th>
             </tr>
           </thead>
@@ -64,7 +64,7 @@
           <div class="card-body px-lg-5 py-lg-5">
             <form action="<?= $form_url ?>" class='row' method="POST" enctype="multipart/form-data">
               <div class="form-group col-md-12">
-                <label for="" class="form-control-label">Nama Kategori</label>
+                <label for="" class="form-control-label">Nama Kategori Produk</label>
                 <input type="text" name="nama_kategori" value="<?= isset($form_data) ? $form_data->nama_kategori : '' ?>" id="" class="form-control">
               </div>
               <div class="form-group col-md-12">

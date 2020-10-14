@@ -22,7 +22,7 @@
         <div class="table-responsive card-body py-4">
           <form action="<?= $form_url ?>" class='row' method="POST" enctype="multipart/form-data">
             <div class="form-group col-md-12">
-              <label for="">Nama Kategori</label>
+              <label for="">Nama Kategori Berita</label>
               <input type="text" name="nama_kategori" value="<?= isset($form_data) ? $form_data->nama_kategori : '' ?>" id="" class="form-control">
             </div>
             <div class="form-group col-md-12">
