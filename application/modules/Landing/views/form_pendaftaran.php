@@ -1,31 +1,90 @@
+      <section class="padding-tb-6px" style="background-color: #f7a91e;">
+        <div class="container">
+          <div class="row justify-content-center wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;"></div>
+        </div>
+      </section>
+
+      <section style="background-color: #432a19;">
+        <section class="padding-tb-80px" style="background-image: url('<?= base_url('assets/img/') ?>bg-pendaftaran.jpg');">
+          <div class="container">
+            <!-- section title -->
+            <div class="row justify-content-left wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+              <div class="col-md-12">
+                <div class="row col-lg-12">
+                  <img src="<?= base_url('assets/img/logo_kjpki _putih.png') ?>" height="110" alt="">
+                  
+                  <p class="text-extra-large margin-tb-50px" style="margin-left: 50px; font-size:40px;">
+                     <b style="color: #f7a91e; ">PENDAFTARAN</b> 
+                  </p>
+                  <div class="col-xl-2 d-none d-xl-block" style="margin-left: 20px;">
+                    <a href="#" class="btn btn-xl border-2 border-radius-30 border-orange btn-block margin-top-43px btn-secondary text-white">Online</a>
+                  </div>
+                  <div class="col-xl-2 d-none d-xl-block">
+                    <a href="#" class="btn btn-xl border-2 border-radius-30 border-orange btn-block margin-top-43px btn-light text-dark">Offline</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      
+        <section class="padding-tb-5px" style="background-color: #f7a91e;">
+          <div class="container">
+            <div class="row justify-content-center wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;"></div>
+          </div>
+        </section>
+
+        <section class="padding-tb-5px" style="background-color: #432a19;">
+          <div class="container">
+            <div class="row justify-content-center"></div>
+            <div class="row">
+              <div class="col-lg-3 col-md-6">
+                <div class="text-left">
+                  <h2 class="text-extra-large  margin-tb-10px">
+                     <b style="color: #ffffff;">PENDAFTARAN</b> <b style="color: #f7a91e;">ONLINE</b>
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- // row -->
+          </div>
+        </section>
+
+
+
+
 <section class="padding-tb-30px">
   <style>
 
   </style>
+
   <div class="container">
     <form id="step-form" method="post" enctype="multipart/form-data" action="<?= base_url('landing/pendaftaran_nasabah') ?>">
       <div>
         <h3>Data Diri</h3>
-        <section>
+        <section style="background-color: #ffffff;">
           <div class="form-group">
-            <label for="">Apakah Sudah Menjadi Member Komunitas PanenSaham ?</label><br>
+            <label for="">Apakah Sudah Menjadi Member <b style="color: #432a19;">Komunitas</b> <b style="color: #f7a91e;">PanenSaham</b> ?</label><br>
             <div class="w-50 daftar-radio">
               <div class="form-check form-check-inline">
-                <input class="form-check-input member" type="radio" name="data_diri[member]" id="" value="sudah">
+                <input class="form-check-input member required" type="radio" name="data_diri[member]" id="" value="sudah">
                 <label class="form-check-label" for="inlineRadio1">Sudah</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input member" type="radio" name="data_diri[member]" checked id="" value="belum">
+                <input class="form-check-input member required" type="radio" name="data_diri[member]" checked id="" value="belum">
                 <label class="form-check-label" for="inlineRadio2">Belum</label>
               </div>
             </div>
           </div>
-          <div class="form-group w-50 d-flex flex-row hide" id="client_id">
-            <label style="min-width: 6vw" for="">Client Id</label>
+          <div class="form-group w-50 flex-row hide" id="client_id">
+            <label style="min-width: 6vw;" for="">Client Id</label>
             <input type="text" name="data_diri[client_id]" data-bind="client_id" id="" class="form-control">
+            <p style="min-width: 6vw; margin-top: 10px;" for="">*Wajib memasukan Client ID jika sudah menjadi member</p>
           </div>
+          <br/>
           <div class="form-group">
-            <label for="">Apakah Sudah Memiliki Kartu Tanda Penduduk (diatas 17 tahun)?</label> <br>
+            <label for="">Apakah Sudah Memiliki <b style="color: #432a19;">Kartu Tanda Penduduk</b> <b style="color: #f7a91e;">(Diatas 17 Tahun)</b> ?</label> <br>
             <div class="w-50 daftar-radio">
               <div class="form-check form-check-inline">
                 <input class="form-check-input ktp" type="radio" name="data_diri[punya_ktp]" checked id="" value="sudah">
@@ -40,15 +99,22 @@
           <div class="form-group">
             <table>
               <tr>
-                <td id="ktp" class="hide">
+                <td id="ktp" class="show">
                   <label for="">Upload E-KTP</label>
                   <input type="file" name="ktp" id=""></td>
+                  <td id="kk2" class="show">
+                    <label for="">Upload KK* (Optional)</label> <br/>
+                    <label for="">*Wajib Upload jika belum memiliki KTP</label>
+                    <input type="file" name="kk" id=""></td>
+
                 <td id="ktp_ahli" class="hide">
                   <label for="">Upload KTP Ahli Waris</label>
                   <input type="file" name="ktp_ahli" id=""></td>
                 <td id="kk" class="hide">
-                  <label for="">Upload KK</label>
+                  <label for="">Upload KK*</label> <br/>
+                  <label for="">*Wajib Upload jika belum memiliki KTP</label>
                   <input type="file" name="kk" id=""></td>
+
               </tr>
             </table>
           </div>
@@ -56,6 +122,7 @@
             <div class="col">
               <label for="">Alamat Email</label>
               <input type="email" id="email" class="form-control" name="data_diri[email]" data-bind="email">
+              <label for="">*nama@mail.com</label>
             </div>
             <div class="col">
               <label for="">Ulangi Alamat Email</label>
@@ -66,16 +133,19 @@
             <div class="col">
               <label for="">Kata Sandi</label>
               <input type="password" id="password" class="form-control" name="data_diri[password]">
+              <label for="">*Kata Sandi harus diantara 8-20 karakter, dan mengandung paling sedikit satu angka, huruf kapital. Simbol tidak diperkenankan </label>
             </div>
             <div class="col">
               <label for="">Ulangi Kata Sandi</label>
               <input type="password" class="form-control" name="Cpassword">
             </div>
           </div>
+          <br/>
           <div class="form-group pt-4">
-            <h3>MOHON DIISI INFORMASI BERIKUT :</h3>
-            <p>(Seluru Data Formulir <b class="red">Wajib</b> diisi dengan lengkap dan benar) </p>
+            <h1><b style="color: #432a19;">MOHON DIISI INFORMASI BERIKUT :</b></h1>
+            <p>(Seluruh Data Formulir <b style="color: red;">Wajib</b> diisi dengan lengkap dan benar) </p>
           </div>
+          <br/>
           <div class="form-group row">
             <label for="colFormLabelSm" class="col-sm-5 col-form-label col-form-label">Nama Lengkap Sesuai
               Identitas</label>
@@ -97,7 +167,7 @@
                 <label for="">Tempat/Tanggal/Bulan/Tahun Lahir</label>
                 <div class="row">
                   <div class="col-md-6">
-                    <input type="text" name="data_diri[tempat]" placeholder="Tempat" class="form-control" data-bind="tempat">
+                    <input type="text" name="data_diri[tempat]" placeholder="PLACE" class="form-control" data-bind="tempat">
                   </div>
                   <div class="col-md-2">
                     <input type="text" name="data_diri[tanggal]" placeholder="DD" class="form-control haripicker" data-bind="hari">
@@ -207,7 +277,9 @@
               class="form-control"></textarea>
           </div>
         </section>
+
         <h3>STEP 2</h3>
+
         <section>
           <h2>Data Pekerjaan</h2>
           <div class="form-group row">
@@ -528,5 +600,32 @@
         </section>
       </div>
     </form>
+  </div>
+</section>
+
+<section class="padding-tb-5px" style="background-color: #f7a91e;">
+  <div class="container">
+    <div class="row justify-content-center wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;"></div>
+  </div>
+</section>
+
+<section class="padding-tb-5px" style="background-color: #432a19;">
+  <div class="container">
+    <div class="row justify-content-center"></div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6">
+        <div class="text-left">
+          <h2 class="text-extra-large  margin-tb-30px">
+          </h2>
+        </div>
+      </div>
+    </div>
+    <!-- // row -->
+  </div>
+</section>
+
+<section class="padding-tb-5px" style="background-color: #f7a91e;">
+  <div class="container">
+    <div class="row justify-content-center wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;"></div>
   </div>
 </section>

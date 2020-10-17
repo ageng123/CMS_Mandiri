@@ -115,11 +115,13 @@ $(document).ready(function () {
         if (data === 'belum') {
             $('#ktp').addClass('hide');
             $('#ktp_ahli').removeClass('hide');
+            $('#kk2').removeClass('hide');
             $('#kk').removeClass('hide');
         } else {
             $('#ktp').removeClass('hide');
             $('#ktp_ahli').addClass('hide');
-            $('#kk').addClass('hide');
+            $('#kk2').addClass('show');
+            $('#kk').removeClass('hide');
         }
     })
     $('input, select, textarea').on('change dp.change', function(){

@@ -73,6 +73,7 @@ class Landing extends CI_Controller {
 			'form_url' => 'users/add'
 		];
 		landing_parse($content, $data);
+
 	}
 	public function pendaftaran_nasabah(){
 		var_dump($this->input->post());
