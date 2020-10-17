@@ -530,7 +530,7 @@
       <div class="col-4">
         <div class="card no-border no-bg">
           <div class="card-header no-border no-bg">
-            <img src="<?= base_url('assets/img/panen.png') ?>" alt="">
+            <img src="<?= base_url('assets/img/panenbersama_2.png') ?>" alt="">
           </div>
           <div class="card-body no-border bo-bg">
              <div class="background-white padding-20px" style="text-align: center;font-size: 14px;">
@@ -542,7 +542,7 @@
       <div class="col-4">
         <div class="card no-border no-bg">
           <div class="card-header no-border no-bg">
-            <img src="<?= base_url('assets/img/radio.png') ?>" alt="" >
+            <img src="<?= base_url('assets/img/radio3.png') ?>" alt="" >
           </div>
           <br>
             <div class="background-white padding-20px" style="text-align: center;font-size: 14px;">

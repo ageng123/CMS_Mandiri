@@ -46,6 +46,18 @@ class Landing extends CI_Controller {
 		// admin_parse($content, null);
 		// $this->load->view('welcome_message');
 	}
+
+	public function detail_berita()
+	{
+		$model = new Landing_model();
+		$user = $model->findBy(['active' => '1']);
+		$content = 'detail_berita';
+		$data = [
+			'page_title' => 'Mandiri Sekuritas - CMS'
+		];
+		landing_parse($content, $data);
+	}
+
 	public function save_data()
 	{
 		$model = new Landing_model();

@@ -31,10 +31,8 @@ class Berita extends CI_Controller {
 			$row[] = '';
 			$row[] = $val->nama_kategori;
 			$row[] = $val->deskripsi_kategori;
-			$row[] = '<a href='.base_url('admin').' class="btn btn-secondary btn-sm" data-toggle="tooltip" title="Detail"><i class="fa fa-info"></i></span></a>
-					  <a href='.base_url('admin').' class="btn btn-info btn-sm" data-toggle="tooltip" title="Download Word"><i class="fa fa-download"></i></span></a>
-					  <a href="'.base_url('kategori/berita/edit').'?session_id='.encode($val->id_kategori).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
-					  <a href="'.base_url('kategori/berita/destroy').'?session_id='.encode($val->id_kategori).'" class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>';
+			$row[] = '<a href="'.base_url('kategori/berita/edit').'?session_id='.encode($val->id_kategori).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
+					  <a href="'.base_url('kategori/berita/destroy').'?session_id='.encode($val->id_kategori).'" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" title="Delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Kategori Berita : '.$val->nama_kategori.' ? "><i class="fa fa-trash"></i></span></a> ';
 			$result[] = $row;
 		endforeach;
 		$data = json_output(200, null, $result);

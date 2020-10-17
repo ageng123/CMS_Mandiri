@@ -22,7 +22,7 @@
         <div class="table-responsive card-body py-4">
           <form action="<?= $form_url ?>" class='row' method="POST" enctype="multipart/form-data">
           <div class="form-group col-md-12">
-              <label for="">User</label>
+              <label for="">Nama User</label>
               <select name="user_id" id="" class="form-control">
                 <?php foreach($user_data as $val): ?>
                   <option value="<?= $val->id ?>" <?= isset($form_data) && $form_data->id_user == $val->id ? 'Selected' : '';  ?> ><?= $val->username ?></option>
@@ -30,7 +30,7 @@
               </select>
             </div>
             <div class="form-group col-md-12">
-              <label for="">Roles</label>
+              <label for="">Nama Role</label>
               <select name="role_id" id="" class="form-control">
                 <?php foreach($role_data as $val): ?>
                   <option value="<?= $val->id_role ?>" <?= isset($form_data) && $form_data->id_role == $val->id_role ? 'Selected' : '';  ?> ><?= $val->nama_role ?></option>
