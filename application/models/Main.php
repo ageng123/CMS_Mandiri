@@ -50,5 +50,28 @@ class Main extends CI_Model{
         $this->lastId = $this->db->insert_id();
         return true;
     }
+    private function upload_file($params, $id){
+        $folder = APPPATH.'../public/resources/upload/'.$id;
+        $config['upload_path']          = $folder;
+        $config['allowed_types']        = '*';
+        // $config['max_size']             = 100;
+        // $config['max_width']            = 1024;
+        // $config['max_height']           = 768;
 
+        $this->load->library('upload', $config);
+        if(!file_exists($folder)):
+            mkdir($folder, 0777);
+        endif;
+        if ( ! $this->upload->do_upload($params))
+        {
+                return $this->upload->display_errors();
+        }
+        else
+        {
+                // $data = array('upload_data' => $this->upload->data());
+                
+                // $this->load->view('upload_success', $data);
+                return (object)$this->upload->data();
+        }
+}
 }

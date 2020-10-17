@@ -46,5 +46,6 @@
 	<script type="text/javascript" src="<?= base_url('assets/landing_template/') ?>assets/js/popper.min.js"></script>
 	<script type="text/javascript" src="<?= base_url('assets/landing_template/') ?>assets/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.js" integrity="sha512-gH0SqyjTN7WJAtki1UvqOkhWi3WsF9LY05BMwdcSq6QdFDXrXeXy0q8iP0YmBXCqo7OnSgdIPrC5Vqn8/KRu/Q==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="<?= base_url('assets/') ?>/js/services.js"></script>
 	<script type="text/javascript" src="<?= base_url('assets/') ?>/js/landing.js"></script>

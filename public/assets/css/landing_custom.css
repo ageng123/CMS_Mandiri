@@ -12,6 +12,9 @@
 .text-black{
     color: black !important;
 }
+p{
+    margin-top: 1em;
+}
 /* JQUERY STEP  */
   ﻿/*
     Common 
@@ -62,8 +65,17 @@
     left: -999em;
 }
 
-
-
+ul[role='tablist']{
+    display: none;
+}
+/* Button Next */
+a[href='#next']{
+    color: red !important;
+}
+/* button prev  */
+a[href='#previous']{
+    color: green !important;
+}
 /*
     Wizard
 */
