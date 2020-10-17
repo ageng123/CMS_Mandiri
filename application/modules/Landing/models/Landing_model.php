@@ -5,8 +5,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         protected $table = 'tb_user';
         protected $primaryKey = 'id_user';
         
-        public function __construct(){
+         public function __construct(){
             parent::__construct();
+		$this->model = 'dat_subscribe';
+        }
+        public function simpan($data){
+            return $this->db->insert($this->model, $data);
         }
 
     }

@@ -3,9 +3,10 @@
 			<div class="row">
 				<div class="col-5">
 					<h2 class="text-primary">Subscribe to Our Newsletter ... </h2>
-					<form action="">
+					
+          <form action="<?= base_url('landing/proses_add');?>" method="POST">
 						<div class="form-group">
-							<input type="text" placeholder="Enter Your Email Address ..." class="form-control">
+							<input type="text" name="email" placeholder="Enter Your Email Address ..." class="form-control">
 						</div>
 					</form>
 				</div>

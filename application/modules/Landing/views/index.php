@@ -122,11 +122,19 @@
   aria-hidden="true">
   <div class="modal-body" style="display: flex; flex-direction: column">
     <button type="button"
-      style="align-self: end;background: white !important;border: 1px solid black;border-radius: 50%;width: 50px;height: 50px; margin-bottom: 1vh; cursor: pointer"
+      style="align-self: end;background: white !important;border: 1px solid black;border-radius: 30%;width: 30px;height: 30px; margin-bottom: 1vh; cursor: pointer"
       class="modal-close">
       <span aria-hidden="true">&times;</span>
     </button>
-    <a href="<?= base_url();?>pendaftaran"><img src="<?= base_url('assets/img/') ?>opening.jpg" style="height: auto ; width: 120%" alt=""></a>
+    <table style="border: 0px;">
+      <tr>
+      <td width="17%" style="border: 0px;">&nbsp;</td>
+      <td width="70%" style="border: 0px;">
+    <a href="<?= base_url();?>pendaftaran"><img src="<?= base_url('assets/img/') ?>opening.jpg" style="height: auto ; width: 93%;text-align: center;" alt=""></a></td>
+      <td width="10%" style="border: 0px;">&nbsp;</td>
+
+      </tr>
+    </table>
   </div>
 </div>
 <script>
@@ -565,7 +573,7 @@
       <div class="col-12 sm-mb-30px text-center hvr-float wow fadeInUp">
         <span class="fa fa-map-marker" style="font-size: 72px; color: yellow" aria-hidden="true"></span>
         <br>
-        <button style="margin-top: 2vh" class="btn btn-lg btn-default"> Show on Map</button>
+        <a href="https://goo.gl/maps/xqwezwXATf3ijMiS6" style="margin-top: 2vh;background-color: white;" class="btn btn-lg btn-default" target="_blank"> Show on Map</a>
       </div>
 
     </div>
