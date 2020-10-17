@@ -24,7 +24,7 @@ class Product extends Auth_Guard {
 	// JSON
 	public function getJSON(){
 		$model = new ProdukModel;
-		$output = $model->all();
+		$output = $model->findBy(['seller_id' => $this->session->userdata('user_id'), 'status !=' => 3]);
 		$no = $this->input->post('start');
 		$result = array();
 		foreach($output as $key => $val):
@@ -97,7 +97,7 @@ class Product extends Auth_Guard {
 			$model = new ProdukModel();
 			$model->title = $this->input->post('judul');
 			// $model->link = str_replace([' ', '-'], ['_', ''], $this->input->post('judul'));
-			// $model->sub = $this->input->post('subjudul');
+			$model->harga = $this->input->post('subjudul');
 			$model->deskripsi = $this->input->post('isi_berita');
 			$model->tag_id = implode(',',$this->input->post('kategori_berita'));
 			$model->status = $this->input->post('status_berita');
@@ -125,6 +125,7 @@ class Product extends Auth_Guard {
 	}
 	public function edit(){
 		$model = new ProdukModel();
+		$attach = new Attachment_Model;
 		$id = decode($_GET['session_id']);
 		$content = 'content/produk/add';
 		$data = [
@@ -132,27 +133,40 @@ class Product extends Auth_Guard {
 			'card_title' => "Edit Data Konten Produk",
 			'form_url' => base_url('content/product/edit?session_id='.encode($id)),
 			'form_data' => $model->find($id),
+			'attachment' => $attach->Attachment_List($id),
 			'kategori_list' => $this->KategoriModel->findBy(['jenis_kategori' => 2]),
 			'status_list' => $this->status
 		];
+		$imgArr = explode(',',$data['attachment']);
+		$img = array();
+		foreach($imgArr as $val){
+			$img[] = $attach->find($val);
+		}
+		$data['img'] = $img;
 		if(!empty($this->input->post())):
-			
+			$model = new ProdukModel();
+			var_dump($this->input->post());
 			$model->title = $this->input->post('judul');
-			$model->link = str_replace([' ', '-'], ['_', ''], $this->input->post('judul'));
-			$model->sub = $this->input->post('subjudul');
-			$model->content = $this->input->post('isi_berita');
+			// $model->link = str_replace([' ', '-'], ['_', ''], $this->input->post('judul'));
+			$model->harga = $this->input->post('subjudul');
+			$model->deskripsi = $this->input->post('isi_berita');
 			$model->tag_id = implode(',',$this->input->post('kategori_berita'));
 			$model->status = $this->input->post('status_berita');
-			$cover = $this->upload('cover_berita');
-			if(isset($cover->file_name)):
-				$model->thumbnail = $cover->file_name;
-			endif;
-			$model->author = 3; //must-edit
+			$model->seller_id = $this->session->userdata('user_id'); //must-edit
 			if($model->update($id)):
+			$attachArr = explode(',', $this->input->post('attachment'));
+				var_dump($attachArr);
+				foreach($attachArr as $key => $val){
+					$attach = new Attachment_Model;
+					$attach->refid = $id;
+					$attach->seq = $key + 1;
+					$attach->update($val);
+				}	
 				$this->session->set_flashdata('message', 'Data Konten Produk Telah Di Update');
 				return redirect(base_url('content/product'));
 			else:
 				echo $this->db->error();
+				die;
 			endif;
 		endif;
 		admin_parse($content, $data);

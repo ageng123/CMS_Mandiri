@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
          public function __construct(){
             parent::__construct();
-		$this->model = 'dat_subscribe';
+		    $this->model = 'dat_subscribe';
         }
         public function simpan($data){
             return $this->db->insert($this->model, $data);

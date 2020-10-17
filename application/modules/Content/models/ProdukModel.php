@@ -33,6 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             endforeach;
             return implode(' ',$result);
         }
+        
     }
     class Attachment_Model extends Main{
         protected $table = 'attachment_list';
@@ -57,4 +58,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
              }
              return $result;
          }
+         public function Attachment_List($params){
+            $sqlQuery = "SELECT GROUP_CONCAT(`id_attachment` separator ',') as list FROM ".$this->table." WHERE refid ='".$params."' GROUP BY refid";
+            $output = $this->query($sqlQuery);
+            return $output[0]->list;
+        }
     }

@@ -10,6 +10,7 @@ class Berita extends CI_Controller {
 			'2' => 'Simpan',
 			'3' => 'Delete'
 		];
+		$this->user = $this->session->userdata('user_id');
 	}
 	public function index()
 	{
@@ -24,7 +25,7 @@ class Berita extends CI_Controller {
 	// JSON
 	public function getJSON(){
 		$model = new BeritaModel;
-		$output = $model->all();
+		$output = $model->findBy(['author' => $this->user, 'status !=' => 3]);
 		$no = $this->input->post('start');
 		$result = array();
 		foreach($output as $key => $val):

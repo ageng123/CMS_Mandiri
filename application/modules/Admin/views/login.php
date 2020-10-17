@@ -128,6 +128,7 @@
               </div>
 
               <form enctype="multipart/form-data" data-url="<?= base_url('Auth_api/login_api') ?>" id="form-login">
+              <div id="alert-holder"></div>
                 <div class="form-group mb-3">
                   <div class="input-group input-group-merge input-group-alternative">
                     <div class="input-group-prepend">

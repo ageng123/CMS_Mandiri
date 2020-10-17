@@ -49,14 +49,18 @@
                 <?php endif; ?>
               </div>
             </div> -->
-            <textarea name="attachment" style="display: none" id="attch_list" cols="30" rows="10"></textarea>
+            <?php if(isset($attachment)): ?>
+              <?php foreach($img as $key => $val) ?>
+                  <img src="<?= base_url('resources/Produk/').$this->session->userdata('user_id').'/'.$val->nama_file ?>" alt="">
+            <?php endif; ?>
+            <textarea name="attachment" value="<?= isset($form_data) ? $attachment : '' ?>" style="display: none" id="attch_list" cols="30" rows="10"><?= isset($form_data) ? $attachment : '' ?></textarea>
             <div class="form-group col-md-12">
               <label for="">Judul Produk</label>
               <input type="text" name="judul" value="<?= isset($form_data) ? $form_data->title : '' ?>" id="" class="form-control">
             </div>
             <div class="form-group col-md-12">
               <label for="">Harga Produk</label>
-              <input type="number" name="subjudul" value="<?= isset($form_data) ? $form_data->sub : '' ?>" id="" class="form-control">
+              <input type="number" name="subjudul" value="<?= isset($form_data) ? $form_data->harga : '' ?>" id="" class="form-control">
             </div>
             <div class="form-group col-md-12">
               <label for="">Kategori Produk</label>
@@ -70,7 +74,7 @@
             </div>
             <div class="form-group col-md-12">
               <label for="">Deskripsi Produk</label>
-              <textarea class="form-control news-content" name="isi_berita" id="" cols="30" rows="10"><?= isset($form_data) ? $form_data->content : '' ?></textarea>
+              <textarea class="form-control news-content" name="isi_berita" id="" cols="30" rows="10"><?= isset($form_data) ? $form_data->deskripsi : '' ?></textarea>
             </div>
             <div class="form-group col-md-12">
               <label for="">Status Produk</label>

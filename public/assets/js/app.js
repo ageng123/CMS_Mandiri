@@ -177,7 +177,8 @@ $(document).ready(function () {
         if(postData.kode == 200){
             window.location.href = BaseUri+'/admin';
         } else {
-            console.log(postData);
+           let errorMsg = '<div class="alert alert-warning" role="alert">Username atau Password Salah !!!</div>';
+           $('#alert-holder').html(errorMsg);
         }
     })
 
@@ -192,6 +193,8 @@ $(document).ready(function () {
                     $('#attch_list').val(data.id_upload);
                 } else {
                     $('#attch_list').val(current + ',' + data.id_upload);
+                    console.log($('#attch_list').val());
+
                 }
             })
                 
