@@ -25,7 +25,8 @@ class Berita extends Auth_Guard {
 	// JSON
 	public function getJSON(){
 		$model = new BeritaModel;
-		$output = $model->findBy(['author' => $this->user, 'status !=' => 3]);
+		var_dump($this->user);
+		$output = $model->findBy(['author' => $this->user]);
 		$no = $this->input->post('start');
 		$result = array();
 		foreach($output as $key => $val):
@@ -96,7 +97,7 @@ class Berita extends Auth_Guard {
 			$cover = $this->upload('cover_berita');
 			$model->thumbnail = $cover->file_name;
 			$model->view = 0; //must-edit
-			$model->author = 3; //must-edit
+			$model->author = $this->user; //must-edit
 			if($model->save()):
 				$this->session->set_flashdata('message', 'Data Konten Berita Telah Di Input');
 				return redirect(base_url('content/berita'));
@@ -130,7 +131,7 @@ class Berita extends Auth_Guard {
 			if(isset($cover->file_name)):
 				$model->thumbnail = $cover->file_name;
 			endif;
-			$model->author = 3; //must-edit
+			$model->author = $this->user; //must-edit
 			if($model->update($id)):
 				$this->session->set_flashdata('message', 'Data Konten Berita Telah Di Update');
 				return redirect(base_url('content/berita'));
