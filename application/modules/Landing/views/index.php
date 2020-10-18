@@ -178,7 +178,7 @@
                   border: 0px transparent;
                 }
               </style>
-              <div class="col-12 p-2 pl-4 row">
+              <div class="col-12 p-2 pl-4 row getTopProduct">
                 <?php for($i = 1; $i <= 6; $i++){
               ?>
                 <div class="col-6"><a href="">
@@ -200,12 +200,12 @@
               <div class="col-12 row">
                 <h3>Latest Product</h3>
               </div>
-              <div class="col-12 row">
+              <div class="col-12 row getProductLatest">
                 <?php for($i = 1; $i <= 6; $i++){
               ?>
                 <div class="col-2"><a href="">
                     <div class="card card-product">
-                      <div class="card-boy" style="padding: 0px; background: black">
+                      <div class="card-body" style="padding: 0px; background: black">
                         <img src="<?= base_url('assets/img/header.png') ?>" height="75" alt="">
                       </div>
                     </div>
@@ -271,7 +271,7 @@
         <div class="col-12">
           <h2>Kategori Berita Populer</h2>
         </div>
-        <div class="col-12 row">
+        <div class="col-12 row getTagsPopular">
           <?php for($i = 0; $i < 23; $i++){?>
           <div class="p-1">
             <button class="btn btn-sm btn-danger">Tags berita</button>
@@ -281,7 +281,7 @@
         <div class="col-12">
           <h2>Berita Populer</h2>
         </div>
-        <div class="col-12">
+        <div class="col-12 topNews">
           <?php for($i = 0; $i < 3; $i++){?>
           <?php if($i == 0): ?>
           <div class="col-12 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s"

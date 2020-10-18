@@ -14,7 +14,7 @@
 	{_header_}
 </head>
 
-<body class="background-white">
+<body class="background-white" data-server="<?= base_url() ?>">
 	<!-- header -->
 	<header class="gradient-white box-shadow">
 		<div class="background-grey-2 padding-tb-10px position-relative" style="background-color: #efebe8;">

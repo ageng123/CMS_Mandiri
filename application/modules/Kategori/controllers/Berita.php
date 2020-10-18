@@ -1,7 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+require_once APPPATH.'controllers/Auth_Guard.php';
 
-class Berita extends CI_Controller {
+class Berita extends Auth_Guard {
 
 
 	public function __construct(){

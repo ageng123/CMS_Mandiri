@@ -32,7 +32,7 @@
             }
             </style>
             <label for="">Foto Produk</label>
-            <form action="<?= base_url('content/product/upload_foto') ?>" class="produkDrop dropzone" id="produkDrop" style="display: flex;flex-direction: row">
+            <form action="<?= base_url('content/product/upload_foto') ?>" data-delete="<?= base_url('content/product/delete_attachment?id=') ?>" <?= isset($form_data) ? 'data-get='.base_url('content/product/get_attachment?id=').$_GET['session_id'] : '' ?>" class="produkDrop dropzone" id="produkDrop" style="display: flex;flex-direction: row">
             <div class="fallback">
               <input name="foto_produk[]" type="file" multiple />
             </div>
@@ -49,10 +49,10 @@
                 <?php endif; ?>
               </div>
             </div> -->
-            <?php if(isset($attachment)): ?>
+            <!-- <?php if(isset($attachment)): ?>
               <?php foreach($img as $key => $val) ?>
                   <img src="<?= base_url('resources/Produk/').$this->session->userdata('user_id').'/'.$val->nama_file ?>" alt="">
-            <?php endif; ?>
+            <?php endif; ?> -->
             <textarea name="attachment" value="<?= isset($form_data) ? $attachment : '' ?>" style="display: none" id="attch_list" cols="30" rows="10"><?= isset($form_data) ? $attachment : '' ?></textarea>
             <div class="form-group col-md-12">
               <label for="">Judul Produk</label>

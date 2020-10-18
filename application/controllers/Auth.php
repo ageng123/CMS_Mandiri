@@ -256,6 +256,7 @@ class Auth extends CI_Controller
 			if ($forgotten)
 			{
 				// if there were no errors
+				send_email();
 				$this->session->set_flashdata('message', $this->ion_auth->messages());
 				redirect(base_url("auth/login"), 'refresh'); //we should display a confirmation page here instead of the login page
 			}

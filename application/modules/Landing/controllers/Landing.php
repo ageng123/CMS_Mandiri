@@ -75,9 +75,26 @@ class Landing extends CI_Controller {
 		landing_parse($content, $data);
 	}
 	public function pendaftaran_nasabah(){
-		var_dump($this->input->post());
 		$this->trigger_save_event('SAVE_DATA_DIRI', $this->input->post('data_diri'));
-		echo true;
+		$message = '
+					<html>
+					<head>
+					<title>Birthday Reminders for August</title>
+					</head>
+					<body>
+					<p>Harap Klik Link dibawah Ini untuk aktivasi Akun KJKPI Anda</p>
+					<table>
+					<tr>
+					<td>Total Pembayaran</td><td>'.$this->email['total_pembayaran'].'</td>
+					</tr>
+					<tr>
+					<td>Link Aktivasi Akun</td><td>'.$this->email['kode_aktivasi'].'</td>
+					</tr>
+					</table>
+					</body>
+					</html>
+					';
+		send_email($this->email['to'], null, null, 'Status Pendaftaran Akun KJKPI ANDA',$message);
 	}
 	private function saveData_diri($request){
 		$model = new Nasabah_Model;
@@ -98,8 +115,11 @@ class Landing extends CI_Controller {
 		$model->alamat = $request->alamat.'/'.$request->rt.'/'.$request->kelurahan.'/'.$request->kecamatan.'/'.$request->kabupaten.'/'.$request->provinsi.'/'.$request->kodepos;
 		$model->alamat_rumah = $request->alamat_rumah;
 		$model->email = $request->email;
+		$this->email['to'] = $request->email;
 		$model->password = $this->bcrypt->hash($request->password);
-		$model->activation_code = encode($request->nomor_identity.$request->nama);
+		$code =  encode($request->nomor_identity.$request->nama);
+		$model->activation_code = $code;
+		$this->email['kode_aktivasi'] = $code;
 		if($model->save()):
 			$this->nasabahId = $model->lastId;
 			$ktp = $this->upload('ktp', $this->nasabahId);
@@ -151,6 +171,7 @@ class Landing extends CI_Controller {
 		$random_number = rand(1, 999);
 		$model->total_pembayaran = (15000 * (int)$simpanan_wajib ) + 100000 + (int)$sukarela;
 		$model->kode_pembayaran = $random_number;
+		$this->email['total_pembayaran'] = (15000 * (int)$simpanan_wajib ) + 100000 + (int)$sukarela + (int)$random_number;
 		if($model->save()):
 			return true;
 		endif;
@@ -182,4 +203,5 @@ class Landing extends CI_Controller {
 			}
 
 		}
+
 }

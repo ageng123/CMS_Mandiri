@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-class Berita extends CI_Controller {
+require_once APPPATH.'controllers/Auth_Guard.php';
+class Berita extends Auth_Guard {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model(['BeritaModel', 'Users/UserModel', 'Kategori/KategoriModel']);
@@ -88,7 +88,7 @@ class Berita extends CI_Controller {
 		if(!empty($this->input->post())):
 			$model = new BeritaModel();
 			$model->title = $this->input->post('judul');
-			$model->link = str_replace([' ', '-'], ['_', ''], $this->input->post('judul'));
+			$model->link = str_replace([' ', '-'], ['+', ''], $this->input->post('judul'));
 			$model->sub = $this->input->post('subjudul');
 			$model->content = $this->input->post('isi_berita');
 			$model->tag_id = implode(',',$this->input->post('kategori_berita'));

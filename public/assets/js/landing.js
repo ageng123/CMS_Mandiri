@@ -138,4 +138,63 @@ $(document).ready(function () {
         let alamat_rumah = alamat+','+rt+','+kelurahan+','+kecamatan+','+kabupaten+','+provinsi+','+kodepos;
         $('textarea#alamat_rumah').html(alamat_rumah);
     })
+    $('.getProductLatest').each(function(){
+        let data = Content_Services.getNewestProduct();
+        if(data.kode == 200){
+            let content_data = data.data;
+            let content = ''
+            content_data.map(function(val){
+                content = content + Content_Services.latestProductData(val);
+            })
+            $(this).html(content)
+        } else {
+            console.log(data.msg);
+        }
+    })
+    $('.getTopProduct').each(function(){
+        let data = Content_Services.getTopProduct();
+        if(data.kode == 200){
+            let content_data = data.data;
+            let content = ''
+            content_data.map(function(val){
+                content = content + Content_Services.TopProductData(val);
+            })
+            $(this).html(content)
+        } else {
+            console.log(data.msg);
+        }
+    })
+    $('.getTagsPopular').each(function(){
+        let data = Content_Services.getTopKategori();
+        if(data.kode == 200){
+            let content_data = data.data;
+            let content = ''
+            content_data.map(function(val){
+                console.log(data);
+                content = content + Content_Services.topTagsContent(val);
+            })
+            $(this).html(content)
+        } else {
+            console.log(data.msg);
+        }
+    })
+    $('.topNews').each(function(){
+        let data = Content_Services.getTopNews();
+        if(data.kode == 200){
+            let content_data = data.data;
+            let content = ''
+            content_data.map(function(val, index){
+                console.log(index);
+                if(index == 0){
+                    content = content + Content_Services.topNewsContent(1,val);
+                } else {
+                    content = content + Content_Services.topNewsContent(2, val);
+                }
+                // content = content + Content_Services.topTagsContent(val);
+            })
+            $(this).html(content)
+        } else {
+            console.log(data.msg);
+        }
+    })
 })

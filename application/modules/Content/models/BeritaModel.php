@@ -33,5 +33,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             }
             return $result;
         }
-
+        public function top_3(){
+            $query = "SELECT * FROM ".$this->table." WHERE status = 1 ORDER BY view DESC LIMIT 3";
+            return $this->query($query);
+        }
+        public function newest(){
+            $query = "SELECT * FROM ".$this->table." WHERE status = 1 ORDER BY last_update DESC LIMIT 10";
+            return $this->query($query);
+        }
     }

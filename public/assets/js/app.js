@@ -181,11 +181,11 @@ $(document).ready(function () {
            $('#alert-holder').html(errorMsg);
         }
     })
-
+    Dropzone.autoDiscover = false;
     var myDropZone = new Dropzone('.produkDrop',{
+        addRemoveLinks: true, 
         init: function(){
             this.on('success', function(file, resp){
-                console.warn(file);
                 let parse = JSON.parse(resp);
                 let data = parse.data;
                 let current = $('#attch_list').val();
@@ -197,8 +197,48 @@ $(document).ready(function () {
 
                 }
             })
-                
+            this.on('addedfile', function(file){
+                var removeButton = Dropzone.createElement("<button data-dz-remove " +
+                "class='del_thumbnail btn btn-default'><span class='glyphicon glyphicon-trash'></span></button>");
+
+                removeButton.addEventListener("click", function (e) {
+
+                })
+            })
+            let DropZone = this;
+            let element = DropZone.element;
+            let url_data = element.getAttribute('data-get');
+            // if(url_data !== 'undefined'){
+                $.get(url_data, function(data) {
+                    data = JSON.parse(data);
+                    $.each(data.data, function(key,value){
+                        var mockFile = { name: value.nama, size: value.size, id: value.id, files: value.file };
+                        DropZone.options.addedfile.call(DropZone, mockFile);
+                        DropZone.emit("complete", mockFile);
+                        DropZone.options.thumbnail.call(DropZone, mockFile, "http://localhost:8000/resources/Produk/4/"+value.file);
+                         
+                    });
+                })
+            // }
+        },
+        removedfile: function(file) {
+            let DropZone = this;
+            let element = DropZone.element;
+            let url_data = element.getAttribute('data-delete');
+            x = confirm('Do you want to delete?');
+            if(!x)  return false;
+            $.ajax({
+                url: url_data,
+                method: 'POST',
+                data: {
+                    name : file.files,
+                    id : file.id
+                },
+                dataType: 'text/html',
+                success: function(response){
+                    window.location.reload();
+                }
+            })
         }
-     })
-     
+     })     
 })

@@ -9,5 +9,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             parent::__construct();
             $this->last_update = date('Y-m-d H:i:s');
         }
-
+        public function top($params){
+            $query = "SELECT * FROM ".$this->table." ORDER BY view DESC LIMIT ".$params;
+            return $this->query($query);
+        }
     }

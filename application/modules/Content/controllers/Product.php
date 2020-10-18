@@ -44,6 +44,36 @@ class Product extends Auth_Guard {
 		// $data['draw'] = $this->input->post('draw');
 		echo JSON_ENCODE($data, JSON_PRETTY_PRINT);
 	}
+	public function get_attachment(){
+		$folder = APPPATH.'../public/resources/produk/'.$this->session->userdata('user_id');
+		$id = decode($_GET['id']);
+		$model = new Attachment_Model;
+		$output = $model->findBy(['refid' => $id, 'nama_attachment !=' => null]);
+		$result = array();
+		foreach($output as $key => $val):
+			$row = array();
+			$row['id'] = $val->id_attachment;
+			$row['file'] = $val->nama_file;
+			$row['nama'] = $val->nama_attachment;
+			$row['size'] = filesize($folder.DIRECTORY_SEPARATOR.$val->nama_file);
+			$result[] = $row;
+		endforeach;
+		$data = json_output(200, null, $result);
+		echo json_encode($data, JSON_PRETTY_PRINT);
+	}
+	public function delete_attachment(){
+		$nama_file = $this->input->post('name');
+		$id = $this->input->post('id');
+		$directory =  APPPATH.'../public/resources/produk/'.$this->session->userdata('user_id');
+		if(unlink($directory.'/'.$nama_file)){
+			$model = new Attachment_Model;
+			if($model->delete($id)){
+				$result = 'Berhasil Hapus Data';
+			}
+		}
+		$data = json_output(200, null, $result);
+		echo json_encode($data, JSON_PRETTY_PRINT);
+	}
 	public function getUserNamaById($params){
 		$model = new UserModel();
 		$output = $model->find($params);

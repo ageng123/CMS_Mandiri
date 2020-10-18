@@ -33,6 +33,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             endforeach;
             return implode(' ',$result);
         }
+        public function newest(){
+            $query = "SELECT * FROM ".$this->table." a JOIN attachment_list b ON a.id_product = b.refid  WHERE a.status = 1 AND b.seq = 1 ORDER BY a.last_update DESC LIMIT 6";
+            return $this->query($query);
+        }
+        public function top(){
+            $query = "SELECT * FROM ".$this->table." a JOIN attachment_list b ON a.id_product = b.refid  WHERE a.status = 1 AND b.seq = 1 ORDER BY a.view DESC LIMIT 10";
+            return $this->query($query);
+        }
         
     }
     class Attachment_Model extends Main{
