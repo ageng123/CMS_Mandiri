@@ -16,13 +16,16 @@ $(document).ready(function () {
                    rules: PendaftaranServices.letrulesStep1,
                 })
                 console.log(form.valid());
-                return form.valid();
+                // return form.valid();
+                return true;
             } else if(currentIndex === 1){
                 form.validate({
                    rules: PendaftaranServices.letrulesStep1,
                 })
                 console.log(form.valid());
-                return form.valid();
+                // return form.valid();
+                return true;
+
             } 
             else {
                 return true;
@@ -114,14 +117,14 @@ $(document).ready(function () {
         let data = $(this).val();
         if (data === 'belum') {
             $('#ktp').addClass('hide');
+            $('#kk2').addClass('hide');
             $('#ktp_ahli').removeClass('hide');
-            $('#kk2').removeClass('hide');
             $('#kk').removeClass('hide');
         } else {
             $('#ktp').removeClass('hide');
+            $('#kk2').removeClass('hide');
             $('#ktp_ahli').addClass('hide');
-            $('#kk2').addClass('show');
-            $('#kk').removeClass('hide');
+            $('#kk').addClass('hide');
         }
     })
     $('input, select, textarea').on('change dp.change', function(){

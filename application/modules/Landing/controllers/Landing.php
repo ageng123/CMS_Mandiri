@@ -129,6 +129,7 @@ class Landing extends CI_Controller {
 			$prefix = $this->nasabId.'/';
 			if(isset($ktp->filename)):
 				$model->foto_ktp = $prefix.$ktp->file_name;
+				$model->foto_kk = $prefix.$kk->file_name;
 			else:
 				$model->foto_kk = $prefix.$kk->file_name;
 				$model->foto_ktp_ahli_waris = $prefix.$ktp_ahli->file_name;
