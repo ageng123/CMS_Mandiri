@@ -217,6 +217,9 @@ const Content_Services = {
     NewestProductUrl: base_url+'api/newestProduct',
     TopKategoriUrl: base_url+'api/getMostPopularTags',
     NewestNewsUrl: base_url+'api/newestNews',
+    renderSource: function(data){
+        return base_url+'/resources/Berita/'+data.thumbnail;
+    },
     topNewsDescript: function(data){
         data = data.replace(/<img[^>]*>/g,""); 
         data = data.replace(/<[^>]*>?/gm, '');
@@ -296,5 +299,5 @@ const Content_Services = {
     getNewestProduct: function(){
         let data = HttpServices.getJson(Content_Services.NewestProductUrl);
         return data;
-    }
+    },
 }

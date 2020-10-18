@@ -179,41 +179,17 @@
                 }
               </style>
               <div class="col-12 p-2 pl-4 row getTopProduct">
-                <?php for($i = 1; $i <= 6; $i++){
-              ?>
-                <div class="col-6"><a href="">
-                    <div class="card card-product">
-                      <div class="card-body">
-                        <img src="<?= base_url('assets/img/header.png') ?>" height="150" alt="">
-                        <div class="price-list">
-                          <h4>Sepeda Gunung</h4>
-                          <h3>$30.000</h3>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-                <?php
-              } ?>
+              <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
               </div>
               <div class="col-12 row">
                 <h3>Latest Product</h3>
               </div>
               <div class="col-12 row getProductLatest">
-                <?php for($i = 1; $i <= 6; $i++){
-              ?>
-                <div class="col-2"><a href="">
-                    <div class="card card-product">
-                      <div class="card-body" style="padding: 0px; background: black">
-                        <img src="<?= base_url('assets/img/header.png') ?>" height="75" alt="">
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-                <?php
-              } ?>
+              <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
               </div>
             </div>
           </div>
@@ -272,42 +248,17 @@
           <h2>Kategori Berita Populer</h2>
         </div>
         <div class="col-12 row getTagsPopular">
-          <?php for($i = 0; $i < 23; $i++){?>
-          <div class="p-1">
-            <button class="btn btn-sm btn-danger">Tags berita</button>
-          </div>
-          <?php } ?>
+        <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
         </div>
         <div class="col-12">
           <h2>Berita Populer</h2>
         </div>
         <div class="col-12 topNews">
-          <?php for($i = 0; $i < 3; $i++){?>
-          <?php if($i == 0): ?>
-          <div class="col-12 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s"
-            style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp; border-bottom: 1px solid red;">
-            <div class="text-left hvr-bob opacity-hover-7">
-              <img src="<?= base_url('assets/img/pb.png') ?>" alt="">
-              <h2 class="text-extra-large  margin-tb-10px">
-                Powerful Website
-              </h2>
-              <p class="opacity-7">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard</p>
-            </div>
-          </div>
-          <?php else: ?>
-          <div class="col-12 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s"
-            style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp; border-bottom: 2px solid red;">
-            <div class="text-left hvr-bob opacity-hover-7">
-              <h2 class="text-extra-large  margin-tb-10px">
-                Powerful Website
-              </h2>
-              <p class="opacity-7">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard</p>
-            </div>
-          </div>
-          <?php endif; ?>
-          <?php } ?>
+        <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
         </div>
       </div>
     </div>
@@ -433,26 +384,27 @@
           Forum Diskusi Berbagi Berita dari dalam dan luar negeri. Mulai dari Ideologi Politik dan lain sebagainya
         </div>
         <div class="col-9 row">
-          <div class="card col-8">
-            <div class="card-body">
-              <img src="<?= base_url('assets/img/panens.png') ?>" alt="" srcset="">
+          <div class="card no-border col-8">
+            <div class="card-body" >
+              <img src="<?= base_url('assets/img/panens.png') ?>" class="getBeritaLatest hide" data-berita="1" alt="" srcset="">
             </div>
           </div>
-          <div class="card col-4">
+          <div class="card no-border col-4">
             <div class="card-body">
-              <img src="<?= base_url('assets/img/panens.png') ?>" alt="" srcset="">
+              <img src="<?= base_url('assets/img/panens.png') ?>" class="getBeritaLatest hide" data-berita="2" alt="" srcset="">
             </div>
           </div>
         </div>
       </div>
       <div class="col-12" style="margin-top: 3vh">
         <div class="row">
-          <?php for($i = 1; $i <= 8 ; $i++): ?>
-          <div class="card col-3">
+          <?php $id = 3; for($i = 1; $i <= 8 ; $i++): ?>
+          <div class="card no-border col-3">
             <div class="card-body">
-              <img src="<?= base_url('assets/img/panens.png') ?>" alt="" srcset="">
+              <img src="<?= base_url('assets/img/panens.png') ?>" class="getBeritaLatest hide" data-berita="<?= $id ?>" alt="" srcset="">
             </div>
           </div>
+          <?php $id++ ?>
           <?php endfor; ?>
         </div>
       </div>

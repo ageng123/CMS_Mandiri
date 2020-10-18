@@ -15,6 +15,9 @@
 p{
     margin-top: 1em;
 }
+.no-border{
+    border: 0px !important;
+}
 /* JQUERY STEP  */
   ﻿/*
     Common 

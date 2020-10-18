@@ -199,4 +199,17 @@ $(document).ready(function () {
             console.log(data.msg);
         }
     })
+    // Latest News
+    let data = Content_Services.getNewestNews();
+        if(data.kode == 200){
+            let content_data = data.data;
+            let content = '';
+            content_data.map(function(val, index){
+                $('.getBeritaLatest[data-berita='+(index+1)+']').attr('src', Content_Services.renderSource(val));
+                $('.getBeritaLatest[data-berita='+(index+1)+']').removeClass('hide');
+            })
+        } else {
+            console.log(data.msg);
+        }
+   
 })
