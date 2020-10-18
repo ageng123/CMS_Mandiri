@@ -73,6 +73,7 @@ class Landing extends CI_Controller {
 			'form_url' => 'users/add'
 		];
 		landing_parse($content, $data);
+
 	}
 	public function pendaftaran_nasabah(){
 		$this->trigger_save_event('SAVE_DATA_DIRI', $this->input->post('data_diri'));
