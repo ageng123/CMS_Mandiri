@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 require_once APPPATH.'controllers/Auth_Guard.php';
 
-class Admin extends Auth_Guard {
+class Admin extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
@@ -12,6 +12,10 @@ class Admin extends Auth_Guard {
 
 
 	public function index(){
+		if($this->ion_auth->logged_in()){
+		} else {
+			return redirect(base_url('admin/login'));
+		}
 		$location = $this->uri->segment(1);
 		$model = new Admin_model();
 		$user = $model->findBy(['active' => '1']);
