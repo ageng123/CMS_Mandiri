@@ -25,8 +25,7 @@ class Berita extends Auth_Guard {
 	// JSON
 	public function getJSON(){
 		$model = new BeritaModel;
-		var_dump($this->user);
-		$output = $model->findBy(['author' => $this->user]);
+		$output = $model->findBy(['author' => $this->user, 'status !=' => 3]);
 		$no = $this->input->post('start');
 		$result = array();
 		foreach($output as $key => $val):
