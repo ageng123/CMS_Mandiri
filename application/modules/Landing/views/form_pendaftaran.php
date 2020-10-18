@@ -1,3 +1,22 @@
+      <style>
+        .wizard > .actions .disabled a, .wizard > .actions .disabled a:hover, .wizard > .actions .disabled a:active {
+            background: #aaa;
+            color: #aaa;
+        }
+        .wizard > .actions a, .wizard > .actions a:hover, .wizard > .actions a:active {
+            background: #f7a91e;
+            color: #fff;
+            font-weight: bold;
+            display: block;
+            padding: 1em 3em;
+            text-decoration: none;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 50px;
+        }
+      </style>
+
+
       <section class="padding-tb-6px" style="background-color: #f7a91e;">
         <div class="container">
           <div class="row justify-content-center wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;"></div>
@@ -96,7 +115,7 @@
               </div>
             </div>
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <table>
               <tr>
                 <td id="ktp" class="show">
@@ -114,10 +133,39 @@
                   <label for="">Upload KK*</label> <br/>
                   <label for="">*Wajib Upload jika belum memiliki KTP</label>
                   <input type="file" name="kk" id=""></td>
-
               </tr>
             </table>
+          </div> -->
+
+          <label for="">Pilih <b style="color: red;">SALAH SATU</b> dari dokumen yang akan di upload : </label> <br>
+
+
+          
+          <div class="form-row">
+            <div class="col show" id="ktp">
+              <img src="<?= base_url('assets/img/ktpkk.png') ?>" height="110" alt="">
+              <label for="">Upload <b style="color: #f7a91e;">E-KTP</b></label>
+              <input type="file" name="ktp" id="">
+            </div>
+            <div class="col show" id="kk2">
+              <img src="<?= base_url('assets/img/ktpkk.png') ?>" height="110" alt="">
+              <label for="">Upload <b style="color: #f7a91e;">KK</b>* (Optional)</label>
+              <input type="file" name="kk" id="">
+            </div>
+            <div class="col hide" id="ktp_ahli">
+              <img src="<?= base_url('assets/img/ktpkk.png') ?>" height="110" alt="">
+              <label for="">Upload <b style="color: #f7a91e;">E-KTP AHLI WARIS</b></label>
+              <input type="file" name="ktp_ahli" id="">
+            </div>
+            <div class="col hide" id="kk">
+              <img src="<?= base_url('assets/img/ktpkk.png') ?>" height="110" alt="">
+              <label for="">Upload <b style="color: #f7a91e;">KK</b>* </label> <br/>
+              <label for="">*Wajib Upload jika belum memiliki KTP</label>
+              <input type="file" name="kk" id="">
+            </div>
           </div>
+
+          <br/><br/>
           <div class="form-row">
             <div class="col">
               <label for="">Alamat Email</label>
@@ -143,7 +191,7 @@
           <br/>
           <div class="form-group pt-4">
             <h1><b style="color: #432a19;">MOHON DIISI INFORMASI BERIKUT :</b></h1>
-            <p>(Seluruh Data Formulir <b style="color: red;">Wajib</b> diisi dengan lengkap dan benar) </p>
+            <p>(Seluruh Data Formulir <b style="color: red;">WAJIB</b> diisi dengan lengkap dan benar) </p>
           </div>
           <br/>
           <div class="form-group row">
@@ -184,7 +232,7 @@
             </div>
             <div class="col-md-5">
               <div class="row">
-                <label for="" class="col-form-label col-md-5">Jenis Kelamin</label>
+                <label for="" class="col-form-label col-md-6">Jenis Kelamin</label>
                 <div class="col-md-6">
                   <select name="data_diri[jenis_kelamin]" id="" data-bind="jenis_kelamin" class="form-control">
                     <option value="Laki-laki">Laki-Laki</option>
@@ -263,13 +311,11 @@
             </div>
           </div>
           <div class="form-group">
-            <label style="display: flex; flex-direction: row; width: 80%; justify-content: space-between" for="">Alamat
-              Rumah
+            <label style="display: flex; flex-direction: row; width: 80%; justify-content: space-between" for="">Alamat Rumah (Sesuai KTP / E-KTP / KK)
               <div class="daftar-radio">
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="alamatradio" id="alamat_radio" value="option2">
-                  <label class="form-check-label" for="alamat_radio">Alamat Sama Dengan Alamat E-KTP / KTP Ahli Waris /
-                    KK</label>
+                  <label class="form-check-label" for="alamat_radio"><b style="color: red;">Sama Dengan Alamat Rumah</b></label>
                 </div>
               </div>
             </label>
@@ -424,8 +470,7 @@
           <div class="daftar-radio">
             <div class="form-check form-check-inline">
               <input class="form-check-input required" type="radio" name="aggreement[anggota]" id="inlineRadio2" value="option2">
-              <label class="form-check-label" for="inlineRadio2">Alamat Sama Dengan Alamat E-KTP / KTP Ahli Waris /
-                KK</label>
+              <label class="form-check-label" for="inlineRadio2">Alamat Sama Dengan Alamat E-KTP / KTP Ahli Waris / KK</label>
             </div>
           </div>
         </section>

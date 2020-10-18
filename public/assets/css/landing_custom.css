@@ -70,11 +70,11 @@ ul[role='tablist']{
 }
 /* Button Next */
 a[href='#next']{
-    color: red !important;
+    color: white !important;
 }
 /* button prev  */
 a[href='#previous']{
-    color: green !important;
+    color: #432a19 !important;
 }
 /*
     Wizard
@@ -140,14 +140,23 @@ a[href='#previous']{
     cursor: default;
 }
 
-.wizard > .steps .current a,
-.wizard > .steps .current a:hover,
-.wizard > .steps .current a:active
-{
-    background: #2184be;
+
+
+
+.wizard > .actions a, .wizard > .actions a:hover, .wizard > .actions a:active {
+    background: #f7a91e;
     color: #fff;
-    cursor: default;
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
+
+
+
+
 
 .wizard > .steps .done a,
 .wizard > .steps .done a:hover,
