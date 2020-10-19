@@ -56,7 +56,7 @@
                 </h5>
               </div>
 
-              <div id="collapse-2" class="collapse hide" role="tabpanel" aria-labelledby="headingOne">
+              <div id="collapse-2" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class="card-block padding-30px">
                   Simpanan – simpanan yang menjadi miliknya dikembalikan  apabila keluar atau berakhir dari keanggotaan , dan atau  sisa hasil penyelesaian Koperasi apabila Koperasi membubarkan diri atau dibubarkan oleh pemerintah.
                 </div>
@@ -71,7 +71,7 @@
                 </h5>
               </div>
 
-              <div id="collapse-3" class="collapse hide" role="tabpanel" aria-labelledby="headingOne">
+              <div id="collapse-3" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class="card-block padding-30px">
                   Mendapatkan bagian dari sisa hasil usaha koperasi sebanding dengan jumlah simpanan pokok dan simpanan wajib di koperasi .
                 </div>
@@ -87,7 +87,7 @@
                 </h5>
               </div>
 
-              <div id="collapse-4" class="collapse hide" role="tabpanel" aria-labelledby="headingOne">
+              <div id="collapse-4" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class="card-block padding-30px">
                   Bertujuan untuk meningkatkan kesejahteraan Anggota pada khususnya dan masyarakat pada umumnya, sekaligus sebagai bagian yang tidak terpisahkan dari tatanan perekonomian nasional yang demokratis dan berkeadilan.
                 </div>
@@ -102,7 +102,7 @@
                 </h5>
               </div>
 
-              <div id="collapse-5" class="collapse hide" role="tabpanel" aria-labelledby="headingOne">
+              <div id="collapse-5" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class="card-block padding-30px">
                   <p>1. Mengisi formulir pendaftaran</p> 
                   <p>2. Mendapat pesan Konfirmasi </p>
@@ -122,7 +122,7 @@
                 </h5>
               </div>
 
-              <div id="collapse-6" class="collapse hide" role="tabpanel" aria-labelledby="headingOne">
+              <div id="collapse-6" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class="card-block padding-30px">
                   Anggota luar biasa  adalah orang yang dimaksud menjadi Anggota , akan tetapi tidak memenuhi seluruh syarat sebagai anggota. Ketentuan ini memberi peluang bagi bagi penduduk Indonesia bukan Warga Negara dapat menjadi Anggota Luar Biasa sepanjang memenuhi ketentuan peraturan perundang-undangan yang berlaku.
                 </div>
@@ -137,7 +137,7 @@
                 </h5>
               </div>
 
-              <div id="collapse-7" class="collapse hide" role="tabpanel" aria-labelledby="headingOne">
+              <div id="collapse-7" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class="card-block padding-30px">
                   <ul>
                     <li>Memperoleh pelayanan Koperasi </li>
@@ -156,7 +156,7 @@
                 </h5>
               </div>
 
-              <div id="collapse-8" class="collapse hide" role="tabpanel" aria-labelledby="headingOne">
+              <div id="collapse-8" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class="card-block padding-30px">
                   <ul>
                     <li>Membayar simpanan pokok dan simpanan wajib sesuai dengan ketentuan rapat anggota</li>
@@ -175,7 +175,7 @@
                 </h5>
               </div>
 
-              <div id="collapse-9" class="collapse hide" role="tabpanel" aria-labelledby="headingOne">
+              <div id="collapse-9" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class="card-block padding-30px">
                   <p>1. Simpanan Pokok 100.000 1 kali bayar</p>
                   <p>2. Simpanan wajib 15.000 per-bulan</p>
@@ -193,7 +193,7 @@
                 </h5>
               </div>
 
-              <div id="collapse-10" class="collapse hide" role="tabpanel" aria-labelledby="headingOne">
+              <div id="collapse-10" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class="card-block padding-30px">
                   Selambat-lambatnya 1 tahun setelah Koperasi berdiri.
 
@@ -208,7 +208,7 @@
                 </h5>
               </div>
 
-              <div id="collapse-11" class="collapse hide" role="tabpanel" aria-labelledby="headingOne">
+              <div id="collapse-11" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class="card-block padding-30px">
                   Rapat Anggota dilakukan sekurang-kurangnya sekali dalam 1 (satu) tahun. Yang terdiri dari rapat anggota dan rapat anggota luar biasa.
                 </div>
@@ -222,7 +222,7 @@
                 </h5>
               </div>
 
-              <div id="collapse-12" class="collapse hide" role="tabpanel" aria-labelledby="headingOne">
+              <div id="collapse-12" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class="card-block padding-30px">
                   Pengambilan Keputusan Rapat Anggota berdasarkan musyawarah untuk mencapai mufakat.
                 </div>
@@ -236,7 +236,7 @@
                 </h5>
               </div>
 
-              <div id="collapse-13" class="collapse hide" role="tabpanel" aria-labelledby="headingOne">
+              <div id="collapse-13" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class="card-block padding-30px">
                 <p>Visi :  Menjadikan koperasi jasa yang berkualitas dan terbaik di Indonesia.</p>
                 <p>Misi : </p>
@@ -257,7 +257,7 @@
                 </h5>
               </div>
 
-              <div id="collapse-14" class="collapse hide" role="tabpanel" aria-labelledby="headingOne">
+              <div id="collapse-14" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class="card-block padding-30px">
                 <p>1. Keanggotaan bersifat sukarela dan terbuka</p>
                 <p>2. Pengelolaan dilakukan secara demokratis</p>
