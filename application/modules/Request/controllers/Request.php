@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 require_once APPPATH.'controllers/Auth_Guard.php';
-class Nasabah extends Auth_Guard {
+class Request extends Auth_Guard {
 
 
 	public function __construct(){
 		parent::__construct();
-		$this->load->model(['UserModel', 'AssignRoles/AssignRoleModel', 'Roles/RoleModel']);
+		$this->load->model(['Request_model', 'AssignRoles/AssignRoleModel', 'Roles/RoleModel']);
 	}
 
 	private function msg($status = null, $msg = ' Data Found', $data = []){
@@ -20,18 +20,40 @@ class Nasabah extends Auth_Guard {
 
 	public function index()
 	{
-		$content = 'nasabah/list';
-		$this->formUrl = base_url('nasabah/save');
+		$content = 'request/list';
+		$this->formUrl = base_url('request/save');
 
 		$data = [
 			'form_url' => $this->formUrl,
 			'title' => 'Mandiri Sekuritas - CMS',
-			'card_title' => "Data Nasabah"
+			'card_title' => "Data Request Nasabah"
 		];
 		admin_parse($content, $data);
 		// $this->load->view('welcome_message');
 	}
-
+	public function accept(){
+		$id = $_GET['code'];
+		$id = decode($id);
+		$model = new Request_model($id);
+		$data = $model->find($id);
+		$koperasi = new Koperasi_model($data->id_user);
+		switch($data->jenis_request){
+			case 'REKENING':
+				$koperasi->nomor_rekening = $data->data_request;
+			break;
+		}
+		$koperasi->update_data() ? $model->status_request = 2 : '';
+		$model->update_data();
+		return redirect(base_url('request'));
+	}
+	public function decline(){
+		$id = $_GET['code'];
+		$id = decode($id);
+		$model = new Request_model($id);
+		$model->status_request = 3;
+		$model->update_data();
+		return redirect(base_url('request'));
+	}
 	public function save_data()
 	{
 		$model = new Landing_model();
@@ -39,25 +61,39 @@ class Nasabah extends Auth_Guard {
 		$model->active = 1;
 		$model->delete(4);
 	}
-
+	
 	public function getJSON(){
-		$model = new UserModel;
-		$output = $model->getNasabah();
-		// var_dump($output);
+		$model = new Request_model;
+		$output = $model->all();
 		$no = $this->input->post('start');
 		$result = array();
 		foreach($output as $key => $val):
 			$row = array();
-			$row[] = $val->id;
+			$row[] = $val->id_request;
 			$row[] = '';
-			$row[] = $val->full_name;
-			$row[] = $val->sudah_member == 1 ? $val->member : ' Bukan Member';
+			$row[] = $val->jenis_request;
+			$row[] = $val->data_request;
+			$content = '' ; 
+			switch($val->status_request){
+				case 1:
+					$content = 'Belum di Approve';
+				break;
+				case 2:
+					$content = 'Approved';
+				break;
+				case 3:
+					$content = 'Declined';
+				break;
+			}
+			$row[] = $content ;
+			$content = '';
 			// $row[] = '<a href='.base_url('admin').' class="btn btn-success btn-sm">Edit</a><a href='.base_url('admin').' class="btn btn-danger btn-sm">Hapus</a>';
-			$row[] = '<a href='.base_url('admin').' class="btn btn-secondary btn-sm" data-toggle="tooltip" title="Detail"><i class="fa fa-info"></i></span></a>
-			<a href='.base_url('admin').' class="btn btn-info btn-sm" data-toggle="tooltip" title="Download Word"><i class="fa fa-download"></i></span></a>
-			<a href='.base_url('admin').' class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
-			<a href='.base_url('admin').' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>';
-			$result[] = $row;
+			$val->status_request == 1 ? 
+				($content .= '<a href='.base_url('request/accept?code=').encode($val->id_request).' class="btn btn-info btn-sm" data-toggle="tooltip" title="Acccept Request"><i class="fa fa-download"></i></span>Accept Incoming Request</a>
+				<a href='.base_url('request/decline?code=').encode($val->id_request).' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Decline Request"><i class="fa fa-download"></i></span>Decline Incoming Request</a>')  
+				: ''; 
+				$row[] = $content;
+				$result[] = $row;
 		endforeach;
 		$data = json_output(200, null, $result);
 		$data['draw'] = $this->input->post('draw');
