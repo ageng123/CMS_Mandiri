@@ -1,4 +1,3 @@
-<img src="<?= base_url('assets/img/') ?>list.png" width="200%">
     
   <!-- // Page title -->
 
@@ -52,7 +51,7 @@
           <form action="<?= base_url('kontak/proses_add');?>" method="POST">
             <table>
                 <tr>
-                <td><label >Full Name *</label></td>
+                <td><label >Name *</label></td>
                 <td><input type="text" class="form-control" id="inputName4" placeholder="Name" name="nama" required></td>
               </tr>
               <tr>

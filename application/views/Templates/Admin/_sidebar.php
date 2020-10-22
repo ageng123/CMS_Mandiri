@@ -24,6 +24,7 @@
           </div>
         </div>
       </div>
+      
     </div>
 
     <div class="navbar-inner">
@@ -57,8 +58,8 @@
             }
           </style>
           <li class="nav-item">
-            <a  class="nav-link" href="#">
-              <i class="ni ni-shop" style="color: #eba502;"></i>
+            <a <?php if($location1 == 'admin') { echo 'class="nav-link active" style="color: white;"';} else { echo 'class="nav-link"';} ?> href="<?= base_url('admin') ?>">
+              <i <?php if($location1 == 'admin') { echo 'class="ni ni-shop text-white"';} else { echo 'class="ni ni-shop" style="color: #eba502;"';} ?> style="color: #eba502;"></i>
               <span class="nav-link-text">Dashboard</span>
             </a>
           </li>
@@ -137,6 +138,13 @@
                   </li>
                 </ul>
               </div>
+            </li>
+
+            <li class="nav-item">
+              <a  class="nav-link" href="<?= base_url('auth/logout') ?>">
+                <i class="ni ni-user-run" style="color: #eba502;"></i>
+                <span class="nav-link-text">Logout</span>
+              </a>
             </li>
 
 

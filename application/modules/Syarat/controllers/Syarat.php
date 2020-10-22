@@ -14,7 +14,7 @@ class Syarat extends CI_Controller {
 		// $user = $model->findBy(['is_active' => '1']);
 		$content = 'index';
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS'
+			'page_title' => 'Mandiri Sekuritas - CMS'
 		];
 		// landing_parse($content, null);
 		landing_parse($content, null);
