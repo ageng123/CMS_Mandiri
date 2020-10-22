@@ -17,11 +17,11 @@
             
             <td style="width: 80%;background-color: #f2c866;padding:10px;vertical-align: top;color: white;border-radius: 10px;" rowspan="7">
                     
-                    <form action="" method="post">
+                    <form action="<?= base_url('request/save_data') ?>" method="post">
                     <table style="border: 0px;">
-                    <tr><td style="width: 25%;border: 0px;"><h3>Nama Rekening </h3></td><td style="border: 0px;">: <input type="" name="" style="width: 75%;"></td></tr>
-                    <tr><td style="width: 25%;border: 0px;"><h3>Nomer Rekening </h3></td><td style="border: 0px;">: <input type="" name="" style="width: 75%;"></td></tr>
-                    <tr><td style="width: 25%;border: 0px;"><h3>Cabang </h3></td><td style="border: 0px;">: <input type="" name="" style="width: 75%;"></td></tr>
+                    <tr><td style="width: 25%;border: 0px;"><h3>Nama Rekening </h3></td><td style="border: 0px;">: <input type="hidden" name="jenis_req[1]" value="NAMA_REKENING"><input type="text" name="data_request[1]"  style="width: 75%;"></td></tr>
+                    <tr><td style="width: 25%;border: 0px;"><h3>Nomer Rekening </h3></td><td style="border: 0px;">: <input type="hidden" name="jenis_req[2]" value="NOMOR_REKENING"><input type="text" name="data_request[2]" style="width: 75%;"></td></tr>
+                    <tr><td style="width: 25%;border: 0px;"><h3>Cabang </h3></td><td style="border: 0px;">:<input type="hidden" name="jenis_req[3]" value="CABANG"><input type="text" name="data_request[3]" style="width: 75%;"></td></tr>
                     </table>
                     <button type="submit" class="btn btn-lg border-2 border-radius-0 btn-warning btn-block">Request Ganti Nomer Rekening</button>
                     </form>

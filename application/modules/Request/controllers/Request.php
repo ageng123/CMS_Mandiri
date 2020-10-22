@@ -56,10 +56,19 @@ class Request extends Auth_Guard {
 	}
 	public function save_data()
 	{
-		$model = new Landing_model();
-		$model->nama = 'Nofri Willis 2';
-		$model->active = 1;
-		$model->delete(4);
+		// var_dump($this->input->post());
+		foreach($this->input->post('data_request') as $key => $val){
+			if(isset($val)):
+				$model = new Request_model();
+				$model->id_user = '4';
+				$model->jenis_request = $this->input->post('jenis_req')[$key];
+				$model->data_request = $val;
+				$model->status_request = 1;
+				$model->created_on = date('Y-m-d H:i:s');
+				$model->save();
+			endif;
+		}
+		return redirect(base_url('rekening'));		
 	}
 	
 	public function getJSON(){
