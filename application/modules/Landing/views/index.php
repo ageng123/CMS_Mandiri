@@ -274,15 +274,23 @@
        <hr style="background-color: #f7a91e;width: 12%;height: 4px;" border="0" align="left">
     <div class="row">
 
-      <div class="col-4">
+      <!--div class="col-4">
         <p style="font-size: 14px;">Program Pinjaman dapat diikuti oleh masyarakat umum dan karyawan tetap Panen Sahama Group yang sudah menjadi anggota Koperasi Jasa Komunitas <font color="#f7a91e">Panen Saham indonesia</font></p>
-      </div>
-      <div class="col-8">
-         <table>
+      </div-->
+      <table>
            <tr>
-             <td style="border: 0px;font-size: 14px;"><h2 class="text-primary">1)</h2><img src="<?= base_url('assets/img/Home/') ?>formulir.png" width="50%"><p ><b>Mengisi</b> dan <b>Melengkapi</b><br> Form Pinjaman</p></td>
-             <td style="border: 0px;font-size: 14px;"><h2 class="text-primary">2)</h2><img src="<?= base_url('assets/img/Home/') ?>kai.png" width="50%"><p>Persetujuan <b>KAI</b></p></td>
-             <td style="border: 0px;font-size: 14px;"><h2 class="text-primary">3)</h2><img src="<?= base_url('assets/img/Home/') ?>dana.png" width="50%"><p><b>Dana</b> diterima oleh anggota</p></td>
+             <td><h1 class="widget-title clearfix"><b>PENDAFTARAN ANGGOTA</b></h1></td>             
+             <td style="background-color: #ecc15d;width: 20%;text-align: center;color: white;"><h3 class="widget-title clearfix">DUKUNGAN BANTUAN <br> 021 - 4582 5710</h3></td>
+           </tr>
+      </table>
+      <div class="col-12">
+         <table cellpadding="5" cellspacing="5">
+           <tr>
+             <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">1)</h2><img src="<?= base_url('assets/img/Home/') ?>formulir.png" width="50%"><p ><b>Mengisi</b> dan <b>Melengkapi</b><br> Form Pendaftaran</p></td>
+             <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">2)</h2><img src="<?= base_url('assets/img/Home/') ?>kai.png" width="50%"><p>Mendapat <br><b>Pesan Konformasi</b></p></td>
+             <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">3)</h2><img src="<?= base_url('assets/img/Home/') ?>dana.png" width="50%"><p><b>Melakukan</b><br> Penyetoran Tunai</p></td>
+             <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">4)</h2><img src="<?= base_url('assets/img/Home/') ?>kon.png" width="50%"><p><b>Konfirmasi</b><br> Pembayaran</p></td>
+             <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">5)</h2><img src="<?= base_url('assets/img/Home/') ?>kartu.png" width="50%"><p><b>Mendapatkan</b><br> Kartu Anggota</p></td>
            </tr>
          </table>
       </div>
