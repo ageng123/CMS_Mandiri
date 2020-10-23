@@ -127,9 +127,9 @@ class Landing extends CI_Controller {
 			$ktp_ahli = $this->upload('ktp_ahli', $this->nasabahId);
 			$kk = $this->upload('kk', $this->nasabahId);
 			$prefix = $this->nasabahId.'/';
-			if(isset($ktp->filename)):
-				$model->foto_ktp = $prefix.$ktp->file_name;
-				$model->foto_kk = $prefix.$kk->file_name;
+			if(isset($ktp->file_name)):
+				$model->foto_ktp = isset($ktp->file_name) ? $prefix.$ktp->file_name : 'ktp_'.$prefix;
+				$model->foto_kk = isset($kk->file_name) ? $prefix.$kk->file_name : 'ktp_'.$prefix;
 			else:
 				$model->foto_kk = $prefix.$kk->file_name;
 				$model->foto_ktp_ahli_waris = $prefix.$ktp_ahli->file_name;

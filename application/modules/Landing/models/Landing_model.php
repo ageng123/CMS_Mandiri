@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  require_once(APPPATH.'/models/Main.php');
     class Landing_Model extends Main{
         protected $table = 'tb_user';
-        protected $primaryKey = 'id_user';
+        protected $primaryKey = 'id';
         
          public function __construct(){
             parent::__construct();
@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     // @table user berisi tentang data umum nasabah pada form step 1
     class Nasabah_Model extends Main{
         protected $table = 'tb_user';
-        protected $primaryKey = 'id_user';
+        protected $primaryKey = 'id';
         
         public function __construct(){
             parent::__construct();
