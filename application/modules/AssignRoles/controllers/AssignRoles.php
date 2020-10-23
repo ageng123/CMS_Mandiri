@@ -19,7 +19,7 @@ class AssignRoles extends Auth_Guard {
 			'form_url' => base_url('assignroles/add'),
 			'user_data' => $this->UserModel->all(),
 			'role_data' => $this->RoleModel->all(),
-			'card_title' => "Master Data Pengaturan User"
+			'card_title' => "Data Pengaturan User"
 		];
 		admin_parse($content, $data);
 		// $this->load->view('welcome_message');
