@@ -153,14 +153,15 @@
         <div style="background-color: transparent; width: 100%; height: 100%">
           <div class="d-flex flex-column container">
             <div class="row" style="padding-top: 50px">
-              <div class="col-12 row" style="border-bottom: 2px solid red">
-                <div class="col-4 p-2"><img class="pl-4" src="<?= base_url('assets/img/pb.png') ?>" alt=""></div>
-                <div class="col-8 p-2">
-                  <p class="text-black pt-2">Sudah check panen bersama </p>
+              <div class="col-12 row" style="border-bottom: 4px solid orange">
+                <div class="col-4 p-2"><img class="pl-2" src="<?= base_url('assets/img/panen.png') ?>"  alt=""></div>
+                <div class="col-8 p-2"">
+                  <p class="pt-2" style="margin-top: 25px;"><b style="color:#f7a91e;">Pusat jual beli online</b> perlengkapan dan peralatan hobi. 
+                    Belanja murah, lengkap, aman, bisa nego dan COD. </p>
                 </div>
               </div>
               <div class="col-12 p-2">
-                Sudah Check Panen Bersama atau belum
+                Udah check <b style="color: #f7a91e;"> Panen Bersama</b> belum hari ini ? Banyak cerita seru dan informasi terbaru di sini. Berbagi Hobi. Berita Terbaru. Berkomunitas.
               </div>
               <style>
                 .price-list {
@@ -184,7 +185,7 @@
               </div>
               </div>
               <div class="col-12 row">
-                <h3>Latest Product</h3>
+                <h3><b style="color: #f7a91e;">Latest Products</b></h3>
               </div>
               <div class="col-12 row getProductLatest">
               <div class="spinner-border" role="status">
@@ -200,7 +201,7 @@
           <div class="card">
             <div class="card-header landing-login-form">
               <ul class="nav nav-pils" id="myTab" role="tablist">
-                <style>
+                <>
                   .login-button {
                     background: #603913;
                     width: 50%;
@@ -217,26 +218,22 @@
                     padding-left: 0px;
                     padding-right: 0px;
                   }
-                </style>
-                <li class="nav-item login-button">
-                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                    aria-controls="home" aria-selected="true">Login</a>
-                </li>
-                <li class="nav-item login-button">
-                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                    aria-controls="profile" aria-selected="false">Register</a>
-                </li>
+                </>
+
               </ul>
             </div>
             <div class="card-body">
-
+              <div class="text-center">
+                <a href="#"><b style="color: #432a19;">LOGIN</b></a> &nbsp; <b style="color: #f7a91e;">|</b> <a href="#"> &nbsp; <b style="color: grey;">REGISTER</b></a>
+              </div>
+              <br/>
               <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                   <form action="" style="border: 6px solid #fcb11a; border-radius: 2%; overflow: hidden">
-                    <input type="text" name="username" class="form-control" placeholder="username" id="">
-                    <input type="password" name="pass" class="form-control" placeholder="password" id="">
+                    <input type="text" name="username" class="form-control" placeholder="Name" id="">
+                    <input type="password" name="pass" class="form-control" placeholder="Password" id="">
                     <button class="btn btn-danger btn-block"
-                      style="border-radius: 2% !Important; background: #603913; color: #fcb11a">Continue</button>
+                      style="border-radius: 2% !Important; background: #603913; color: white;">Continue</button>
                   </form>
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
@@ -245,20 +242,21 @@
           </div>
         </div>
         <div class="col-12">
-          <h2>Kategori Berita Populer</h2>
+          <h2><b><i style="color: #603913;">BERITA POPULAR</i> <i style="color: #f7a91e;">KATEGORI</i></b></h2>
         </div>
-        <div class="col-12 row getTagsPopular">
-        <div class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
-              </div>
+        <div class="col-12 row getTagsPopular" style="margin-left: 0px;">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
         </div>
+        <br/><br/>
         <div class="col-12">
-          <h2>Berita Populer</h2>
+          <h2><b><i style="color: #603913;">BERITA POPULAR</i> <i style="color: #f7a91e;">HARI INI</i></b></h2> <h4><?= date('d F, Y'); ?></h3>
         </div>
         <div class="col-12 topNews">
-        <div class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
-              </div>
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
         </div>
       </div>
     </div>
@@ -267,7 +265,11 @@
 
 
 
-<img src="<?= base_url('assets/img/') ?>list.png" width="200%">
+<section class="padding-tb-6px" style="background-image: url('<?= base_url('assets/img/') ?>list2.jpg');">
+  <div class="container">
+    <div class="row justify-content-center wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;"></div>
+  </div>
+</section>
 <section class="padding-tb-30px section-bg2">
   <div class="container">
       <h1 class="widget-title clearfix"><b>PRODUK</b></h1>
@@ -289,8 +291,8 @@
              <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">1)</h2><img src="<?= base_url('assets/img/Home/') ?>formulir.png" width="50%"><p ><b>Mengisi</b> dan <b>Melengkapi</b><br> Form Pendaftaran</p></td>
              <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">2)</h2><img src="<?= base_url('assets/img/Home/') ?>kai.png" width="50%"><p>Mendapat <br><b>Pesan Konformasi</b></p></td>
              <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">3)</h2><img src="<?= base_url('assets/img/Home/') ?>dana.png" width="50%"><p><b>Melakukan</b><br> Penyetoran Tunai</p></td>
-             <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">4)</h2><img src="<?= base_url('assets/img/Home/') ?>kon.png" width="50%"><p><b>Konfirmasi</b><br> Pembayaran</p></td>
-             <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">5)</h2><img src="<?= base_url('assets/img/Home/') ?>kartu.png" width="50%"><p><b>Mendapatkan</b><br> Kartu Anggota</p></td>
+             <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">4)</h2><img src="<?= base_url('assets/img/') ?>kon.png" width="50%"><p><b>Konfirmasi</b><br> Pembayaran</p></td>
+             <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">5)</h2><img src="<?= base_url('assets/img/') ?>kartu.png" width="50%"><p><b>Mendapatkan</b><br> Kartu Anggota</p></td>
            </tr>
          </table>
       </div>
@@ -381,7 +383,11 @@
 
 
 
-<img src="<?= base_url('assets/img/') ?>list.png" width="200%">
+<section class="padding-tb-6px" style="background-image: url('<?= base_url('assets/img/') ?>list2.jpg');">
+  <div class="container">
+    <div class="row justify-content-center wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;"></div>
+  </div>
+</section>
 <section class="padding-tb-30px">
   <div class="container">
       <h1 class="widget-title clearfix"><b>BERITA UPDATE</b></h1>
@@ -389,7 +395,7 @@
     <div class="row">
       <div class="col-12 row">
         <div class="col-3">
-          Forum Diskusi Berbagi Berita dari dalam dan luar negeri. Mulai dari Ideologi Politik dan lain sebagainya
+          Forum diskusi dan berbagi berita dari dalam maupun luar negeri. Mulai dari ideologi, politik, ekonomi, sosial dan budaya. <b style="color: #f7a91e;">Subforum</b>: berita-dunia-hiburan.
         </div>
         <div class="col-9 row">
           <div class="card no-border col-8">
@@ -469,7 +475,11 @@
   </style>
 
 
-  <img src="<?= base_url('assets/img/') ?>list.png" width="200%">
+  <section class="padding-tb-6px" style="background-image: url('<?= base_url('assets/img/') ?>list2.jpg');">
+    <div class="container">
+      <div class="row justify-content-center wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;"></div>
+    </div>
+  </section>
 <section class="padding-tb-30px section-bg2">
   <div class="container">
       <h1 class="widget-title clearfix"><b>KELUARGA</b></h1>
@@ -514,7 +524,11 @@
 </section>
 
 
-<img src="<?= base_url('assets/img/') ?>list.png" width="200%">
+<section class="padding-tb-6px" style="background-image: url('<?= base_url('assets/img/') ?>list2.jpg');">
+  <div class="container">
+    <div class="row justify-content-center wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;"></div>
+  </div>
+</section>
 <section style="background-image: url(<?= base_url('assets/img/map.png') ?>)" class="padding-tb-30px">
   <div class="container">
     <style>

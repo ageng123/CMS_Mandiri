@@ -16,15 +16,15 @@ $(document).ready(function () {
                    rules: PendaftaranServices.letrulesStep1,
                 })
                 console.log(form.valid());
-                // return form.valid();
-                return true;
+                return form.valid();
+                // return true;
             } else if(currentIndex === 1){
                 form.validate({
                    rules: PendaftaranServices.letrulesStep1,
                 })
                 console.log(form.valid());
-                // return form.valid();
-                return true;
+                return form.valid();
+                // return true;
 
             } 
             else {

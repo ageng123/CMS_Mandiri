@@ -23,19 +23,18 @@
 				<div class="row">
 					<div class="col-xl-8  d-none d-xl-block">
 							<ul class="user-area list-inline margin-0px text-black">
-								<li class="list-inline-item  padding-right-10px">
-										<img src="<?= base_url('assets/img/pesan.png') ?>"
-											style="object-fit: cover;width: 24px; height: 24px" alt="" srcset="">
-										info@KJKPI.com</li>
-								<li class="list-inline-item"><img
+								<li class="list-inline-item  padding-right-50px">
+										<img src="<?= base_url('assets/img/pesan1.png') ?>"
+											style="object-fit: cover;width: 30px; height: 30px" alt="" srcset="">
+										<b style="color: #432a19;">info@KJKPI.com</b></li>
+								<li class="list-inline-item padding-right-50px"><img
 											src="<?= base_url('assets/img/telp.png') ?>"
 											style="object-fit: cover;width: 24px; height: 24px" alt="" srcset="">
-										(021) 4582 5710</li>
-								<li class="list-inline-item  padding-right-10px"><img
-											src="<?= base_url('assets/img/profil.png') ?>"
-											style="object-fit: cover;width: 24px; height: 24px" alt="" srcset=""> User
-										Login
-								</li>
+										<b style="color: #432a19;">(021) 4582 5710</b></li>
+								<li class="list-inline-item  padding-right-50px"><img
+											src="<?= base_url('assets/img/chat.png') ?>"
+											style="object-fit: cover;width: 24px; height: 24px" alt="" srcset=""> 
+										<b style="color: #432a19;">User Login</b></li>
 							</ul>
 					</div>
 
@@ -53,7 +52,7 @@
 										style="object-fit: cover;width: 24px; height: 24px" alt="" srcset=""></a></li>
 							<li class="list-inline-item">
 									<form action="" style="display: flex; flex-direction: row; height: 24px; ">
-									<input type="text" style="padding: 1px; font-size: 8pt; letter-spacing: 1px" name="search" id="">
+									<input type="text" style="padding: 1px; font-size: 12pt; letter-spacing: 1px" name="search" id="">
 									<div class="button text-center" style="height: 24px;width: 24px;background-color: #f7a91e;">
 									<a href="" class="text-center"><img
 										src="<?= base_url('assets/img/search.png') ?>"
@@ -103,7 +102,14 @@
 				</div>
 			</div>
 		</div>
-		<div class="" style="background-image: url(<?= base_url('assets/img/list.png') ?>)"></div>
+
+	<section class="padding-tb-6px" style="background-image: url('<?= base_url('assets/img/') ?>list2.jpg');">
+		<div class="container">
+			<div class="row justify-content-center wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;"></div>
+		</div>
+	</section>
+
+	
 	</header>
 	<!-- // header -->
 	<style type="text/css">

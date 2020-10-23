@@ -1,4 +1,3 @@
-<img src="<?= base_url('assets/img/') ?>list.png" width="200%">
     
   <!-- // Page title -->
 
@@ -22,7 +21,7 @@
             <p align="center">Founder and Managing Patner Of Koperasi Jasa Komunitas Panen Saham Indonesia</p><hr>
 
             <h4 class="widget-title clearfix"><span><font color="#f7a91e">Koperasi Jasa Komunitas Panen Saham Indonesia</font></span></h4>
-            <p align="center">merupakan salah satu upaya sebagai koperasi konsumen, namu juga mampu meningkatkan kinerja melalui anak perusahaan yang bergerak dalam berbagai bidang.</p>
+            <p align="center">merupakan salah satu upaya sebagai koperasi konsumen, namun juga mampu meningkatkan kinerja melalui anak perusahaan yang bergerak dalam berbagai bidang.</p>
 
           </div>
           <!-- //  Mail list -->
