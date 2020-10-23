@@ -111,7 +111,7 @@ class Landing extends CI_Controller {
 		$model->jenis_kelamin = $request->jenis_kelamin;
 		$model->tempat_lahir = $request->tempat;
 		$tanggal = $request->tahun.'-'.$request->bulan.'-'.$request->tanggal;
-		$model->tanggal_lahir = date('Y-m-d', $tanggal);
+		$model->tanggal_lahir = date('Y-m-d', $tahun.'-'.$bulan.'-'.$tanggal);
 		$model->no_hp = $request->hp.'/'.$request->rumah;
 		$model->alamat = $request->alamat.'/'.$request->rt.'/'.$request->kelurahan.'/'.$request->kecamatan.'/'.$request->kabupaten.'/'.$request->provinsi.'/'.$request->kodepos;
 		$model->alamat_rumah = $request->alamat_rumah;
@@ -126,7 +126,7 @@ class Landing extends CI_Controller {
 			$ktp = $this->upload('ktp', $this->nasabahId);
 			$ktp_ahli = $this->upload('ktp_ahli', $this->nasabahId);
 			$kk = $this->upload('kk', $this->nasabahId);
-			$prefix = $this->nasabId.'/';
+			$prefix = $this->nasabahId.'/';
 			if(isset($ktp->filename)):
 				$model->foto_ktp = $prefix.$ktp->file_name;
 				$model->foto_kk = $prefix.$kk->file_name;
@@ -170,7 +170,7 @@ class Landing extends CI_Controller {
 		$model->simpanan_wajib = $simpanan->wajib;
 		$sukarela = str_replace('.', '', $simpanan->sukarela);
 		$model->simpanan_sukarela = $sukarela;
-		$random_number = rand(1, 999);
+		$random_number = rand(100, 999);
 		$model->total_pembayaran = (15000 * (int)$simpanan_wajib ) + 100000 + (int)$sukarela;
 		$model->kode_pembayaran = $random_number;
 		$this->email['total_pembayaran'] = (15000 * (int)$simpanan_wajib ) + 100000 + (int)$sukarela + (int)$random_number;
