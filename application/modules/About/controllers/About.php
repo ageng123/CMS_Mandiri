@@ -10,15 +10,13 @@ class About extends CI_Controller {
 	}
 	public function index()
 	{
-		// $model = new About_model();
-		// $user = $model->findBy(['is_active' => '1']);
+		$model = new About_model();
+		$user = $model->findBy(['active' => '1']);
 		$content = 'index';
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS'
+			'page_title' => 'Mandiri Sekuritas - CMS'
 		];
-		// landing_parse($content, null);
-		landing_parse($content, null);
-		// $this->load->view('welcome_message');
+		landing_parse($content, $data);
 	}
 	public function save_data()
 	{

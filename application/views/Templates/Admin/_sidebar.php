@@ -92,7 +92,10 @@
                 <span class="nav-link-text">Master Data</span>
               </a>
               <div <?php if($location1 == 'users' OR $location1 == 'roles' OR  $location1 == 'assignroles') { echo 'class="collapse show"';} else { echo 'class="collapse"';} ?> id="navbar-admin">
-                <ul class="nav nav-sm flex-column
+                <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                    <a href="<?= base_url('nasabah') ?>" <?php if($location1 == 'nasabah') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Nasabah</a>
+                  </li>
                   <li class="nav-item">
                     <a href="<?= base_url('users') ?>" <?php if($location1 == 'users') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>User</a>
                   </li>
