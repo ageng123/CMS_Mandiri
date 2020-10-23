@@ -56,6 +56,7 @@
     }
     function send_email($to, $cc, $bcc, $subject, $msg){
         $CI =& get_instance();
+        $CI->load->library('email');
         $config = [
             'protocol' => 'smtp',
             'smtp_host' => 'ssl://smtp.gmail.com',
