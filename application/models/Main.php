@@ -51,6 +51,9 @@ class Main extends CI_Model{
         $this->lastId = $this->db->insert_id();
         return true;
     }
+    public function get_lastId(){
+        return $this->lastId;
+    }
     private function upload_file($params, $id){
         $folder = APPPATH.'../public/resources/upload/'.$id;
         $config['upload_path']          = $folder;

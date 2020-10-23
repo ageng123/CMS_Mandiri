@@ -122,7 +122,7 @@ class Landing extends CI_Controller {
 		$model->activation_code = $code;
 		$this->email['kode_aktivasi'] = $code;
 		if($model->save()):
-			$this->nasabahId = $model->lastId;
+			$this->nasabahId = $model->get_lastId();
 			$ktp = $this->upload('ktp', $this->nasabahId);
 			$ktp_ahli = $this->upload('ktp_ahli', $this->nasabahId);
 			$kk = $this->upload('kk', $this->nasabahId);
@@ -171,9 +171,9 @@ class Landing extends CI_Controller {
 		$sukarela = str_replace('.', '', $simpanan->sukarela);
 		$model->simpanan_sukarela = $sukarela;
 		$random_number = rand(100, 999);
-		$model->total_pembayaran = (15000 * (int)$simpanan_wajib ) + 100000 + (int)$sukarela;
+		$model->total_pembayaran = (15000 * (int)$simpanan->wajib ) + 100000 + (int)$sukarela;
 		$model->kode_pembayaran = $random_number;
-		$this->email['total_pembayaran'] = (15000 * (int)$simpanan_wajib ) + 100000 + (int)$sukarela + (int)$random_number;
+		$this->email['total_pembayaran'] = (15000 * (int)$simpanan->wajib ) + 100000 + (int)$sukarela + (int)$random_number;
 		if($model->save()):
 			return true;
 		endif;
