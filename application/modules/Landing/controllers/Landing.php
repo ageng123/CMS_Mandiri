@@ -95,7 +95,8 @@ class Landing extends CI_Controller {
 					</body>
 					</html>
 					';
-		send_email($this->data_email['to'], null, null, 'Status Pendaftaran Akun KJKPI ANDA',$message);
+		$send = send_email($this->data_email['to'], null, null, 'Status Pendaftaran Akun KJKPI ANDA',$message);
+		return redirect(base_url('landing'));
 	}
 	private function saveData_diri($request){
 		$model = new Nasabah_Model;

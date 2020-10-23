@@ -72,7 +72,7 @@
         $CI->email->subject($subject);
         $CI->email->message($msg);
         if($CI->email->send()){
-        echo 'sukses';
+        return 'sukses';
      } else {
         echo 'gagal';
         echo $CI->email->print_debugger();
