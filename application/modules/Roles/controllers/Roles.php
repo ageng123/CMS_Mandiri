@@ -15,7 +15,7 @@ class Roles extends Auth_Guard {
 		$content = 'roles/list';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
-			'card_title' => "Master Data Role",
+			'card_title' => "Data Role",
 			'form_url' => base_url('roles/add')
 		];
 		admin_parse($content, $data);
