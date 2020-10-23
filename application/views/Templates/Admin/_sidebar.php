@@ -140,6 +140,21 @@
               </div>
             </li>
 
+            
+            <li class="nav-item">
+              <a <?php if($location1 == 'content') { echo 'class="nav-link active" style="color: white;"';} else { echo 'class="nav-link"';} ?> href="#navbar-nasabah" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
+                <i <?php if($location1 == 'content') { echo 'class="ni ni-archive-2 text-white"';} else { echo 'class="ni ni-archive-2" style="color: #eba502;"';} ?>></i>
+                <span class="nav-link-text">Nasabah</span>
+              </a>
+              <div <?php if($location1 == 'status_pembayaran') { echo 'class="collapse show"';} else { echo 'class="collapse"';} ?> id="navbar-nasabah">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="<?= base_url('status_pembayaran') ?>" <?php if($location1 == 'status_pembayaran') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Status Pembayaran</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
             <li class="nav-item">
               <a  class="nav-link" href="<?= base_url('auth/logout') ?>">
                 <i class="ni ni-user-run" style="color: #eba502;"></i>
