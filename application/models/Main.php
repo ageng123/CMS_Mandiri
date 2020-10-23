@@ -1,6 +1,7 @@
 <?php 
 
 class Main extends CI_Model{
+    protected $lastId;
     public function __construct()
     {
         parent::__construct();
