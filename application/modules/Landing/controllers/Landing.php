@@ -111,7 +111,7 @@ class Landing extends CI_Controller {
 		$model->jenis_kelamin = $request->jenis_kelamin;
 		$model->tempat_lahir = $request->tempat;
 		$tanggal = $request->tahun.'-'.$request->bulan.'-'.$request->tanggal;
-		$model->tanggal_lahir = date('Y-m-d', $tahun.'-'.$bulan.'-'.$tanggal);
+		$model->tanggal_lahir = date('Y-m-d', strtotime($tanggal));
 		$model->no_hp = $request->hp.'/'.$request->rumah;
 		$model->alamat = $request->alamat.'/'.$request->rt.'/'.$request->kelurahan.'/'.$request->kecamatan.'/'.$request->kabupaten.'/'.$request->provinsi.'/'.$request->kodepos;
 		$model->alamat_rumah = $request->alamat_rumah;
