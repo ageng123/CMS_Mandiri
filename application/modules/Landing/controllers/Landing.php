@@ -134,8 +134,8 @@ class Landing extends CI_Controller {
 				$model->foto_ktp = isset($ktp->file_name) ? $prefix.$ktp->file_name : 'ktp_'.$prefix;
 				$model->foto_kk = isset($kk->file_name) ? $prefix.$kk->file_name : 'ktp_'.$prefix;
 			else:
-				$model->foto_kk = $prefix.$kk->file_name;
-				$model->foto_ktp_ahli_waris = $prefix.$ktp_ahli->file_name;
+				$model->foto_kk = isset($kk->file_name) ? $prefix.$kk->file_name : 'ktp_'.$prefix;
+				$model->foto_ktp_ahli_waris = isset($ktp_ahli->file_name) ? $prefix.$ktp_ahli->file_name : 'ktp_'.$prefix;
 			endif;
 			$model->update($this->nasabahId);
 			$pekerjaan = $this->trigger_save_event('SAVE_PEKERJAAN', $this->input->post('pekerjaan'));
@@ -208,5 +208,10 @@ class Landing extends CI_Controller {
 			}
 
 		}
+	public function addComment(){
+		$id_berita = decode($_GET['code']);
+		$id_user = decode($_GET['auth']);
+
+	}
 
 }

@@ -76,6 +76,7 @@
      } else {
         echo 'gagal';
         echo $CI->email->print_debugger();
+        die;
          }
         }
         function rupiah($angka){
