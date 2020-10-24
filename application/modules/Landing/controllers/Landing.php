@@ -211,8 +211,12 @@ class Landing extends CI_Controller {
 	public function addComment(){
 		$id_berita = decode($_GET['code']);
 		$id_user = decode($_GET['auth']);
-		$model = new detailBerita_Model;
-		$model->
+		$model = new Comment_Model;
+		$model->news_id = $id_berita;
+		$model->author_id = $id_user;
+		$model->isi = $this->input->post('comment_content');
+		$model->save();
+		
 	}
 
 }

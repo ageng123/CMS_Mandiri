@@ -100,3 +100,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         }
     }
+    class Comment_Model extends Main{
+        protected $table = 'news_comment_list';
+        protected $primaryKey = 'id_comment';
+        
+        public function __construct(){
+            parent::__construct();
+        }
+    }
