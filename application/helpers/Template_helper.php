@@ -59,7 +59,7 @@
         $configEmail = $CI->config->item('email');
         $CI->email->initialize($configEmail);
         $CI->email->set_newline("\r\n");
-        $CI->email->from($config['smtp_user'], 'KJKPI');
+        $CI->email->from($configEmail['smtp_user'], 'KJKPI');
         $CI->email->to($to);
         $CI->email->subject($subject);
         $CI->email->message($msg);
