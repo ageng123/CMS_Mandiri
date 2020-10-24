@@ -232,6 +232,7 @@
                 <label for="" class="col-form-label col-md-6"><h5>Jenis Kelamin</h5></label>
                 <div class="col-md-6">
                   <select name="data_diri[jenis_kelamin]" id="" data-bind="jenis_kelamin" class="form-control">
+                  <option value="">Pilih Jenis Kelamin</option>
                     <option value="Laki-laki">Laki-Laki</option>
                     <option value="Perempuan">Perempuan</option>
                   </select>

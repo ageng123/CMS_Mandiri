@@ -56,16 +56,8 @@
     }
     function send_email($to, $cc, $bcc, $subject, $msg){
         $CI =& get_instance();
-        $config = [
-            'protocol' => 'smtp',
-            'smtp_host' => 'ssl://smtp.gmail.com',
-            'smtp_port' => 465,
-            'smtp_user' => 'kenpaci.1@gmail.com',
-            'smtp_pass' => 'Carisendir1',
-            'mailtype'  => 'html', 
-            'charset'   => 'iso-8859-1'
-        ];
-        $CI->email->initialize($config);
+        $configEmail = $CI->config->item('email');
+        $CI->email->initialize($configEmail);
         $CI->email->set_newline("\r\n");
         $CI->email->from($config['smtp_user'], 'KJKPI');
         $CI->email->to($to);

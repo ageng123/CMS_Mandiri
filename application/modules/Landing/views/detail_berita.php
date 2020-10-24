@@ -289,38 +289,31 @@
   <div class="container">
     <h2>Comment</h2>
     <div class="container">
+      <?php foreach($comment as $val){ ?>
       <div class="media p-3 d-flex flex-row">
         <a style="border-radius: 50%; width: 7vw; height: 8vh; overflow:hidden; border: 1px solid #666; padding-top: 0.8vw"
           href=”#” class=”pull-left”>
           <img src="<?= base_url('resources/Berita/').$berita->thumbnail ?>" class="media-object" />
         </a>
         <div class="media-body pl-4">
-          <h4 class=”media-heading”>Setuju</h4>
-          <p>Setuju dengan salam 3 jari : Persatuan Indonesia. Pilpres sudah selesai, mari berkarya dengan penuh
-            semangat di bidang kita masing-masing.</p>
+          <h4 class=”media-heading”><b><?= $val->full_name ?></b> &nbsp; <i style="font-size: 10pt" class="text-muted"><?= indonesiaFullDate(date('Y-m-d', strtotime($val->last_update))) ?></i></h4>
+          <p><?= $val->isi ?></p>
         </div>
       </div>
-      <div class="media p-3 d-flex flex-row">
-        <a style="border-radius: 50%; width: 7vw; height: 8vh; overflow:hidden; border: 1px solid #666; padding-top: 0.8vw"
-          href=”#” class=”pull-left”>
-          <img src="<?= base_url('resources/Berita/').$berita->thumbnail ?>" class="media-object" />
-        </a>
-        <div class="media-body pl-4">
-          <h4 class=”media-heading”>Setuju</h4>
-          <p>Setuju dengan salam 3 jari : Persatuan Indonesia. Pilpres sudah selesai, mari berkarya dengan penuh
-            semangat di bidang kita masing-masing.</p>
-        </div>
-      </div>
+      <?php } ?>
       <div class="commentInput">
-      <?php if(!empty($this->session->userdata('user_id'))){ ?>
-        <form action="<?= base_url('landing/addComment?code=').encode($berita->id_news).'&auth='.encode($this->session->userdata('user_id')) ?>" method="POST">
+        <?php if(!empty($this->session->userdata('user_id'))){ ?>
+        <form
+          action="<?= base_url('landing/addComment?code=').encode($berita->id_news).'&auth='.encode($this->session->userdata('user_id')) ?>"
+          method="POST">
           <div class="form-group">
+            <input type="hidden" name="slug" value="<?= $this->uri->segment(3) ?>">
             <textarea name="comment_content" class="form-control" id="" cols="30" rows="10"></textarea>
             <button class="btn btn-block btn-secondary " type="submit">Kirim</button>
           </div>
         </form>
         <?php }else{ ?>
-          <p>Harap Lakukan login terlebih dahulu untuk membalas komentar</p>
+        <p>Harap Lakukan login terlebih dahulu untuk membalas komentar</p>
         <?php } ?>
       </div>
       <!– /media –>
