@@ -251,7 +251,7 @@
         </div>
         <br/><br/>
         <div class="col-12">
-          <h2><b><i style="color: #603913;">BERITA POPULAR</i> <i style="color: #f7a91e;">HARI INI</i></b></h2> <h4><?= date('d F, Y'); ?></h3>
+          <h2><b><i style="color: #603913;">BERITA POPULAR</i> <i style="color: #f7a91e;">HARI INI</i></b></h2> <h4><?= indonesiaFullDate(date('Y-m-d')); ?></h3>
         </div>
         <div class="col-12 topNews">
           <div class="spinner-border" role="status">

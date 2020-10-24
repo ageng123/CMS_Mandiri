@@ -47,13 +47,15 @@ class Landing extends CI_Controller {
 		// $this->load->view('welcome_message');
 	}
 
-	public function detail_berita()
+	public function detail_berita($slug)
 	{
-		$model = new Landing_model();
-		$user = $model->findBy(['active' => '1']);
+		$model = new detailBerita_Model($slug);
+		$berita = $model->getBerita();
 		$content = 'detail_berita';
 		$data = [
-			'page_title' => 'Mandiri Sekuritas - CMS'
+			'page_title' => 'Mandiri Sekuritas - CMS',
+			'berita' => $berita,
+			'comment' => $model->getComment()
 		];
 		landing_parse($content, $data);
 	}

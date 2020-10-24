@@ -16,8 +16,11 @@ class Main extends CI_Model{
     }
     public function query($sqlQuery)
     {
-        $query = $this->db->query($sqlQuery)->result_object();
-        return $query;
+        $query = $this->db->query($sqlQuery);
+        if(is_bool($query)):
+            return $query;
+        endif;
+        return $query->result_object();
     }
     public function find($params)
     {

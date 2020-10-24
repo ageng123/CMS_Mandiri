@@ -69,6 +69,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
          public function Attachment_List($params){
             $sqlQuery = "SELECT GROUP_CONCAT(`id_attachment` separator ',') as list FROM ".$this->table." WHERE refid ='".$params."' GROUP BY refid";
             $output = $this->query($sqlQuery);
-            return $output[0]->list;
+            if(count($output) > 0){
+                return $output[0]->list;
+            }
+            return '';
         }
     }

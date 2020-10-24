@@ -460,7 +460,7 @@
             </tr>
             <tr>
               <td colspan="2"><h5><b>Total Pembayaran</b></h5></td>
-              <td data-bind="total_biaya"><h5 id="biaya-total">RP. 115.000 </h5></td>
+              <td data-bind="total_biaya"><h5 id="biaya-total">RP. 115.000 </h5><input type="hidden" name="total_pembayaran" data-bind="biaya_total"></td>
             </tr>
           </table>
           <br/>

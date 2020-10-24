@@ -41,3 +41,62 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             parent::__construct();
         }
     }
+    class detailBerita_Model extends Main{
+        protected $table = 'news_dat';
+        protected $primaryKey = 'id_news';
+        protected $slug;
+        protected $primary;
+        protected $viewBerita;
+        protected $tags;
+        public function __construct($slug = null){
+            parent::__construct();
+            if($slug != null):
+                $this->slug = $slug;
+            endif;
+        }
+        public function getComment(){
+            $berita = $this->findBy(['link' => $this->slug]);
+            $sql = '';
+            foreach($berita as $key => $val){
+                
+                $sql = "SELECT * FROM news_comment_list WHERE refid = {$val->id_news} ORDER BY last_update DESC";
+            }
+            $comment = $this->query($sql);
+            return $comment;
+        }
+        public function getBerita(){
+            $berita = $this->db->select('*')->where('link', $this->slug)->get($this->table)->row_object();
+            $this->tags = $berita->tag_id;
+            $this->viewBerita = $berita->view;
+            $this->primary = $berita->id_news;
+            $this->triggerEvents('ADD_BERITA_VIEW');
+            $this->triggerEvents('ADD_TAGS_VIEW');
+            return $berita;
+        }
+        public function triggerEvents($action){
+            switch($action){
+                case 'ADD_BERITA_VIEW':
+                    $this->view = (int)$this->viewBerita + 1;
+                    $this->update($this->primary);
+                    return true;
+                break;
+                case 'ADD_TAGS_VIEW':
+                    $viewNow = 1;
+                    $tags = explode(',', $this->tags);
+                    foreach($tags as $val){
+                        $sql = "SELECT view FROM kategori_list WHERE  id_kategori = {$val}";
+                        $view = $this->query($sql);
+                        $viewNow = (int)$view[0]->view + $viewNow;
+                        $sql = "UPDATE kategori_list SET view = {$viewNow} WHERE id_kategori = {$val}";
+                        $this->query($sql);
+                    }
+                    return true;
+                break;
+                case 'ADD_COMMENT':
+                break;
+            }
+        }
+        private function add_beritaView($id_berita){
+
+        }
+    }

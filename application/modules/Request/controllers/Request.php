@@ -6,7 +6,7 @@ class Request extends Auth_Guard {
 
 	public function __construct(){
 		parent::__construct();
-		$this->load->model(['Request_model', 'AssignRoles/AssignRoleModel', 'Roles/RoleModel']);
+		$this->load->model(['Request_model', 'AssignRoles/AssignRoleModel', 'Roles/RoleModel', ]);
 	}
 
 	private function msg($status = null, $msg = ' Data Found', $data = []){
@@ -38,8 +38,14 @@ class Request extends Auth_Guard {
 		$data = $model->find($id);
 		$koperasi = new Koperasi_model($data->id_user);
 		switch($data->jenis_request){
-			case 'REKENING':
+			case 'NOMOR_REKENING':
 				$koperasi->nomor_rekening = $data->data_request;
+			break;
+			case 'NAMA_REKENING':
+				$koperasi->nama_rekening = $data->data_request;
+			break;
+			case 'CABANG':
+				$koperasi->cabang = $data->data_request;
 			break;
 		}
 		$koperasi->update_data() ? $model->status_request = 2 : '';

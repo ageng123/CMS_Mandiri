@@ -6,13 +6,12 @@
       <!-- SLIDE  -->
       <li data-index="rs-64" data-transition="3dcurtain-horizontal" data-slotamount="default" data-hideafterloop="0"
         data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default"
-        data-thumb="<?= base_url('assets/landing_template/') ?>assets/revslider/assets/100x50_a033c-1.jpg"
-        data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3=""
-        data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10=""
-        data-description="">
+        data-thumb="<?= base_url('resources/Berita/').$berita->thumbnail ?>" data-rotate="0" data-saveperformance="off"
+        data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6=""
+        data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
         <!-- MAIN IMAGE -->
-        <img src="<?= base_url('assets/img/') ?>header.png" alt="" data-bgposition="center center" data-kenburns="on"
-          data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110"
+        <img src="<?= base_url('resources/Berita/').$berita->thumbnail ?>" alt="" data-bgposition="center center"
+          data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110"
           data-rotatestart="0" data-rotateend="0" data-blurstart="-2" data-blurend="0" data-offsetstart="2 2"
           data-offsetend="0 0" class="rev-slidebg" data-no-retina>
         <!-- LAYERS -->
@@ -25,12 +24,13 @@
           data-frames='[{"delay":10,"speed":750,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
           data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
           data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-          style="z-index: 5; white-space: normal; font-size: 71px; line-height: 22px; font-weight: 400; color: #757575;font-family:Open Sans;"> </div>
+          style="z-index: 5; white-space: normal; font-size: 71px; line-height: 22px; font-weight: 400; color: #757575;font-family:Open Sans;">
+        </div>
 
 
       </li>
       <!-- SLIDE  -->
-      
+
     </ul>
     <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
   </div>
@@ -129,26 +129,27 @@
             <div class="row" style="padding-top: 50px">
               <div class="col-12 row">
                 <div class="col-8 p-2">
-                  <h1 style="color: #432a19;"> <b>BERITA KOMUNITAS</b> </h1>
-                  <hr style="background-color: #f7a91e;width: 27%;height: 4px;" border="0" align="left">              
+                  <h1 style="color: #432a19;"> <b><?= $berita->title ?></b> </h1>
+                  <hr style="background-color: #f7a91e;width: 27%;height: 4px;" border="0" align="left">
                 </div>
               </div>
               <div class="col-12 p-2">
-                <h2 style="color: #6f6c6a;">Forum diskusi dan <br> berbagi berita dari <br> dalam dan luar <br> negeri. Mulai dari <br> ideologi, politik, <br> ekonomi, sosial dan <br> budaya. Subforum: <br> berita-dunia-hiburan. </h2>
+                <h2 style="color: #6f6c6a;"><?= $berita->sub ?> </h2>
               </div>
-        
-         
+              <div class="col-12 p-2">
+                <p><?= $berita->content ?></p>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="col-md-4">
-        <br/><br/>
+        <br /><br />
 
         <div class="col-12">
           <h2>Berita Populer</h2>
         </div>
-        <div class="col-12">
+        <div class="col-12 topNews">
           <?php for($i = 0; $i < 3; $i++){?>
           <?php if($i == 0): ?>
           <div class="col-12 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s"
@@ -284,11 +285,49 @@
       </div>
     </div>
 </section> -->
-
-
-
-
-
+<section>
+  <div class="container">
+    <h2>Comment</h2>
+    <div class="container">
+      <div class="media p-3 d-flex flex-row">
+        <a style="border-radius: 50%; width: 7vw; height: 8vh; overflow:hidden; border: 1px solid #666; padding-top: 0.8vw"
+          href=”#” class=”pull-left”>
+          <img src="<?= base_url('resources/Berita/').$berita->thumbnail ?>" class="media-object" />
+        </a>
+        <div class="media-body pl-4">
+          <h4 class=”media-heading”>Setuju</h4>
+          <p>Setuju dengan salam 3 jari : Persatuan Indonesia. Pilpres sudah selesai, mari berkarya dengan penuh
+            semangat di bidang kita masing-masing.</p>
+        </div>
+      </div>
+      <div class="media p-3 d-flex flex-row">
+        <a style="border-radius: 50%; width: 7vw; height: 8vh; overflow:hidden; border: 1px solid #666; padding-top: 0.8vw"
+          href=”#” class=”pull-left”>
+          <img src="<?= base_url('resources/Berita/').$berita->thumbnail ?>" class="media-object" />
+        </a>
+        <div class="media-body pl-4">
+          <h4 class=”media-heading”>Setuju</h4>
+          <p>Setuju dengan salam 3 jari : Persatuan Indonesia. Pilpres sudah selesai, mari berkarya dengan penuh
+            semangat di bidang kita masing-masing.</p>
+        </div>
+      </div>
+      <div class="commentInput">
+      <?php if(!empty($this->session->userdata('user_id'))){ ?>
+        <form action="<?= base_url('landing/addComment?code=').encode($berita->id_news).'&auth='.encode($this->session->userdata('user_id')) ?>" method="POST">
+          <div class="form-group">
+            <textarea name="comment_content" class="form-control" id="" cols="30" rows="10"></textarea>
+            <button class="btn btn-block btn-secondary " type="submit">Kirim</button>
+          </div>
+        </form>
+        <?php }else{ ?>
+          <p>Harap Lakukan login terlebih dahulu untuk membalas komentar</p>
+        <?php } ?>
+      </div>
+      <!– /media –>
+    </div>
+    <!– /container –>
+  </div>
+</section>
 <img src="<?= base_url('assets/img/') ?>list.png" width="200%">
 <section class="padding-tb-1px">
   <div class="container">
@@ -303,7 +342,7 @@
     </style>
     <div class="row text-center">
       <div class="col-12 sm-mb-30px text-center hvr-float wow fadeInUp">
-    
+        asdasdasd
       </div>
 
     </div>

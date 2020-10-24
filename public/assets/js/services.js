@@ -191,6 +191,7 @@ const Pembayaran_Function = {
         let value = wajib + sukarela + 100000;
         $('#biaya-total').html(Pembayaran_Function.formatRupiah(value, prefix));
         let container = $('#biaya-total').attr('data-bind');
+        $('input[name=total_pembayaran]').val(Pembayaran_Function.formatRupiah(value, prefix));
         PendaftaranServices.renderFormData(Pembayaran_Function.formatRupiah(value, prefix), container);
 
     },
@@ -260,7 +261,7 @@ const Content_Services = {
     },
     topNewsContent: function(type, data){
         if(type == 1){
-            return `<div class="col-12 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s"
+            return `<div class="col-12 margin-bottom-30px wow fadeInUp beritaLink" data-pointer="`+data.link+`" style="cursor: pointer" data-wow-delay="0.2s"
             style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp; border-bottom: 1px solid red;">
             <div class="text-left hvr-bob opacity-hover-7">
               <img src="`+base_url+'/resources/Berita/'+data.thumbnail+`" alt="">
@@ -271,7 +272,7 @@ const Content_Services = {
             </div>
           </div>`;   
         }
-        return `<div class="col-12 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s"
+        return `<div class="col-12 margin-bottom-30px wow fadeInUp beritaLink" style="cursor: pointer" data-pointer="`+data.link+`" data-wow-delay="0.2s"
         style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp; border-bottom: 2px solid red;">
         <div class="text-left hvr-bob opacity-hover-7">
           <h2 class="text-extra-large  margin-tb-10px">
@@ -300,4 +301,8 @@ const Content_Services = {
         let data = HttpServices.getJson(Content_Services.NewestProductUrl);
         return data;
     },
+    goToDetailNews: function(slug){
+        let uri = base_url + 'landing/detail_berita/' + slug;
+        window.location.href = uri;
+    }
 }
