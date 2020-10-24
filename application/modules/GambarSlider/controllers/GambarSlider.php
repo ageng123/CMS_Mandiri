@@ -53,7 +53,7 @@ class Berita extends Auth_Guard {
 	}
 	// Form Url
 	private function upload($params){
-		$folder = APPPATH.'../public/resources/Berita/';
+		$folder = APPPATH.'../public/resources/Slider/';
 		$config['upload_path']          = $folder;
 		$config['allowed_types']        = '*';
 		// $config['max_size']             = 100;
@@ -127,11 +127,11 @@ class Berita extends Auth_Guard {
 			$model->content = $this->input->post('isi_berita');
 			$model->tag_id = implode(',',$this->input->post('kategori_berita'));
 			$model->status = $this->input->post('status_berita');
-			$cover = $this->upload('cover_berita');
+			$cover = $this->upload('nama_file');
 			if(isset($cover->file_name)):
 				$model->thumbnail = $cover->file_name;
 			endif;
-			$model->author = $this->user; //must-edit
+			$model->author = $this->user; 
 			if($model->update($id)):
 				$this->session->set_flashdata('message', 'Data Konten Berita Telah Di Update');
 				return redirect(base_url('content/berita'));

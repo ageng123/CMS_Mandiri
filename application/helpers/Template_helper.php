@@ -58,10 +58,10 @@
         $CI =& get_instance();
         $config = [
             'protocol' => 'smtp',
-            'smtp_host' => 'ssl://smtp.gmail.com',
-            'smtp_port' => 465,
-            'smtp_user' => 'kenpaci.1@gmail.com',
-            'smtp_pass' => 'Carisendir1',
+            'smtp_host' => 'zmail.cac-office.com',
+            'smtp_port' => 1025,
+            'smtp_user' => 'admin@kjkpi.com',
+            'smtp_pass' => 'koperasi1234',
             'mailtype'  => 'html', 
             'charset'   => 'iso-8859-1'
         ];
