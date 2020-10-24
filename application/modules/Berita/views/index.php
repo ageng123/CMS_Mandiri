@@ -1,4 +1,4 @@
-<img src="<?= base_url('assets/img/') ?>list.png" width="200%">
+<!-- <img src="<?= base_url('assets/img/') ?>list.png" width="200%"> -->
     
 
 
