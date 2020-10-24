@@ -211,7 +211,8 @@ class Landing extends CI_Controller {
 	public function addComment(){
 		$id_berita = decode($_GET['code']);
 		$id_user = decode($_GET['auth']);
-
+		$model = new detailBerita_Model;
+		$model->
 	}
 
 }
