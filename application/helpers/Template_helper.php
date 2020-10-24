@@ -56,16 +56,8 @@
     }
     function send_email($to, $cc, $bcc, $subject, $msg){
         $CI =& get_instance();
-        $config = [
-            'protocol' => 'smtp',
-            'smtp_host' => 'zmail.cac-office.com',
-            'smtp_port' => 1025,
-            'smtp_user' => 'admin@kjkpi.com',
-            'smtp_pass' => 'koperasi1234',
-            'mailtype'  => 'html', 
-            'charset'   => 'iso-8859-1'
-        ];
-        $CI->email->initialize($config);
+        $configEmail = $CI->config->item('email');
+        $CI->email->initialize($configEmail);
         $CI->email->set_newline("\r\n");
         $CI->email->from($config['smtp_user'], 'KJKPI');
         $CI->email->to($to);

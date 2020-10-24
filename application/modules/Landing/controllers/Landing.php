@@ -216,7 +216,7 @@ class Landing extends CI_Controller {
 		$model->author_id = $id_user;
 		$model->isi = $this->input->post('comment_content');
 		$model->save();
-		
+		return redirect(base_url('landing/detail_berita/').$this->input->post('slug'));
 	}
 
 }
