@@ -15,7 +15,7 @@
         <div class="card-header">
           <div class="row">
             <div class="col-6">
-              <h3><?= isset($card_title) ? $card_title : 'Tabel' ?></h3>
+              <h3><?= isset($card_title) ? $card_title : 'Tabel Contoh' ?></h3>
             </div>
             <div class="col-6 text-right">
               <a class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="Tambah Data" href="<?= base_url('content/berita/add') ?>"> <i class="fa fa-plus"></i></a>
