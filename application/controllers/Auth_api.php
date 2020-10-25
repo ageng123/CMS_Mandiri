@@ -1,10 +1,13 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 require_once(APPPATH.'controllers\Auth.php');
 Class Auth_api extends Auth{
+    protected $request;
     function __construct(){
         parent::__construct();
-        
+        $this->load->model('Auth_nasabah');
+        $this->request = (object)$this->input->post();
     }
+
     public function output($msg, $data, $code = 404){
         $data = [
             'msg' => $msg,
@@ -35,6 +38,10 @@ Class Auth_api extends Auth{
             $this->output('message', $this->ion_auth->errors());
         }
     // }
+    }
+    public function login_nasabah(){
+        $model = new Auth_nasabah();
+        
     }
 }
 ?>

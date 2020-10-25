@@ -54,7 +54,7 @@ class Nasabah extends Auth_Guard {
 			$row[] = $val->sudah_member == 1 ? $val->member : ' Bukan Member';
 			// $row[] = '<a href='.base_url('admin').' class="btn btn-success btn-sm">Edit</a><a href='.base_url('admin').' class="btn btn-danger btn-sm">Hapus</a>';
 			$row[] = '<a href='.base_url('admin').' class="btn btn-secondary btn-sm" data-toggle="tooltip" title="Detail"><i class="fa fa-info"></i></span></a>
-			<a href='.base_url('admin').' class="btn btn-info btn-sm" data-toggle="tooltip" title="Download Word"><i class="fa fa-download"></i></span></a>
+			<a href='.base_url('nasabah/word/'.$val->id.'').' class="btn btn-info btn-sm" data-toggle="tooltip" title="Download Word"><i class="fa fa-download"></i></span></a>
 			<a href='.base_url('admin').' class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
 			<a href='.base_url('admin').' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>';
 			$result[] = $row;
@@ -145,4 +145,33 @@ class Nasabah extends Auth_Guard {
 			return 'Jabatan Belum Diisi';
 		endif;
 	}
+
+
+	public function excel()
+	{
+		
+		$data = [
+			'title' => 'Mandiri Sekuritas - CMS',
+			'card_title' => "Data Nasabah",
+			'data_user' => $this->UserModel->get_data_user()
+		];
+		
+		$this->load->view('nasabah/excel',$data);
+	}
+
+		public function word()
+	{
+		
+		$id = $this->uri->segment(3);
+		$data = [
+			'title' => 'Mandiri Sekuritas - CMS',
+			'card_title' => "Data Nasabah",
+			'data_user' => $this->UserModel->get_data_nasabah($id)
+		];
+		
+		$this->load->view('nasabah/word',$data);
+	}
+
 }
+
+	
