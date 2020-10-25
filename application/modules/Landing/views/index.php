@@ -231,7 +231,7 @@
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                   <form action="<?= base_url('landing/login_save') ?>" method="POST" style="border: 6px solid #fcb11a; border-radius: 2%; overflow: hidden">
                     <input type="email" name="email" class="form-control" placeholder="Email" id="">
-                    <input type="password" name="pass" class="form-control" placeholder="Password" id="">
+                    <input type="password" name="password" class="form-control" placeholder="Password" id="">
                     <button class="btn btn-danger btn-block"
                       style="border-radius: 2% !Important; background: #603913; color: white;">Continue</button>
                   </form>
