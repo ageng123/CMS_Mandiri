@@ -220,7 +220,7 @@
                   <div class="col-md-2">
                     <input type="text" name="data_diri[bulan]" placeholder="MM" class="form-control bulanpicker" data-bind="bulan">
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-md-3">
                     <input type="text" name="data_diri[tahun]" placeholder="YYYY" class="form-control tahunpicker"
                       data-bind="tahun">
                   </div>

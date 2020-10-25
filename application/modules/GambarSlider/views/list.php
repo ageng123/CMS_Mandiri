@@ -32,18 +32,15 @@
         <?php endif; ?>
 
         <div class="table-responsive py-4">
-          <table class="table table-flush init-DataTable" data-url="<?= base_url('content/berita/getJSON') ?>"
+          <table class="table table-flush init-DataTable" data-url="<?= base_url('gambarslider/getJSON') ?>"
             id="userTbl">
             <thead class="thead-light">
               <tr>
                 <th></th>
                 <th class="text-center" style="padding: 1.3vh"><input type="checkbox"
                     class="form-check-input all-checkbox-dt" style="position: inherit; margin: auto" name="" id=""></th>
-                <th>Judul Berita</th>
-                <th>Penulis Berita</th>
-                <th>View Berita</th>
-                <th>Status Berita</th>
-                <th>Kategori Berita</th>
+                <th>Nama Gambar</th>
+                <th>Status Gambar</th>
                 <th>Aksi</th>
               </tr>
             </thead>
