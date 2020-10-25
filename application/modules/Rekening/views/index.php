@@ -9,12 +9,28 @@
       <div class="row">
      
       <div class="col-12" style="margin-top: 3vh;">
+
+     <div class="col-lg-3">
+          <div class="blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2">
+            <div class="position-relative">
+             
+                <div class="item-thumbnail background-dark"><img src="<?= base_url('assets/img/');?>opening.jpg" alt=""></div>
+            
+            </div>
+
+               <div class="border-radius-15 width-50px padding-10px background-main-color text-white text-center position-absolute top-20px right-20px">
+                <a href="<?= base_url();?>profile/edit_foto" title="Ganti Foto" data-original-title="Ganti Foto"><i class="fa fa-setting"></i></a>
+              </div>
+          </div>
+        </div>
+        <br>
+
         <table style="font-size: 14px;">
           <tr>
             <td style="width: 20%;"><a href="<?= base_url();?>Profile" class="btn btn-sm border-2 border-radius-30 btn-block text-white" style="background-color: #eaa400;">Data Profile</a></td>
             <td></td>
             
-            <td style="width: 80%;background-color: #f2c866;padding:10px;vertical-align: top;color: white;border-radius: 10px;" rowspan="7">
+            <td style="width: 80%;background-color: #eaa400;padding:10px;vertical-align: top;color: white;border-radius: 10px;" rowspan="7">
                     
                     <form action="<?= base_url('request/save_data') ?>" method="post">
                     <table style="border: 0px;">
