@@ -24,7 +24,7 @@
               </span>
 
               <!-- <a class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="Tambah Data" href="<?= base_url('users/add') ?>"> <span class="btn-inner--text"><i class="fa fa-plus"></i></span></a> -->
-              <a href="#" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="top" title="Export Excel"> <span class="btn-inner--text"><i class="fa fa-file-excel"></i></span></a>
+              <a href="<?= base_url();?>nasabah/excel" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="top" title="Export Excel"> <span class="btn-inner--text"><i class="fa fa-file-excel"></i></span></a>
             </div>
         </div>
       </div>
