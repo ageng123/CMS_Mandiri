@@ -39,7 +39,7 @@
                 <th></th>
                 <th class="text-center" style="padding: 1.3vh"><input type="checkbox"
                     class="form-check-input all-checkbox-dt" style="position: inherit; margin: auto" name="" id=""></th>
-                <th>Nama Gambar</th>
+                <th>Nama Gambar Ajah</th>
                 <th>Status Gambar</th>
                 <th>Aksi</th>
               </tr>
