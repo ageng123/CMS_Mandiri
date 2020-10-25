@@ -28,10 +28,13 @@ class Auth_Nasabah extends CI_Model{
     }
     public function login(){
         $login = $this->db->select('*')->where($this->identity, $this->get_Identity())->get($this->table)->row_object();
-        if(count($login) > 0){
+        if(!empty($login)){
             var_dump($login);
         } else {
             var_dump($login);
         }
+    }
+    public function getRoles(){
+
     }
 }

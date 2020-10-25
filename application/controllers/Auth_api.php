@@ -41,8 +41,9 @@ Class Auth_api extends Auth{
     }
     public function login_nasabah(){
         $model = new Auth_nasabah();
-        $model->set_email('email');
-        echo $model->get_Identity();
+        $model->set_email($this->request->email);
+        $model->set_password($this->request->password);
+        $model->login();
         die;
     }
 }

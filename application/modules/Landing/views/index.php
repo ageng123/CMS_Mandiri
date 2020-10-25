@@ -229,7 +229,7 @@
               <br/>
               <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                  <form action="<?= base_url('landing/login_save') ?>" method="POST" style="border: 6px solid #fcb11a; border-radius: 2%; overflow: hidden">
+                  <form action="<?= base_url('auth_api/login_nasabah') ?>" method="POST" style="border: 6px solid #fcb11a; border-radius: 2%; overflow: hidden">
                     <input type="email" name="email" class="form-control" placeholder="Email" id="">
                     <input type="password" name="password" class="form-control" placeholder="Password" id="">
                     <button class="btn btn-danger btn-block"
