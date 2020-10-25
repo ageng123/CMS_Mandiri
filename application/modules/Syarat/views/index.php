@@ -4,7 +4,6 @@
        <hr style="background-color: #f7a91e;width: 12%;height: 4px;" border="0" align="left">
     <div class="row">
 
-
       <div class="col-12">
          <table cellpadding="5" cellspacing="5">
            <tr>
