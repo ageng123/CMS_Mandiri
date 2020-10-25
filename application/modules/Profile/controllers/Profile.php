@@ -20,5 +20,17 @@ class Profile extends CI_Controller {
 	}
 
 
+	public function edit_foto()
+	{
+		$model = new Profile_model();
+		$user = $model->findBy(['active' => '1']);
+		$content = 'edit';
+		$data = [
+			'page_title' => 'Mandiri Sekuritas - CMS'
+		];
+		landing_parse($content, $data);
+	}
+
+
 
 }
