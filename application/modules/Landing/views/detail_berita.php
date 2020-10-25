@@ -335,7 +335,7 @@
     </style>
     <div class="row text-center">
       <div class="col-12 sm-mb-30px text-center hvr-float wow fadeInUp">
-        asdasdasd
+        
       </div>
 
     </div>
