@@ -5,13 +5,15 @@
   <!-- page output -->
   <div class="padding-tb-40px background-light-grey">
     <div class="container">
-            <h1 class="widget-title clearfix"><b>BERITA UPDATE </b></h1>
+            <h1 class="widget-title clearfix"><b>BERITA & MEDIA </b></h1>
             <hr style="background-color: #f7a91e;width: 20%;height: 4px;" border="0" align="left">
       <div class="row">
-     
+        <div class="col-12 row">
+          <div class="col-3">
+            Forum diskusi dan berbagi berita dari dalam maupun luar negeri. Mulai dari ideologi, politik, ekonomi, sosial dan budaya. <b style="color: #f7a91e;">Subforum</b>: berita-dunia-hiburan.
+          </div>
+        </div>
       <div class="col-12" style="margin-top: 3vh">
-        
-
         <div class="row">
           <?php $id = 3; for($i = 1; $i <= 8 ; $i++): ?>
             <?php $id++ ?>
@@ -38,10 +40,10 @@
       </div>
 
 
-
+        <br>
       <p>
 
-    <ul class="pagination pagination-md dark" style="text-align: center;">
+    <ul class="pagination pagination-lg justify-content-center dark">
       <li class="page-item"><a class="page-link rounded-0" href="#" tabindex="-1">Previous</a></li>
       <li class="page-item"><a class="page-link" href="#">1</a></li>
       <li class="page-item"><a class="page-link" href="#">2</a></li>

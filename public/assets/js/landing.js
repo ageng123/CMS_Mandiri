@@ -18,8 +18,8 @@ $(document).ready(function () {
                 console.log(form.valid());
                 let content = $('#alamat_rumah').val();
                 $('p[data-update=alamat_rumah]').html(content);
-                // return form.valid();
-                return true;
+                return form.valid();
+                // return true;
             } else if(currentIndex === 1){
                 form.validate({
                    rules: PendaftaranServices.letrulesStep1,
@@ -27,8 +27,8 @@ $(document).ready(function () {
                 console.log(form.valid());
                 let content = $('input[name=total_pembayaran]').val();
                 $('p[data-update=total_biaya]').html(content);
-                // return form.valid();
-                return true;
+                return form.valid();
+                // return true;
 
             } 
             else {
