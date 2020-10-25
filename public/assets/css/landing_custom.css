@@ -15,6 +15,25 @@
 p{
     margin-top: 1em;
 }
+.page-link > a {
+    color: #fff !important;
+}
+.page-link {
+    padding: 1.5vh;
+    font-size: 12pt;
+    background: #424242;
+}
+.page-item.active .page-link{
+    background-color: #fff !important;
+    border-color: #424242 !important;
+    color: #000 !important;
+}
+.page-link:focus, .page-link:hover {
+    padding: 1.7vh;
+    background: #424242 !important;
+    border-color: #424242 !important;
+    color: #000 !important;
+}
 .no-border{
     border: 0px !important;
 }

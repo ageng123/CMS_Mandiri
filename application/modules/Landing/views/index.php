@@ -228,6 +228,11 @@
               </div>
               <br/>
               <div class="tab-content" id="myTabContent">
+                  <?php if($this->session->flashdata('error_login') != null): ?>
+                  <div class="alert alert-danger" role="alert">
+                    <?= $this->session->flashdata('error_login') ?>
+                  </div>
+                  <?php endif; ?>
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                   <form action="<?= base_url('auth_api/login_nasabah') ?>" method="POST" style="border: 6px solid #fcb11a; border-radius: 2%; overflow: hidden">
                     <input type="email" name="email" class="form-control" placeholder="Email" id="">
@@ -235,6 +240,7 @@
                     <button class="btn btn-danger btn-block"
                       style="border-radius: 2% !Important; background: #603913; color: white;">Continue</button>
                   </form>
+                  
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
               </div>

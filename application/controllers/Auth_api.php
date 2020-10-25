@@ -44,7 +44,10 @@ Class Auth_api extends Auth{
         $model->set_email($this->request->email);
         $model->set_password($this->request->password);
         $model->login();
-        die;
+    }
+    public function logout_nasabah(){
+        $this->session->sess_destroy();
+        return redirect(base_url('/'));
     }
 }
 ?>

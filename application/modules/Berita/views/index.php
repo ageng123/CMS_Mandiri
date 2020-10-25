@@ -15,43 +15,37 @@
         </div>
       <div class="col-12" style="margin-top: 3vh">
         <div class="row">
-          <?php $id = 3; for($i = 1; $i <= 8 ; $i++): ?>
-            <?php $id++ ?>
-        
+          <?php foreach($data as $key => $val): ?>      
         <div class="col-lg-3">
           <div class="blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2">
             <div class="position-relative">
               <div class="date z-index-10 border-radius-15 width-50px padding-10px background-main-color text-white text-center position-absolute top-20px left-20px">
-                17/2 2018
+                <?= date('d/m Y', strtotime($val->last_update)) ?>
               </div>
-              <a href="#">
-                <div class="item-thumbnail background-dark"><img src="<?= base_url('assets/img/') ?>opening.jpg" alt=""></div>
+              <a href="<?= base_url('landing/detail_berita/').$val->link ?>">
+                <div class="item-thumbnail background-dark"><img src="<?= site_url('resources/Berita/') ?><?= $val->thumbnail != null ? $val->thumbnail : 'opening.jpg' ?>" alt=""></div>
               </a>
             </div>
-            <a href="#" class="text-extra-large margin-tb-20px d-block padding-lr-30px">Don’t spend time beating on a wall, hoping to trans ...</a>
+            <a href="<?= base_url('landing/detail_berita/').$val->link ?>" class="text-extra-large margin-tb-20px d-block padding-lr-30px"><?= $val->title ?></a>
             <hr>
-            <p class="padding-lr-30px opacity-6">when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+            <p class="padding-lr-30px opacity-6"><?= $val->sub ?></p>
             <hr>
             <hr class="margin-bottom-0px border-white">
           </div>
         </div>
-          <?php endfor; ?>
+          <?php endforeach; ?>
 
       </div>
 
 
         <br>
       <p>
-
-    <ul class="pagination pagination-lg justify-content-center dark">
-      <li class="page-item"><a class="page-link rounded-0" href="#" tabindex="-1">Previous</a></li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item"><a class="page-link" href="#">4</a></li>
-      <li class="page-item"><a class="page-link" href="#">5</a></li>
-      <li class="page-item"><a class="page-link rounded-0" href="#">Next</a></li>
-    </ul>
+    <div class="row">
+        <div class="col">
+            <!--Tampilkan pagination-->
+            <?php echo $paginate; ?>
+        </div>
+    </div>
     </p>
 
 
