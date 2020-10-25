@@ -16,14 +16,14 @@ class Auth_Nasabah extends CI_Model{
         $this->identityInput = $value;
         return $this;
     }
-    public function get_Identity($value){
+    public function get_Identity(){
         return $this->identityInput;
     }
     public function set_password($value){
         $this->passwordInput = $value;
         return $this;
     }
-    public function get_password($value){
+    public function get_password(){
         return $this->passwordInput;
     }
     public function login(){
