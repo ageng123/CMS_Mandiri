@@ -34,11 +34,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             return implode(' ',$result);
         }
         public function newest(){
-            $query = "SELECT * FROM ".$this->table." a JOIN attachment_list b ON a.id_product = b.refid  WHERE a.status = 1 AND b.seq = 1 ORDER BY a.last_update DESC LIMIT 6";
+            $query = "SELECT * FROM ".$this->table." a LEFT JOIN attachment_list b ON a.id_product = b.refid  WHERE a.status = 1 GROUP BY b.refid ORDER BY a.last_update DESC, b.seq ASC LIMIT 6";
             return $this->query($query);
         }
         public function top(){
-            $query = "SELECT * FROM ".$this->table." a JOIN attachment_list b ON a.id_product = b.refid  WHERE a.status = 1 AND b.seq = 1 ORDER BY a.view DESC LIMIT 10";
+            $query = "SELECT * FROM ".$this->table." a LEFT JOIN attachment_list b ON a.id_product = b.refid  WHERE a.status = 1 GROUP BY b.refid ORDER BY a.view DESC, b.seq ASC LIMIT 10";
             return $this->query($query);
         }
         

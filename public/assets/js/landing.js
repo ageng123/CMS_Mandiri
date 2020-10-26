@@ -165,9 +165,21 @@ $(document).ready(function () {
         if(data.kode == 200){
             let content_data = data.data;
             let content = ''
-            content_data.map(function(val){
-                content = content + Content_Services.TopProductData(val);
+            let PageSize = 4;
+            content_data.map(function(val, index){
+                if(index < PageSize){
+                    content = content + Content_Services.TopProductData(val);
+                }
             })
+            $('#pagination-container').pagination({
+                dataSource: content_data,
+                pageSize: PageSize,
+                callback: function(data, pagination){
+                    var html = Content_Services.paginateProduct(data);
+                    $('#data-container').html(html);
+                }
+            })
+            
             $(this).html(content)
         } else {
             console.log(data.msg);

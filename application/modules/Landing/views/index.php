@@ -146,7 +146,7 @@
     })
   })
 </script>
-<section class="">
+<section class="pb-3">
   <div class="container">
     <div class="row">
       <div class="col-md-8">
@@ -179,10 +179,14 @@
                   border: 0px transparent;
                 }
               </style>
-              <div class="col-12 p-2 pl-4 row getTopProduct">
+              <div class="col-12 p-2 pl-4 row getTopProduct" id="data-container">
               <div class="spinner-border" role="status">
                 <span class="sr-only">Loading...</span>
               </div>
+              </div>
+              <div class="col-12">
+              <div ></div>
+              <div id="pagination-container"></div>
               </div>
               <div class="col-12 row">
                 <h3><b style="color: #f7a91e;">Latest Products</b></h3>

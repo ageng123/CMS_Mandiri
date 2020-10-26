@@ -304,5 +304,13 @@ const Content_Services = {
     goToDetailNews: function(slug){
         let uri = base_url + 'landing/detail_berita/' + slug;
         window.location.href = uri;
+    },
+    paginateProduct: function(data){
+        var html = '';
+        $.each(data, function(index, item){
+            html += Content_Services.TopProductData(item);
+        });
+        html += '';
+        return html;
     }
 }
