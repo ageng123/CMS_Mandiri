@@ -91,15 +91,14 @@
 								<li><a href="<?= base_url();?>Berita">Berita & Media</a></li>
 								<li><a href="<?= base_url();?>Kontak">Kontak</a></li>
 								<?php if(!($this->session->userdata('full_name'))): ?>
-								<li><a href="<?= base_url();?>Profile"><img
+								<!-- <li><a href="<?= base_url();?>Profile"><img
 											src="<?= base_url('assets/img/profil.png') ?>"
 											style="object-fit: cover;width: 24px; height: 24px" alt="" srcset="">&nbsp;Profile</a>
-								</li>
+								</li> -->
 								<?php else: ?>
 								<li class="has-dropdown">
-									<a style="display: flex; flex-direction: row" href="<?= base_url();?>Profile"><img
-											src="<?= base_url('assets/img/profil.png') ?>"
-											style="object-fit: cover;width: 24px; height: 24px" alt="" srcset="">&nbsp;<div><?= $this->session->userdata('full_name') ?></div></a>
+									<a href="<?= base_url();?>Profile">&nbsp;<?= $this->session->userdata('full_name') ?>
+									</a>
 									<ul class="sub-menu">
 										<li><a href="<?= base_url('profile') ?>">Profile User</a></li>
 										<li><a href="<?= base_url('auth/logout') ?>">Logout</a></li>
