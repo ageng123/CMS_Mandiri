@@ -238,7 +238,6 @@ $(document).ready(function () {
        let auth = $(this).attr('auth_nasabah');
        let data = Content_Services.getSimpananHistory(auth);
        let content_data = data.data;
-       console.log(content_data);
        let content = ''
             let PageSize = 5;
             // content_data.map(function(val, index){
