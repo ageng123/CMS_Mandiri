@@ -256,7 +256,7 @@ class Auth extends CI_Controller
 			if ($forgotten)
 			{
 				// if there were no errors
-				send_email();
+				send_email($this->input->post('identity'), null, null, 'Lupa Password',$this->ion_auth->messages());
 				$this->session->set_flashdata('message', $this->ion_auth->messages());
 				redirect(base_url("auth/login"), 'refresh'); //we should display a confirmation page here instead of the login page
 			}
@@ -324,7 +324,7 @@ class Auth extends CI_Controller
 			else
 			{
 				// do we have a valid request?
-				if ($this->_valid_csrf_nonce() === FALSE || $user->id != $this->input->post('user_id'))
+				if ($user->id != $this->input->post('user_id'))
 				{
 
 					// something fishy might be up

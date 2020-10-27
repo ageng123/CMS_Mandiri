@@ -68,7 +68,7 @@
 
 
 
-		<div class="header-output" style="border-image: url(<?= base_url('assets/img/list.png') ?>); border-top: 0px; border-right: 0px; border-left: 0px;">
+		<div class="header-output" style="border-image: url(<?= base_url('assets/img/list.png') ?>); border-top: 0px; border-right: 0px; border-left: 0px; white-space: nowrap">
 			<div class="container header-in">
 				<div class="row">
 					<div class="col-xl-2 col-lg-2">
@@ -90,10 +90,23 @@
 								<li><a href="<?= base_url();?>Faq">FAQ</a></li>
 								<li><a href="<?= base_url();?>Berita">Berita & Media</a></li>
 								<li><a href="<?= base_url();?>Kontak">Kontak</a></li>
+								<?php if(!($this->session->userdata('full_name'))): ?>
 								<li><a href="<?= base_url();?>Profile"><img
 											src="<?= base_url('assets/img/profil.png') ?>"
 											style="object-fit: cover;width: 24px; height: 24px" alt="" srcset="">&nbsp;Profile</a>
 								</li>
+								<?php else: ?>
+								<li class="has-dropdown">
+									<a style="display: flex; flex-direction: row" href="<?= base_url();?>Profile"><img
+											src="<?= base_url('assets/img/profil.png') ?>"
+											style="object-fit: cover;width: 24px; height: 24px" alt="" srcset="">&nbsp;<div><?= $this->session->userdata('full_name') ?></div></a>
+									<ul class="sub-menu">
+										<li><a href="<?= base_url('profile') ?>">Profile User</a></li>
+										<li><a href="<?= base_url('auth/logout') ?>">Logout</a></li>
+
+									</ul>
+								</li>
+								<?php endif; ?>
 							</ul>
 
 							

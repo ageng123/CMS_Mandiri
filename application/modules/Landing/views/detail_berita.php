@@ -294,7 +294,7 @@
           <img src="<?= base_url('resources/Berita/').$berita->thumbnail ?>" class="media-object" />
         </a>
         <div class="media-body pl-4">
-          <h4 class=”media-heading”><b><?= $val->full_name ?></b> &nbsp; <i style="font-size: 10pt" class="text-muted"><?= indonesiaFullDate(date('Y-m-d', strtotime($val->last_update))) ?></i></h4>
+          <h4 class=”media-heading”><b><?= $val->full_name ?></b> &nbsp; <i style="font-size: 10pt" class="text-muted"><?= indonesiaFullDate(date('Y-m-d',strtotime($val->comment_update))) ?> </i></h4>
           <p><?= $val->isi ?></p>
         </div>
       </div>

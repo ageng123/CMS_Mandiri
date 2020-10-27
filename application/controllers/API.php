@@ -2,7 +2,7 @@
 Class API extends CI_Controller{
     public function __construct(){
         parent::__construct();
-        $this->load->model(['Content/BeritaModel', 'Content/ProdukModel', 'Kategori/KategoriModel']);
+        $this->load->model(['Content/BeritaModel', 'Content/ProdukModel', 'Kategori/KategoriModel', 'Simpanan/Simpanan_model']);
     }
     public function getMostPopularNews(){
         $model = new BeritaModel;
@@ -36,6 +36,11 @@ Class API extends CI_Controller{
         $data = $model->newest();
         $output = json_output(200, null, $data);
         echo json_encode($output, JSON_PRETTY_PRINT);
-        
+    }
+    public function get_historyPembayaran(){
+        $model = new Simpanan_model;
+        $data = $model->get_history();
+        $output = json_output(200, null, $data);
+        echo json_encode($output, JSON_PRETTY_PRINT);
     }
 }

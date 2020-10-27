@@ -959,7 +959,7 @@ class Ion_auth_model extends CI_Model
 		}
 
 		// check if the default set in config exists in database
-		$query = $this->db->get_where($this->tables['groups'], array('name' => $this->config->item('default_group', 'ion_auth')), 1)->row();
+		$query = $this->db->get_where($this->tables['groups'], array('nama_role' => $this->config->item('default_group', 'ion_auth')), 1)->row();
 		if (!isset($query->id) && empty($groups))
 		{
 			$this->set_error('account_creation_invalid_default_group');
@@ -1573,7 +1573,7 @@ class Ion_auth_model extends CI_Model
 			if(!empty($group_names))
 			{
 				$this->db->join($this->tables['groups'], $this->tables['users_groups'] . '.' . $this->join['groups'] . ' = ' . $this->tables['groups'] . '.id', 'inner');
-				$this->db->where_in($this->tables['groups'] . '.name', $group_names);
+				$this->db->where_in($this->tables['groups'] . '.nama_role', $group_names);
 			}
 			if(!empty($group_ids))
 			{
@@ -1671,9 +1671,9 @@ class Ion_auth_model extends CI_Model
 		// if no id was passed use the current users id
 		$id || $id = $this->session->userdata('user_id');
 
-		return $this->db->select($this->tables['users_groups'].'.'.$this->join['groups'].' as id, '.$this->tables['groups'].'.name, '.$this->tables['groups'].'.description')
+		return $this->db->select($this->tables['users_groups'].'.'.$this->join['groups'].' as id, '.$this->tables['groups'].'.nama_role, '.$this->tables['groups'].'.description')
 		                ->where($this->tables['users_groups'].'.'.$this->join['users'], $id)
-		                ->join($this->tables['groups'], $this->tables['users_groups'].'.'.$this->join['groups'].'='.$this->tables['groups'].'.id')
+		                ->join($this->tables['groups'], $this->tables['users_groups'].'.'.$this->join['groups'].'='.$this->tables['groups'].'.id_role')
 		                ->get($this->tables['users_groups']);
 	}
 

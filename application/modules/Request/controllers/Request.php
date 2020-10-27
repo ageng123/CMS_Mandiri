@@ -66,7 +66,7 @@ class Request extends Auth_Guard {
 		foreach($this->input->post('data_request') as $key => $val){
 			if(isset($val)):
 				$model = new Request_model();
-				$model->id_user = '4';
+				$model->id_user = $this->session->userdata('user_id');
 				$model->jenis_request = $this->input->post('jenis_req')[$key];
 				$model->data_request = $val;
 				$model->status_request = 1;

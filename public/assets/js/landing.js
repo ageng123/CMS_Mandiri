@@ -234,4 +234,30 @@ $(document).ready(function () {
        let link = $(this).attr('data-pointer');
       Content_Services.goToDetailNews(link);
    })
+   $('.getPembayaranNasabah').each(function(){
+       let auth = $(this).attr('auth_nasabah');
+       let data = Content_Services.getSimpananHistory(auth);
+       let content_data = data.data;
+       console.log(content_data);
+       let content = ''
+            let PageSize = 5;
+            // content_data.map(function(val, index){
+            //     if(index < PageSize){
+            //         content = content + Content_Services.viewHistory(val, index);
+            //     }
+            // })
+            $('#pagination-container').pagination({
+                dataSource: content_data,
+                pageSize: PageSize,
+                autoHidePrevious: true,
+                autoHideNext: true,
+                callback: function(data, pagination){
+                    var html = '';
+                    data.map(function(val){
+                       html += Content_Services.viewHistory(val);
+                    })
+                    $('#historyContainer').html(html);
+                }
+            })
+   })
 })

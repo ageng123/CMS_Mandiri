@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $sql = '';
             foreach($berita as $key => $val){
                 
-                $sql = "SELECT a.*, b.full_name, b.photo, c.* FROM news_comment_list a LEFT JOIN tb_user b ON a.author_id = b.id LEFT JOIN attachment_list C ON a.author_id = c.uploader  WHERE news_id = {$val->id_news} AND c.tipe_attachment = 1 ORDER BY a.last_update DESC";
+                $sql = "SELECT a.*, a.last_update as comment_update,b.full_name, b.photo, c.* FROM news_comment_list a LEFT JOIN tb_user b ON a.author_id = b.id LEFT JOIN attachment_list C ON a.author_id = c.uploader  WHERE news_id = {$val->id_news}  ORDER BY a.last_update DESC";
             }
             $comment = $this->query($sql);
             return $comment;

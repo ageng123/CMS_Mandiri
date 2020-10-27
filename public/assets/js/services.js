@@ -185,6 +185,16 @@ const PendaftaranServices = {
         }
     }
 }
+const DateIndo_Func = {
+    MonthList: ['','Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
+    convertFromString: (date) => {
+        let data = date.split("-");
+        let tanggal = data[2];
+        let bulan = DateIndo_Func.MonthList[data[1]];
+        let tahun = data[0]
+        return tanggal+' '+bulan+" "+tahun;
+    }
+}
 const Pembayaran_Function = {
     renderToForm: function(wajib, sukarela){
         let prefix = "Rp. ";
@@ -218,8 +228,17 @@ const Content_Services = {
     NewestProductUrl: base_url+'api/newestProduct',
     TopKategoriUrl: base_url+'api/getMostPopularTags',
     NewestNewsUrl: base_url+'api/newestNews',
+    SimpananNasabah: base_url+'api/get_historyPembayaran',
     renderSource: function(data){
         return base_url+'/resources/Berita/'+data.thumbnail;
+    },
+    viewHistory: (data, pag) => {
+        let content = `<tr>
+        <td style="text-align: center;">`+DateIndo_Func.convertFromString(data.tgl_pembayaran)+`</td>
+        <td style="text-align: center;width: 25%;">`+data.jenis_bayar+`</td>
+        <td style="text-align: right;">`+Pembayaran_Function.formatRupiah(data.jml_pembayaran, 'Rp. ')+`</td>
+        </tr>`;
+        return content
     },
     topNewsDescript: function(data){
         data = data.replace(/<img[^>]*>/g,""); 
@@ -312,5 +331,9 @@ const Content_Services = {
         });
         html += '';
         return html;
+    },
+    getSimpananHistory: (auth) =>{
+        let data = HttpServices.getJson(Content_Services.SimpananNasabah + '?auth='+auth);
+        return data;
     }
 }

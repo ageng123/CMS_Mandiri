@@ -32,12 +32,12 @@
             <td style="width: 80%;background-color: #eaa400;padding:10px;vertical-align: top;color: white;border-radius: 10px;" rowspan="7">
                     
                     <table style="border: 0px;">
-                    <tr><td style="width: 25%;border: 0px;">Nama Lengkap</td><td style="border: 0px;">: </td></tr>
-                    <tr><td style="width: 25%;border: 0px;">Jenis Kelamin</td><td style="border: 0px;">: </td></tr>
-                    <tr><td style="width: 25%;border: 0px;">Tempat / Tanggal Lahir</td><td style="border: 0px;">: </td></tr>
-                    <tr><td style="width: 25%;border: 0px;">Alamat</td><td style="border: 0px;">: </td></tr>
-                    <tr><td style="width: 25%;border: 0px;">No. Telepon</td><td style="border: 0px;">: </td></tr>
-                    <tr><td style="width: 25%;border: 0px;">Email</td><td style="border: 0px;">: </td></tr>
+                    <tr><td style="width: 25%;border: 0px;">Nama Lengkap</td><td style="border: 0px;">: </td><td class="border-0"><?= $user->full_name ?></td></tr>
+                    <tr><td style="width: 25%;border: 0px;">Jenis Kelamin</td><td style="border: 0px;">: </td><td class="border-0"><?= $user->jenis_kelamin ?></td></tr>
+                    <tr><td style="width: 25%;border: 0px;">Tempat / Tanggal Lahir</td><td style="border: 0px;">: </td><td class="border-0"><?= ucwords($user->tempat_lahir).' / '.indonesiaFullDate(date('Y-m-d', strtotime($user->tanggal_lahir))) ?></td></tr>
+                    <tr><td style="width: 25%;border: 0px;">Alamat</td><td style="border: 0px;">: </td><td class="border-0"><?= $user->alamat ?></td></tr>
+                    <tr><td style="width: 25%;border: 0px;">No. Telepon</td><td style="border: 0px;">: </td><td class="border-0"><?= $user->no_hp ?></td></tr>
+                    <tr><td style="width: 25%;border: 0px;">Email</td><td style="border: 0px;">: </td><td class="border-0"><?= $user->email ?></td></tr>
                     </table>
             </td>
           </tr>

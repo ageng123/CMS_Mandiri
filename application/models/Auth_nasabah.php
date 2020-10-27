@@ -34,6 +34,7 @@ class Auth_Nasabah extends CI_Model{
         }
         $this->userData = $login;
         $this->password = $login->password;
+        
         if($this->bcrypt->verify($this->get_password() ,$this->password)){
             $this->userData->role = $this->getRoles($login->id);
             if($this->userData->role == NULL){
@@ -42,6 +43,9 @@ class Auth_Nasabah extends CI_Model{
             } else {
                 $this->trigger_events('post_login');
             }
+        } else {
+            $this->session->set_flashdata('error_login', 'Salah Username atau Password');
+            return redirect(base_url('/'));
         }
     }
     public function getRoles($id_user){
@@ -54,9 +58,11 @@ class Auth_Nasabah extends CI_Model{
             case 'post_login':
                 $this->set_session();
                 $this->update_lastLogin($this->userData->id);
+                
                 return redirect(base_url('/'));
             break;
         }
+        echo 'true';
     }
     public function update_lastLogin($id){
         $time = time();
@@ -74,5 +80,6 @@ class Auth_Nasabah extends CI_Model{
             'id_role' => $this->userData->role->id_role
         ];
         $this->session->set_userdata($data);
+        return true;
     }
 }

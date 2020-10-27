@@ -36,6 +36,8 @@ class Landing extends CI_Controller {
 	}
 	public function index()
 	{
+		// print_r($this->session->userdata);
+        //         die;
 		$model = new Landing_model();
 		$user = $model->findBy(['active' => '1']);
 		$content = 'index';
@@ -158,6 +160,7 @@ class Landing extends CI_Controller {
 	private function saveData_koperasi($request){
 		$model = new Koperasi_Model;
 		$request = (object)$request;
+		$model->id_user = $this->nasabahId;
 		$shu = $this->input->post('shu');
 		$shu = (object)$shu;
 		$model->nama_rekening = $shu->nama;
@@ -215,6 +218,7 @@ class Landing extends CI_Controller {
 		$model->news_id = $id_berita;
 		$model->author_id = $id_user;
 		$model->isi = $this->input->post('comment_content');
+		$model->last_update = date('Y-m-d H:i:s');
 		$model->save();
 		return redirect(base_url('landing/detail_berita/').$this->input->post('slug'));
 	}

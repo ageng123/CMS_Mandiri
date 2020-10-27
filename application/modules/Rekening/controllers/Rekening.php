@@ -11,10 +11,11 @@ class Rekening extends CI_Controller {
 	public function index()
 	{
 		$model = new Rekening_model();
-		$user = $model->findBy(['active' => '1']);
+		$rekening = $model->get_rekeningNasabah();
 		$content = 'index';
 		$data = [
-			'page_title' => 'Mandiri Sekuritas - CMS'
+			'page_title' => 'Mandiri Sekuritas - CMS',
+			'rekening' => $rekening
 		];
 		landing_parse($content, $data);
 	}

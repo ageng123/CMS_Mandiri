@@ -34,6 +34,10 @@ p{
     border-color: #424242 !important;
     color: #000 !important;
 }
+header ul.dropdown-dark li > ul.sub-menu > li{
+    z-index: 99;
+    position: relative
+}
 .no-border{
     border: 0px !important;
 }

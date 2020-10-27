@@ -32,26 +32,17 @@
             <td></td>
             <td style="width: 80%;background-color: #806142;padding:10px;vertical-align: top;color: white;border-radius: 10px;" rowspan="7">
                     
-                    <table style="border: 1px solid white;">
-                    <tr>
-                    <td style="text-align: center;">No.</td>
+                    <table style="border: 1px solid white;" class="getPembayaranNasabah" auth_nasabah="<?= encode($this->session->userdata('user_id')) ?>">
+                   <thead>
+                    <td style="text-align: center;">Tgl. Pembayaran</td>
                     <td style="text-align: center;width: 25%;">Jenis Pembayaran</td>
-                    <td style="text-align: center;">Tgl. Pembayaran</td>
                     <td style="text-align: center;">Jumlah</td>
-                    </tr>
-                    <tr>
-                    <td style="text-align: center;">1.</td>
-                    <td style="text-align: center;width: 25%;">Simpanan Pokok</td>
-                    <td style="text-align: center;">Tgl. Pembayaran</td>
-                    <td style="text-align: right;">Rp. Jumlah</td>
-                    </tr>
-                    <tr>
-                    <td style="text-align: center;">2.</td>
-                    <td style="text-align: center;width: 25%;">Simpanan Wajib</td>
-                    <td style="text-align: center;">Tgl. Pembayaran</td>
-                    <td style="text-align: right;">Rp. Jumlah</td>
-                    </tr>
+                   </thead>
+                   <tbody id="historyContainer">
+
+                   </tbody>
                     </table>
+                    <div id="pagination-container"></div>
             </td>
           </tr>
           <tr>
