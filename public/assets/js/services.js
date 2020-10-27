@@ -266,7 +266,7 @@ const Content_Services = {
     TopProductData: function(data){
         let content = `<div class="col-6"><a href="">
         <div class="card card-product">
-          <div class="card-body">
+          <div class="card-body text-center">
             <img src="`+base_url+'/resources/Produk/'+data.uploader+'/'+data.nama_file+`" height="150" alt="">
             <div class="price-list">
               <h4>`+ data.title+`</h4>
