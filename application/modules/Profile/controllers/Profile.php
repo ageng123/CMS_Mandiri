@@ -31,7 +31,9 @@ class Profile extends CI_Controller {
 		];
 		landing_parse($content, $data);
 	}
-
-
+	public function save_changes(){
+		$model = new Profile_model();
+		
+	}
 
 }
