@@ -116,13 +116,7 @@ class Product extends Auth_Guard {
 			'status_list' => $this->status
 		];
 		$tempData = new Attachment_model;
-		$dataTemp = $tempData->findBy(['uploader' => $this->session->userdata('user_id'), 'refid' => null]);
-		if(count($dataTemp) > 0):
-			foreach($dataTemp as $key => $val): 
-				$tempData->delete($val->id_attachment);
-				unlink(APPPATH.'../public/resources/produk/'.$this->session->userdata('user_id').'/'.$val->nama_file);
-			endforeach;
-		endif;
+		
 		if(!empty($this->input->post())):
 			$model = new ProdukModel();
 			$model->title = $this->input->post('judul');
@@ -151,6 +145,13 @@ class Product extends Auth_Guard {
 				echo $this->db->error();
 			endif;
 		endif;
+		$dataTemp = $tempData->findBy(['uploader' => $this->session->userdata('user_id'), 'refid' => null]);
+		if(count($dataTemp) > 0):
+			foreach($dataTemp as $key => $val): 
+				$tempData->delete($val->id_attachment);
+				unlink(APPPATH.'../public/resources/produk/'.$this->session->userdata('user_id').'/'.$val->nama_file);
+			endforeach;
+		endif;
 		admin_parse($content, $data);
 	}
 	public function edit(){
@@ -175,7 +176,6 @@ class Product extends Auth_Guard {
 		$data['img'] = $img;
 		if(!empty($this->input->post())):
 			$model = new ProdukModel();
-			var_dump($this->input->post());
 			$model->title = $this->input->post('judul');
 			// $model->link = str_replace([' ', '-'], ['_', ''], $this->input->post('judul'));
 			$model->harga = $this->input->post('subjudul');
