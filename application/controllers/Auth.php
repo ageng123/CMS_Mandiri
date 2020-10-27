@@ -109,13 +109,16 @@ class Auth extends CI_Controller
 	public function logout()
 	{
 		$this->data['title'] = "Logout";
-
+		$redirect = '/';
+		if(!$this->session->userdata('id_role')){
+			$redirect = 'admin/login';
+		}
 		// log the user out
 		$logout = $this->ion_auth->logout();
 
 		// redirect them to the login page
 		$this->session->set_flashdata('message', $this->ion_auth->messages());
-		redirect(base_url('admin/login'), 'refresh');
+		redirect(base_url($redirect), 'refresh');
 	}
 
 	/**
