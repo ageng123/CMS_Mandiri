@@ -8,6 +8,10 @@
 			parent::__construct();
 			$this->load->model('GambarSliderModel');
 			$this->user = $this->session->userdata('user_id');
+			$this->status_slider = [
+				'1' => 'Aktif',
+				'0' => 'Tidak Aktif'
+			];
 		}
 
 
@@ -33,7 +37,8 @@
 				$row[] = $val->id_attachment;
 				$row[] = '';
 				$row[] = $val->nama_attachment;
-				$row[] = $val->status_slider;
+				$row[] = '<img src="'.base_url('resources/Slider/'.$val->nama_file).'" alt="Image placeholder" width="50%">';
+				$row[] = $val->status_slider == 1 ? 'Aktif' : 'Tidak Aktif';
 				$row[] = '<a href="'.base_url('gambarslider/edit').'?session_id='.encode($val->id_attachment).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
 						<a href="'.base_url('gambarslider/destroy').'?session_id='.encode($val->id_attachment).'" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" title="Delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Gambar : '.$val->nama_attachment.' ? "><i class="fa fa-trash"></i></span></a>';
 				$result[] = $row;
@@ -52,49 +57,43 @@
 			// $config['max_size']             = 100;
 			// $config['max_width']            = 1024;
 			// $config['max_height']           = 768;
+			$config['file_name'] = date('YmdHis').'_'.encode(date('Y-m-d H:i:s'));
+
 
 			$this->load->library('upload', $config);
 			if(!file_exists($folder)):
 				mkdir($folder, 0777);
 			endif;
-			if ( ! $this->upload->do_upload($params))
-			{
-					return $this->upload->display_errors();
-			}
-			else
-			{
-					// $data = array('upload_data' => $this->upload->data());
-					
-					// $this->load->view('upload_success', $data);
-					return (object)$this->upload->data();
+			if ( ! $this->upload->do_upload($params)) {
+				return $this->upload->display_errors();
+			} else {
+				return (object)$this->upload->data();
 			}
 		}
 
 
 		public function add(){
-			$content = 'content/berita/add';
+			$content = 'GambarSlider/add';
 			$data = [
 				'title' => 'Mandiri Sekuritas - CMS',
-				'card_title' => "Tambah Data Konten Berita",
-				'form_url' => base_url('content/berita/add'),
-				'kategori_list' => $this->KategoriModel->findBy(['jenis_kategori' => 1]),
-				'status_list' => $this->status
+				'card_title' => "Tambah Data Gambar Slider",
+				'form_url' => base_url('gambarslider/add'),
+				'status_list' => $this->status_slider
 			];
 			if(!empty($this->input->post())):
-				$model = new BeritaModel();
-				$model->title = $this->input->post('judul');
-				$model->link = str_replace([' ', '-'], ['+', ''], $this->input->post('judul'));
-				$model->sub = $this->input->post('subjudul');
-				$model->content = $this->input->post('isi_berita');
-				$model->tag_id = implode(',',$this->input->post('kategori_berita'));
-				$model->status = $this->input->post('status_berita');
-				$cover = $this->upload('cover_berita');
-				$model->thumbnail = $cover->file_name;
-				$model->view = 0; //must-edit
-				$model->author = $this->user; //must-edit
+				$model = new GambarSliderModel();
+				$slider = $this->upload('cover_slider');
+				$model->nama_file = $slider->file_name;
+				$model->mime = $slider->file_type;
+				$model->uploader = $this->session->userdata('user_id');
+				$model->seq = $this->session->userdata('seq');
+				$model->tipe_attachment = 3;
+				$model->nama_attachment = $slider->client_name;
+				$model->status_slider = $this->input->post('status_slider');
+
 				if($model->save()):
-					$this->session->set_flashdata('message', 'Data Konten Berita Telah Di Input');
-					return redirect(base_url('content/berita'));
+					$this->session->set_flashdata('message', 'Data Gambar Slider Telah Di Input');
+					return redirect(base_url('gambarslider'));
 				else:
 					echo $this->db->error();
 				endif;
@@ -106,31 +105,28 @@
 		public function edit(){
 			$model = new GambarSliderModel();
 			$id = decode($_GET['session_id']);
-			$content = 'content/berita/add';
+			$content = 'GambarSlider/add';
 			$data = [
 				'title' => 'Mandiri Sekuritas - CMS',
-				'card_title' => "Edit Data Konten Berita",
-				'form_url' => base_url('content/berita/edit?session_id='.encode($id)),
+				'card_title' => "Edit Data Gambar Slider",
+				'form_url' => base_url('gambarslider/edit?session_id='.encode($id)),
 				'form_data' => $model->find($id),
-				'kategori_list' => $this->KategoriModel->findBy(['jenis_kategori' => 1]),
-				'status_list' => $this->status
+				'status_list' => $this->status_slider
 			];
 			if(!empty($this->input->post())):
-				
-				$model->title = $this->input->post('judul');
-				$model->link = str_replace([' ', '-'], ['_', ''], $this->input->post('judul'));
-				$model->sub = $this->input->post('subjudul');
-				$model->content = $this->input->post('isi_berita');
-				$model->tag_id = implode(',',$this->input->post('kategori_berita'));
-				$model->status = $this->input->post('status_berita');
-				$cover = $this->upload('nama_file');
-				if(isset($cover->file_name)):
-					$model->thumbnail = $cover->file_name;
+				$slider = $this->upload('cover_slider');
+				if(isset($slider->file_name)):
+					$model->nama_file = $slider->file_name;
 				endif;
-				$model->author = $this->user; 
+				$model->uploader = $this->session->userdata('user_id');
+				$model->seq = $this->session->userdata('seq');
+				$model->tipe_attachment = 3;
+				$model->nama_attachment = $slider->client_name;
+				$model->status_slider = $this->input->post('status_slider');
+
 				if($model->update($id)):
-					$this->session->set_flashdata('message', 'Data Konten Berita Telah Di Update');
-					return redirect(base_url('content/berita'));
+					$this->session->set_flashdata('message', 'Data Gambar Slider Telah Di Update');
+					return redirect(base_url('gambarslider'));
 				else:
 					echo $this->db->error();
 				endif;
@@ -143,8 +139,27 @@
 			$id = decode($_GET['session_id']);
 			$model = new GambarSliderModel;
 			$model->delete($id);
-			$this->session->set_flashdata('message', 'Data Konten Berita Telah Di Hapus');
-			return redirect(base_url('content/berita'));
+			$this->session->set_flashdata('message', 'Data Gambar Slider Di Hapus');
+			return redirect(base_url('gambarslider'));
+		}
+
+
+		public function upload_foto(){
+			$product = $this->upload('file');
+			if(isset($product)){
+				$model = new GambarSliderModel;
+				$model->nama_file = $product->file_name;
+				$model->mime = $product->file_type;
+				$model->uploader = $this->session->userdata('user_id');
+				$model->seq = $this->session->userdata('seq');
+				$model->tipe_attachment = 3;
+				$model->nama_attachment = $product->client_name;
+				if($model->save()){
+					$output = json_output(200, 'Success Upload', $data = ['id_upload' => $this->db->insert_id()]);
+					echo json_encode($output, JSON_PRETTY_PRINT);
+				}
+			}
+			
 		}
 
 	}

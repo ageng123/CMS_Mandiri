@@ -18,7 +18,7 @@
               <h3><?= isset($card_title) ? $card_title : 'Tabel Contoh' ?></h3>
             </div>
             <div class="col-6 text-right">
-              <a class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="Tambah Data" href="<?= base_url('content/berita/add') ?>"> <i class="fa fa-plus"></i></a>
+              <a class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="Tambah Data" href="<?= base_url('gambarslider/add') ?>"> <i class="fa fa-plus"></i></a>
             </div>
           </div>
         </div>
@@ -39,7 +39,8 @@
                 <th></th>
                 <th class="text-center" style="padding: 1.3vh"><input type="checkbox"
                     class="form-check-input all-checkbox-dt" style="position: inherit; margin: auto" name="" id=""></th>
-                <th>Nama Gambar Ajah</th>
+                <th>Nama Gambar</th>
+                <th>Gambar</th>
                 <th>Status Gambar</th>
                 <th>Aksi</th>
               </tr>
