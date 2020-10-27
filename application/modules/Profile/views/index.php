@@ -11,7 +11,25 @@
       <div class="col-12" style="margin-top: 3vh;">
 
      <div class="col-lg-3">
+<<<<<<< HEAD
           <?php $this->load->view('Component/profile_photo') ?>
+=======
+          <div class="blog-item">
+            <div class="position-relative" style="background-color: #fafafa;">
+                <div class="item-thumbnail rounded-circle">
+                  <img src="<?= base_url('assets/img/');?>user.png">
+                  
+                </div>
+                <br>
+                <center>Welcome Back <b style="color: #f7a91e;"><?= $user->full_name ?></b></center>
+            </div>
+          </div>
+          
+          <div class="border-radius-15 width-50px padding-10px background-main-color text-white text-center position-absolute top-20px right-20px">
+            <a href="<?= base_url();?>profile/edit_foto" title="Ganti Foto" data-original-title="Ganti Foto"><i class="fa fa-cog"></i></a>
+          </div>
+
+>>>>>>> 43ea1ef6383aa933638f117e61114bebd5fd37a6
         </div>
         <br>
 
