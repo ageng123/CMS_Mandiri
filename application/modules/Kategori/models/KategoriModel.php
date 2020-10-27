@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->last_update = date('Y-m-d H:i:s');
         }
         public function top($params){
-            $query = "SELECT * FROM ".$this->table." ORDER BY view DESC LIMIT ".$params;
+            $query = "SELECT * FROM ".$this->table." WHERE jenis_kategori = 1 ORDER BY view DESC LIMIT ".$params;
             return $this->query($query);
         }
     }
