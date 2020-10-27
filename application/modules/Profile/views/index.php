@@ -11,17 +11,7 @@
       <div class="col-12" style="margin-top: 3vh;">
 
      <div class="col-lg-3">
-          <div class="blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2">
-            <div class="position-relative">
-             
-                <div class="item-thumbnail background-dark"><img src="<?= base_url('assets/img/');?>opening.jpg" alt=""></div>
-            
-            </div>
-
-               <div class="border-radius-15 width-50px padding-10px background-main-color text-white text-center position-absolute top-20px right-20px">
-                <a href="<?= base_url();?>profile/edit_foto" title="Ganti Foto" data-original-title="Ganti Foto"><i class="fa fa-setting"></i></a>
-              </div>
-          </div>
+          <?php $this->load->view('Component/profile_photo') ?>
         </div>
         <br>
 

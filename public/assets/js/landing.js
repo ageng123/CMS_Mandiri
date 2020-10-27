@@ -259,4 +259,20 @@ $(document).ready(function () {
                 }
             })
    })
+   $('#edit_photo').click(function(){
+       Profile_Services.openUpload();
+   })
+   $('#profileUpload').on('change', function(){
+       $('#profilUploadButton').removeClass('hide');
+       let input = this;
+       if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        
+        reader.onload = function(e) {
+          $('#profilePreview').attr('src', e.target.result);
+        }
+        
+        reader.readAsDataURL(input.files[0]); // convert to base64 string
+      }
+   })
 })

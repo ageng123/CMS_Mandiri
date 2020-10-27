@@ -195,6 +195,11 @@ const DateIndo_Func = {
         return tanggal+' '+bulan+" "+tahun;
     }
 }
+const Profile_Services = {
+    openUpload: () => {
+        $('#profileUpload').trigger('click');
+    }
+}
 const Pembayaran_Function = {
     renderToForm: function(wajib, sukarela){
         let prefix = "Rp. ";
