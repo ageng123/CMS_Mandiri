@@ -13,6 +13,6 @@ require_once(APPPATH.'/models/Main.php');
             return $this->db->insert($this->model, $data);
         }
         public function get_History(){
-            return $this->db->join('tb_koperasi_data b', 'a.id_nasabah = b.kode_nasabah')->where('b.id_user', decode($_GET['auth']))->get($this->table.' a')->result_object();
+            return $this->db->join('tb_koperasi_data b', 'a.id_nasabah = b.kode_nasabah')->where('b.id_user', decode($_GET['auth']))->where('status', '1')->get($this->table.' a')->result_object();
         }
     }

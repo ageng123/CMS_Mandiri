@@ -15,11 +15,12 @@
             <div class="position-relative">
              
                 <div class="item-thumbnail background-dark"><img src="<?= base_url('assets/img/');?>opening.jpg" alt=""></div>
-            
             </div>
 
                <div class="border-radius-15 width-50px padding-10px background-main-color text-white text-center position-absolute top-20px right-20px">
-                <a href="<?= base_url();?>profile/edit_foto" title="Ganti Foto" data-original-title="Ganti Foto"><i class="fa fa-setting"></i></a>
+                <a title="Ganti Foto" data-original-title="Ganti Foto"><i class="fa fa-setting"></i></a>
+                <input type="file" id="imgupload" style="display:none"/> 
+
               </div>
           </div>
         </div>
