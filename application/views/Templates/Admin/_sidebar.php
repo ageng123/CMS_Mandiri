@@ -106,6 +106,9 @@
                     <a href="<?= base_url('nasabah') ?>" <?php if($location1 == 'nasabah') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Nasabah</a>
                   </li>
                   <li class="nav-item">
+                    <a href="<?= base_url('request') ?>" <?php if($location1 == 'request') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Request List</a>
+                  </li>
+                  <li class="nav-item">
                     <a href="<?= base_url('statuspembayaran') ?>" <?php if($location1 == 'statuspembayaran') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Status Pembayaran</a>
                   </li>
                   <li class="nav-item">
