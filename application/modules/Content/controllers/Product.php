@@ -138,7 +138,7 @@ class Product extends Auth_Guard {
 			if($model->save()):
 				$this->session->set_flashdata('message', 'Data Konten Produk Telah Di Input');
 				$attach = new Attachment_model;
-				$id =  $model->lastId;
+				$id =  $model->get_lastId();
 				$attachArr = explode(',', $this->input->post('attachment'));
 				foreach($attachArr as $key => $val){
 					$attach->refid = $id;
@@ -185,7 +185,6 @@ class Product extends Auth_Guard {
 			$model->seller_id = $this->session->userdata('user_id'); //must-edit
 			if($model->update($id)):
 			$attachArr = explode(',', $this->input->post('attachment'));
-				var_dump($attachArr);
 				foreach($attachArr as $key => $val){
 					$attach = new Attachment_Model;
 					$attach->refid = $id;
