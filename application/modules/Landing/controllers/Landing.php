@@ -110,7 +110,7 @@ class Landing extends CI_Controller {
 		$model = new Nasabah_Model;
 		$request = (object)$request;
 		$model->sudah_member = $request->member == 'sudah' ? 1 : 0;
-		$model->member = $request->member == 'sudah' ? $request->client_id : null;
+		$model->member = $request->member == 'sudah' ? $request->client_id : 0;
 		$model->full_name = $request->nama;
 		$this->session->set_flashdata('nama_pendaftaran', $request->nama);
 		if($request->punya_ktp == 'sudah'): 
@@ -167,7 +167,7 @@ class Landing extends CI_Controller {
 		$model = new Koperasi_Model;
 		$request = (object)$request;
 		$model->id_user = $this->nasabahId;
-		$kodenasabah = date("Ymd").$this->nasabahId.date("His");
+		$kodenasabah = 'KJKPI'.date("ym").$this->nasabahId.date("s");
 		$model->kode_nasabah = $kodenasabah;
 		$this->session->set_flashdata('nomor_nasabah', $kodenasabah);
 		$shu = $this->input->post('shu');
