@@ -87,11 +87,11 @@
           </li> -->
 
           <li class="nav-item">
-              <a <?php if($location1 == 'users' OR $location1 == 'roles' OR  $location1 == 'assignroles'  OR  $location1 == 'nasabah' OR  $location1 == 'statuspembayaran' OR  $location1 == 'gambarslider') { echo 'class="nav-link active" style="color: white;"';} else { echo 'class="nav-link"';} ?> href="#navbar-admin" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
-                <i <?php if($location1 == 'users' OR $location1 == 'roles' OR  $location1 == 'assignroles'  OR  $location1 == 'nasabah' OR  $location1 == 'statuspembayaran' OR  $location1 == 'gambarslider') { echo 'class="ni ni-archive-2 text-white"';} else { echo 'class="ni ni-archive-2" style="color: #eba502;"';} ?>></i>
+              <a <?php if($location1 == 'users' OR $location1 == 'roles' OR  $location1 == 'assignroles'  OR  $location1 == 'nasabah' OR  $location1 == 'statuspembayaran' OR  $location1 == 'gambarslider' OR  $location1 == 'request') { echo 'class="nav-link active" style="color: white;"';} else { echo 'class="nav-link"';} ?> href="#navbar-admin" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
+                <i <?php if($location1 == 'users' OR $location1 == 'roles' OR  $location1 == 'assignroles'  OR  $location1 == 'nasabah' OR  $location1 == 'statuspembayaran' OR  $location1 == 'gambarslider' OR  $location1 == 'request') { echo 'class="ni ni-archive-2 text-white"';} else { echo 'class="ni ni-archive-2" style="color: #eba502;"';} ?>></i>
                 <span class="nav-link-text">Master Data</span>
               </a>
-              <div <?php if($location1 == 'users' OR $location1 == 'roles' OR  $location1 == 'assignroles'  OR  $location1 == 'nasabah' OR  $location1 == 'statuspembayaran' OR  $location1 == 'gambarslider') { echo 'class="collapse show"';} else { echo 'class="collapse"';} ?> id="navbar-admin">
+              <div <?php if($location1 == 'users' OR $location1 == 'roles' OR  $location1 == 'assignroles'  OR  $location1 == 'nasabah' OR  $location1 == 'statuspembayaran' OR  $location1 == 'gambarslider' OR  $location1 == 'request') { echo 'class="collapse show"';} else { echo 'class="collapse"';} ?> id="navbar-admin">
                 <ul class="nav nav-sm flex-column">
                   <li class="nav-item">
                     <a href="<?= base_url('users') ?>" <?php if($location1 == 'users') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>User</a>
