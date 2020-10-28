@@ -89,7 +89,8 @@ class Berita extends Auth_Guard {
 		if(!empty($this->input->post())):
 			$model = new BeritaModel();
 			$model->title = $this->input->post('judul');
-			$model->link = str_replace([' ', '-'], ['+', ''], $this->input->post('judul'));
+			$judul =  preg_replace('/[^A-Za-z0-9\-]/', '', $this->input->post('judul'));
+			$model->link = str_replace([' ', '-'], ['+', ''], $judul);
 			$model->sub = $this->input->post('subjudul');
 			$model->content = $this->input->post('isi_berita');
 			$model->tag_id = implode(',',$this->input->post('kategori_berita'));
@@ -122,7 +123,8 @@ class Berita extends Auth_Guard {
 		if(!empty($this->input->post())):
 			
 			$model->title = $this->input->post('judul');
-			$model->link = str_replace([' ', '-'], ['_', ''], $this->input->post('judul'));
+			$judul =  preg_replace('/[^A-Za-z0-9\-]/', '', $this->input->post('judul'));
+			$model->link = str_replace([' ', '-'], ['+', ''], $judul);
 			$model->sub = $this->input->post('subjudul');
 			$model->content = $this->input->post('isi_berita');
 			$model->tag_id = implode(',',$this->input->post('kategori_berita'));
