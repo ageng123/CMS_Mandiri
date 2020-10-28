@@ -96,7 +96,7 @@ class Landing extends CI_Controller {
 					<td>Total Pembayaran</td><td>'.$this->data_email['total_pembayaran'].'</td>
 					</tr>
 					<tr>
-					<td>Link Aktivasi Akun</td><td>'.$this->data_email['kode_aktivasi'].'</td>
+					<td>Link Aktivasi Akun</td><td><a href="'.base_url('auth/activate/').$this->data_email['kode_aktivasi'].'">Link Aktivasi</a></td>
 					</tr>
 					</table>
 					</body>
