@@ -256,7 +256,7 @@ const Content_Services = {
        let content =  `<div class="col-2"><a href="">
                     <div class="card card-product">
                       <div class="card-body" style="padding: 0px; background: black">
-                        <img src="`+base_url+'/resources/Produk/'+data.uploader+'/'+data.nama_file+`" height="75" alt="">
+                        <img style="width: 100% !important; object-fit: cover;" src="`+base_url+'/resources/Produk/'+data.uploader+'/'+data.nama_file+`" height="75" alt="">
                       </div>
                     </div>
                   </a>
