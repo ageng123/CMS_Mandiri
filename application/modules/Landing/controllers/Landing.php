@@ -130,8 +130,8 @@ class Landing extends CI_Controller {
 		$this->data_email['to'] = $request->email;
 		$model->password = $this->bcrypt->hash($request->password);
 		$code =  encode($request->nomor_identity.$request->nama);
-		$model->activation_code = $code;
-		$this->data_email['kode_aktivasi'] = $code;
+		$model->activation_code = str_replace('=','', $code);
+		$this->data_email['kode_aktivasi'] = str_replace('=','', $code);
 		if($model->save()):
 			$this->nasabahId = $model->get_lastId();
 			$ktp = $this->upload('ktp', $this->nasabahId);
