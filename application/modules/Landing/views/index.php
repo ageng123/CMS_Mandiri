@@ -205,7 +205,7 @@
           <div class="card">
             <div class="card-header landing-login-form">
               <ul class="nav nav-pils" id="myTab" role="tablist">
-                <>
+                <style>
                   .login-button {
                     background: #603913;
                     width: 50%;
@@ -222,7 +222,7 @@
                     padding-left: 0px;
                     padding-right: 0px;
                   }
-                </>
+                </style>
 
               </ul>
             </div>

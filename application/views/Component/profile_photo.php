@@ -6,11 +6,12 @@
 
         </div>
         <br>
-        <center>Welcome Back <b style="color: #f7a91e;"><?= $user->full_name ?></b></center>
+        Welcome Back <b style="color: #f7a91e;"><?= $user->full_name ?></b>
     </div>
+    <br>
     <form action="">
         <input type="file" name="profilePhoto" id="profileUpload" style="display:none" />
-        <button type="submit" id="profilUploadButton" class="btn btn-primary btn-block m-t-1 hide">Save</button>
+        <button type="submit" id="profilUploadButton" class="btn btn-primary btn-sm m-t-1 hide">Save</button>
     </form>
 </div>
 
