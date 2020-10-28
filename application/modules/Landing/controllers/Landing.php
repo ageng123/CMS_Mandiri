@@ -130,8 +130,8 @@ class Landing extends CI_Controller {
 		$this->data_email['to'] = $request->email;
 		$model->password = $this->bcrypt->hash($request->password);
 		$code =  encode($request->nomor_identity.$request->nama);
-		$model->activation_code = str_replace('=','', $code);
-		$this->data_email['kode_aktivasi'] = str_replace('=','', $code);
+		$model->activation_code = $this->clean($code);
+		$this->data_email['kode_aktivasi'] = $this->clean($code);
 		if($model->save()):
 			$this->nasabahId = $model->get_lastId();
 			$ktp = $this->upload('ktp', $this->nasabahId);
@@ -233,5 +233,9 @@ class Landing extends CI_Controller {
 		$model->save();
 		return redirect(base_url('landing/detail_berita/').$this->input->post('slug'));
 	}
-
+	function clean($string) {
+		$string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
+	 
+		return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
+	 }
 }
