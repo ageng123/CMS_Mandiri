@@ -7,7 +7,6 @@ require_once(APPPATH.'/models/Main.php');
         protected $filename;
          public function __construct(){
             parent::__construct();
-            $this->model = 'dat_subscribe';
         }
         public function simpan($data){
             return $this->db->insert($this->model, $data);
