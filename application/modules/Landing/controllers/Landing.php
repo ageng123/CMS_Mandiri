@@ -8,6 +8,7 @@ class Landing extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Landing_model');
 		$this->load->library('bcrypt');
+		$this->kode_nasabah = 'YYYYMMDD[IDNASABAH]His';
 	}
 	private function upload($params, $id){
 		$folder = APPPATH.'../public/resources/upload/';
@@ -102,6 +103,7 @@ class Landing extends CI_Controller {
 					</html>
 					';
 		$send = send_email($this->data_email['to'], null, null, 'Status Pendaftaran Akun KJKPI ANDA',$message);
+		$this->session->set_flashdata('daftar_sukses', true);
 		return redirect(base_url('landing'));
 	}
 	private function saveData_diri($request){
@@ -110,6 +112,7 @@ class Landing extends CI_Controller {
 		$model->sudah_member = $request->member == 'sudah' ? 1 : 0;
 		$model->member = $request->member == 'sudah' ? $request->client_id : null;
 		$model->full_name = $request->nama;
+		$this->session->set_flashdata('nama_pendaftaran', $request->nama);
 		if($request->punya_ktp == 'sudah'): 
 			$model->ektp = $request->nomor_identity;
 		else:
@@ -123,6 +126,7 @@ class Landing extends CI_Controller {
 		$model->alamat = $request->alamat.'/'.$request->rt.'/'.$request->kelurahan.'/'.$request->kecamatan.'/'.$request->kabupaten.'/'.$request->provinsi.'/'.$request->kodepos;
 		$model->alamat_rumah = $request->alamat_rumah;
 		$model->email = $request->email;
+		$this->session->set_flashdata('email_nasabah', $request->email);
 		$this->data_email['to'] = $request->email;
 		$model->password = $this->bcrypt->hash($request->password);
 		$code =  encode($request->nomor_identity.$request->nama);
@@ -163,6 +167,9 @@ class Landing extends CI_Controller {
 		$model = new Koperasi_Model;
 		$request = (object)$request;
 		$model->id_user = $this->nasabahId;
+		$kodenasabah = date("Ymd").$this->nasabahId.date("His");
+		$model->kode_nasabah = $kodenasabah;
+		$this->session->set_flashdata('nomor_nasabah', $kodenasabah);
 		$shu = $this->input->post('shu');
 		$shu = (object)$shu;
 		$model->nama_rekening = $shu->nama;

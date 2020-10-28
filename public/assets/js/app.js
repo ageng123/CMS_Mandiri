@@ -119,7 +119,7 @@ $(document).ready(function () {
         let uri = $(this).data('url');
         DatatableServices.setContainer(container);
         DatatableServices.dataUri = uri;
-        DatatableServices.initDT();
+        DatatableServices.initDTOnly();
     })
     $('.all-checkbox-dt').on('click', function(){
         console.log(DatatableServices.table)

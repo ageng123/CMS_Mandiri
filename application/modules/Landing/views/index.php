@@ -137,7 +137,68 @@
     </table>
   </div>
 </div>
-<script>
+<div class="modal" id="modalPendaftaran" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Pendaftaran Sukses</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3>TERIMA KASIH TELAH MELAKUKAN PENDAFTARAN CALON ANGGOTA KOPERASI JASA KOMUNITAS PANENSAHAM INDONESIA</h3>
+        <table class="no-border">
+        <style>
+            .no-border{
+              border-top: 0px !important;
+            }
+            .no-border > tr td{
+              border-top: 0px !important;
+            }
+            .no-border td {
+              border-top: 0px !important;
+            }
+        </style>
+          <tr>
+            <td style="width: 35%">Nama </td>
+            <td>:</td>
+            <td><?= $this->session->flashdata('nama'); ?></td>
+          </tr>
+          <tr>
+            <td>Nomor Pendaftaran</td>
+            <td>:</td>
+            <td><?= $this->session->flashdata('nomor_nasabah') ?></td>
+          </tr>
+        </table>
+        <p>Kami telah mengirimkan email ke: <?= $this->session->flashdata('email_nasabah') ?>untuk konfirmasi pendaftaran</p>
+        <p>Mohon periksa inbox email Anda,jika tidak ada mohon periksa folder spam di akun email anda</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <script>
+  $(document).ready(function () {
+    $('#welcome-modal').modal('show');
+    $('#modalPendaftaran').modal('show');
+    $('.modal-close').on('click', function () {
+      $('#welcome-modal').modal('hide');
+      console.log('modal');
+    })
+  })
+</script> -->
+<?php if($this->session->flashdata('daftar_sukses')): ?>
+  <script>
+  $(document).ready(function () {
+    $('#modalPendaftaran').modal('show');
+    $('.modal-close').on('click', function () {
+      $('.modal').modal('hide');
+      console.log('modal');
+    })
+  })
+</script>
+<?php else: ?>
+  <script>
   $(document).ready(function () {
     $('#welcome-modal').modal('show');
     $('.modal-close').on('click', function () {
@@ -146,8 +207,6 @@
     })
   })
 </script>
-<?php if($this->session->flashdata()): ?>
-<?php else: ?>
 <?php endif; ?>
 <section class="pb-3">
   <div class="container">
