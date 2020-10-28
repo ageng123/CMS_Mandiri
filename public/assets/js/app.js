@@ -33,6 +33,16 @@ const DatatableServices = {
         });
         DatatableServices.table.column(0).visible(false);
     },
+    initDTOnly: () => {
+        DatatableServices.table = $(DatatableServices.container).DataTable({
+            "processing": true,
+            "serverSide": false,
+            "ajax": {
+                "url": DatatableServices.dataUri,
+                "type": "POST"
+            }
+        })
+    },
     setContainer: (id) => {
         console.log(id);
         DatatableServices.container = '#' + id;
@@ -98,6 +108,13 @@ function ActionMessage(type, e, event)
 Dropzone.autoDiscover = false;
 $(document).ready(function () {
     $('.init-DataTable').each(function () {
+        let container = $(this).attr('id');
+        let uri = $(this).data('url');
+        DatatableServices.setContainer(container);
+        DatatableServices.dataUri = uri;
+        DatatableServices.initDT();
+    })
+    $('.initDTOnly').each(function(){
         let container = $(this).attr('id');
         let uri = $(this).data('url');
         DatatableServices.setContainer(container);

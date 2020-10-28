@@ -146,6 +146,9 @@
     })
   })
 </script>
+<?php if($this->session->flashdata()): ?>
+<?php else: ?>
+<?php endif; ?>
 <section class="pb-3">
   <div class="container">
     <div class="row">
