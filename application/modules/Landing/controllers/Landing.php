@@ -208,7 +208,6 @@ class Landing extends CI_Controller {
 			break;
 		}
 	}
-
 	public function proses_add()
 		{
 			$data = [
