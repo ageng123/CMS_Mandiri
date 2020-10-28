@@ -163,7 +163,7 @@
           <tr>
             <td style="width: 35%">Nama </td>
             <td>:</td>
-            <td><?= $this->session->flashdata('nama'); ?></td>
+            <td><?= $this->session->flashdata('nama_pendaftaran'); ?></td>
           </tr>
           <tr>
             <td>Nomor Pendaftaran</td>
@@ -171,7 +171,7 @@
             <td><?= $this->session->flashdata('nomor_nasabah') ?></td>
           </tr>
         </table>
-        <p>Kami telah mengirimkan email ke: <?= $this->session->flashdata('email_nasabah') ?>untuk konfirmasi pendaftaran</p>
+        <p>Kami telah mengirimkan email ke: <?= $this->session->flashdata('email_nasabah') ?> untuk konfirmasi pendaftaran</p>
         <p>Mohon periksa inbox email Anda,jika tidak ada mohon periksa folder spam di akun email anda</p>
       </div>
     </div>
