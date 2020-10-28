@@ -252,11 +252,10 @@
                 <?php else: ?>
                    <div class="position-relative" style="background-color: #fafafa;">
                     <center><div class="item-thumbnail rounded-circle" style="height: 10vw; width: 10vw; overflow: hidden">
-                        <?php if(isset($user->photo)): ?>
-                            <img src="<?= base_url('resources/upload/').$this->session->userdata('user_id').'/'.$user->photo;?>" style="height: 100%" id="profilePreview">
+                        <?php if(empty($user->photo)): ?>
+                             <img src="<?= base_url('assets/img/');?>user.png" style="height: 100%" id="profilePreview">
                         <?php else: ?>
-                            <img src="<?= base_url('assets/img/');?>user.png" style="height: 100%" id="profilePreview">
-
+                            <img src="<?= base_url('resources/upload/').$this->session->userdata('user_id').'/'.$user->photo;?>" style="height: 100%" id="profilePreview">
                         <?php endif; ?>
                     </div></center>
                     <br>
