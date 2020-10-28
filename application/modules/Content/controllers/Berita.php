@@ -89,8 +89,8 @@ class Berita extends Auth_Guard {
 		if(!empty($this->input->post())):
 			$model = new BeritaModel();
 			$model->title = $this->input->post('judul');
-			$judul =  preg_replace('/[^A-Za-z0-9\-]/', '', $this->input->post('judul'));
-			$model->link = str_replace([' ', '-'], ['+', ''], $judul);
+			$judul =  $this->slugify($this->input->post('judul'));
+			$model->link = $judul;
 			$model->sub = $this->input->post('subjudul');
 			$model->content = $this->input->post('isi_berita');
 			$model->tag_id = implode(',',$this->input->post('kategori_berita'));
@@ -123,8 +123,8 @@ class Berita extends Auth_Guard {
 		if(!empty($this->input->post())):
 			
 			$model->title = $this->input->post('judul');
-			$judul =  preg_replace('/[^A-Za-z0-9\-]/', '', $this->input->post('judul'));
-			$model->link = str_replace([' ', '-'], ['+', ''], $judul);
+			$judul =  $this->slugify($this->input->post('judul'));
+			$model->link = $judul;
 			$model->sub = $this->input->post('subjudul');
 			$model->content = $this->input->post('isi_berita');
 			$model->tag_id = implode(',',$this->input->post('kategori_berita'));
@@ -157,6 +157,31 @@ class Berita extends Auth_Guard {
 		$model = new BeritaModel();
 		$output = $model->kategori_list('1,3');
 		var_dump($output);
+	}
+	public function slugify($text)
+	{
+	// replace non letter or digits by -
+	$text = preg_replace('~[^\pL\d]+~u', '-', $text);
 
+	// transliterate
+	$text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
+
+	// remove unwanted characters
+	$text = preg_replace('~[^-\w]+~', '', $text);
+
+	// trim
+	$text = trim($text, '-');
+
+	// remove duplicate -
+	$text = preg_replace('~-+~', '-', $text);
+
+	// lowercase
+	$text = strtolower($text);
+
+	if (empty($text)) {
+		return 'n-a';
+	}
+
+	return $text;
 	}
 }
