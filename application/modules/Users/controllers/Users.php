@@ -42,7 +42,7 @@ class Users extends Auth_Guard {
 
 	public function getJSON(){
 		$model = new UserModel;
-		$output = $model->findBy(['active' => 1]);
+		$output = $model->get_Users();
 		$no = $this->input->post('start');
 		$result = array();
 		foreach($output as $key => $val):

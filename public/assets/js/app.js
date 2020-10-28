@@ -33,6 +33,16 @@ const DatatableServices = {
         });
         DatatableServices.table.column(0).visible(false);
     },
+    initDTOnly: () => {
+        DatatableServices.table = $(DatatableServices.container).DataTable({
+            "processing": true,
+            "serverSide": false,
+            "ajax": {
+                "url": DatatableServices.dataUri,
+                "type": "POST"
+            }
+        })
+    },
     setContainer: (id) => {
         console.log(id);
         DatatableServices.container = '#' + id;
@@ -103,6 +113,13 @@ $(document).ready(function () {
         DatatableServices.setContainer(container);
         DatatableServices.dataUri = uri;
         DatatableServices.initDT();
+    })
+    $('.initDTOnly').each(function(){
+        let container = $(this).attr('id');
+        let uri = $(this).data('url');
+        DatatableServices.setContainer(container);
+        DatatableServices.dataUri = uri;
+        DatatableServices.initDTOnly();
     })
     $('.all-checkbox-dt').on('click', function(){
         console.log(DatatableServices.table)
