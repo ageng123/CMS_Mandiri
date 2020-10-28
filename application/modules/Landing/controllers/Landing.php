@@ -145,6 +145,8 @@ class Landing extends CI_Controller {
 				$model->foto_kk = isset($kk->file_name) ? $prefix.$kk->file_name : 'ktp_'.$prefix;
 				$model->foto_ktp_ahli_waris = isset($ktp_ahli->file_name) ? $prefix.$ktp_ahli->file_name : 'ktp_'.$prefix;
 			endif;
+			$user = explode(' ', $request->nama);
+			$model->username = strtolower($user[0]).'-'.$this->nasabahId;
 			$model->update($this->nasabahId);
 			$pekerjaan = $this->trigger_save_event('SAVE_PEKERJAAN', $this->input->post('pekerjaan'));
 			$koperasi = $this->trigger_save_event('SAVE_KOPERASI_DATA', $this->input->post('koperasi'));
