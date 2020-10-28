@@ -19,7 +19,7 @@ class StatusPembayaran extends Auth_Guard {
 		$content = 'StatusPembayaran/list';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
-			'card_title' => "Data Status Pembayaran",
+			'card_title' => "Data Pembayaran Iuran",
 			'form_url' => base_url('statuspembayaran/add'),
 			'status_list' => $this->status
 		];
@@ -58,7 +58,7 @@ class StatusPembayaran extends Auth_Guard {
 		$content = 'StatusPembayaran/add';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
-			'card_title' => "Tambah Data Status Pembayaran",
+			'card_title' => "Tambah Data Pembayaran Iuran",
 			'form_url' => base_url('statuspembayaran/add')
 		];
 		if(!empty($this->input->post())):
@@ -85,7 +85,7 @@ class StatusPembayaran extends Auth_Guard {
 		$content = 'StatusPembayaran/add';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
-			'card_title' => "Edit Data Status Pembayaran",
+			'card_title' => "Edit Data Pembayaran Iuran",
 			'form_url' => base_url('statuspembayaran/edit?session_id='.encode($id)),
 			'status_list' => $this->status,
 			'form_data' => $model->find($id)

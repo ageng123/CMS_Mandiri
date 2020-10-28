@@ -3,7 +3,6 @@
     <div class="position-relative" style="background-color: #fafafa;">
         <div class="item-thumbnail rounded-circle" style="height: 10vw; width: 10vw; overflow: hidden">
             <img src="<?= base_url('assets/img/');?>user.png" style="height: 100%" id="profilePreview">
-
         </div>
         <br>
         Welcome Back <b style="color: #f7a91e;"><?= $user->full_name ?></b>
