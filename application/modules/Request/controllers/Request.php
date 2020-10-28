@@ -87,7 +87,7 @@ class Request extends Auth_Guard {
 			$row[] = $val->id_request;
 			$row[] = '';
 			$row[] = $val->jenis_request;
-			$row[] = $val->data_request;
+			$row[] = $this->get_userNama($val->id_user);
 			$content = '' ; 
 			switch($val->status_request){
 				case 1:
@@ -195,5 +195,10 @@ class Request extends Auth_Guard {
 		else:
 			return 'Jabatan Belum Diisi';
 		endif;
+	}
+	public function get_userNama($id){
+		$sql = "SELECT full_name FROM tb_user WHERE id = {$id}";
+		$dump_data = $this->db->query($sql)->row_object();
+		return $dump_data->full_name;
 	}
 }
