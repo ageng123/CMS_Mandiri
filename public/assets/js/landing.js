@@ -90,6 +90,7 @@ $(document).ready(function () {
         let data = KotaIndonesia.getProvinsi();
         let container = '#' + $(this).attr('id');
         let content = '';
+        content = content + '<option value="" data-idProvinsi=""></option>';
         data.map(function (index) {
             content = content + '<option value="' + index.nama + '" data-idProvinsi="' + index.id + '">' + index.nama + '</option>'
         })
@@ -101,6 +102,7 @@ $(document).ready(function () {
         let data = KotaIndonesia.getKota(option);
         let container = $(this).attr('data-kabupatenlist');
         let kabupatenlist = '';
+        kabupatenlist = kabupatenlist + '<option value="">Pilih Kabupaten</option>';
         data.map(function (index) {
             kabupatenlist = kabupatenlist + '<option value="' + index.nama + '">' + index.nama + '</option>'
         })
