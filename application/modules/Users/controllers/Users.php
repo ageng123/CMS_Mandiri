@@ -53,9 +53,7 @@ class Users extends Auth_Guard {
 			$row[] = $this->getRoleNamaByIDUser($val->id);
 			$row[] = $val->active == 1 ? 'aktif' : ' tidak aktif';
 			// $row[] = '<a href='.base_url('admin').' class="btn btn-success btn-sm">Edit</a><a href='.base_url('admin').' class="btn btn-danger btn-sm">Hapus</a>';
-			$row[] = '<a href='.base_url('admin').' class="btn btn-secondary btn-sm" data-toggle="tooltip" title="Detail"><i class="fa fa-info"></i></span></a>
-			<a href='.base_url('admin').' class="btn btn-info btn-sm" data-toggle="tooltip" title="Download Word"><i class="fa fa-download"></i></span></a>
-			<a href='.base_url('admin').' class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
+			$row[] = '<a href='.base_url('admin').' class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
 			<a href='.base_url('admin').' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>';
 			$result[] = $row;
 		endforeach;
@@ -112,18 +110,12 @@ class Users extends Auth_Guard {
 		$model->username = $request->username;
 		$model->password = $request->password;
 		$model->active = 1;
-		$model->created_on = date('Y-m-d');
+		$model->created_on = time();
 		$model->save();
 		$id = $this->db->insert_id();
-		$ktp = $this->upload('foto_ktp', $id);
 		$photo = $this->upload('photo', $id);
-		$kk = $this->upload('foto_kk', $id);
-		$ahli_waris = $this->upload('foto_ktp_ahli_waris', $id);
 		$model->photo = $photo->full_path;
-		$model->foto_ktp = $ktp->full_path;
-		$model->foto_kk = $kk->full_path;
-		$model->foto_ktp_ahli_waris = $ahli_waris->full_path;
-		$model->activation_code = base64_encode(md5(date('Y-m-d').$id));
+		$model->active = 1;
 		$model->update($id);
 		return redirect(base_url('users'));
 	}

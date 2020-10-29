@@ -34,8 +34,16 @@
             <tr>
               <th></th>
               <th class="text-center" style="padding: 1.3vh"><input type="checkbox" class="form-check-input all-checkbox-dt" style="position: inherit; margin: auto" name="" id=""></th>
+              <th>Sudah Member</th>
               <th>Nama Lengkap</th>
-              <th>Status</th>
+              <th>Email</th>
+              <th>Jenis Kelamin</th>
+              <th>No HP</th>
+              <th>Tempat Lahir</th>
+              <th>Tanggal Lahir</th>
+              <th>Alamat</th>
+              <th>Provinsi</th>
+              <th>Created On</th>
               <th>Aksi</th>
             </tr>
           </thead>
@@ -73,18 +81,6 @@
               <div class="form-group col-md-12">
                 <label class="form-control-label for="">Jenis Kelamin</label>
                 <input type="text" name="jenis_kelamin" id="" class="form-control">
-              </div>
-              <div class="form-group col-md-4">
-                <label class="form-control-label for="">Nomor KTP</label>
-                <input type="text" name="ektp" id="" class="form-control">
-              </div>
-              <div class="form-group col-md-4">
-                <label class="form-control-label for="">Nomor Kartu Keluarga</label>
-                <input type="text" name="no_kk" id="" class="form-control">
-              </div>
-              <div class="form-group col-md-4">
-                <label class="form-control-label for="">Nomor Handphone</label>
-                <input type="text" name="no_hp" id="" class="form-control">
               </div>
               <div class="form-group col-md-12">
                 <label class="form-control-label for="">Email</label>

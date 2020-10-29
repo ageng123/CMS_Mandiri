@@ -47,7 +47,7 @@ class AssignRoles extends Auth_Guard {
 	public function getUserNamaById($params){
 		$model = new UserModel();
 		$output = $model->find($params);
-		return $output->username;
+		return isset($output->username) ? $output->username : 'Tidak Ada Nasabah';
 	}
 	public function getRoleNamaById($params){
 		$model = new RoleModel();

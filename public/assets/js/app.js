@@ -143,7 +143,7 @@ $(document).ready(function () {
             
             reader.onload = function(e) {
               $(preview).attr('src', e.target.result);
-              $(preview).html('<embed src="'+e.target.result+'" type="" id="foto_ahli_waris" class="mt-2 p-2 file-border">');
+              $(preview).html('<embed src="'+e.target.result+'" type="" style="width: 100%" id="foto_ahli_waris" class="mt-2 p-2 file-border">');
             }
             
             reader.readAsDataURL(input.files[0]); // convert to base64 string

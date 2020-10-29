@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             parent::__construct();
         }
         public function get_Users(){
-            $sql  = $this->db->join('roles_list b', 'a.id = b.id_user')->where('b.id_role != 3')->get($this->table. ' a')->result_object();
+            $sql  = $this->db->join('roles_list b', 'a.id = b.id_user', 'LEFT')->where('b.id_role != 3')->or_where('b.id_role IS NULL')->get($this->table. ' a')->result_object();
             return $sql;
         }
     }

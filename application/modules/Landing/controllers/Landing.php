@@ -151,6 +151,7 @@ class Landing extends CI_Controller {
 			$role = new AssignRoleModel;
 			$role->id_user = $this->nasabahId;
 			$role->id_role = '3';
+			$role->last_update = date('Y-m-d H:i:s');
 			$role->save();
 			$pekerjaan = $this->trigger_save_event('SAVE_PEKERJAAN', $this->input->post('pekerjaan'));
 			$koperasi = $this->trigger_save_event('SAVE_KOPERASI_DATA', $this->input->post('koperasi'));
@@ -164,7 +165,7 @@ class Landing extends CI_Controller {
 		$model->nama_perusahaan = $request->perusahaan;
 		$model->divisi = $request->divisi;
 		$model->lama_bekerja = $request->lama;
-		$model->alamat = $request->alamat.'/'.$request->rt.'/'.$request->kelurahan.'/'.$request->kecamatan.'/'.$request->kabupaten.'/'.$request->provinsi.'/'.$request->kodepos;
+		$model->alamat = $request->alamat.','.$request->rt.','.$request->kelurahan.','.$request->kecamatan.','.$request->kabupaten.','.$request->provinsi.','.$request->kodepos;
 		if($model->save()):
 			return true;
 		endif;

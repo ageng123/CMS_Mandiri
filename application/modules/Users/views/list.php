@@ -22,9 +22,6 @@
               <span data-toggle="modal" data-target="#modal-form">
                 <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" title="Tambah Data"><i class="fa fa-plus"></i></button>
               </span>
-
-              <!-- <a class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="Tambah Data" href="<?= base_url('users/add') ?>"> <span class="btn-inner--text"><i class="fa fa-plus"></i></span></a> -->
-              <a href="#" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="top" title="Export Excel"> <span class="btn-inner--text"><i class="fa fa-file-excel"></i></span></a>
             </div>
         </div>
       </div>
@@ -75,18 +72,6 @@
                 <label class="form-control-label for="">Jenis Kelamin</label>
                 <input type="text" name="jenis_kelamin" id="" class="form-control">
               </div>
-              <div class="form-group col-md-4">
-                <label class="form-control-label for="">Nomor KTP</label>
-                <input type="text" name="ektp" id="" class="form-control">
-              </div>
-              <div class="form-group col-md-4">
-                <label class="form-control-label for="">Nomor Kartu Keluarga</label>
-                <input type="text" name="no_kk" id="" class="form-control">
-              </div>
-              <div class="form-group col-md-4">
-                <label class="form-control-label for="">Nomor Handphone</label>
-                <input type="text" name="no_hp" id="" class="form-control">
-              </div>
               <div class="form-group col-md-12">
                 <label class="form-control-label for="">Email</label>
                 <input type="text" name="email" id="" class="form-control">
@@ -109,26 +94,6 @@
                 <input type="file" name="photo" data-preview='#foto' id="" class="form-control">
                 <!-- <embed src="" type="" id="foto" class="mt-2 p-2"> -->
                 <div class="preview mt-2 p-2" id="foto"></div>
-              </div>
-              <div class="form-group col-md-12">
-                <label class="form-control-label for="">Foto KTP</label>
-                <input type="file" name="foto_ktp" data-preview='#foto_ktp' id="" class="form-control">
-                <div class="preview mt-2 p-2" id="foto_ktp"></div>
-              </div>
-              <div class="form-group col-md-12">
-                <label class="form-control-label for="">Foto Kartu Keluarga</label>
-                <input type="file" name="foto_kk" id="" data-preview="#foto_kk" class="form-control">
-                <div class="preview mt-2 p-2" id="foto_kk"></div>
-
-              </div>
-              <div class="form-group col-md-12">
-                <label class="form-control-label for="">Foto KTP Ahli Waris</label>
-                <input type="file" name="foto_ktp_ahli_waris" data-preview="#foto_ahli_waris" id="" class="form-control">
-                <div class="preview mt-2 p-2"id="foto_ahli_waris" ></div>
-              </div>
-              <div class="form-group col-md-12">
-                <label class="form-control-label for="">Additional</label>
-                <textarea name="additional" id="" cols="30" rows="10" class="form-control"></textarea>
               </div>
               </div>
               <div class="card-footer text-right">

@@ -50,8 +50,18 @@ class Nasabah extends Auth_Guard {
 			$row = array();
 			$row[] = $val->id;
 			$row[] = '';
-			$row[] = $val->full_name;
-			$row[] = $val->sudah_member == 1 ? $val->member : ' Bukan Member';
+			$row[] = $val->sudah_member == 1 ? 'Sudah' : 'Belum Sudah';
+			$row[] = ucwords($val->full_name);
+			$row[] = $val->email;
+			$row[] = $val->jenis_kelamin;
+			$row[] = $val->no_hp;
+			$row[] = $val->tempat_lahir;
+			$row[] = indonesiaFullDate($val->tanggal_lahir);
+			// $row[] = $val->tanggal_lahir;
+			$row[] = str_replace('/', ',', $val->alamat);
+			$alamat = explode('/', $val->alamat);
+			$row[] = $alamat[6];
+			$row[] = $val->last_update;
 			// $row[] = '<a href='.base_url('admin').' class="btn btn-success btn-sm">Edit</a><a href='.base_url('admin').' class="btn btn-danger btn-sm">Hapus</a>';
 			$row[] = '<a href='.base_url('admin').' class="btn btn-secondary btn-sm" data-toggle="tooltip" title="Detail"><i class="fa fa-info"></i></span></a>
 			<a href='.base_url('nasabah/word/'.$val->id.'').' class="btn btn-info btn-sm" data-toggle="tooltip" title="Download Word"><i class="fa fa-download"></i></span></a>
