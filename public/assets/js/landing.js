@@ -92,7 +92,7 @@ $(document).ready(function () {
         let content = '';
         content = content + '<option value="" data-idProvinsi=""></option>';
         data.map(function (index) {
-            content = content + '<option value="' + index.nama + '" data-idProvinsi="' + index.id + '">' + index.nama + '</option>'
+            content = content + '<option value="' + index.nama + '" data-idProvinsi="' + index.id + '">' + index.nama + '</option>';
         })
         $(container).html(content);
     })
@@ -104,7 +104,7 @@ $(document).ready(function () {
         let kabupatenlist = '';
         kabupatenlist = kabupatenlist + '<option value="">Pilih Kabupaten</option>';
         data.map(function (index) {
-            kabupatenlist = kabupatenlist + '<option value="' + index.nama + '">' + index.nama + '</option>'
+            kabupatenlist = kabupatenlist + '<option value="' + index.nama + '">' + index.nama + '</option>';
         })
         $(container).html(kabupatenlist);
     })
