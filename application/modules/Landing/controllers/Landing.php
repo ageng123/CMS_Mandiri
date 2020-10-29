@@ -6,7 +6,7 @@ class Landing extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		$this->load->model('Landing_model');
+		$this->load->model(['Landing_model', 'AssignRoles/AssignRoleModel']);
 		$this->load->library('bcrypt');
 		$this->kode_nasabah = 'YYYYMMDD[IDNASABAH]His';
 	}
@@ -148,6 +148,10 @@ class Landing extends CI_Controller {
 			$user = explode(' ', $request->nama);
 			$model->username = strtolower($user[0]).'-'.$this->nasabahId;
 			$model->update($this->nasabahId);
+			$role = new AssignRoleModel;
+			$role->id_user = $this->nasabahId;
+			$role->id_role = '3';
+			$role->save();
 			$pekerjaan = $this->trigger_save_event('SAVE_PEKERJAAN', $this->input->post('pekerjaan'));
 			$koperasi = $this->trigger_save_event('SAVE_KOPERASI_DATA', $this->input->post('koperasi'));
 		endif;
