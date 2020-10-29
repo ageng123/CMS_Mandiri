@@ -215,10 +215,22 @@
                     <input type="text" name="data_diri[tempat]" placeholder="PLACE" class="form-control" data-bind="tempat">
                   </div>
                   <div class="col-md-2">
-                    <input type="text" name="data_diri[tanggal]" placeholder="DD" class="form-control haripicker" data-bind="hari">
+                    <!-- <input type="text" name="data_diri[tanggal]" placeholder="DD" class="form-control haripicker" data-bind="hari"> -->
+                    <select name="data_diri[tanggal]" class="form-control" id="">
+                      <option value="">DD</option>
+                      <?php for($i = 1; $i <= 31; $i++): ?>
+                        <option value="<?= $i ?>"><?= $i ?></option>
+                      <?php endfor; ?>
+                    </select>
                   </div>
                   <div class="col-md-2">
-                    <input type="text" name="data_diri[bulan]" placeholder="MM" class="form-control bulanpicker" data-bind="bulan">
+                    <!-- <input type="text" name="data_diri[bulan]" placeholder="MM" class="form-control bulanpicker" data-bind="bulan"> -->
+                    <select name="data_diri[bulan]" class="form-control" id="">
+                      <option value="">MM</option>
+                      <?php for($i = 1; $i <= 12; $i++): ?>
+                        <option value="<?= $i ?>"><?= $i ?></option>
+                      <?php endfor; ?>
+                    </select>
                   </div>
                   <div class="col-md-3">
                     <input type="text" name="data_diri[tahun]" placeholder="YYYY" class="form-control tahunpicker"
@@ -250,7 +262,9 @@
               <div class="form-group">
                 <label for=""><h5>Provinsi</h5></label>
                 <select name="data_diri[provinsi]" class="form-control getProvinsi" id="provinsi" data-kabupatenlist='#kabupaten1'
-                  data-bind="provinsi"></select>
+                  data-bind="provinsi">
+                  <option value="">Pilih Provinsi</option>
+                </select>
               </div>
               <div class="form-group">
                 <label for=""><h5>Kecamatan</h5></label>
@@ -260,7 +274,10 @@
             <div class="col-md-4">
               <div class="form-group">
                 <label for=""><h5>Kabupaten</h5></label>
-                <select name="data_diri[kabupaten]" class="form-control" id="kabupaten1" data-bind="kabupaten"></select>
+                <select name="data_diri[kabupaten]" class="form-control" id="kabupaten1" data-bind="kabupaten">
+                <option value="">Pilih Kabupaten</option>
+
+                </select>
               </div>
               <div class="form-group">
                 <label for=""><h5>Kelurahan</h5></label>
@@ -314,7 +331,7 @@
             <label style="display: flex; flex-direction: row; width: 100%; justify-content: space-between" for=""><h5>Alamat Rumah (Sesuai KTP / E-KTP / KK)</h5>
               <div class="daftar-radio">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="alamatradio" id="alamat_radio" value="option2">
+                  <input class="form-check-input" type="checkbox" name="alamatradio" id="alamat_radio" value="option2">
                   <label class="form-check-label" for="alamat_radio"><h5><b style="color: red;">Sama Dengan Alamat Rumah</b></h5></label>
                 </div>
               </div>
