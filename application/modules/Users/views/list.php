@@ -22,6 +22,10 @@
               <span data-toggle="modal" data-target="#modal-form">
                 <button type="button" class="btn btn-primary btn-sm" onclick="UserServices.buttonAddClicked()" data-toggle="tooltip" title="Tambah Data"><i class="fa fa-plus"></i></button>
               </span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7af57fa2fc95e44cd3e32065f252453184b3d25d
             </div>
         </div>
       </div>

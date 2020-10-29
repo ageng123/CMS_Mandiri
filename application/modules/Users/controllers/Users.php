@@ -62,9 +62,9 @@ class Users extends Auth_Guard {
 		$data['draw'] = $this->input->post('draw');
 		echo JSON_ENCODE($data, JSON_PRETTY_PRINT);
 	}
+	
 
-	public function add()
-	{
+	public function add(){
 		$this->formUrl = base_url('Users/save');
 		$data = [
 			'form_url' => $this->formUrl,
