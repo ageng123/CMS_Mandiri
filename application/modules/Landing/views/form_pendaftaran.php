@@ -215,10 +215,22 @@
                     <input type="text" name="data_diri[tempat]" placeholder="PLACE" class="form-control" data-bind="tempat">
                   </div>
                   <div class="col-md-2">
-                    <input type="text" name="data_diri[tanggal]" placeholder="DD" class="form-control haripicker" data-bind="hari">
+                    <!-- <input type="text" name="data_diri[tanggal]" placeholder="DD" class="form-control haripicker" data-bind="hari"> -->
+                    <select name="data_diri[tanggal]" id="">
+                      <option value="">DD</option>
+                      <?php for($i = 1; $i <= 31; $i++): ?>
+                        <option value="<?= $i ?>"><?= $i ?></option>
+                      <?php endfor; ?>
+                    </select>
                   </div>
                   <div class="col-md-2">
-                    <input type="text" name="data_diri[bulan]" placeholder="MM" class="form-control bulanpicker" data-bind="bulan">
+                    <!-- <input type="text" name="data_diri[bulan]" placeholder="MM" class="form-control bulanpicker" data-bind="bulan"> -->
+                    <select name="data_diri[bulan]" id="">
+                      <option value="">MM</option>
+                      <?php for($i = 1; $i <= 12; $i++): ?>
+                        <option value="<?= $i ?>"><?= $i ?></option>
+                      <?php endfor; ?>
+                    </select>
                   </div>
                   <div class="col-md-3">
                     <input type="text" name="data_diri[tahun]" placeholder="YYYY" class="form-control tahunpicker"
