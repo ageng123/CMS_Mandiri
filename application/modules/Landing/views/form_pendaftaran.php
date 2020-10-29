@@ -331,7 +331,7 @@
             <label style="display: flex; flex-direction: row; width: 100%; justify-content: space-between" for=""><h5>Alamat Rumah (Sesuai KTP / E-KTP / KK)</h5>
               <div class="daftar-radio">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="alamatradio" id="alamat_radio" value="option2">
+                  <input class="form-check-input" type="checkbox" name="alamatradio" id="alamat_radio" value="option2">
                   <label class="form-check-label" for="alamat_radio"><h5><b style="color: red;">Sama Dengan Alamat Rumah</b></h5></label>
                 </div>
               </div>
