@@ -52,20 +52,17 @@ class Users extends Auth_Guard {
 			$row[] = $val->username;
 			$row[] = $this->getRoleNamaByIDUser($val->id);
 			$row[] = $val->active == 1 ? 'aktif' : ' tidak aktif';
-			// $row[] = '<a href='.base_url('admin').' class="btn btn-success btn-sm">Edit</a><a href='.base_url('admin').' class="btn btn-danger btn-sm">Hapus</a>';
-			$row[] = '<a href='.base_url('admin').' class="btn btn-secondary btn-sm" data-toggle="tooltip" title="Detail"><i class="fa fa-info"></i></span></a>
-			<a href='.base_url('admin').' class="btn btn-info btn-sm" data-toggle="tooltip" title="Download Word"><i class="fa fa-download"></i></span></a>
-			<a href='.base_url('admin').' class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
-			<a href='.base_url('admin').' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>';
+			$row[] = '<a href="'.base_url('users/edit').'?session_id='.encode($val->id).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
+					 <a href="'.base_url('users/destroy').'?session_id='.encode($val->id).'" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" title="Delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Username : '.$val->username.' ? "><i class="fa fa-trash"></i></span></a>';
 			$result[] = $row;
 		endforeach;
 		$data = json_output(200, null, $result);
 		$data['draw'] = $this->input->post('draw');
 		echo JSON_ENCODE($data, JSON_PRETTY_PRINT);
 	}
+	
 
-	public function add()
-	{
+	public function add(){
 		$this->formUrl = base_url('Users/save');
 		$data = [
 			'form_url' => $this->formUrl,
