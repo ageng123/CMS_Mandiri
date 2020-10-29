@@ -110,10 +110,10 @@ $(document).ready(function () {
         let data = $(this).val();
         if (data === 'belum') {
             $('#client_id').addClass('hide');
-            $('#client_id').removeClass('required');
+            $('#client_id input').removeClass('required');
         } else {
             $('#client_id').removeClass('hide');
-            $('#client_id').addClass('required');
+            $('#client_id input').addClass('required');
         }
     })
     $('.ktp').on('change', function () {
