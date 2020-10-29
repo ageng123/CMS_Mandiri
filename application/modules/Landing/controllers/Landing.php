@@ -102,6 +102,54 @@ class Landing extends CI_Controller {
 					</body>
 					</html>
 					';
+		$content = '
+		Kepada Yth Bapak/ Ibu *Nama*
+		
+		Selamat Datang di Koperasi Jasa Komunitas PanenSAHAM Indonesia.
+		
+		Terima kasih telah melakukan pendaftaran sebagai calon anggota Koperasi Jasa Komunitas PanenSaham Indonesia dengan data sebagai berikut :
+		
+		No Pendaftaran :
+		Nama :
+		Email :
+		No HP :
+		
+		Simpanan koperasi dengan rincian :
+		
+		
+		• Simpanan Pokok Rp 100.000,-
+		
+		• Simpanan Wajib Rp 15.000,-
+		
+		• Simpanan Sukarela Rp *Input*
+		
+		• Kode Unik Rp 500,-
+		
+		• Jumlah Pembayaran Rp 115.500,-
+		
+		silahkan lakukan pembayaran simpanan koperasi Anda melalui nomor rekening di bawah ini :
+		
+		Rekening BRI an Koperasi Jasa Komunitas PanenSaham Indonesia
+		No Rek 032001001729302
+		
+		Rekening Mandiri an Koperasi Jasa Komunitas PanenSaham Indonesia
+		No Rek 1250014072052
+		
+		Setelah melakukan pembayaran, mohon tunggu konfirmasi dari kami.
+		
+		Jika Bpk/ibu ingin mendaftarkan Anak, istri, kerabat atau teman terdekat silahkan langsung mendaftar melalui website kami http://kjkpi.com/
+		
+		Untuk pertanyaan dan informasi lebih lanjut, silahkan hubungi bagian keanggotaan kami 0812-1139-4434
+		Jam Operasional:
+		pukul 08.30 – 17.00 ( Hari kerja )
+		
+		Terima kasih atas kepercayaan Anda telah bergabung di Koperasi Jasa Komunitas PanenSAHAM Indonesia.
+		
+		Salam,
+		Koperasi Jasa Komunitas PanenSAHAM Indonesia.
+		
+		 ----------------
+		';
 		$send = send_email($this->data_email['to'], null, null, 'Status Pendaftaran Akun KJKPI ANDA',$message);
 		$this->session->set_flashdata('daftar_sukses', true);
 		return redirect(base_url('landing'));
