@@ -660,11 +660,6 @@
   <label style="margin-left: 230px;"><h5><i>Bermasalah dengan Pendaftaran Online ? Daftar melalui Form</i> <b style="color: #f7a91e;">Pendaftaran Offline</b></h5></label>
   <br/>
   <br/>
-
-
-
-
-
   <div class="" style="background-color: #efebe8;">
     <section class="padding-tb-6px" style="background-color: #f7a91e;">
       <div class="container">
