@@ -46,7 +46,7 @@
 
 </head>
 
-<body class="" style="background-color: #432a19;">
+<body class="" style="background-color: #432a19;" server-url="<?= base_url() ?>">
 
   <!-- Navbar -->
   <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">

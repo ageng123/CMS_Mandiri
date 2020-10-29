@@ -177,7 +177,7 @@ $(document).ready(function () {
             
         }
     })
-    let BaseUri = 'http://localhost:8000'
+    let LoginUrl = $('body').attr('server-url');
     $('.btn-login-ajax').on('click',function(){
         let form = $(this).attr('data-form');
         let url = $(form).attr('data-url');
@@ -192,7 +192,7 @@ $(document).ready(function () {
         postData = JSON.parse(postData);
         console.log(postData.kode);
         if(postData.kode == 200){
-            window.location.href = BaseUri+'/admin';
+            window.location.href = LoginUrl+'/admin';
         } else {
            let errorMsg = '<div class="alert alert-warning" role="alert">Username atau Password Salah !!!</div>';
            $('#alert-holder').html(errorMsg);
@@ -225,6 +225,7 @@ $(document).ready(function () {
             let DropZone = this;
             let element = DropZone.element;
             let url_data = element.getAttribute('data-get');
+            let id = element.getAttribute('session_token');
             // if(url_data !== 'undefined'){
                 $.get(url_data, function(data) {
                     data = JSON.parse(data);
@@ -232,7 +233,7 @@ $(document).ready(function () {
                         var mockFile = { name: value.nama, size: value.size, id: value.id, files: value.file };
                         DropZone.options.addedfile.call(DropZone, mockFile);
                         DropZone.emit("complete", mockFile);
-                        DropZone.options.thumbnail.call(DropZone, mockFile, "http://localhost:8000/resources/Produk/4/"+value.file);
+                        DropZone.options.thumbnail.call(DropZone, mockFile, "http://localhost:8000/resources/Produk/"+id+"/"+value.file);
                          
                     });
                 })

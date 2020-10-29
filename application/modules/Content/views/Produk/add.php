@@ -32,7 +32,7 @@
             }
             </style>
             <label for="">Foto Produk</label>
-            <form action="<?= base_url('content/product/upload_foto') ?>" data-delete="<?= base_url('content/product/delete_attachment?id=') ?>" <?= isset($form_data) ? 'data-get='.base_url('content/product/get_attachment?id=').$_GET['session_id'] : '' ?>" class="produkDrop dropzone" id="produkDrop" style="display: flex;flex-direction: row">
+            <form action="<?= base_url('content/product/upload_foto') ?>" data-delete="<?= base_url('content/product/delete_attachment?id=') ?>" <?= isset($form_data) ? 'data-get='.base_url('content/product/get_attachment?id=').$_GET['session_id'] : '' ?>" session_token="<?= $this->session->userdata('user_id') ?>" class="produkDrop dropzone" id="produkDrop" style="display: flex;flex-direction: row">
             <div class="fallback">
               <input name="foto_produk[]" type="file" multiple />
             </div>
