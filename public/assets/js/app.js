@@ -1,4 +1,5 @@
 // $('.datepicker').datetimepicker({format: 'yyyy-mm-dd'});
+var base_url = $('body').attr('server-url');
 const DatatableServices = {
     dataUri: '',
     container: '',
@@ -67,7 +68,7 @@ const HttpServices = {
     getAjax: (url)=>{
         var response;
         $.ajax({
-            type: 'POST',
+            type: 'GET',
             url: url,
             // data: Object.assign({}, HttpServices.FormData),
             ContentType: 'multipart/form-data',
@@ -104,6 +105,38 @@ function ActionMessage(type, e, event)
         isConfirmed.value ? window.location.href = e.getAttribute('href') : '';
       })
     return confirm;
+}
+const UserServices = {
+    userUriEdit: base_url+'users/edit?session_id=',
+    userUriUpdate: base_url+'users/update?session_id=',
+    userUriData: Array(),
+    userInitData: (uri) => {
+       let data =  HttpServices.getAjax(uri);
+       data = JSON.parse(data);
+       UserServices.userRenderToForm(data.data);
+    },
+    userRenderToForm: (data) => {
+        $('#userModal-form').modal('show');
+        $('#userForm input select').val('');
+        $('input[name=full_name]').val(data.full_name);
+        $('input[name=tempat_lahir]').val(data.tempat_lahir);
+        $('input[name=tanggal_lahir]').val(data.tanggal_lahir);
+        $('select[name=jenis_kelamin]').val(data.jenis_kelamin).change();
+        $('input[name=email]').val(data.email);
+        $('input[name=username]').val(data.username);
+    },
+    clearForm: () => {
+
+    },
+    buttonUpdateClicked: (id) => {
+        let uriData = UserServices.userUriEdit+id;
+        $('#userForm').attr('action', UserServices.userUriUpdate+id);
+        UserServices.userInitData(uriData);
+    },
+    buttonAddClicked: () => {
+        $('#userModal-form').modal('show');
+        $('#userForm input select').val('');
+    }
 }
 Dropzone.autoDiscover = false;
 $(document).ready(function () {

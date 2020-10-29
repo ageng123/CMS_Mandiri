@@ -20,7 +20,7 @@
             <div class="col-6 text-right"> 
 
               <span data-toggle="modal" data-target="#modal-form">
-                <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" title="Tambah Data"><i class="fa fa-plus"></i></button>
+                <button type="button" class="btn btn-primary btn-sm" onclick="UserServices.buttonAddClicked()" data-toggle="tooltip" title="Tambah Data"><i class="fa fa-plus"></i></button>
               </span>
             </div>
         </div>
@@ -46,7 +46,7 @@
 </div>
 
 
-<div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+<div class="modal fade" id="userModal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
   <div class="modal-dialog modal-primary modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-body p-0">
@@ -55,7 +55,7 @@
             <div class="text-muted text-center"> <b>Form Input Data</b> </div>
           </div>
           <div class="card-body px-lg-5 py-lg-5">
-            <form action="<?= $form_url ?>" class='row' method="POST" enctype="multipart/form-data">
+            <form action="<?= $form_url ?>" class='row' id="userForm" method="POST" enctype="multipart/form-data">
               <div class="form-group col-md-12">
                 <label class="form-control-label" for="">Nama Lengkap</label>
                 <input type="text" name="full_name" id="" class="form-control" required>
@@ -70,7 +70,11 @@
               </div>
               <div class="form-group col-md-12">
                 <label class="form-control-label for="">Jenis Kelamin</label>
-                <input type="text" name="jenis_kelamin" id="" class="form-control">
+                <select name="jenis_kelamin" id="" class="form-control">
+                  <option value="">Pilih Jenis Kelamin </option>
+                  <option value="Laki-Laki">Laki - Laki</option>
+                  <option value="Perempuan">Perempuan</option>
+                </select>
               </div>
               <div class="form-group col-md-12">
                 <label class="form-control-label for="">Email</label>

@@ -110,8 +110,10 @@ $(document).ready(function () {
         let data = $(this).val();
         if (data === 'belum') {
             $('#client_id').addClass('hide');
+            $('#client_id').removeClass('required');
         } else {
             $('#client_id').removeClass('hide');
+            $('#client_id').addClass('required');
         }
     })
     $('.ktp').on('change', function () {
@@ -142,7 +144,11 @@ $(document).ready(function () {
         let provinsi = $('select#provinsi').val();
         let kodepos = $('input#diri_kodepos').val();
         let alamat_rumah = alamat + ',' + rt + ',' + kelurahan + ',' + kecamatan + ',' + kabupaten + ',' + provinsi + ',' + kodepos;
-        $('textarea#alamat_rumah').html(alamat_rumah);
+        if($('textarea#alamat_rumah').html() === ''){
+            $('textarea#alamat_rumah').html(alamat_rumah);
+        } else {
+            $('textarea#alamat_rumah').html('');
+        }
     })
     $('.getProductLatest').each(function () {
         let data = Content_Services.getNewestProduct();

@@ -60,7 +60,7 @@ class Nasabah extends Auth_Guard {
 			// $row[] = $val->tanggal_lahir;
 			$row[] = str_replace('/', ',', $val->alamat);
 			$alamat = explode('/', $val->alamat);
-			$row[] = $alamat[6];
+			$row[] = strtoupper($alamat[6]);
 			$row[] = $val->last_update;
 			// $row[] = '<a href='.base_url('admin').' class="btn btn-success btn-sm">Edit</a><a href='.base_url('admin').' class="btn btn-danger btn-sm">Hapus</a>';
 			$row[] = '<a href='.base_url('admin').' class="btn btn-secondary btn-sm" data-toggle="tooltip" title="Detail"><i class="fa fa-info"></i></span></a>
