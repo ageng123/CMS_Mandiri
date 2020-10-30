@@ -3,14 +3,36 @@
 
   <!-- page output -->
 
+<section style="background-image: url(<?= base_url('assets/img/map.png') ?>)" class="padding-tb-70px">
+  <div class="container">
+    <style>
+      .kontak-heading {
+        border-bottom: 4px solid #ddaa37;
+        width: max-content;
+      }
 
-<img src="<?= base_url('assets/img/') ?>map.png" width="200%">
+      .text-primary {
+        color: #795839 !important;
+      }
+    </style>
+    <div class="row text-center">
+      <div class="col-12 sm-mb-30px text-center hvr-float wow fadeInUp">
+        <span class="fa fa-map-marker" style="font-size: 72px; color: yellow" aria-hidden="true"></span>
+        <br>
+        <a href="https://goo.gl/maps/xqwezwXATf3ijMiS6" style="margin-top: 2vh;background-color: white;" class="btn btn-lg btn-default" target="_blank"> Show on Map</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <header class="gradient-white box-shadow">
     <div class="background-grey-2 padding-tb-5px position-relative" style="background-color: #c9bcb0;">
       <div class="container">
         <div class="row">
           <div class="col-xl-1 col-lg-1"></div>
           <div class="col-xl-10 col-lg-10" align="center">
+
             <!-- lang dropdown -->
             <font align="center" color="#603913"><b>Koperasi Jasa Komunitas Panen Saham Indonesia</b> | Rukan Gading Bukit Indah  Blok A No 27. Kelapa Gading Jakarta Utara 14240</font>
            
