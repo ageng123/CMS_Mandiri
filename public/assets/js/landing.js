@@ -280,5 +280,7 @@ $(document).ready(function () {
             reader.readAsDataURL(input.files[0]); // convert to base64 string
         }
     })
-    
+    $('.owl-carousel').each(function(){
+        Content_Services.sliderRender('.owl-carousel');
+    })
 })

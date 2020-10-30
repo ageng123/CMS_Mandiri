@@ -234,6 +234,7 @@ const Content_Services = {
     TopKategoriUrl: base_url+'api/getMostPopularTags',
     NewestNewsUrl: base_url+'api/newestNews',
     SimpananNasabah: base_url+'api/get_historyPembayaran',
+    sliderUrl: base_url+'api/get_slider',
     renderSource: function(data){
         return base_url+'/resources/Berita/'+data.thumbnail;
     },
@@ -340,5 +341,15 @@ const Content_Services = {
     getSimpananHistory: (auth) =>{
         let data = HttpServices.getJson(Content_Services.SimpananNasabah + '?auth='+auth);
         return data;
+    },
+    sliderRender: (container) => {
+        let data =  HttpServices.getJson(Content_Services.sliderUrl);
+        data = data.data;
+        content = '';
+        data.map(function(val){
+            content = content + `<div> <img src="`+base_url+'/resources/Slider/'+data.nama_file+`" alt=""> </div>`;
+        })
+        $(container).html(content);
     }
+    
 }
