@@ -84,8 +84,7 @@ class Request extends Auth_Guard {
 		$result = array();
 		foreach($output as $key => $val):
 			$row = array();
-			$row[] = $val->id_request;
-			$row[] = '';
+			$row[] = $key+1;
 			$row[] = $val->jenis_request;
 			$row[] = $this->get_userNama($val->id_user);
 			$content = '' ; 

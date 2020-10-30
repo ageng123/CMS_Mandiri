@@ -34,8 +34,7 @@
 			$result = array();
 			foreach($output as $key => $val):
 				$row = array();
-				$row[] = $val->id_attachment;
-				$row[] = '';
+				$row[] = $key+1;
 				$row[] = $val->nama_attachment;
 				$row[] = '<img src="'.base_url('resources/Slider/'.$val->nama_file).'" alt="Image placeholder" width="50%">';
 				$row[] = $val->status_slider == 1 ? 'Aktif' : 'Tidak Aktif';
@@ -65,8 +64,16 @@
 				mkdir($folder, 0777);
 			endif;
 			if ( ! $this->upload->do_upload($params)) {
+				
 				return $this->upload->display_errors();
 			} else {
+				$upload_data = (object)$this->upload->data();
+				$config['source_image']=  APPPATH.'../public/resources/Slider/'.$upload_data->file_name;
+				$config['width']= 1260;
+                $config['height']= 800;
+                $config['new_image']=  APPPATH.'../public/resources/Slider/'.$upload_data->file_name;
+                $this->load->library('image_lib', $config);
+                $this->image_lib->resize();
 				return (object)$this->upload->data();
 			}
 		}

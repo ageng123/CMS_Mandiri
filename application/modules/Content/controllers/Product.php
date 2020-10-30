@@ -29,8 +29,7 @@ class Product extends Auth_Guard {
 		$result = array();
 		foreach($output as $key => $val):
 			$row = array();
-			$row[] = $val->id_product;
-			$row[] = '';
+			$row[] = $key+1;
 			$row[] = $val->title;
 			$row[] = $this->getUserNamaById($val->seller_id);
 			$row[] = '<i class="fa fa-eye"></i> '.$val->view;

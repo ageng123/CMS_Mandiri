@@ -1,46 +1,95 @@
-<div id="rev_slider_18_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="the-nile-1"
-  data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+<!-- <div id="rev_slider_18_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="the-nile-1"
+  data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;"> -->
   <!-- START REVOLUTION SLIDER 5.4.1 fullwidth mode -->
-  <div id="rev_slider_18_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
-    <ul>
+  <!-- <div id="rev_slider_18_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
+    <ul> -->
       <!-- SLIDE  -->
-      <li data-index="rs-64" data-transition="3dcurtain-horizontal" data-slotamount="default" data-hideafterloop="0"
+      <!-- <li data-index="rs-64" data-transition="3dcurtain-horizontal" data-slotamount="default" data-hideafterloop="0"
         data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default"
         data-thumb="<?= base_url('assets/landing_template/') ?>assets/revslider/assets/100x50_a033c-1.jpg"
         data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3=""
         data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10=""
-        data-description="">
+        data-description=""> -->
         <!-- MAIN IMAGE -->
-        <img src="<?= base_url('assets/img/') ?>header.png" alt="" data-bgposition="center center" data-kenburns="on"
+        <!-- <img src="<?= base_url('assets/img/') ?>header.png" alt="" data-bgposition="center center" data-kenburns="on"
           data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110"
           data-rotatestart="0" data-rotateend="0" data-blurstart="-2" data-blurend="0" data-offsetstart="2 2"
-          data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+          data-offsetend="0 0" class="rev-slidebg" height="800" data-no-retina> -->
         <!-- LAYERS -->
 
         <!-- LAYER NR. 1 -->
-        <div class="tp-caption   tp-resizeme" id="slide-64-layer-4" data-x="['left','left','left','center']"
+        <!-- <div class="tp-caption   tp-resizeme" id="slide-64-layer-4" data-x="['left','left','left','center']"
           data-hoffset="['657','575','259','0']" data-y="['top','top','top','top']"
           data-voffset="['123','123','57','57']" data-width="none" data-height="none" data-whitespace="normal"
           data-type="text" data-responsive_offset="on"
           data-frames='[{"delay":10,"speed":750,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
           data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
           data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-          style="z-index: 5; white-space: normal; font-size: 71px; line-height: 22px; font-weight: 400; color: #757575;font-family:Open Sans;"> </div>
+          style="z-index: 5; white-space: normal; font-size: 71px; line-height: 22px; font-weight: 400; color: #757575;font-family:Open Sans;"> </div> -->
 
 
-      </li>
+      <!-- </li>
+      <li data-index="rs-64" data-transition="3dcurtain-horizontal" data-slotamount="default" data-hideafterloop="0"
+        data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default"
+        data-thumb="<?= base_url('assets/landing_template/') ?>assets/revslider/assets/100x50_a033c-1.jpg"
+        data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3=""
+        data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10=""
+        data-description=""> -->
+        <!-- MAIN IMAGE -->
+        <!-- <img src="<?= base_url('assets/img/') ?>opening.jpg" alt="" data-bgposition="center center" data-kenburns="on"
+          data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110"
+          data-rotatestart="0" data-rotateend="0" data-blurstart="-2" data-blurend="0" data-offsetstart="2 2"
+          data-offsetend="0 0" height="800" class="rev-slidebg" data-no-retina> -->
+        <!-- LAYERS -->
+
+        <!-- LAYER NR. 1 -->
+        <!-- <div class="tp-caption   tp-resizeme" id="slide-64-layer-4" data-x="['left','left','left','center']"
+          data-hoffset="['657','575','259','0']" data-y="['top','top','top','top']"
+          data-voffset="['123','123','57','57']" data-width="none" data-height="none" data-whitespace="normal"
+          data-type="text" data-responsive_offset="on"
+          data-frames='[{"delay":10,"speed":750,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+          data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+          data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+          style="z-index: 5; white-space: normal; font-size: 71px; line-height: 22px; font-weight: 400; color: #757575;font-family:Open Sans;"> </div> -->
+
+
+      <!-- </li> -->
       <!-- SLIDE  -->
       
-    </ul>
-    <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+    <!-- </ul> -->
+    <!-- <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
   </div>
-</div>
+</div> -->
 <!-- END REVOLUTION SLIDER -->
+<div class="owl-carousel owl-theme">
+  <div> <img src="<?= base_url('assets/img/opening.jpg') ?>" alt=""> </div>
+  <div> <img src="<?= base_url('assets/img/header.png') ?>" alt=""> </div>
+</div>
 <script type="text/javascript">
   var tpj = jQuery;
 
   var revapi18;
   tpj(document).ready(function () {
+    tpj(".owl-carousel").owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    },
+    autoplay:true,
+    autoplayTimeout:5000,
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn'
+});
     if (tpj("#rev_slider_18_1").revolution == undefined) {
       revslider_showDoubleJqueryError("#rev_slider_18_1");
     } else {

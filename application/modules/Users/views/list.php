@@ -22,19 +22,14 @@
               <span data-toggle="modal" data-target="#modal-form">
                 <button type="button" class="btn btn-primary btn-sm" onclick="UserServices.buttonAddClicked()" data-toggle="tooltip" title="Tambah Data"><i class="fa fa-plus"></i></button>
               </span>
-<<<<<<< HEAD
-=======
-
->>>>>>> 7af57fa2fc95e44cd3e32065f252453184b3d25d
             </div>
         </div>
       </div>
       <div class="table-responsive py-4">
-        <table class="table table-flush init-DataTable" data-url="<?= base_url('Users/getJSON') ?>" id="userTbl">
+        <table class="table table-flush initDTOnly" data-url="<?= base_url('Users/getJSON') ?>" id="userTbl">
           <thead class="thead-light">
             <tr>
-              <th></th>
-              <th class="text-center" style="padding: 1.3vh"><input type="checkbox" class="form-check-input all-checkbox-dt" style="position: inherit; margin: auto" name="" id=""></th>
+              <th>Nomor</th>
               <th>Username</th>
               <th>Jabatan</th>
               <th>Status</th>

@@ -35,8 +35,7 @@ class StatusPembayaran extends Auth_Guard {
 		$result = array();
 		foreach($output as $key => $val):
 			$row = array();
-			$row[] = $val->id;
-			$row[] = '';
+			$row[] = $key+1;
 			$row[] = $val->id_nasabah;
 			$row[] = $val->jenis_bayar;
 			$row[] = 'Rp '.$val->jml_pembayaran;

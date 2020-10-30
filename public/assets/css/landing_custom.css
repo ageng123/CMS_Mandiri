@@ -41,6 +41,10 @@ header ul.dropdown-dark li > ul.sub-menu > li{
 .no-border{
     border: 0px !important;
 }
+.tp-bgimg {
+    visibility: hidden;
+    display: none;
+}
 /* JQUERY STEP  */
   ﻿/*
     Common 

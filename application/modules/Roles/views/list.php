@@ -34,11 +34,10 @@
         <?php endif; ?>
 
         <div class="table-responsive py-4">
-          <table class="table table-flush init-DataTable" data-url="<?= base_url('Roles/getJSON') ?>" id="userTbl">
+          <table class="table table-flush initDTOnly" data-url="<?= base_url('Roles/getJSON') ?>" id="userTbl">
             <thead class="thead-light">
               <tr>
-                <th></th>
-                <th class="text-center" style="padding: 1.3vh"><input type="checkbox" class="form-check-input all-checkbox-dt" style="position: inherit; margin: auto" name="" id=""></th>
+                <th>Nomor</th>
                 <th>Nama Role</th>
                 <th>Aksi</th>
               </tr>

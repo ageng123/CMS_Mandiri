@@ -32,13 +32,11 @@
         <?php endif; ?>
 
         <div class="table-responsive py-4">
-          <table class="table table-flush init-DataTable" data-url="<?= base_url('content/berita/getJSON') ?>"
+          <table class="table table-flush initDTOnly" data-url="<?= base_url('content/berita/getJSON') ?>"
             id="userTbl">
             <thead class="thead-light">
               <tr>
-                <th></th>
-                <th class="text-center" style="padding: 1.3vh"><input type="checkbox"
-                    class="form-check-input all-checkbox-dt" style="position: inherit; margin: auto" name="" id=""></th>
+                <th>No.</th>
                 <th>Judul Berita</th>
                 <th>Penulis Berita</th>
                 <th>View Berita</th>

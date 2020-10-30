@@ -48,8 +48,7 @@ class Users extends Auth_Guard {
 		$result = array();
 		foreach($output as $key => $val):
 			$row = array();
-			$row[] = $val->id;
-			$row[] = '';
+			$row[] = $key+1;
 			$row[] = $val->username;
 			$row[] = $this->getRoleNamaByIDUser($val->id);
 			$row[] = $val->active == 1 ? 'aktif' : ' tidak aktif';

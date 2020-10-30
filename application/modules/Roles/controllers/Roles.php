@@ -30,8 +30,7 @@ class Roles extends Auth_Guard {
 		$result = array();
 		foreach($output as $key => $val):
 			$row = array();
-			$row[] = $val->id_role;
-			$row[] = '';
+			$row[] = $key+1;
 			$row[] = $val->nama_role;
 			$row[] = '<a href="'.base_url('roles/edit').'?session_id='.encode($val->id_role).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
 					 <a href="'.base_url('roles/destroy').'?session_id='.encode($val->id_role).'" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" title="Delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Role : '.$val->nama_role.' ? "><i class="fa fa-trash"></i></span></a>

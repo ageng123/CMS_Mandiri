@@ -28,8 +28,7 @@ class Berita extends Auth_Guard {
 		$result = array();
 		foreach($output as $key => $val):
 			$row = array();
-			$row[] = $val->id_kategori;
-			$row[] = '';
+			$row[] = $key+1;
 			$row[] = $val->nama_kategori;
 			$row[] = $val->deskripsi_kategori;
 			$row[] = '<a href="'.base_url('kategori/berita/edit').'?session_id='.encode($val->id_kategori).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>

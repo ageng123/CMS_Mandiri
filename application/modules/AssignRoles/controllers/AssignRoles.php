@@ -32,8 +32,7 @@ class AssignRoles extends Auth_Guard {
 		$result = array();
 		foreach($output as $key => $val):
 			$row = array();
-			$row[] = $val->id_lst_roles;
-			$row[] = '';
+			$row[] = $key+1;
 			$row[] = $this->getUserNamaById($val->id_user);
 			$row[] = $this->getRoleNamaById($val->id_role);
 			$row[] = '<a href="'.base_url('assignroles/edit').'?session_id='.encode($val->id_lst_roles).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>

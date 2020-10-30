@@ -41,7 +41,13 @@ const DatatableServices = {
             "ajax": {
                 "url": DatatableServices.dataUri,
                 "type": "POST"
-            }
+            },
+            language: {
+                paginate: {
+                  next: '<i class="fa fa-angle-right">',
+                  previous: '<i class="fa fa-angle-left">'  
+                }
+              }
         })
     },
     setContainer: (id) => {
