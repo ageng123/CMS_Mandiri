@@ -146,7 +146,7 @@
             <div class="col show" id="ktp">
               <img src="<?= base_url('assets/img/ktpkk.png') ?>" height="110" alt="">
               <label for=""><h5>Upload <b style="color: #f7a91e;">E-KTP</b></h5></label>
-              <input type="file" name="ktp" id="">
+              <input type="file" class="required" name="ktp" id="">
             </div>
             <div class="col show" id="kk2">
               <img src="<?= base_url('assets/img/ktpkk.png') ?>" height="110" alt="">
@@ -211,10 +211,10 @@
               <div class="form-group">
                 <label for=""><h5>Tempat/Tanggal/Bulan/Tahun Lahir</h5></label>
                 <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-md-3">
                     <input type="text" name="data_diri[tempat]" placeholder="PLACE" class="form-control" data-bind="tempat">
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-md-3">
                     <!-- <input type="text" name="data_diri[tanggal]" placeholder="DD" class="form-control haripicker" data-bind="hari"> -->
                     <select name="data_diri[tanggal]" class="form-control" id="">
                       <option value="">DD</option>
@@ -223,7 +223,7 @@
                       <?php endfor; ?>
                     </select>
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-md-3">
                     <!-- <input type="text" name="data_diri[bulan]" placeholder="MM" class="form-control bulanpicker" data-bind="bulan"> -->
                     <select name="data_diri[bulan]" class="form-control" id="">
                       <option value="">MM</option>

@@ -125,11 +125,15 @@ $(document).ready(function () {
             $('#kk2').addClass('hide');
             $('#ktp_ahli').removeClass('hide');
             $('#kk').removeClass('hide');
+            $('#ktp input').removeClass('required');
+            $('#kk input').addClass('required');
         } else {
             $('#ktp').removeClass('hide');
             $('#kk2').removeClass('hide');
             $('#ktp_ahli').addClass('hide');
             $('#kk').addClass('hide');
+            $('#ktp input').addClass('required');
+            $('#kk input').removeClass('required');
         }
     })
     $('input, select, textarea').on('change dp.change', function () {
