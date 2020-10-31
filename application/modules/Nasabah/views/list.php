@@ -622,7 +622,7 @@
                   </section>
                   <div class="form-group">
                     <button type="submit" class="btn btn-md btn-success">Save</button>
-                    <a onclick="$('modal').modal('hide')" class="btn btn-secondary">Cancel</a>
+                    <button class="btn btn-secondary">Cancel</button>
                   </div>
                 </div>
               </form>
