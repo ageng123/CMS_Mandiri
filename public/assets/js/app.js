@@ -55,37 +55,7 @@ const DatatableServices = {
         DatatableServices.container = '#' + id;
     }
 }
-// const HttpServices = {
-//     FormData: new Array(),
-//     PostAjax: (url) => {
-//         var response;
-//         $.ajax({
-//             type: 'POST',
-//             url: url,
-//             data: Object.assign({}, HttpServices.FormData),
-//             ContentType: 'multipart/form-data',
-//             async : false,
-//             success: function(resp){
-//                 response = resp
-//             }
-//         });
-//         return response;
-//     },
-//     getAjax: (url)=>{
-//         var response;
-//         $.ajax({
-//             type: 'GET',
-//             url: url,
-//             // data: Object.assign({}, HttpServices.FormData),
-//             ContentType: 'multipart/form-data',
-//             async : false,
-//             success: function(resp){
-//                 response = resp
-//             }
-//         });
-//         return response; 
-//     }
-// }
+
 function ActionMessage(type, e, event)
 {
     event.preventDefault();
