@@ -71,7 +71,7 @@ jQuery.validator.addMethod("passwordCheck",
 
             return true;
         },
-        "Tidak ada symbol uppercase dan lowercase");
+        "Harus Mengandung Angka, Huruf Kapital, dan Simbol");
 const PendaftaranServices = {
     renderFormData: (data, bind) => {
         $('p[data-update='+ bind +']').html(data);

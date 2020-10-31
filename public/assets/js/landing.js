@@ -96,9 +96,9 @@ $(document).ready(function () {
             $('input[name="pekerjaan[perusahaan]"]').removeClass('hide');
             $('input[name="pekerjaan[divisi]"]').removeClass('hide');
             $('input[name="pekerjaan[lama]"]').removeClass('hide');
-            $('input[name="pekerjaan[alamat]"]').removeClass('hide');
-            $('input[name="pekerjaan[provinsi]"]').removeClass('hide');
-            $('input[name="pekerjaan[kabupaten]"]').removeClass('hide');
+            $('textarea[name="pekerjaan[alamat]"]').removeClass('hide');
+            $('select[name="pekerjaan[provinsi]"]').removeClass('hide');
+            $('select[name="pekerjaan[kabupaten]"]').removeClass('hide');
             $('input[name="pekerjaan[kecamatan]"]').removeClass('hide');
             $('input[name="pekerjaan[kelurahan]"]').removeClass('hide');
             $('input[name="pekerjaan[rt]"]').removeClass('hide');

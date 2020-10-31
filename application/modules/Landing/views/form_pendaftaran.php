@@ -350,6 +350,7 @@
             <div class="col">
               <label for=""><h5>Pekerjaan</h5></label>
               <select class="form-control" data-bind="jenis_pekerjaan" name="pekerjaan[jenis]" id="pekerjaan">
+                <option value="">Pilih Pekerjaan</option>
                 <option value="Ibu Rumah Tangga">Ibu Rumah Tangga</option>
                 <option value="Wiraswasta">Wiraswasta</option>
                 <option value="PNS">PNS</option>
