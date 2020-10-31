@@ -337,4 +337,5 @@ $(document).ready(function () {
             animateIn: 'fadeIn'
         });
     })
+    $('.testimonial-carousel').owlCarousel({});
 })
