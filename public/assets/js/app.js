@@ -119,7 +119,7 @@ const UserServices = {
 const NasabahServices = {
     uriEdit: base_url + 'nasabah/edit?session_id=',
     uriUpdate: base_url+'nasabah/update?session_id=',
-    uriAdd: base_url+'nasabah/save_data',
+    uriAdd: base_url+'nasabah/pendaftaran_nasabah',
     Form: '#step-form',
     ModalForm: '#modal-form',
     JSON: Array(),
@@ -219,6 +219,7 @@ const NasabahServices = {
         $(NasabahServices.Form).val('');
         $(NasabahServices.Form).attr('action', NasabahServices.uriUpdate+id);
         NasabahServices.InitData(NasabahServices.uriEdit+id);
+        $(NasabahServices.Form + ' :input').prop('disabled', false);
     },
     addEvent: () => {
         $(NasabahServices.ModalForm).modal('show');
@@ -229,6 +230,8 @@ const NasabahServices = {
             console.log(index);
         })
         $(NasabahServices.Form).trigger('reset');
+        $(NasabahServices.Form + ' :input').prop('disabled', false);
+
     },
     closeModal: () => {
         $(NasabahServices.Form).attr('action', NasabahServices.uriAdd);
