@@ -354,9 +354,31 @@ const Content_Services = {
         data = data.data;
         content = '';
         data.map(function(val){
-            content = content + `<div> <img src="`+base_url+'/resources/Slider/'+val.nama_file+`" alt=""> </div>`;
+            content = content + `<div> <img style="height: 44vh; width: 100vw; object-fit: fill" src="`+base_url+'/resources/Slider/'+val.nama_file+`" alt=""> </div>`;
         })
         $(container).html(content);
+        $(".owl-carousel").owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            },
+            autoplay:true,
+            autoplayTimeout:5000,
+            animateOut: 'fadeOut',
+            animateIn: 'fadeIn'
+        });
+        window.dispatchEvent(new Event('resize'));
+        $('.owl-carousel').trigger('refresh.owl.carousel',content);
     }
     
 }

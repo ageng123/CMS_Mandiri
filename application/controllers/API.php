@@ -45,7 +45,7 @@ Class API extends CI_Controller{
     }
     public function get_slider(){
         $model = new GambarSliderModel;
-        $data = $model->findBy(['tipe_attachment' => 3]);
+        $data = $model->findBy(['tipe_attachment' => 3, 'status_slider' => 1]);
         $output = json_output(200, null, $data);
         echo json_encode($output, JSON_PRETTY_PRINT);
     }

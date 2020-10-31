@@ -70,26 +70,7 @@
 
   var revapi18;
   tpj(document).ready(function () {
-    tpj(".owl-carousel").owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:1
-        },
-        1000:{
-            items:1
-        }
-    },
-    autoplay:true,
-    autoplayTimeout:5000,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeIn'
-});
+    
     if (tpj("#rev_slider_18_1").revolution == undefined) {
       revslider_showDoubleJqueryError("#rev_slider_18_1");
     } else {
