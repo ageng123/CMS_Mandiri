@@ -61,7 +61,7 @@
   </div>
 </div> -->
 <!-- END REVOLUTION SLIDER -->
-<div class="owl-carousel owl-theme">
+<div class="" id="slider">
   <div> <img src="<?= base_url('assets/img/opening.jpg') ?>" alt=""> </div>
   <div> <img src="<?= base_url('assets/img/header.png') ?>" alt=""> </div>
 </div>
@@ -464,7 +464,7 @@
        <hr style="background-color: #f7a91e;width: 100%;height: 4px;" border="0" align="left">
       </div>
       <div class="col-12">
-        <div class="testimonial-carousel">
+        <div class="testimonial-carousel" id="slider2">
           <div class="margin-lr-15px">
             <div class="background-white padding-20px" style="text-align: center;">
                 <img src="<?= base_url('assets/img/Home/') ?>gedung.png"  style="text-align: center;width: 50%;">

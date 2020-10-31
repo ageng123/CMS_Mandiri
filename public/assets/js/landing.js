@@ -1,4 +1,24 @@
 $(document).ready(function () {
+    $('.owl-carousel2').owlCarousel({
+        loop:true,
+            margin:10,
+            nav:true,
+            responsive:{
+                0:{
+                    items:3
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:3
+                }
+            },
+            autoplay:true,
+            autoplayTimeout:5000,
+            animateOut: 'fadeOut',
+            animateIn: 'fadeIn'
+    });
     let wajib = 15000;
     let sukarela = 0;
     var form = $("#step-form");
@@ -315,27 +335,16 @@ $(document).ready(function () {
         }
     })
     $('.owl-carousel').each(function(){
-        Content_Services.sliderRender('.owl-carousel');
-        $(".owl-carousel").owlCarousel({
-            loop:true,
-            margin:10,
-            nav:true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:1
-                },
-                1000:{
-                    items:1
-                }
-            },
-            autoplay:true,
-            autoplayTimeout:5000,
-            animateOut: 'fadeOut',
-            animateIn: 'fadeIn'
+        Content_Services.sliderRender('#slider');
+        $("#slider").owlCarousel({
+            items: 1, //10 items above 1000px browser width
+            itemsDesktop: [1000, 1], //5 items between 1000px and 901px
+            itemsDesktopSmall: [900, 1], // betweem 900px and 601px
+            itemsTablet: [600, 1], //2 items between 600 and 0
+            slideSpeed: 1000,
+            autoPlay: true,
+            itemsMobile: false // itemsMobile disabled - inherit from itemsTablet option
         });
     })
-    $('.testimonial-carousel').owlCarousel({});
+    
 })
