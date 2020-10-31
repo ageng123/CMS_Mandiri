@@ -55,37 +55,37 @@ const DatatableServices = {
         DatatableServices.container = '#' + id;
     }
 }
-const HttpServices = {
-    FormData: new Array(),
-    PostAjax: (url) => {
-        var response;
-        $.ajax({
-            type: 'POST',
-            url: url,
-            data: Object.assign({}, HttpServices.FormData),
-            ContentType: 'multipart/form-data',
-            async : false,
-            success: function(resp){
-                response = resp
-            }
-        });
-        return response;
-    },
-    getAjax: (url)=>{
-        var response;
-        $.ajax({
-            type: 'GET',
-            url: url,
-            // data: Object.assign({}, HttpServices.FormData),
-            ContentType: 'multipart/form-data',
-            async : false,
-            success: function(resp){
-                response = resp
-            }
-        });
-        return response; 
-    }
-}
+// const HttpServices = {
+//     FormData: new Array(),
+//     PostAjax: (url) => {
+//         var response;
+//         $.ajax({
+//             type: 'POST',
+//             url: url,
+//             data: Object.assign({}, HttpServices.FormData),
+//             ContentType: 'multipart/form-data',
+//             async : false,
+//             success: function(resp){
+//                 response = resp
+//             }
+//         });
+//         return response;
+//     },
+//     getAjax: (url)=>{
+//         var response;
+//         $.ajax({
+//             type: 'GET',
+//             url: url,
+//             // data: Object.assign({}, HttpServices.FormData),
+//             ContentType: 'multipart/form-data',
+//             async : false,
+//             success: function(resp){
+//                 response = resp
+//             }
+//         });
+//         return response; 
+//     }
+// }
 function ActionMessage(type, e, event)
 {
     event.preventDefault();
@@ -162,7 +162,7 @@ const NasabahServices = {
     renderToForm: (data) => {
         console.log(data);
         let form_data = data.sudah_member;
-        if(form_data === 1){
+        if(form_data == 1){
             $('input[name="data_diri[member]"][value="sudah"]').prop('checked', true);
             $('#client_id').removeClass('hide');
             $('#client_id input').val(data.member);
@@ -170,7 +170,7 @@ const NasabahServices = {
             $('input[name="data_diri[member]"][value="belum"]').prop('checked', true);
             $('#client_id').addClass('hide');
         }
-        if(data.foto_ktp === 'ktp_'+data.id+'/'){
+        if(data.foto_ktp == 'ktp_'+data.id+'/'){
             $('input[name="data_diri[punya_ktp]"][value="belum"]').prop('checked', true);
             // $('input[name="ktp_ahli"]').val(data.foto_ktp_ahli_waris);
             // $('#kk input[name="kk"]').val(data.foto_kk);
@@ -189,13 +189,14 @@ const NasabahServices = {
         $('input[name="data_diri[tempat]"]').val(data.tempat_lahir);
         $('input[name="data_diri[nomor_identity]"]').val(data.ektp);
         form_data = data.tanggal_lahir.split('-');
-        $('select[name="data_diri[tahun]"]').val(form_data[0]);
+        $('input[name="data_diri[tahun]"]').val(form_data[0]);
         $('select[name="data_diri[bulan]"]').val(form_data[1]);
-        $('input[name="data_diri[tanggal]"]').val(form_data[2]);
+        $('select[name="data_diri[tanggal]"]').val(form_data[2]);
         $('select[name="data_diri[jenis_kelamin]"]').val(data.jenis_kelamin);
         form_data = data.alamat.split('/');
         $('textarea[name="data_diri[alamat]"]').val(form_data[0]);
         $('select[name="data_diri[provinsi]"]').val(form_data[6]);
+        $('select[name="data_diri[provinsi]"]').trigger('change');
         $('select[name="data_diri[kabupaten]"]').val(form_data[5]);
         $('input[name="data_diri[rt]"]').val(form_data[1]+'/'+form_data[2]);
         $('input[name="data_diri[kecamatan]"]').val(form_data[4]);
@@ -206,8 +207,11 @@ const NasabahServices = {
         $('input[name="data_diri[rumah]"]').val(form_data[1]);
         if(data.alamat_rumah === data.alamat){
             $('input[name="alamatradio"]').prop('checked', true);
+            $('textarea[name="data_diri[alamat_rumah]"]').val(data.alamat_rumah);
         } else {
             $('input[name="alamatradio"]').prop('checked', false);
+            $('textarea[name="data_diri[alamat_rumah]"]').val(data.alamat_rumah);
+
         }
         $('select[name="pekerjaan[jenis]"]').val(data.jenis_pekerjaan);
         $('input[name="pekerjaan[perusahaan]"]').val(data.nama_perusahaan);
@@ -392,4 +396,125 @@ $(document).ready(function () {
             })
         }
      })     
+})
+$(document).ready(function(){
+    $('#alamat_radio').on('change', function () {
+        let alamat = $('textarea#diri_alamat').val();
+        let rt = $('input#diri_rt').val();
+        let kelurahan = $('input#diri_kelurahan').val();
+        let kecamatan = $('input#diri_kecamatan').val();
+        let kabupaten = $('select#kabupaten1').val();
+        let provinsi = $('select#provinsi').val();
+        let kodepos = $('input#diri_kodepos').val();
+        let alamat_rumah = alamat + ',' + rt + ',' + kelurahan + ',' + kecamatan + ',' + kabupaten + ',' + provinsi + ',' + kodepos;
+        if($('textarea#alamat_rumah').html() == ''){
+            $('textarea#alamat_rumah').html(alamat_rumah);
+        } else {
+            $('textarea#alamat_rumah').html('');
+        }
+    })
+    $('#pekerjaan').on('change', function () {
+        let val = $(this).val();
+        if (val == 'Lainnya') {
+            $('#detail_pekerjaan').removeClass('hide');
+        } else {
+            $('#detail_pekerjaan').addClass("hide");
+        }
+    })
+    $('#select_wajib').on('change', function () {
+        let biaya = $('#wajib').attr('data-biaya');
+        let bulan = $(this).val();
+        let bind = $('#wajib').attr('data-bind');
+        wajib = biaya * bulan
+        PendaftaranServices.renderFormData(Pembayaran_Function.formatRupiah(wajib, 'Rp. '), bind);
+        Pembayaran_Function.renderToForm(wajib, sukarela);
+    })
+    $('#sukarela').on('keyup', function () {
+        let biaya = $(this).val();
+        biaya = biaya.replace(/[^,\d]/g, '', '');
+        biaya = parseInt(biaya);
+        sukarela = parseInt(biaya);
+        $(this).val(Pembayaran_Function.formatRupiah(biaya), '');
+        let bind = $(this).attr('data-bind');
+        PendaftaranServices.renderFormData(Pembayaran_Function.formatRupiah(biaya, 'Rp. '), bind);
+        Pembayaran_Function.renderToForm(wajib, sukarela);
+    })
+    $('#pekerjaan').on('change', function () {
+        let val = $(this).val();
+        if (val == 'Lainnya') {
+            $('#detail_pekerjaan').removeClass('hide');
+        } else {
+            $('#detail_pekerjaan').addClass("hide");
+        }
+    })
+    $('.getProvinsi').each(function () {
+        let data = KotaIndonesia.getProvinsi();
+        let container = '#' + $(this).attr('id');
+        let content = '';
+        content = content + '<option value="" data-idProvinsi="">Pilih Provinsi</option>';
+        data.map(function (index) {
+            content = content + '<option value="' + index.nama + '" data-idProvinsi="' + index.id + '">' + index.nama + '</option>';
+        })
+        $(container).html(content);
+    })
+    $('.getProvinsi').on('change', function () {
+        let conten = '#' + $(this).attr('id');
+        let option = $(conten + ' option:selected').attr('data-idProvinsi');
+        let data = KotaIndonesia.getKota(option);
+        let container = $(this).attr('data-kabupatenlist');
+        let kabupatenlist = '';
+        kabupatenlist = kabupatenlist + '<option value="">Pilih Kabupaten</option>';
+        data.map(function (index) {
+            kabupatenlist = kabupatenlist + '<option value="' + index.nama + '">' + index.nama + '</option>';
+        })
+        $(container).html(kabupatenlist);
+    })
+    $('.member').on('change', function () {
+        let data = $(this).val();
+        if (data === 'belum') {
+            $('#client_id').addClass('hide');
+            $('#client_id input').removeClass('required');
+        } else {
+            $('#client_id').removeClass('hide');
+            $('#client_id input').addClass('required');
+        }
+    })
+    $('.ktp').on('change', function () {
+        let data = $(this).val();
+        if (data === 'belum') {
+            $('#ktp').addClass('hide');
+            $('#kk2').addClass('hide');
+            $('#ktp_ahli').removeClass('hide');
+            $('#kk').removeClass('hide');
+            $('#ktp input').removeClass('required');
+            $('#kk input').addClass('required');
+        } else {
+            $('#ktp').removeClass('hide');
+            $('#kk2').removeClass('hide');
+            $('#ktp_ahli').addClass('hide');
+            $('#kk').addClass('hide');
+            $('#ktp input').addClass('required');
+            $('#kk input').removeClass('required');
+        }
+    })
+    $('input, select, textarea').on('change dp.change', function () {
+        let preview = $(this).attr('data-bind');
+        let val = $(this).val();
+        PendaftaranServices.renderFormData(val, preview);
+    })
+    $('#alamat_radio').on('change', function () {
+        let alamat = $('textarea#diri_alamat').val();
+        let rt = $('input#diri_rt').val();
+        let kelurahan = $('input#diri_kelurahan').val();
+        let kecamatan = $('input#diri_kecamatan').val();
+        let kabupaten = $('select#kabupaten1').val();
+        let provinsi = $('select#provinsi').val();
+        let kodepos = $('input#diri_kodepos').val();
+        let alamat_rumah = alamat + ',' + rt + ',' + kelurahan + ',' + kecamatan + ',' + kabupaten + ',' + provinsi + ',' + kodepos;
+        if($('textarea#alamat_rumah').html() === ''){
+            $('textarea#alamat_rumah').html(alamat_rumah);
+        } else {
+            $('textarea#alamat_rumah').html('');
+        }
+    })
 })

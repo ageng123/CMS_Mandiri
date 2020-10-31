@@ -54,6 +54,7 @@
   <script src="<?= base_url('assets/new_template/') ?>js/demo.min.js"></script>
 
 <!-- SCRIPT POP UP BERHASIL SWEETALERT -->
+
 <script src="<?= base_url('assets/new_template/') ?>sweet/sweetalert2.all.min.js"></script>
 <script src="<?= base_url('assets/new_template/') ?>sweet/aspekkompetensi.js"></script>
 
@@ -111,6 +112,7 @@
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.js" integrity="sha512-gH0SqyjTN7WJAtki1UvqOkhWi3WsF9LY05BMwdcSq6QdFDXrXeXy0q8iP0YmBXCqo7OnSgdIPrC5Vqn8/KRu/Q==" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="<?= base_url('assets/') ?>/js/services.js"></script>
   <script src="<?= base_url('assets/js/') ?>app.js"></script>
 
 </body>

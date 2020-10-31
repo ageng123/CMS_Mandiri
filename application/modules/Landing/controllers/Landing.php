@@ -181,7 +181,8 @@ class Landing extends CI_Controller {
 		$model->tanggal_lahir = date('Y-m-d', strtotime($tanggal));
 		$model->no_hp = $request->hp;
 		$his->no_hp = $request->hp;
-		$model->alamat = $request->alamat.'/'.$request->rumah.'/'.$request->rt.'/'.$request->kelurahan.'/'.$request->kecamatan.'/'.$request->kabupaten.'/'.$request->provinsi.'/'.$request->kodepos;
+		
+		$model->alamat = $request->alamat.','.$request->rumah.','.$request->rt.','.$request->kelurahan.','.$request->kecamatan.','.$request->kabupaten.','.$request->provinsi.','.$request->kodepos;
 		$model->alamat_rumah = $request->alamat_rumah;
 		$model->email = $request->email;
 		$this->session->set_flashdata('email_nasabah', $request->email);
@@ -190,6 +191,16 @@ class Landing extends CI_Controller {
 		$code =  encode($request->nomor_identity.$request->nama);
 		$model->activation_code = $this->clean($code);
 		$this->data_email['kode_aktivasi'] = $this->clean($code);
+		$rtrw = explode('/', $request->rt);
+		$additional = [
+			'pendidikan' => $request->pendidikan,
+			'client_id' => $request->client_id,
+			'provinsi' => $request->provinsi,
+			'kabupaten' => $request->kabupaten,
+			'RT' => $rtrw[0],
+			'RW' => $rtrw[1]
+		];
+		$model->additional = json_encode($additional);
 		if($model->save()):
 			$this->nasabahId = $model->get_lastId();
 			$ktp = $this->upload('ktp', $this->nasabahId);

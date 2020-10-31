@@ -90,7 +90,7 @@ $(document).ready(function () {
         let data = KotaIndonesia.getProvinsi();
         let container = '#' + $(this).attr('id');
         let content = '';
-        content = content + '<option value="" data-idProvinsi=""></option>';
+        content = content + '<option value="" data-idProvinsi="">Pilih Provinsi</option>';
         data.map(function (index) {
             content = content + '<option value="' + index.nama + '" data-idProvinsi="' + index.id + '">' + index.nama + '</option>';
         })

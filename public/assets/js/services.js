@@ -204,6 +204,7 @@ const Pembayaran_Function = {
     renderToForm: function(wajib, sukarela){
         let prefix = "Rp. ";
         let value = wajib + sukarela + 100000;
+        console.log(value);
         $('#biaya-total').html(Pembayaran_Function.formatRupiah(value, prefix));
         let container = $('#biaya-total').attr('data-bind');
         $('input[name=total_pembayaran]').val(Pembayaran_Function.formatRupiah(value, prefix));

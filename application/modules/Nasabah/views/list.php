@@ -364,7 +364,7 @@
                           <h5>Nomor Handphone</h5>
                         </label>
                         <div class="col-md-6">
-                          <input type="text" data-bind="hp" name="data_diri[hp]">
+                          <input type="text" class="form-control" data-bind="hp" name="data_diri[hp]">
                         </div>
                       </div>
                       <div class="col-md-6 row">
@@ -372,7 +372,7 @@
                           <h5>Nomor Rumah</h5>
                         </label>
                         <div class="col-md-6">
-                          <input type="text" data-bind="rumah" name="data_diri[rumah]">
+                          <input type="text" class="form-control" data-bind="rumah" name="data_diri[rumah]">
                         </div>
                       </div>
                     </div>
@@ -618,27 +618,6 @@
                       </tr>
                     </table>
                     <br />
-                    <div class="daftar-radio">
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input required" type="radio" name="aggreement[ketentuan]"
-                          id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">
-                          <h5>Bersedia memenuhi semua ketentuan yang tertera dalam Anggaran dasar,
-                            Anggaran Rumah Tangga dan kebijakan-kebijakan lainnya yang telah ditetapkan
-                            di <b style="color: #432a19;">Koperasi Jasa</b> <b style="color: #f7a91e;">Komunitas
-                              PanenSaham Indonesia</b>.</h5>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="daftar-radio">
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input required" type="radio" name="aggreement[anggota]"
-                          id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">
-                          <h5>Bersedia menerima hak dan melakukan kewajiban sebagai anggota.</h5>
-                        </label>
-                      </div>
-                    </div>
                   </section>
                   
                 </div>
