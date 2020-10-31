@@ -19,10 +19,10 @@
             </div>
             <div class="col-6 text-right">
 
-              <span data-toggle="modal" data-target="#modal-form">
-                <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" title="Tambah Data"><i
+              <!-- <span data-toggle="modal" data-target="#modal-form"> -->
+                <button onclick="NasabahServices.addEvent()" type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" title="Tambah Data"><i
                     class="fa fa-plus"></i></button>
-              </span>
+              <!-- </span> -->
 
               <!-- <a class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="Tambah Data" href="<?= base_url('users/add') ?>"> <span class="btn-inner--text"><i class="fa fa-plus"></i></span></a> -->
               <a href="<?= base_url();?>nasabah/excel" class="btn btn-success btn-sm" data-toggle="tooltip"
@@ -65,8 +65,11 @@
       <div class="modal-content">
         <div class="modal-body p-0">
           <div class="card bg-secondary border-0 mb-0">
-            <div class="card-header bg-transparent class=" form-control-label pb-1">
-              <div class="text-muted text-center"> <b>Form Input Data</b> </div>
+            <div class="card-header bg-transparent form-control-label pb-1">
+              <div class="text-muted" style="float:left"> <b>Form Input Data</b> </div>
+              <button type="button" style="float-left" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" style="color: #666">&times;</span>
+            </button>
             </div>
             <div class="card-body px-lg-5 py-lg-5">
               <form id="step-form" method="post" enctype="multipart/form-data"

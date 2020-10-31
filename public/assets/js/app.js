@@ -221,9 +221,14 @@ const NasabahServices = {
         NasabahServices.InitData(NasabahServices.uriEdit+id);
     },
     addEvent: () => {
+        $(NasabahServices.ModalForm).modal('show');
         $(NasabahServices.Form).attr('action', NasabahServices.uriAdd);
-        $(NasabahServices.Form+' input select textarea').val('');
-        $(NasabahServices.ModalForm).modal('hide');
+        $(NasabahServices.Form+'> input select textarea').val('');
+        $(NasabahServices.Form+' input select textarea').each(function(val, index){
+            console.log(val);
+            console.log(index);
+        })
+        $(NasabahServices.Form).trigger('reset');
     },
     closeModal: () => {
         $(NasabahServices.Form).attr('action', NasabahServices.uriAdd);
@@ -234,7 +239,7 @@ const NasabahServices = {
         $(NasabahServices.ModalForm).modal('show');
         console.log(NasabahServices.Form);
         $(NasabahServices.Form + ' input select textarea').val('');
-        $(NasabahServices.Form + ' input select textarea').attr('disabled', 'disabled');
+        $(NasabahServices.Form + ' :input').prop('disabled', true);
 
         // $(NasabahServices.Form).attr('action', NasabahServices.uriUpdate+id);
         NasabahServices.InitData(NasabahServices.uriEdit+id);  
