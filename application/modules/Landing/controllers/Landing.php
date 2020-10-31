@@ -162,12 +162,7 @@ class Landing extends CI_Controller {
 		$tanggal = $request->tahun.'-'.$request->bulan.'-'.$request->tanggal;
 		$model->tanggal_lahir = date('Y-m-d', strtotime($tanggal));
 		$model->no_hp = $request->hp;
-<<<<<<< HEAD
 		$this->no_hp = $request->hp;
-=======
-		// $his->no_hp = $request->hp;
-		
->>>>>>> c16ee26d9c85c16a5cd176ccf8acbd8040d1cedd
 		$model->alamat = $request->alamat.','.$request->rumah.','.$request->rt.','.$request->kelurahan.','.$request->kecamatan.','.$request->kabupaten.','.$request->provinsi.','.$request->kodepos;
 		$model->alamat_rumah = $request->alamat_rumah;
 		$model->email = $request->email;
