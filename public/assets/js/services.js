@@ -354,7 +354,7 @@ const Content_Services = {
         data = data.data;
         content = '';
         data.map(function(val){
-            content = content + `<div> <img src="`+base_url+'/resources/Slider/'+data.nama_file+`" alt=""> </div>`;
+            content = content + `<div> <img src="`+base_url+'/resources/Slider/'+val.nama_file+`" alt=""> </div>`;
         })
         $(container).html(content);
     }
