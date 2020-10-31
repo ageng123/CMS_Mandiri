@@ -189,6 +189,8 @@
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <script src="<?= base_url('assets/new_template/') ?>/js/demo.min.js"></script>
+  <script type="text/javascript" src="<?= base_url('assets/') ?>/js/services.js"></script>
+
   <script src="<?= base_url('assets/') ?>/js/app.js"></script>
 
 </body>

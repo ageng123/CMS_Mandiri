@@ -160,8 +160,8 @@ const NasabahServices = {
         $('input[name="data_diri[nomor_identity]"]').val(data.ektp);
         form_data = data.tanggal_lahir.split('-');
         $('input[name="data_diri[tahun]"]').val(form_data[0]);
-        $('select[name="data_diri[bulan]"]').val(form_data[1]);
-        $('select[name="data_diri[tanggal]"]').val(form_data[2]);
+        $('select[name="data_diri[bulan]"]').val(parseInt(form_data[1]));
+        $('select[name="data_diri[tanggal]"]').val(parseInt(form_data[2]));
         $('select[name="data_diri[jenis_kelamin]"]').val(data.jenis_kelamin);
         form_data = data.alamat.split('/');
         $('textarea[name="data_diri[alamat]"]').val(form_data[0]);
@@ -479,7 +479,7 @@ $(document).ready(function(){
             $('#kk input').removeClass('required');
         }
     })
-    $('input, select, textarea').on('change dp.change', function () {
+    $('#step-form input, select, textarea').on('change dp.change', function () {
         let preview = $(this).attr('data-bind');
         let val = $(this).val();
         PendaftaranServices.renderFormData(val, preview);
