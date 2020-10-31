@@ -140,7 +140,7 @@ class Landing extends CI_Controller {
 		<br?
 		<p> ---------------- </p>
 		';
-		$send = send_email($this->data_email['to'], null, null, 'Status Pendaftaran Akun KJKPI ANDA',$message);
+		$send = send_email($this->data_email['to'], null, null, 'Status Pendaftaran Akun KJKPI ANDA',$content);
 		$this->session->set_flashdata('daftar_sukses', true);
 		return redirect(base_url('landing'));
 	}
@@ -212,7 +212,7 @@ class Landing extends CI_Controller {
 		$model = new Pekerjaan_Model;
 		$request = (object)$request;
 		$model->id_user = $this->nasabahId;
-		$model->jenis_pekerjaan = $request->jenis;
+		$model->jenis_pekerjaan = $request->jenis == 'Lainnya' ? $request->jenis.'-'.$request->jenis_detail : $request->jenis;
 		$model->nama_perusahaan = $request->perusahaan;
 		$model->divisi = $request->divisi;
 		$model->lama_bekerja = $request->lama;

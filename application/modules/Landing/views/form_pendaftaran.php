@@ -361,7 +361,7 @@
             <div class="col">
               <label for=""><h5 style="color: #ffffff;">Pekerjaan Lainnya</h5></label>
               <input type="text" class="form-control hide" data-bind="jenis_pekerjaan" id="detail_pekerjaan" placeholder="Pekerjaan Lainnya"
-                name="pekerjaan[jenis]">
+                name="pekerjaan[jenis_detail]">
             </div>
           </div>
           <br/>
