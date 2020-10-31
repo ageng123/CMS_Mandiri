@@ -131,7 +131,7 @@ class Landing extends CI_Controller {
 		<br>
 		<p>Untuk pertanyaan dan informasi lebih lanjut, silahkan hubungi bagian keanggotaan kami 0812-1139-4434 
 		Jam Operasional:</p>
-		<p>pukul 08.30 – 17.00 ( Hari kerja )</p>
+		<p>pukul 08.30 s/d 17.00 ( Hari kerja )</p>
 		<br?
 		<p>Terima kasih atas kepercayaan Anda telah bergabung di Koperasi Jasa Komunitas PanenSAHAM Indonesia.</p>
 		<br?
