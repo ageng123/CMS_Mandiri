@@ -14,15 +14,17 @@ class StatusPembayaran extends Auth_Guard {
 		];
 	}
 
-	public function index()
+	public function index($id = null)
 	{
 		$content = 'StatusPembayaran/list';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'card_title' => "Data Pembayaran Iuran",
 			'form_url' => base_url('statuspembayaran/add'),
-			'status_list' => $this->status
+			'status_list' => $this->status,
+			'id_user' => $id
 		];
+		
 		admin_parse($content, $data);
 		// $this->load->view('welcome_message');
 	}
@@ -30,7 +32,8 @@ class StatusPembayaran extends Auth_Guard {
 	// JSON
 	public function getJSON(){
 		$model = new StatusPembayaranModel;
-		$output = $model->all();
+		$id = decode($_GET['filter']);
+		$output = $model->findBy(['id_nasabah' => $id]);
 		$no = $this->input->post('start');
 		$result = array();
 		foreach($output as $key => $val):
