@@ -22,7 +22,7 @@
         <div class="table-responsive card-body py-4">
           <form action="<?= $form_url ?>" class='row' method="POST" enctype="multipart/form-data">
             <div class="form-group col-md-12">
-              <label for="">Gambar</label>
+              <label for="">Gambar</label> (<b style="color: red;">Ukuran gambar disarankan 700 X 1600</b>)
               <input type="file" name="cover_slider" data-preview="#cover_slider" id="" class="form-control">
               <br>
                 <?php if(isset($form_data) && $form_data->nama_file != null): ?>
