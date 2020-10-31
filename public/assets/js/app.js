@@ -217,7 +217,16 @@ const NasabahServices = {
         $('input[name="pekerjaan[perusahaan]"]').val(data.nama_perusahaan);
         $('input[name="pekerjaan[divisi]"]').val(data.divisi);
         $('input[name="pekerjaan[lama]"]').val(data.lama_bekerja);
-        $('textarea[name="pekerjaan[alamat]"]').val(data.alamat_perusahaan);
+        form_data = data.alamat_perusahaan.split('/');
+
+        $('textarea[name="pekerjaan[alamat]"]').val(form_data[0]);
+        $('select[name="pekerjaan[provinsi]"]').val(form_data[6]);
+        $('select[name="pekerjaan[provinsi]"]').trigger('change');
+        $('select[name="pekerjaan[kabupaten]"]').val(form_data[5]);
+        $('input[name="pekerjaan[rt]"]').val(form_data[1]+'/'+form_data[2]);
+        $('input[name="pekerjaan[kecamatan]"]').val(form_data[4]);
+        $('input[name="pekerjaan[kelurahan]"]').val(form_data[3]);
+        $('input[name="pekerjaan[kodepos]"]').val(form_data[7]);
         $('input[name="shu[nama]"]').val(data.nama_rekening);
         $('input[name="shu[norek]"]').val(data.nomor_rekening);
         $('input[name="shu[bank]"]').val(data.nama_bank);
@@ -226,7 +235,10 @@ const NasabahServices = {
         $('input[name="waris[nama]"]').val(data.nama_ahli_waris);
         $('input[name="waris[hubungan]"]').val(data.hubungan_ahli_waris);
         $('select[name="simpanan[wajib]"]').val(data.simpanan_wajib);
+        $('select[name="simpanan[wajib]"]').trigger('change');
         $('input[name="simpanan[sukarela]"]').val(data.simpanan_sukarela);
+        $('input[name="simpanan[sukarela]"]').trigger('keyup');
+
 },
     clearForm: () => {
 
