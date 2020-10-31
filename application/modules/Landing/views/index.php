@@ -340,7 +340,7 @@
             <div class="card-body">
               <?php if(!($this->session->userdata('full_name'))): ?>
                 <div class="text-center">
-                <a href="#"><b style="color: #432a19;">LOGIN</b></a> &nbsp; <b style="color: #f7a91e;">|</b> <a href="#"> &nbsp; <b style="color: grey;">REGISTER</b></a>
+                <a href="#"><b style="color: #432a19;">LOGIN</b></a> &nbsp; <b style="color: #f7a91e;">|</b> <a href="<?= base_url();?>pendaftaran"> &nbsp; <b style="color: grey;">REGISTER</b></a>
               </div>
               <br/>
               <div class="tab-content" id="myTabContent">
@@ -361,7 +361,7 @@
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
               </div>
                 <?php else: ?>
-                   <div class="position-relative" style="background-color: #fafafa;">
+                   <div class="position-relative" style="background-color: white;">
                     <center><div class="item-thumbnail rounded-circle" style="height: 10vw; width: 10vw; overflow: hidden">
                         <?php if(empty($user->photo)): ?>
                              <img src="<?= base_url('assets/img/');?>user.png" style="height: 100%" id="profilePreview">
@@ -371,6 +371,7 @@
                     </div></center>
                     <br>
                     <center>Welcome <b style="color: #f7a91e;"><?= $user->full_name ?></b></center>
+                    <br>
                     <center> <a href="<?= base_url('auth/logout') ?>" class="btn btn-sm btn-danger">Logout</a></center>
                 </div>
                

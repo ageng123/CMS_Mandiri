@@ -14,7 +14,7 @@ class Profile extends CI_Controller {
 		$user = $model->find($this->session->userdata('user_id'));
 		$content = 'index';
 		$data = [
-			'page_title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI',
 			'user' => $user
 		];
 		landing_parse($content, $data);
