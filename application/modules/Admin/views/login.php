@@ -61,8 +61,8 @@
         <div class="navbar-collapse-header">
           <div class="row">
             <div class="col-6 collapse-brand">
-              <a href="../dashboards/dashboard.html">
-                <img src="<?= base_url('assets/new_template/') ?>/img/brand/blue.png">
+              <a href="#">
+                <img src="<?= base_url('assets/new_template/') ?>img/logo.png"> 
               </a>
             </div>
             <div class="col-6 collapse-close">
@@ -77,29 +77,24 @@
         <hr class="d-lg-none" />
         <ul class="navbar-nav align-items-lg-center ml-lg-auto">
           <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="https://www.facebook.com/creativetim" target="_blank" data-toggle="tooltip" data-original-title="Like us on Facebook">
+            <a class="nav-link nav-link-icon" href="" target="_blank" data-toggle="tooltip" data-original-title="Like us on Facebook">
               <i class="fab fa-facebook-square"></i>
               <span class="nav-link-inner--text d-lg-none">Facebook</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="https://www.instagram.com/creativetimofficial" target="_blank" data-toggle="tooltip" data-original-title="Follow us on Instagram">
+            <a class="nav-link nav-link-icon" href="" target="_blank" data-toggle="tooltip" data-original-title="Follow us on Instagram">
               <i class="fab fa-instagram"></i>
               <span class="nav-link-inner--text d-lg-none">Instagram</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="https://twitter.com/creativetim" target="_blank" data-toggle="tooltip" data-original-title="Follow us on Twitter">
+            <a class="nav-link nav-link-icon" href="" target="_blank" data-toggle="tooltip" data-original-title="Follow us on Twitter">
               <i class="fab fa-twitter-square"></i>
               <span class="nav-link-inner--text d-lg-none">Twitter</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="https://github.com/creativetimofficial" target="_blank" data-toggle="tooltip" data-original-title="Star us on Github">
-              <i class="fab fa-github"></i>
-              <span class="nav-link-inner--text d-lg-none">Github</span>
-            </a>
-          </li>
+
  
         </ul>
       </div>
@@ -123,8 +118,7 @@
           <div class="card bg-secondary border-0 mb-0">
             <div class="card-body px-lg-5">
               <div class="text-center text-muted mb-4">
-                <!-- <h1 style="font-weight: bold;">Login Page</h1> -->
-                <img src="<?= base_url('assets/new_template/') ?>img/logo.png"> 
+                <img src="<?= base_url('assets/new_template/') ?>img/logo.png" style="width: 250px; height: 70px;"> 
               </div>
 
               <form enctype="multipart/form-data" data-url="<?= base_url('Auth_api/login_api') ?>" id="form-login">

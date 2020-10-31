@@ -368,9 +368,6 @@
        <hr style="background-color: #f7a91e;width: 12%;height: 4px;" border="0" align="left">
     <div class="row">
 
-      <!--div class="col-4">
-        <p style="font-size: 14px;">Program Pinjaman dapat diikuti oleh masyarakat umum dan karyawan tetap Panen Sahama Group yang sudah menjadi anggota Koperasi Jasa Komunitas <font color="#f7a91e">Panen Saham indonesia</font></p>
-      </div-->
       <table>
            <tr>
              <td><h1 class="widget-title clearfix"><b>PENDAFTARAN ANGGOTA</b></h1></td>             
