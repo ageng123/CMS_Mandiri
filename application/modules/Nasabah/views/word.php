@@ -165,7 +165,7 @@ header("content-disposition: attachment;filename=Form Nasabah.doc");
 <table style="width:110%;border-left: 1px black solid;border: 1px black solid;font-size: 11px;font-family: Calibri;" cellpadding="5">
 <tr>
 <td colspan="4"><b>Verifikasi oleh pihak Koperasi Jasa Komunitas PanenSaham Indonesia
-<br>No Anggota		:
+<br>No Anggota		: <?= $row->kode_nasabah ?>
 <br>Kartu			:
 </b>
 </td>
@@ -178,7 +178,7 @@ header("content-disposition: attachment;filename=Form Nasabah.doc");
  </tr>
  <tr>
   <td style="height: 60px;text-align: center;"><b><br><br><br><br><br><br>(<?= $row->full_name; ?>)</b></td>
-  <td style="height: 60px;text-align: center;"><b><br><br><br><br><br><br><?= date('Y-m-d') ?></b></td>
+  <td style="height: 60px;text-align: center;"><b><br><br><br><br><br><br><?= date('d-m-Y') ?></b></td>
   <td style="height: 60px;text-align: center;"><b><br><br><br><br><br><br></b>(.....................)</td>
   <td style="height: 60px;text-align: center;"><b><br><br><br><br><br><br></b></td>
  </tr>
