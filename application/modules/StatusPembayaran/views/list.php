@@ -18,7 +18,7 @@
               <h3><?= isset($card_title) ? $card_title : 'Tabel' ?></h3>
               </div>
               <div class="col-6 text-right"> 
-                <a href="base_url('nasabah')" class="btn btn-sm btn-danger"> < Back </a>
+                <a href="<?= base_url('nasabah') ?>" class="btn btn-sm btn-danger"> < Back </a>
                 <span data-toggle="modal" data-target="#modal-form">
                   <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" title="Tambah Data"><i class="fa fa-plus"></i></button>
                 </span>
