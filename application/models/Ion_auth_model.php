@@ -1046,6 +1046,7 @@ class Ion_auth_model extends CI_Model
 						  ->join('roles_list', "roles_list.id_user = {$this->tables['users']}.id")
 						  ->where($this->identity_column, $identity)
 						  ->where('roles_list.id_role != ', 3)
+						  ->where('active', 1)
 						  ->limit(1)
 						  ->order_by('id', 'desc')
 						  ->get($this->tables['users']);

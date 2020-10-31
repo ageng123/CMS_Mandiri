@@ -199,6 +199,8 @@ class Nasabah extends Auth_Guard {
 	}
 	public function delete(){
 		$id = decode($_GET['session_id']);
+		$model = new UserModel;
+		$model->softDelete($id);
 	}
 	public function pendaftaran_nasabah(){
 		$this->trigger_save_event('SAVE_DATA_DIRI', $this->input->post('data_diri'));

@@ -229,7 +229,15 @@ const NasabahServices = {
         $(NasabahServices.Form).attr('action', NasabahServices.uriAdd);
         $(NasabahServices.Form+' input select textarea').val('');
         $(NasabahServices.ModalForm).modal('hide');
-        
+    },
+    detailData: () => {
+        $(NasabahServices.ModalForm).modal('show');
+        console.log(NasabahServices.Form);
+        $(NasabahServices.Form + ' input select textarea').val('');
+        $(NasabahServices.Form + ' input select textarea').attr('disabled', 'disabled');
+
+        // $(NasabahServices.Form).attr('action', NasabahServices.uriUpdate+id);
+        NasabahServices.InitData(NasabahServices.uriEdit+id);  
     }
 }
 Dropzone.autoDiscover = false;
