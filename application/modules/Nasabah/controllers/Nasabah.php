@@ -265,6 +265,7 @@ class Nasabah extends Auth_Guard {
 			$model->update($this->nasabahId);
 			$pekerjaan = $this->update_pekerjaanNasabah('SAVE_PEKERJAAN', $this->input->post('pekerjaan'));
 			$koperasi = $this->update_koperasiNasabah('SAVE_KOPERASI_DATA', $this->input->post('koperasi'));
+			return redirect(base_url('nasabah'));
 		endif;
 	}
 	
@@ -283,10 +284,6 @@ class Nasabah extends Auth_Guard {
 	private function update_koperasiNasabah($request){
 		$model = new Koperasi_Model;
 		$request = (object)$request;
-		$kodenasabah = 'KJKPI'.date("ym").$this->nasabahId.date("s");
-		$model->kode_nasabah = $kodenasabah;
-		$this->nomor_pendaftaran = $kodenasabah;
-		$this->session->set_flashdata('nomor_nasabah', $kodenasabah);
 		$shu = $this->input->post('shu');
 		$shu = (object)$shu;
 		$model->nama_rekening = $shu->nama;
