@@ -61,7 +61,7 @@
   </div>
 </div> -->
 <!-- END REVOLUTION SLIDER -->
-<div class="" id="slider">
+<div class="" id="slider" style="margin-top: 2vh">
   <div> <img src="<?= base_url('assets/img/opening.jpg') ?>" alt=""> </div>
   <div> <img src="<?= base_url('assets/img/header.png') ?>" alt=""> </div>
 </div>
