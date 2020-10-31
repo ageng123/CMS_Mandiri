@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     }
 
     public function get_data_nasabah($id){
-       return $this->nasabah = $this->query('SELECT a.*,b.*,c.* FROM '.$this->table.' a 
+       return $this->nasabah = $this->query('SELECT a.*,b.jenis_pekerjaan, b.nama_perusahaan, b.divisi, b.lama_bekerja, b.alamat as alamat_perusahaan,c.* FROM '.$this->table.' a 
         LEFT JOIN tb_nasabah_pekerjaan b ON a.id = b.id_user
         LEFT JOIN tb_koperasi_data c ON a.id = c.id_user
         where id ='.$id.' ');
