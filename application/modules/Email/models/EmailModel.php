@@ -12,4 +12,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $sql= $this->query('SELECT * FROM '.$this->table);
             return $sql;
         }
+
     }
