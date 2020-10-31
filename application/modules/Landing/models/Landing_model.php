@@ -32,6 +32,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         public function __construct(){
             parent::__construct();
         }
+        public function update_nasabahData($id){
+            return $this->db->set($this)->where('id_user', $id)->update($this->table);
+        }
     }
     class Koperasi_Model extends Main{
         protected $table = 'tb_koperasi_data';
@@ -39,6 +42,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
         public function __construct(){
             parent::__construct();
+        }
+        public function update_nasabahData($id){
+            return $this->db->set($this)->where('id_user', $id)->update($this->table);
         }
     }
     class detailBerita_Model extends Main{

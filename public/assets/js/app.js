@@ -221,7 +221,9 @@ const NasabahServices = {
         NasabahServices.InitData(NasabahServices.uriEdit+id);
     },
     addEvent: () => {
-
+        $(NasabahServices.Form).attr('action', NasabahServices.uriAdd);
+        $(NasabahServices.Form+' input select textarea').val('');
+        $(NasabahServices.ModalForm).modal('hide');
     },
     closeModal: () => {
         $(NasabahServices.Form).attr('action', NasabahServices.uriAdd);
