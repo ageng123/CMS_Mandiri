@@ -162,7 +162,7 @@ class Landing extends CI_Controller {
 		$tanggal = $request->tahun.'-'.$request->bulan.'-'.$request->tanggal;
 		$model->tanggal_lahir = date('Y-m-d', strtotime($tanggal));
 		$model->no_hp = $request->hp;
-		$his->no_hp = $request->hp;
+		// $his->no_hp = $request->hp;
 		
 		$model->alamat = $request->alamat.','.$request->rumah.','.$request->rt.','.$request->kelurahan.','.$request->kecamatan.','.$request->kabupaten.','.$request->provinsi.','.$request->kodepos;
 		$model->alamat_rumah = $request->alamat_rumah;
@@ -243,7 +243,7 @@ class Landing extends CI_Controller {
 		$simpanan = (object)$simpanan;
 		$model->simpanan_wajib = $simpanan->wajib;
 		$sukarela = str_replace('.', '', $simpanan->sukarela);
-		$this->sukarela = $$simpanan->sukarela;
+		$this->sukarela = $simpanan->sukarela;
 		$model->simpanan_sukarela = $sukarela;
 		$random_number = rand(100, 999);
 		$model->total_pembayaran = (15000 * (int)$simpanan->wajib ) + 100000 + (int)$sukarela;
