@@ -254,9 +254,9 @@ class Nasabah extends Auth_Guard {
 		<br?
 		<p> ---------------- </p>
 		';
-		$send = send_email($this->data_email['to'], null, null, 'Status Pendaftaran Akun KJKPI ANDA',$message);
+		// $send = send_email($this->data_email['to'], null, null, 'Status Pendaftaran Akun KJKPI ANDA',$message);
 		$this->session->set_flashdata('daftar_sukses', true);
-		return redirect(base_url('landing'));
+		return redirect(base_url('nasabah'));
 	}
 	private function saveData_diri($request){
 		$model = new Nasabah_Model;
@@ -379,6 +379,8 @@ class Nasabah extends Auth_Guard {
 			case 'SAVE_KOPERASI_DATA':
 				$this->saveData_koperasi($data);
 			break;
+			case 'UPDATE_DATA_DIRI':
+			break;	
 		}
 	}
 	public function proses_add()

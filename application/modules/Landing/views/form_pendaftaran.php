@@ -216,7 +216,7 @@
                   </div>
                   <div class="col-md-3">
                     <!-- <input type="text" name="data_diri[tanggal]" placeholder="DD" class="form-control haripicker" data-bind="hari"> -->
-                    <select name="data_diri[tanggal]" class="form-control" id="">
+                    <select name="data_diri[tanggal]" class="form-control" id="" data-bind="hari">
                       <option value="">DD</option>
                       <?php for($i = 1; $i <= 31; $i++): ?>
                         <option value="<?= $i ?>"><?= $i ?></option>
@@ -225,7 +225,7 @@
                   </div>
                   <div class="col-md-3">
                     <!-- <input type="text" name="data_diri[bulan]" placeholder="MM" class="form-control bulanpicker" data-bind="bulan"> -->
-                    <select name="data_diri[bulan]" class="form-control" id="">
+                    <select name="data_diri[bulan]" data-bind="bulan" class="form-control" id="">
                       <option value="">MM</option>
                       <?php for($i = 1; $i <= 12; $i++): ?>
                         <option value="<?= $i ?>"><?= $i ?></option>
