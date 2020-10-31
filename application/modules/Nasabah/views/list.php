@@ -20,8 +20,8 @@
             <div class="col-6 text-right">
 
               <!-- <span data-toggle="modal" data-target="#modal-form"> -->
-                <button onclick="NasabahServices.addEvent()" type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" title="Tambah Data"><i
-                    class="fa fa-plus"></i></button>
+                <!-- <button onclick="NasabahServices.addEvent()" type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" title="Tambah Data"><i
+                    class="fa fa-plus"></i></button> -->
               <!-- </span> -->
 
               <!-- <a class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="Tambah Data" href="<?= base_url('users/add') ?>"> <span class="btn-inner--text"><i class="fa fa-plus"></i></span></a> -->
