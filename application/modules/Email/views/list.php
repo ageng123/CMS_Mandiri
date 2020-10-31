@@ -18,7 +18,10 @@
               <h3><?= isset($card_title) ? $card_title : 'Tabel' ?></h3>
             </div>
             <div class="col-6 text-right"> 
-
+              <a href="<?= base_url();?>email/excel" class="btn btn-success btn-sm" data-toggle="tooltip"
+                data-placement="top" title="Export Excel"> <span class="btn-inner--text"><i
+                    class="fa fa-file-excel"></i></span>
+              </a>
             </div>
         </div>
       </div>

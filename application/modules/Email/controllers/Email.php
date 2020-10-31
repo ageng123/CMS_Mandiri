@@ -58,5 +58,16 @@ class Email extends Auth_Guard {
 		$model->delete($id);
 		return redirect(base_url('/email'));
 	}
+
+
+	public function excel(){
+		$data = [
+			'title' => 'Mandiri Sekuritas - CMS',
+			'card_title' => "Data Email",
+			'data_email' => $this->EmailModel->get_Email()
+		];
+		
+		$this->load->view('email/excel',$data);
+	}
 	
 }

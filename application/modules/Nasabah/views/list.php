@@ -73,7 +73,7 @@
                 action="<?= base_url('landing/pendaftaran_nasabah') ?>">
                 <div>
                   <h3>Data Diri</h3>
-                  <section style="background-color: #ffffff;">
+                  <section>
                     <div class="form-group">
                       <label for="">
                         <h5>Apakah Sudah Menjadi Member <b style="color: #432a19;">Komunitas</b> <b
@@ -417,7 +417,7 @@
 
                   <h3>STEP 2</h3>
 
-                  <section style="background-color: #ffffff;">
+                  <section>
                     <h2><b style="color: #432a19;">DATA</b> <b style="color: #f7a91e;">PEKERJAAN</b></h2>
                     <div class="form row">
                       <div class="col">
