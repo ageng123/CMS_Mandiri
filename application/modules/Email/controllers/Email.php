@@ -44,7 +44,7 @@ class Email extends Auth_Guard {
 			$row[] = $key+1;
 			$row[] = $val->email;
 			$row[] = '
-			<a href='.base_url('email/delete?session_id=').encode($val->id).' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>';
+			<a href='.base_url('email/delete?session_id=').encode($val->id).' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"  onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Email : '.$val->email.' ? "><i class="fa fa-trash"></i></span></a>';
 			$result[] = $row;
 		endforeach;
 		$data = json_output(200, null, $result);
