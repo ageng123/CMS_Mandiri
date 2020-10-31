@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->setNasabah();
         }
         public function setNasabah(){
-            $this->nasabah = $this->query('SELECT * FROM '.$this->table.' a LEFT JOIN roles_list b ON a.id = b.id_user WHERE b.id_role = 3 AND a.email IS NOT NULL');
+            $this->nasabah = $this->query('SELECT * FROM '.$this->table.' a LEFT JOIN roles_list b ON a.id = b.id_user WHERE a.active != 3 AND b.id_role = 3 AND a.email IS NOT NULL');
             return $this;
         }
         public function getNasabah(){
@@ -31,5 +31,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         LEFT JOIN tb_nasabah_pekerjaan b ON a.id = b.id_user
         LEFT JOIN tb_koperasi_data c ON a.id = c.id_user
         where id ='.$id.' LIMIT 1 ')->row_object();
+    }
+    public function softDelete($id){
+        return $this->db->set('active',3)->where('id', $id)->update($this->table);
     }
     }
