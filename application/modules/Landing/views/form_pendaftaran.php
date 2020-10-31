@@ -181,7 +181,8 @@
           <div class="form-row pt-2">
             <div class="col">
               <label for=""><h5>Kata Sandi</h5></label>
-              <input type="password" id="password" class="form-control" name="data_diri[password]">
+              <input type="password" id="password" class="form-control" minlength="8" 
+              passwordCheck="passwordCheck" name="data_diri[password]">
               <label for=""><h6>*Kata Sandi harus diantara 8-20 karakter, dan mengandung paling sedikit satu angka, huruf kapital. Simbol tidak diperkenankan </h6></label>
             </div>
             <div class="col">
@@ -365,6 +366,7 @@
             </div>
           </div>
           <br/>
+          <div id="alamat_perusahaan_section">
           <div class="form row">
             <div class="col">
               <label for=""><h5>Nama Perusahaan</h5></label>
@@ -419,6 +421,7 @@
                 <input type="text" name="pekerjaan[kodepos]" data-bind="kodepos_perusahaan" id="" class="form-control">
               </div>
             </div>
+          </div>
           </div>
           <br/>
           <h2><b style="color: #432a19;">DATA REKENING PEMBAYARAN</b> <b style="color: #f7a91e;">SISA HASIL USAHA (SHU)</b></h2>
