@@ -622,7 +622,7 @@
                   </section>
                   <div class="form-group">
                     <button type="submit" class="btn btn-md btn-success">Save</button>
-                    <button onclick="NasabahServices.closeModal()" onclick="" class="btn btn-secondary">Cancel</button>
+                    <button onclick="NasabahServices.closeModal()" type="button" class="btn btn-secondary">Cancel</button>
                   </div>
                 </div>
               </form>

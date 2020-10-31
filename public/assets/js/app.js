@@ -512,11 +512,6 @@ $(document).ready(function(){
             $('#kk input').removeClass('required');
         }
     })
-    $('#step-form input, select, textarea').on('change dp.change', function () {
-        let preview = $(this).attr('data-bind');
-        let val = $(this).val();
-        PendaftaranServices.renderFormData(val, preview);
-    })
     $('#alamat_radio').on('change', function () {
         let alamat = $('textarea#diri_alamat').val();
         let rt = $('input#diri_rt').val();
