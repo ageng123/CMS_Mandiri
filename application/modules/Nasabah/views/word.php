@@ -179,7 +179,7 @@ header("content-disposition: attachment;filename=Form Nasabah.doc");
  <tr>
   <td style="height: 60px;text-align: center;"><b><br><br><br><br><br><br>(<?= $row->full_name; ?>)</b></td>
   <td style="height: 60px;text-align: center;"><b><br><br><br><br><br><br><?= date('Y-m-d') ?></b></td>
-  <td style="height: 60px;text-align: center;"><b><br><br><br><br><br><br></b>(                   )</td>
+  <td style="height: 60px;text-align: center;"><b><br><br><br><br><br><br></b>(.....................)</td>
   <td style="height: 60px;text-align: center;"><b><br><br><br><br><br><br></b></td>
  </tr>
 </table>
