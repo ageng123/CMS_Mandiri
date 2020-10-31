@@ -7,7 +7,7 @@
     </div>
   </div>
 </div>
-
+<style></style>
 <div class="container-fluid mt--6">
   <div class="row">
     <div class="col">
@@ -252,7 +252,7 @@
                     </div>
                     <br />
                     <div class="form row">
-                      <div class="col">
+                      <div class="col-12">
                         <div class="form-group">
                           <label for="">
                             <h5>Tempat/Tanggal/Bulan/Tahun Lahir</h5>
@@ -263,12 +263,20 @@
                                 data-bind="tempat">
                             </div>
                             <div class="col-md-2">
-                              <input type="text" name="data_diri[tanggal]" placeholder="DD"
-                                class="form-control haripicker" data-bind="hari">
+                            <select name="data_diri[tanggal]" class="form-control" id="">
+                              <option value="">DD</option>
+                              <?php for($i = 1; $i <= 31; $i++): ?>
+                                <option value="<?= $i ?>"><?= $i ?></option>
+                              <?php endfor; ?>
+                            </select>
                             </div>
                             <div class="col-md-2">
-                              <input type="text" name="data_diri[bulan]" placeholder="MM"
-                                class="form-control bulanpicker" data-bind="bulan">
+                            <select name="data_diri[bulan]" class="form-control" id="">
+                              <option value="">MM</option>
+                              <?php for($i = 1; $i <= 12; $i++): ?>
+                                <option value="<?= $i ?>"><?= $i ?></option>
+                              <?php endfor; ?>
+                            </select>
                             </div>
                             <div class="col-md-3">
                               <input type="text" name="data_diri[tahun]" placeholder="YYYY"
@@ -277,7 +285,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col">
+                      <div class="col-12">
                         <div class="row">
                           <label for="" class="col-form-label col-md-6">
                             <h5>Jenis Kelamin</h5>

@@ -65,8 +65,8 @@ class Nasabah extends Auth_Guard {
 			// $row[] = '<a href='.base_url('admin').' class="btn btn-success btn-sm">Edit</a><a href='.base_url('admin').' class="btn btn-danger btn-sm">Hapus</a>';
 			$row[] = '<a href='.base_url('admin').' class="btn btn-secondary btn-sm" data-toggle="tooltip" title="Detail"><i class="fa fa-info"></i></span></a>
 			<a href='.base_url('nasabah/word/'.$val->id.'').' class="btn btn-info btn-sm" data-toggle="tooltip" title="Download Word"><i class="fa fa-download"></i></span></a>
-			<a href='.base_url('admin').' class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
-			<a href='.base_url('admin').' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>';
+			<a onclick="NasabahServices.updateEvent('."'".encode($val->id)."'".')" class="btn btn-warning btn-sm text-white" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
+			<a href='.base_url('nasabah/delete?session_id=').encode($val->id).' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>';
 			$result[] = $row;
 		endforeach;
 		$data = json_output(200, null, $result);
@@ -181,7 +181,21 @@ class Nasabah extends Auth_Guard {
 		
 		$this->load->view('nasabah/word',$data);
 	}
+	public function edit(){
+		$id = decode($_GET['session_id']);
+		$model = new UserModel();
+		$output = $model->get_NasabahData($id);
+		$data = json_output(200, null, $output);
+		echo JSON_ENCODE($data, JSON_PRETTY_PRINT);
+	}
+	public function update(){
+		$id = decode($_GET['session_id']);
+		
 
+	}
+	public function delete(){
+		$id = decode($_GET['session_id']);
+	}
 }
 
 	

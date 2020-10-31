@@ -115,6 +115,7 @@ function ActionMessage(type, e, event)
 const UserServices = {
     userUriEdit: base_url+'users/edit?session_id=',
     userUriUpdate: base_url+'users/update?session_id=',
+    uriTambahData: base_url+'users/save',
     userUriData: Array(),
     userInitData: (uri) => {
        let data =  HttpServices.getAjax(uri);
@@ -132,7 +133,7 @@ const UserServices = {
         $('input[name=username]').val(data.username);
     },
     clearForm: () => {
-
+        $('#userForm input select textarea').val();
     },
     buttonUpdateClicked: (id) => {
         let uriData = UserServices.userUriEdit+id;
@@ -141,7 +142,100 @@ const UserServices = {
     },
     buttonAddClicked: () => {
         $('#userModal-form').modal('show');
-        $('#userForm input select').val('');
+        $('#userForm').attr('action', UserServices.uriTambahData);
+        UserServices.clearForm();
+    }
+}
+const NasabahServices = {
+    uriEdit: base_url + 'nasabah/edit?session_id=',
+    uriUpdate: base_url+'nasabah/update?session_id=',
+    uriAdd: base_url+'nasabah/save_data',
+    Form: '#step-form',
+    ModalForm: '#modal-form',
+    JSON: Array(),
+    InitData: (uri) => {
+        let getData = HttpServices.getAjax(uri);
+        let data = JSON.parse(getData);
+        data = data.data;
+        NasabahServices.renderToForm(data);
+    },
+    renderToForm: (data) => {
+        console.log(data);
+        let form_data = data.sudah_member;
+        if(form_data === 1){
+            $('input[name="data_diri[member]"][value="sudah"]').prop('checked', true);
+            $('#client_id').removeClass('hide');
+            $('#client_id input').val(data.member);
+        } else {
+            $('input[name="data_diri[member]"][value="belum"]').prop('checked', true);
+            $('#client_id').addClass('hide');
+        }
+        if(data.foto_ktp === 'ktp_'+data.id+'/'){
+            $('input[name="data_diri[punya_ktp]"][value="belum"]').prop('checked', true);
+            // $('input[name="ktp_ahli"]').val(data.foto_ktp_ahli_waris);
+            // $('#kk input[name="kk"]').val(data.foto_kk);
+            $('input[name="data_diri[nomor_identity]"]').val(data.no_kk);
+
+        } else {
+            $('input[name="data_diri[punya_ktp]"][value="sudah"]').prop('checked', true);
+            // $('input[name="ktp"]').val(data.foto_ktp);
+            // $('#kk2 input[name="ktp"]').val(data.foto_kk);
+            $('input[name="data_diri[nomor_identity]"]').val(data.ektp);
+
+        }
+        $('input[name="data_diri[email]"]').val(data.email);
+        $('input[name="Cemail"]').val(data.email);
+        $('input[name="data_diri[nama]"]').val(data.full_name);
+        $('input[name="data_diri[tempat]"]').val(data.tempat_lahir);
+        $('input[name="data_diri[nomor_identity]"]').val(data.ektp);
+        form_data = data.tanggal_lahir.split('-');
+        $('select[name="data_diri[tahun]"]').val(form_data[0]);
+        $('select[name="data_diri[bulan]"]').val(form_data[1]);
+        $('input[name="data_diri[tanggal]"]').val(form_data[2]);
+        $('select[name="data_diri[jenis_kelamin]"]').val(data.jenis_kelamin);
+        form_data = data.alamat.split('/');
+        $('textarea[name="data_diri[alamat]"]').val(form_data[0]);
+        $('select[name="data_diri[provinsi]"]').val(form_data[6]);
+        $('select[name="data_diri[kabupaten]"]').val(form_data[5]);
+        $('input[name="data_diri[rt]"]').val(form_data[1]+'/'+form_data[2]);
+        $('input[name="data_diri[kecamatan]"]').val(form_data[4]);
+        $('input[name="data_diri[kelurahan]"]').val(form_data[3]);
+        $('input[name="data_diri[kodepos]"]').val(form_data[7]);
+        form_data = data.no_hp.split('/');
+        $('input[name="data_diri[hp]"]').val(form_data[0]);
+        $('input[name="data_diri[rumah]"]').val(form_data[1]);
+        if(data.alamat_rumah === data.alamat){
+            $('input[name="alamatradio"]').prop('checked', true);
+        } else {
+            $('input[name="alamatradio"]').prop('checked', false);
+        }
+        $('select[name="pekerjaan[jenis]"]').val(data.jenis_pekerjaan);
+        $('input[name="pekerjaan[perusahaan]"]').val(data.nama_perusahaan);
+        $('input[name="pekerjaan[divisi]"]').val(data.divisi);
+        $('input[name="pekerjaan[lama]"]').val(data.lama_bekerja);
+        $('textarea[name="pekerjaan[alamat]"]').val(data.alamat_perusahaan);
+        $('input[name="shu[nama]"]').val(data.nama_rekening);
+        $('input[name="shu[norek]"]').val(data.nomor_rekening);
+        $('input[name="shu[bank]"]').val(data.nama_bank);
+        $('input[name="shu[cabang]"]').val(data.cabang);
+        $('input[name="shu[cabang]"]').val(data.cabang);
+        $('input[name="waris[nama]"]').val(data.nama_ahli_waris);
+        $('input[name="waris[hubungan]"]').val(data.hubungan_ahli_waris);
+        $('select[name="simpanan[wajib]"]').val(data.simpanan_wajib);
+        $('input[name="simpanan[sukarela]"]').val(data.simpanan_sukarela);
+},
+    clearForm: () => {
+
+    },
+    updateEvent: (id) => {
+        $(NasabahServices.ModalForm).modal('show');
+        console.log(NasabahServices.Form);
+        $(NasabahServices.Form).val('');
+        $(NasabahServices.Form).attr('action', NasabahServices.uriUpdate+id);
+        NasabahServices.InitData(NasabahServices.uriEdit+id);
+    },
+    addEvent: () => {
+
     }
 }
 Dropzone.autoDiscover = false;

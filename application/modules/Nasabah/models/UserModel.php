@@ -26,5 +26,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         LEFT JOIN tb_koperasi_data c ON a.id = c.id_user
         where id ='.$id.' ');
     }
-
+    public function get_NasabahData($id){
+        return $this->db->query('SELECT a.*,b.jenis_pekerjaan, b.nama_perusahaan, b.divisi, b.lama_bekerja, b.alamat as alamat_perusahaan,c.*  FROM '.$this->table.' a 
+        LEFT JOIN tb_nasabah_pekerjaan b ON a.id = b.id_user
+        LEFT JOIN tb_koperasi_data c ON a.id = c.id_user
+        where id ='.$id.' LIMIT 1 ')->row_object();
+    }
     }
