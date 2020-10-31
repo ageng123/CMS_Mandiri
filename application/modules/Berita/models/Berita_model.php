@@ -32,7 +32,7 @@ require_once(APPPATH.'/models/Main.php');
             return (int)$this->limit;
         }
         public function getBeritaData(){
-            $sql = $this->db->select('*')->where('status', 2)->get($this->table, $this->get_limit(), $this->get_page())->result_object();
+            $sql = $this->db->select('*')->where('status', 1)->get($this->table, $this->get_limit(), $this->get_page())->result_object();
             return $sql;
         }
     }
