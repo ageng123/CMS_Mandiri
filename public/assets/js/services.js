@@ -114,9 +114,6 @@ const PendaftaranServices = {
         'data_diri[hp]': {
             required: true
         },
-        'data_diri[rumah]': {
-            required: true
-        },
         'data_diri[provinsi]': {
             required: true
         },

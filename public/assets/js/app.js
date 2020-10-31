@@ -222,6 +222,12 @@ const NasabahServices = {
     },
     addEvent: () => {
 
+    },
+    closeModal: () => {
+        $(NasabahServices.Form).attr('action', NasabahServices.uriAdd);
+        $(NasabahServices.Form+' input select textarea').val('');
+        $(NasabahServices.ModalForm).modal('hide');
+        
     }
 }
 Dropzone.autoDiscover = false;
