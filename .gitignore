@@ -7,7 +7,11 @@ application/logs/*
 !application/logs/index.html
 application/config/*
 !application/*/.htaccess
-!public/resources/*
+public/resources/*
+!public/resources/upload/*
+!public/resources/Slider/*
+!public/resources/Produk/*
+!public/resources/Berita/*
 composer.lock
 
 user_guide_src/build/*
