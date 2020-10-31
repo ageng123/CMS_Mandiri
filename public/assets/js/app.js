@@ -230,7 +230,7 @@ const NasabahServices = {
         $(NasabahServices.Form+' input select textarea').val('');
         $(NasabahServices.ModalForm).modal('hide');
     },
-    detailData: () => {
+    detailEvent: () => {
         $(NasabahServices.ModalForm).modal('show');
         console.log(NasabahServices.Form);
         $(NasabahServices.Form + ' input select textarea').val('');
