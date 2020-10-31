@@ -140,7 +140,7 @@ class Landing extends CI_Controller {
 		<br?
 		<p> ---------------- </p>
 		';
-		$send = send_email($this->data_email['to'], null, null, 'Status Pendaftaran Akun KJKPI ANDA',$message);
+		$send = send_email($this->data_email['to'], null, null, 'Status Pendaftaran Akun KJKPI ANDA',$content);
 		$this->session->set_flashdata('daftar_sukses', true);
 		return redirect(base_url('landing'));
 	}
@@ -162,8 +162,6 @@ class Landing extends CI_Controller {
 		$tanggal = $request->tahun.'-'.$request->bulan.'-'.$request->tanggal;
 		$model->tanggal_lahir = date('Y-m-d', strtotime($tanggal));
 		$model->no_hp = $request->hp;
-		$his->no_hp = $request->hp;
-		
 		$model->alamat = $request->alamat.','.$request->rumah.','.$request->rt.','.$request->kelurahan.','.$request->kecamatan.','.$request->kabupaten.','.$request->provinsi.','.$request->kodepos;
 		$model->alamat_rumah = $request->alamat_rumah;
 		$model->email = $request->email;
@@ -212,7 +210,7 @@ class Landing extends CI_Controller {
 		$model = new Pekerjaan_Model;
 		$request = (object)$request;
 		$model->id_user = $this->nasabahId;
-		$model->jenis_pekerjaan = $request->jenis;
+		$model->jenis_pekerjaan = $request->jenis == 'Lainnya' ? $request->jenis.'-'.$request->jenis_detail : $request->jenis;
 		$model->nama_perusahaan = $request->perusahaan;
 		$model->divisi = $request->divisi;
 		$model->lama_bekerja = $request->lama;
@@ -243,7 +241,7 @@ class Landing extends CI_Controller {
 		$simpanan = (object)$simpanan;
 		$model->simpanan_wajib = $simpanan->wajib;
 		$sukarela = str_replace('.', '', $simpanan->sukarela);
-		$this->sukarela = $$simpanan->sukarela;
+		$this->sukarela = $simpanan->sukarela;
 		$model->simpanan_sukarela = $sukarela;
 		$random_number = rand(100, 999);
 		$model->total_pembayaran = (15000 * (int)$simpanan->wajib ) + 100000 + (int)$sukarela;
