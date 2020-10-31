@@ -84,24 +84,6 @@ class Landing extends CI_Controller {
 	}
 	public function pendaftaran_nasabah(){
 		$this->trigger_save_event('SAVE_DATA_DIRI', $this->input->post('data_diri'));
-		$message = '
-					<html>
-					<head>
-					<title>Birthday Reminders for August</title>
-					</head>
-					<body>
-					<p>Harap Klik Link dibawah Ini untuk aktivasi Akun KJKPI Anda</p>
-					<table>
-					<tr>
-					<td>Total Pembayaran</td><td>'.$this->data_email['total_pembayaran'].'</td>
-					</tr>
-					<tr>
-					<td>Link Aktivasi Akun</td><td><a href="'.base_url('auth/activate/').$this->data_email['kode_aktivasi'].'">Link Aktivasi</a></td>
-					</tr>
-					</table>
-					</body>
-					</html>
-					';
 		$content = '
 		<p> Kepada Yth Bapak/ Ibu '.$this->nama_pendaftaran.' <p>
 		<br>
