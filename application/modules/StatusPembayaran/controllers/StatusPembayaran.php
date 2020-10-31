@@ -72,7 +72,7 @@ class StatusPembayaran extends Auth_Guard {
 			$model->status = $this->input->post('status');
 			if($model->save()):
 				$this->session->set_flashdata('message', 'Data Status Pembayaran Telah Di Input');
-				return redirect(base_url('statuspembayaran'));
+				return redirect(base_url('statuspembayaran/index/').encode($this->input->post('id_nasabah')));
 			else:
 				echo $this->db->error();
 			endif;
@@ -100,7 +100,7 @@ class StatusPembayaran extends Auth_Guard {
 			$model->status = $this->input->post('status');
 			if($model->update($id)):
 				$this->session->set_flashdata('message', 'Data Status Pembayaran Telah Di Update');
-				return redirect(base_url('statuspembayaran'));
+				return redirect(base_url('statuspembayaran/index/').encode($this->input->post('id_nasabah')));
 			else:
 				echo $this->db->error();
 			endif;
@@ -114,7 +114,7 @@ class StatusPembayaran extends Auth_Guard {
 		$model = new StatusPembayaranModel;
 		$model->delete($id);
 		$this->session->set_flashdata('message', 'Data Status Pembayaran Telah Di Hapus');
-		return redirect(base_url('statuspembayaran'));
+		return redirect(base_url('statuspembayaran/index/').encode($id));
 	}
 	// Export 
 
