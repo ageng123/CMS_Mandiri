@@ -80,10 +80,37 @@ $(document).ready(function () {
     })
     $('#pekerjaan').on('change', function () {
         let val = $(this).val();
+        if(val == 'Ibu Rumah Tangga' || val == "Pelajar" || val == "Mahasiswa"){
+            $('input[name="pekerjaan[perusahaan]"]').addClass('hide');
+            $('input[name="pekerjaan[divisi]"]').addClass('hide');
+            $('input[name="pekerjaan[lama]"]').addClass('hide');
+            $('input[name="pekerjaan[alamat]"]').addClass('hide');
+            $('input[name="pekerjaan[provinsi]"]').addClass('hide');
+            $('input[name="pekerjaan[kabupaten]"]').addClass('hide');
+            $('input[name="pekerjaan[kecamatan]"]').addClass('hide');
+            $('input[name="pekerjaan[kelurahan]"]').addClass('hide');
+            $('input[name="pekerjaan[rt]"]').addClass('hide');
+            $('input[name="pekerjaan[kodepos]"]').addClass('hide');
+        } else {
+            $('input[name="pekerjaan[perusahaan]"]').removeClass('hide');
+            $('input[name="pekerjaan[divisi]"]').removeClass('hide');
+            $('input[name="pekerjaan[lama]"]').removeClass('hide');
+            $('input[name="pekerjaan[alamat]"]').removeClass('hide');
+            $('input[name="pekerjaan[provinsi]"]').removeClass('hide');
+            $('input[name="pekerjaan[kabupaten]"]').removeClass('hide');
+            $('input[name="pekerjaan[kecamatan]"]').removeClass('hide');
+            $('input[name="pekerjaan[kelurahan]"]').removeClass('hide');
+            $('input[name="pekerjaan[rt]"]').removeClass('hide');
+            $('input[name="pekerjaan[kodepos]"]').removeClass('hide');
+        }
         if (val == 'Lainnya') {
             $('#detail_pekerjaan').removeClass('hide');
+            $('#detail_pekerjaan').addClass('required');
+
         } else {
             $('#detail_pekerjaan').addClass("hide");
+            $('#detail_pekerjaan').removeClass('required');
+
         }
     })
     $('.getProvinsi').each(function () {

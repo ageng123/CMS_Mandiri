@@ -92,13 +92,13 @@ class Landing extends CI_Controller {
 		Terima kasih telah melakukan pendaftaran sebagai calon anggota Koperasi Jasa Komunitas PanenSaham Indonesia dengan data sebagai berikut : </p>
 		<table>
 		<tr>
-		<td>No Pendaftaran</td><td>:</td><td>'.$this->nomor_pembayaran.'</td>
+		<td>No Pendaftaran</td><td style="width: 2%">:</td><td>'.$this->nomor_pendaftaran.'</td>
 		</tr>
 		<tr>
-		<td>Nama </td><td>:</td><td>'.$this->nama_pendaftaran.'</td>
+		<td>Nama </td><td style="width: 2%">:</td><td>'.$this->nama_pendaftaran.'</td>
 		</tr>
 		<tr>
-		<td>Email</td><td>:</td><td>'.$this->data_email['to'].'</td>
+		<td>Email</td><td style="width: 2%">:</td><td>'.$this->data_email['to'].'</td>
 		</tr>
 		<tr>
 		<td>No HP</td><td>:</td><td>'.$this->no_hp.'</td>
@@ -162,6 +162,7 @@ class Landing extends CI_Controller {
 		$tanggal = $request->tahun.'-'.$request->bulan.'-'.$request->tanggal;
 		$model->tanggal_lahir = date('Y-m-d', strtotime($tanggal));
 		$model->no_hp = $request->hp;
+		$this->no_hp = $request->hp;
 		$model->alamat = $request->alamat.','.$request->rumah.','.$request->rt.','.$request->kelurahan.','.$request->kecamatan.','.$request->kabupaten.','.$request->provinsi.','.$request->kodepos;
 		$model->alamat_rumah = $request->alamat_rumah;
 		$model->email = $request->email;
