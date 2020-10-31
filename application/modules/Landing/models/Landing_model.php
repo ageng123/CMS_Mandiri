@@ -33,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             parent::__construct();
         }
         public function update_nasabahData($id){
-            return $this->db->set($this)->where('id_user', $id)->update($this->table);
+            return $this->db->where('id_user', $id)->update($this->table, $this);
         }
     }
     class Koperasi_Model extends Main{
@@ -44,7 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             parent::__construct();
         }
         public function update_nasabahData($id){
-            return $this->db->set($this)->where('id_user', $id)->update($this->table);
+            return $this->db->where('id_user', $id)->update($this->table, $this);
         }
     }
     class detailBerita_Model extends Main{
