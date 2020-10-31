@@ -15,7 +15,6 @@ header("Expires: 0");
 		<td style="text-align:center;">Tanggal lahir</td>
 		<td style="text-align:center;">No HP</td>
 		<td style="text-align:center;">Alamat</td>
-		<td style="text-align:center;">Created on</td>
 	</tr>
     <?php
         $no = 0;
@@ -23,15 +22,14 @@ header("Expires: 0");
         $no++; ?>
 	<tr>
 		<td style="text-align:center;"><?= $no; ?></td>
-		<td style="text-align:center;"><?= $row->sudah_member; ?></td>
+		<td style="text-align:center;"><?= $row->sudah_member == 1 ? 'Sudah' : 'Belum'; ?></td>
 		<td style="text-align:left;"><?= $row->full_name; ?></td>
 		<td style="text-align:left;"><?= $row->email; ?></td>
 		<td style="text-align:center;"><?= $row->jenis_kelamin; ?></td>
 		<td style="text-align:center;"><?= $row->tempat_lahir; ?></td>
 		<td style="text-align:center;"><?= date('d/m/Y',strtotime($row->tanggal_lahir)); ?></td>
-		<td style="text-align:center;"><?= $row->no_hp; ?></td>
+		<td style="text-align:center;"><?= "'".$row->no_hp; ?></td>
 		<td style="text-align:left;"><?= $row->alamat; ?></td>
-		<td style="text-align:center;"><?= $row->created_on; ?></td>
 	</tr>
 
         <?php } ?>

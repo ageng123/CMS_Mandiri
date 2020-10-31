@@ -153,14 +153,12 @@ class Nasabah extends Auth_Guard {
 			$output = $role_detail->nama_role;
 		return $output;
 		else:
-			return 'Jabatan Belum Diisi';
+			return 'Jabatan Belum Diisi'; 
 		endif;
 	}
 
 
-	public function excel()
-	{
-		
+	public function excel(){
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'card_title' => "Data Nasabah",
@@ -170,9 +168,7 @@ class Nasabah extends Auth_Guard {
 		$this->load->view('nasabah/excel',$data);
 	}
 
-		public function word()
-	{
-		
+	public function word(){
 		$id = $this->uri->segment(3);
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
