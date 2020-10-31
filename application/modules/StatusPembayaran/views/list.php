@@ -67,7 +67,7 @@
             <form action="<?= $form_url ?>" class='row' method="POST" enctype="multipart/form-data">
               <div class="form-group col-md-6">
                 <label class="form-control-label" for="">ID Nasabah</label>
-                <input type="text" name="id_nasabah" value="<?= decode($id_user) ?>" id="" class="form-control" disabled>
+                <input type="text" name="id_nasabah" value="<?= decode($id_user) ?>" id="" class="form-control" readonly>
               </div>
               <div class="form-group col-md-6">
                 <label class="form-control-label" for="">Jenis Bayar</label>
