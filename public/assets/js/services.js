@@ -57,6 +57,21 @@ const KotaIndonesia = {
     }
 
 }
+jQuery.validator.addMethod("passwordCheck",
+        function(value, element, param) {
+            if (this.optional(element)) {
+                return true;
+            } else if (!/[A-Z]/.test(value)) {
+                return false;
+            } else if (!/[a-z]/.test(value)) {
+                return false;
+            } else if (!/[0-9]/.test(value)) {
+                return false;
+            }
+
+            return true;
+        },
+        "Tidak ada symbol uppercase dan lowercase");
 const PendaftaranServices = {
     renderFormData: (data, bind) => {
         $('p[data-update='+ bind +']').html(data);

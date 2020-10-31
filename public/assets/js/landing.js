@@ -84,13 +84,14 @@ $(document).ready(function () {
             $('input[name="pekerjaan[perusahaan]"]').addClass('hide');
             $('input[name="pekerjaan[divisi]"]').addClass('hide');
             $('input[name="pekerjaan[lama]"]').addClass('hide');
-            $('input[name="pekerjaan[alamat]"]').addClass('hide');
-            $('input[name="pekerjaan[provinsi]"]').addClass('hide');
-            $('input[name="pekerjaan[kabupaten]"]').addClass('hide');
+            $('textarea[name="pekerjaan[alamat]"]').addClass('hide');
+            $('select[name="pekerjaan[provinsi]"]').addClass('hide');
+            $('select[name="pekerjaan[kabupaten]"]').addClass('hide');
             $('input[name="pekerjaan[kecamatan]"]').addClass('hide');
             $('input[name="pekerjaan[kelurahan]"]').addClass('hide');
             $('input[name="pekerjaan[rt]"]').addClass('hide');
             $('input[name="pekerjaan[kodepos]"]').addClass('hide');
+            $('#alamat_perusahaan_section').addClass('hide');
         } else {
             $('input[name="pekerjaan[perusahaan]"]').removeClass('hide');
             $('input[name="pekerjaan[divisi]"]').removeClass('hide');
@@ -102,6 +103,8 @@ $(document).ready(function () {
             $('input[name="pekerjaan[kelurahan]"]').removeClass('hide');
             $('input[name="pekerjaan[rt]"]').removeClass('hide');
             $('input[name="pekerjaan[kodepos]"]').removeClass('hide');
+            $('#alamat_perusahaan_section').removeClass('hide');
+
         }
         if (val == 'Lainnya') {
             $('#detail_pekerjaan').removeClass('hide');
