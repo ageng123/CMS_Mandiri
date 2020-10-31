@@ -108,9 +108,6 @@ const PendaftaranServices = {
         'data_diri[kabupaten]': {
             required: true
         },
-        'data_diri[rt]': {
-            required: true
-        },
         'data_diri[kecamatan]': {
             required: true
         },
@@ -148,9 +145,6 @@ const PendaftaranServices = {
             required: true
         },
         'pekerjaan[kabupaten]': {
-            required: true
-        },
-        'pekerjaan[rt]': {
             required: true
         },
         'pekerjaan[kecamatan]': {

@@ -59,7 +59,7 @@ class Nasabah extends Auth_Guard {
 			$row[] = indonesiaFullDate($val->tanggal_lahir);
 			// $row[] = $val->tanggal_lahir;
 			$row[] = str_replace('/', ',', $val->alamat);
-			$alamat = explode('/', $val->alamat);
+			$alamat = explode(',', $val->alamat);
 			$row[] = strtoupper($alamat[6]);
 			$row[] = $val->last_update;
 			// $row[] = '<a href='.base_url('admin').' class="btn btn-success btn-sm">Edit</a><a href='.base_url('admin').' class="btn btn-danger btn-sm">Hapus</a>';
