@@ -46,7 +46,7 @@
               <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="<?= base_url('assets') ?>/img/admin.png">
+                    <img alt="Image placeholder" src="<?= base_url('assets') ?>/img/admin2.jpg">
                   </span>
                   <div class="media-body ml-2 d-none d-lg-block">
                     <span class="mb-0 text-sm  font-weight-bold"><?= $this->session->userdata('email') ?></span>

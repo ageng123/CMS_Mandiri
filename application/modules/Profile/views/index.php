@@ -15,37 +15,36 @@
         </div>
         <br>
 
-        <table style="font-size: 14px;">
+        <table style="border: 0px; font-size: 14px;">
           <tr>
-            <td style="width: 20%;"><a href="<?= base_url();?>Profile" class="btn btn-sm border-2 border-radius-30 btn-block text-white" style="background-color: #eaa400;">Data Profile</a></td>
+            <td style="width: 20%;"><a href="<?= base_url();?>Profile" class="btn btn-block text-white" style="background-color: #eaa400;"><b style="color: #806142;">Data Profile</b></a></td>
             <td></td>
             <td style="width: 80%;background-color: #eaa400;padding:10px;vertical-align: top;color: white;border-radius: 10px;" rowspan="7">
-                    
-                    <table style="border: 0px;">
-                    <tr><td style="width: 25%;border: 0px;">Nama Lengkap</td><td style="border: 0px;">: </td><td class="border-0"><?= $user->full_name ?></td></tr>
-                    <tr><td style="width: 25%;border: 0px;">Jenis Kelamin</td><td style="border: 0px;">: </td><td class="border-0"><?= $user->jenis_kelamin ?></td></tr>
-                    <tr><td style="width: 25%;border: 0px;">Tempat / Tanggal Lahir</td><td style="border: 0px;">: </td><td class="border-0"><?= ucwords($user->tempat_lahir).' / '.indonesiaFullDate(date('Y-m-d', strtotime($user->tanggal_lahir))) ?></td></tr>
-                    <tr><td style="width: 25%;border: 0px;">Alamat</td><td style="border: 0px;">: </td><td class="border-0"><?= $user->alamat ?></td></tr>
-                    <tr><td style="width: 25%;border: 0px;">No. Telepon</td><td style="border: 0px;">: </td><td class="border-0"><?= $user->no_hp ?></td></tr>
-                    <tr><td style="width: 25%;border: 0px;">Email</td><td style="border: 0px;">: </td><td class="border-0"><?= $user->email ?></td></tr>
-                    </table>
+                <table style="border: 0px;">
+                  <tr><td style="width: 25%;border: 0px;">Nama Lengkap</td><td style="border: 0px;">: </td><td class="border-0"><?= $user->full_name ?></td></tr>
+                  <tr><td style="width: 25%;border: 0px;">Jenis Kelamin</td><td style="border: 0px;">: </td><td class="border-0"><?= $user->jenis_kelamin ?></td></tr>
+                  <tr><td style="width: 25%;border: 0px;">Tempat / Tanggal Lahir</td><td style="border: 0px;">: </td><td class="border-0"><?= ucwords($user->tempat_lahir).' / '.indonesiaFullDate(date('Y-m-d', strtotime($user->tanggal_lahir))) ?></td></tr>
+                  <tr><td style="width: 25%;border: 0px;">Alamat</td><td style="border: 0px;">: </td><td class="border-0"><?= $user->alamat ?></td></tr>
+                  <tr><td style="width: 25%;border: 0px;">No. Telepon</td><td style="border: 0px;">: </td><td class="border-0"><?= $user->no_hp ?></td></tr>
+                  <tr><td style="width: 25%;border: 0px;">Email</td><td style="border: 0px;">: </td><td class="border-0"><?= $user->email ?></td></tr>
+                </table>
             </td>
           </tr>
           <tr>
-            <td style="width: 20%;"><a href="<?= base_url();?>Rekening" class="btn btn-sm border-2 border-radius-30 btn-block text-white" style="background-color: #f2c866;">Data Rekening</a></td>
+            <td style="width: 20%;"><a href="<?= base_url();?>Rekening" class="btn btn-block text-white" style="background-color: #f2c866;"><b style="color: #806142;">Data Rekening</b></a></td>
           </tr>
           <tr>
-            <td style="width: 20%;"><a href="<?= base_url();?>Simpanan" class="btn btn-sm border-2 border-radius-30 btn-block text-white" style="background-color: #806142;">Simpanan</a></td>
+            <td style="width: 20%;"><a href="<?= base_url();?>Simpanan" class="btn btn-block text-white" style="background-color: #806142;"><b style="color: white;">Simpanan</b></a></td>
           </tr>
           <tr>
-            <td style="width: 20%;"><a href="#" class="btn btn-sm border-2 border-radius-30 btn-block text-white" style="background-color: #af9c89;" disable="disable">SHU</a></td>
+            <td style="width: 20%;"><a href="#" class="btn btn-block text-white" style="background-color: #af9c89;" disable="disable"><b style="color: white;">SHU</b></a></td>
           </tr>
           <tr>
-            <td style="width: 20%;"><a href="<?= base_url();?>Password" class="btn btn-sm border-2 border-radius-30 btn-block text-white" style="background-color: #f14950;">Ganti Password</a></td>
+            <td style="width: 20%;"><a href="<?= base_url();?>Password" class="btn btn-block text-white" style="background-color: #f14950;"><b style="color: white;">Ganti Password</b></a></td>
           </tr>
 
           <tr>
-            <td style="width: 20%;"><a href="<?= base_url();?>Landing/logout" class="btn btn-sm border-2 border-radius-30 btn-block text-white" style="background-color: #7f7f7f;">Logout</a></td>
+            <td style="width: 20%;"><a href="<?= base_url();?>Landing/logout" class="btn btn-block text-white" style="background-color: #7f7f7f;"><b style="color: white;">Logout</b></a></td>
           </tr>
         </table>
 
