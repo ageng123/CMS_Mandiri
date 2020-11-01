@@ -17,12 +17,17 @@
 
         <table style="font-size: 14px;">
           <tr>
-            <td style="width: 20%;"><a href="<?= base_url();?>Profile" class="btn btn-sm border-2 border-radius-30 btn-block text-white" style="background-color: #eaa400;">Data Profile</a></td>
+            <td style="width: 20%;"><a href="<?= base_url();?>Profile"
+                    class="btn btn-block text-white"
+                    style="background-color: #eaa400;"><b style="color: #806142;">Data Profile</b></a></td>           
             <td></td>
             <td style="width: 80%;background-color: #806142;padding:10px;vertical-align: top;color: white;border-radius: 10px;" rowspan="7">
                     
                     <table style="border: 1px solid white;" class="getPembayaranNasabah" auth_nasabah="<?= encode($this->session->userdata('user_id')) ?>">
                    <thead>
+                   <tr>
+                          <h2 style="color: white"><b>SIMPANAN</b> </h2>
+                      </tr>
                     <td style="text-align: center;">Tgl. Pembayaran</td>
                     <td style="text-align: center;width: 25%;">Jenis Pembayaran</td>
                     <td style="text-align: center;">Jumlah</td>
@@ -35,20 +40,29 @@
             </td>
           </tr>
           <tr>
-            <td style="width: 20%;"><a href="<?= base_url();?>Rekening" class="btn btn-sm border-2 border-radius-30 btn-block text-white" style="background-color: #f2c866;">Data Rekening</a></td>
+            <td style="width: 20%;"><a href="<?= base_url();?>Rekening"
+                class="btn btn-block text-white"
+                style="background-color: #f8dfa6;"><b style="color: #806142;">Data Rekening</b></a></td>
           </tr>
           <tr>
-            <td style="width: 20%;"><a href="<?= base_url();?>Simpanan" class="btn btn-sm border-2 border-radius-30 btn-block text-white" style="background-color: #806142;">Simpanan</a></td>
+            <td style="width: 20%;"><a href="<?= base_url();?>Simpanan"
+                class="btn btn-block text-white"
+                style="background-color: #806142;"><b style="color: white;">Simpanan</b></a></td>
           </tr>
           <tr>
-            <td style="width: 20%;"><a href="#" class="btn btn-sm border-2 border-radius-30 btn-block text-white" style="background-color: #af9c89;" disable="disable">SHU</a></td>
+            <td style="width: 20%;"><a class="btn btn-block text-white"
+                style="background-color: #af9c89;" disable="disable"><b style="color: white;">SHU</b></a></td>
           </tr>
           <tr>
-            <td style="width: 20%;"><a href="<?= base_url();?>Password" class="btn btn-sm border-2 border-radius-30 btn-block text-white" style="background-color: #f14950;">Ganti Password</a></td>
+            <td style="width: 20%;"><a href="<?= base_url();?>Password"
+                class="btn btn-block text-white"
+                style="background-color: #f14950;"><b style="color: #806142;">Ganti Password</b></a></td>
           </tr>
 
           <tr>
-            <td style="width: 20%;"><a href="<?= base_url();?>Landing/logout" class="btn btn-sm border-2 border-radius-30 btn-block text-white" style="background-color: #7f7f7f;">Logout</a></td>
+            <td style="width: 20%;"><a href="<?= base_url();?>Landing/logout"
+                class="btn btn-block text-white"
+                style="background-color: #7f7f7f;"><b style="color: white;">Logout</b></a></td>
           </tr>
         </table>
 

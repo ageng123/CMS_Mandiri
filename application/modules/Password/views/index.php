@@ -17,35 +17,50 @@
 
         <table style="font-size: 14px;">
           <tr>
-            <td style="width: 20%;"><a href="<?= base_url();?>Profile" class="btn btn-sm border-2 border-radius-30 btn-block text-white" style="background-color: #eaa400;">Data Profile</a></td>
+            <td style="width: 20%;"><a href="<?= base_url();?>Profile"
+                    class="btn btn-block text-white"
+                    style="background-color: #eaa400;"><b style="color: #806142;">Data Profile</b></a>
+            </td>            
             <td></td>
             <td style="width: 80%;background-color: #f14950;padding:10px;vertical-align: top;color: white;border-radius: 10px;" rowspan="7">
                     
                     <form action="" method="post">
-                    <table style="border: 0px;">
-                    <tr><td style="width: 25%;border: 0px;"><h3>Username </h3></td><td style="border: 0px;">: <input type="" name="" style="width: 75%;"></td></tr>
-                    <tr><td style="width: 25%;border: 0px;"><h3>New Password </h3></td><td style="border: 0px;">: <input type="" name="" style="width: 75%;"></td></tr>
-                    </table>
-                    <button type="submit" class="btn btn-lg border-2 border-radius-0 btn-warning btn-block">Ganti Password</button>
+                      <table style="border: 0px;">
+                      <tr>
+                          <h2 style="color: white;"><b>GANTI PASSWORD</b> </h2>
+                      </tr>
+                        <tr><td style="width: 25%;border: 0px;"><h4>Username </h4></td><td style="border: 0px;">: <input type="" name="" style="width: 75%;"></td></tr>
+                        <tr><td style="width: 25%;border: 0px;"><h4>New Password </h4></td><td style="border: 0px;">: <input type="" name="" style="width: 75%;"></td></tr>
+                      </table>
+                      <button type="submit" class="btn btn-lg btn-block" style="background-color: #eaa400;"><b style="color: #806142;">REQUEST GANTI PASSWORD</b></button>
                     </form>
             </td>
           </tr>
           <tr>
-            <td style="width: 20%;"><a href="<?= base_url();?>Rekening" class="btn btn-sm border-2 border-radius-30 btn-block text-white" style="background-color: #f2c866;">Data Rekening</a></td>
-          </tr>
-          <tr>
-            <td style="width: 20%;"><a href="<?= base_url();?>Simpanan" class="btn btn-sm border-2 border-radius-30 btn-block text-white" style="background-color: #806142;">Simpanan</a></td>
-          </tr>
-          <tr>
-            <td style="width: 20%;"><a href="#" class="btn btn-sm border-2 border-radius-30 btn-block text-white" style="background-color: #af9c89;" disable="disable">SHU</a></td>
-          </tr>
-          <tr>
-            <td style="width: 20%;"><a href="<?= base_url();?>Password" class="btn btn-sm border-2 border-radius-30 btn-block text-white" style="background-color: #f14950;">Ganti Password</a></td>
-          </tr>
+                <td style="width: 20%;"><a href="<?= base_url();?>Rekening"
+                    class="btn btn-block text-white"
+                    style="background-color: #f8dfa6;"><b style="color: #806142;">Data Rekening</b></a></td>
+              </tr>
+              <tr>
+                <td style="width: 20%;"><a href="<?= base_url();?>Simpanan"
+                    class="btn btn-block text-white"
+                    style="background-color: #806142;"><b style="color: white;">Simpanan</b></a></td>
+              </tr>
+              <tr>
+                <td style="width: 20%;"><a class="btn btn-block text-white"
+                    style="background-color: #af9c89;" disable="disable"><b style="color: white;">SHU</b></a></td>
+              </tr>
+              <tr>
+                <td style="width: 20%;"><a href="<?= base_url();?>Password"
+                    class="btn btn-block text-white"
+                    style="background-color: #f14950;"><b style="color: #806142;">Ganti Password</b></a></td>
+              </tr>
 
-          <tr>
-            <td style="width: 20%;"><a href="<?= base_url();?>Landing/logout" class="btn btn-sm border-2 border-radius-30 btn-block text-white" style="background-color: #7f7f7f;">Logout</a></td>
-          </tr>
+              <tr>
+                <td style="width: 20%;"><a href="<?= base_url();?>Landing/logout"
+                    class="btn btn-block text-white"
+                    style="background-color: #7f7f7f;"><b style="color: white;">Logout</b></a></td>
+              </tr>
         </table>
 
       </div>

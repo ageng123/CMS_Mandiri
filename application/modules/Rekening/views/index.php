@@ -12,7 +12,7 @@
             </div>
             <br>
 
-            <table style="font-size: 14px;">
+            <table style="border: 0px; font-size: 14px;">
               <tr>
                 <td style="width: 20%;"><a href="<?= base_url();?>Profile"
                     class="btn btn-block text-white"
@@ -66,13 +66,13 @@
                     style="background-color: #806142;"><b style="color: white;">Simpanan</b></a></td>
               </tr>
               <tr>
-                <td style="width: 20%;"><a href="#" class="btn btn-block text-white"
+                <td style="width: 20%;"><a class="btn btn-block text-white"
                     style="background-color: #af9c89;" disable="disable"><b style="color: white;">SHU</b></a></td>
               </tr>
               <tr>
                 <td style="width: 20%;"><a href="<?= base_url();?>Password"
                     class="btn btn-block text-white"
-                    style="background-color: #f14950;"><b style="color: white;">Ganti Password</b></a></td>
+                    style="background-color: #f14950;"><b style="color: #806142;">Ganti Password</b></a></td>
               </tr>
 
               <tr>
