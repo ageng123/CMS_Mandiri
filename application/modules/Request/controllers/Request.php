@@ -198,6 +198,6 @@ class Request extends Auth_Guard {
 	public function get_userNama($id){
 		$sql = "SELECT full_name FROM tb_user WHERE id = {$id}";
 		$dump_data = $this->db->query($sql)->row_object();
-		return $dump_data->full_name;
+		return isset($dump_data->full_name) ? $dump_data->full_name : 'Nasabah Tidak Ditemukan';
 	}
 }
