@@ -14,6 +14,6 @@ require_once(APPPATH.'/models/Main.php');
             return $this->db->insert($this->model, $data);
         }
         public function get_rekeningNasabah(){
-            return $this->db->select('a.nama_rekening as nama, a.nomor_rekening as nomor, a.cabang')->where('id_user', $this->id_user)->get($this->table.' a')->row_object();
+            return $this->db->select('a.nama_rekening as nama, a.nomor_rekening as nomor, a.cabang, a.nama_bank as bank')->where('id_user', $this->id_user)->get($this->table.' a')->row_object();
         }
     }

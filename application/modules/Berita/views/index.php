@@ -19,8 +19,8 @@
         <div class="col-lg-3">
           <div class="blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2">
             <div class="position-relative">
-              <div class="date z-index-10 border-radius-15 width-50px padding-10px background-main-color text-white text-center position-absolute top-20px left-20px">
-                <?= date('d/m Y', strtotime($val->last_update)) ?>
+              <div class="date z-index-10 border-radius-15 width-90px padding-10px background-main-color text-white text-center position-absolute top-20px left-20px">
+                <?= date('d/m/Y'); ?>
               </div>
               <a href="<?= base_url('landing/detail_berita/').$val->link ?>">
                 <div class="item-thumbnail background-dark"><img src="<?= site_url('resources/Berita/') ?><?= $val->thumbnail != null ? $val->thumbnail : 'opening.jpg' ?>" alt=""></div>
