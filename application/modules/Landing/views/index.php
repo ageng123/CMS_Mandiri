@@ -523,17 +523,17 @@
           Forum diskusi dan berbagi berita dari dalam maupun luar negeri. Mulai dari ideologi, politik, ekonomi, sosial dan budaya. <b style="color: #f7a91e;">Subforum</b>: berita-dunia-hiburan.
         </div>
         <div class="col-9 row getBeritaLatest">
-          <div class="card no-border col-md-8 col-xs-12">
-            <div class="newestNews_container hide latestNews" data-index="<?= '1' ?>">
+          <div class="card no-border col-md-6 col-xs-12">
+            <div class="newestNews_container hide latestNews item-thumbnail background-dark" data-index="<?= '1' ?>">
               <img src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" data-index="<?= '1' ?>" class="newestNewsImage">
               <div class="newestNewsOverlay">
                 <div class="newsText"><h3 class="title" data-index="<?= '1' ?>"><b>Hello World</b></h3><p data-index="<?= '1' ?>" class="subtitle">Subtitle</p><p><a data-index="<?= '1' ?>" class="btn btn-detail btn-success btn-md">Lihat Berita</a></p></div>
               </div>
             </div>
           </div>
-          <div class="card no-border col-md-4 col-xs-12">
-            <div class="newestNews_container hide latestNews" data-index="<?= '2' ?>">
-                <img src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" data-index="<?= '2' ?>" class="newestNewsImage">
+          <div class="card no-border col-md-6 col-xs-12">
+            <div class="newestNews_container hide latestNews item-thumbnail background-dark" data-index="<?= '2' ?>">
+                <img style="min-height: 200px;" src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" data-index="<?= '2' ?>" class="newestNewsImage">
                 <div class="newestNewsOverlay">
                   <div class="newsText"><h3 class="title" data-index="<?= '2' ?>"><b>Hello World</b></h3><p data-index="<?= '2' ?>" class="subtitle">Subtitle</p><p><a data-index="<?= '2' ?>" class="btn btn-detail btn-success btn-md">Lihat Berita</a></p></div>
                 </div>
@@ -544,24 +544,25 @@
       <div class="col-12" style="margin-top: 3vh">
         <div class="row">
           <?php $id = 3; for($i = 1; $i <= 8 ; $i++): ?>
-          <!-- <div class="newestNews_container hide col-md-3 col-xs-12 latestNews" data-index="<?= $id ?>">
-            <img src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" data-index="<?= $id ?>" class="newestNewsImage">
-            <div class="newestNewsOverlay">
-              <div class="newsText"><h3 class="title" data-index="<?= $id ?>"><b>Hello World</b></h3><p data-index="<?= $id ?>" class="subtitle">Subtitle</p><p><a data-index="<?= $id ?>" class="btn btn-detail btn-success btn-md">Lihat Berita</a></p></div>
+            <div class="col-xs-12 newestNews_container hide col-lg-3" style="width: 100%; min-height: 400px;" data-index="<?= $id ?>">
+              <div class="blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2">
+                <div class="position-relative">
+                  <a class="btn-detail" data-index="<?= $id ?>" href="<?= base_url('landing/detail_berita/')?>">
+                    <div class="item-thumbnail background-dark"><img style="max-height: 140px;" data-index="<?= $id ?>" class="newestNewsImage" src="<?= site_url('resources/Berita/') ?>" alt=""></div>
+                  </a>
+                </div>
+                <b><a data-index="<?= $id ?>" class="btn-detail title text-extra-large margin-tb-20px d-block padding-lr-30px"></a></b>
+                <center><p data-index="<?= $id ?>" class="subtitle">Subtitle</p></center>
+                <hr>
+                <center>
+                  <a class="btn btn-warning border-radius-30 btn-detail" data-index="<?= $id ?>" href="<?= base_url('landing/detail_berita/')?>">
+                    Read More
+                  </a>
+                </center>
+                <hr class="margin-bottom-0px border-white">
+
+              </div>
             </div>
-          </div> -->
-          <div class="col-xs-12 newestNews_container hide col-lg-3" style="width: 100%" data-index="<?= $id ?>">
-          <div class="blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2">
-            <div class="position-relative">
-              <a class="btn-detail" data-index="<?= $id ?>" href="<?= base_url('landing/detail_berita/')?>">
-                <div class="item-thumbnail background-dark"><img data-index="<?= $id ?>" class="newestNewsImage" src="<?= site_url('resources/Berita/') ?>" alt=""></div>
-              </a>
-            </div>
-            <a data-index="<?= $id ?>" class="  btn-detail title text-extra-large margin-tb-20px d-block padding-lr-30px"></a>
-            <hr>
-            <hr class="margin-bottom-0px border-white">
-          </div>
-        </div>
           <?php $id++ ?>
           <?php endfor; ?>
         </div>
