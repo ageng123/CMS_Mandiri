@@ -523,30 +523,31 @@
           Forum diskusi dan berbagi berita dari dalam maupun luar negeri. Mulai dari ideologi, politik, ekonomi, sosial dan budaya. <b style="color: #f7a91e;">Subforum</b>: berita-dunia-hiburan.
         </div>
         <div class="col-9 row getBeritaLatest">
-          <div class="card no-border col-8">
-            <div class="card-body" >
-              <img src="<?= base_url('assets/img/panens.png') ?>" class="getBeritaLatest hide" data-berita="1" alt="" srcset="">
+          <div class="card no-border col-md-8 col-xs-12">
+            <div class="newestNews_container hide latestNews" data-index="<?= '1' ?>">
+              <img src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" data-index="<?= '1' ?>" class="newestNewsImage">
+              <div class="newestNewsOverlay">
+                <div class="newsText"><h3 class="title" data-index="<?= '1' ?>"><b>Hello World</b></h3><p data-index="<?= '1' ?>" class="subtitle">Subtitle</p><p><a data-index="<?= '1' ?>" class="btn btn-detail btn-success btn-md">Lihat Berita</a></p></div>
+              </div>
             </div>
           </div>
-          <div class="card no-border col-4">
-            <div class="card-body">
-              <img src="<?= base_url('assets/img/panens.png') ?>" class="getBeritaLatest hide" data-berita="2" alt="" srcset="">
-            </div>
+          <div class="card no-border col-md-4 col-xs-12">
+            <div class="newestNews_container hide latestNews" data-index="<?= '2' ?>">
+                <img src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" data-index="<?= '2' ?>" class="newestNewsImage">
+                <div class="newestNewsOverlay">
+                  <div class="newsText"><h3 class="title" data-index="<?= '2' ?>"><b>Hello World</b></h3><p data-index="<?= '2' ?>" class="subtitle">Subtitle</p><p><a data-index="<?= '2' ?>" class="btn btn-detail btn-success btn-md">Lihat Berita</a></p></div>
+                </div>
+              </div>
           </div>
         </div>
       </div>
       <div class="col-12" style="margin-top: 3vh">
         <div class="row">
           <?php $id = 3; for($i = 1; $i <= 8 ; $i++): ?>
-          <div class="card no-border col-3">
-            <div class="card-body">
-              <img src="<?= base_url('assets/img/panens.png') ?>" class="getBeritaLatest hide" data-berita="<?= $id ?>" alt="" srcset="">
-            </div>
-          </div>
-          <div class="newestNews_container col-md-3 col-xs-12 latestNews" data-index="<?= $id ?>">
-            <img src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" class="newestNewsImage">
+          <div class="newestNews_container hide col-md-3 col-xs-12 latestNews" data-index="<?= $id ?>">
+            <img src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" data-index="<?= $id ?>" class="newestNewsImage">
             <div class="newestNewsOverlay">
-              <div class="newsText"><h3 class="title"><b>Hello World</b></h3><p class="subtitle">Subtitle</p><p><button class="btn btn-success btn-md">Lihat Berita</button></p></div>
+              <div class="newsText"><h3 class="title" data-index="<?= $id ?>"><b>Hello World</b></h3><p data-index="<?= $id ?>" class="subtitle">Subtitle</p><p><a data-index="<?= $id ?>" class="btn btn-detail btn-success btn-md">Lihat Berita</a></p></div>
             </div>
           </div>
           <?php $id++ ?>

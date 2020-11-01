@@ -284,10 +284,13 @@ $(document).ready(function () {
         let content = '';
         content_data.map(function (val, index) {
             $('.getBeritaLatest[data-berita=' + (index + 1) + ']').attr('src', Content_Services.renderSource(val));
-            $('.latestNews[data-index='+index+'] img').attr('src', Content_Services.renderSource(val));
-            $('.latestNews[data-index='+index+']  .newsText .title > b').html(val.title);
-            $('.latestNews[data-index='+index+'] .newsText .subtitle').html(val.subtitle);
-            $('.getBeritaLatest[data-berita=' + (index + 1) + ']').removeClass('hide');
+            $('.newestNewsImage[data-index='+index+']').attr('src', Content_Services.renderSource(val));
+            $('.newestNews_container[data-index='+index+']').removeClass('hide');
+            $('.title[data-index='+index+']').html('<b>'+val.title+'</b>');
+            $('.subtitle[data-index='+index+']').html(val.sub);
+            $('.btn-detail[data-index='+index+']').attr('href', base_url+'/landing/detail_berita/'+val.link);
+            console.log($('.subtitle[data-index='+index+']'));
+            // $('.getBeritaLatest[data-berita=' + (index + 1) + ']').removeClass('hide');
         })
     } else {
         console.log(data.msg);
