@@ -288,8 +288,16 @@ $(document).ready(function () {
             $('.newestNews_container[data-index='+(index + 1)+']').removeClass('hide');
             $('.newestNewsImage[data-index='+(index + 1)+']').attr('src', Content_Services.renderSource(val));
             $('.newestNews_container[data-index='+(index + 1)+']').removeClass('hide');
-            $('.title[data-index='+(index + 1)+']').html('<b>'+val.title+'</b>');
-            $('.subtitle[data-index='+(index + 1)+']').html(val.sub);
+            let ellipsis = '';
+            if(val.title.length > 50){
+                ellipsis = '...';
+            }
+            $('.title[data-index='+(index + 1)+']').html('<b>'+val.title.slice(0, 50)+ellipsis+'</b>');
+            ellipsis = '';
+            if(val.sub.length > 50){
+                ellipsis = '...';
+            }
+            $('.subtitle[data-index='+(index + 1)+']').html(val.sub.slice(0, 50)+ellipsis);
             $('.btn-detail[data-index='+(index + 1)+']').attr('href', base_url+'/landing/detail_berita/'+val.link);
             console.log($('.subtitle[data-index='+(index + 1)+']'));
             // $('.getBeritaLatest[data-berita=' + (index + 1) + ']').removeClass('hide');
