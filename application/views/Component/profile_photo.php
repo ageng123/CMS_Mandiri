@@ -18,8 +18,7 @@
     </form>
 </div>
 
-<div id="edit_photo" style="cursor: pointer"
-    class="border-radius-15 width-50px padding-10px background-main-color text-white text-center position-absolute top-20px right-20px">
-    <a title="Ganti Foto" data-original-title="Ganti Foto"><i
-            class="fa fa-cog"></i></a>
+<div id="edit_photo" style="cursor: pointer; background-color: #f7a91e;"
+    class="border-radius-15 width-50px padding-10px text-white text-center position-absolute top-20px right-20px">
+    <a title="Ganti Foto" data-original-title="Ganti Foto"><i class="fa fa-cog"></i></a>
 </div>

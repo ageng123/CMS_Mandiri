@@ -19,27 +19,26 @@
             </div>
             <div class="col-6 text-right"> 
 
-              <span data-toggle="modal" data-target="#modal-form">
+              <!-- <span data-toggle="modal" data-target="#modal-form">
                 <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" title="Tambah Data"><i class="fa fa-plus"></i></button>
               </span>
-
-              <!-- <a class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="Tambah Data" href="<?= base_url('users/add') ?>"> <span class="btn-inner--text"><i class="fa fa-plus"></i></span></a> -->
-              <a href="#" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="top" title="Export Excel"> <span class="btn-inner--text"><i class="fa fa-file-excel"></i></span></a>
+              <a href="#" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="top" title="Export Excel"> <span class="btn-inner--text"><i class="fa fa-file-excel"></i></span>
+              </a> -->
             </div>
         </div>
       </div>
       <div class="table-responsive py-4">
         <table class="table table-flush initDTOnly" data-url="<?= base_url('request/getJSON') ?>" id="userTbl">
           <thead class="thead-light">
-            <tr>
+            <tr align="center">
               <th>No.</th>
               <th>Jenis Request</th>
-              <th>User Yang Mengajukan</th>
+              <th>Nasabah Yang Mengajukan</th>
               <th>Status Request</th>
               <th>Aksi</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody align="center">
           </tbody>
         </table>
       </div>

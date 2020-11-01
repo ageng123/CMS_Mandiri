@@ -37,7 +37,7 @@
         <table class="table table-flush initDTOnly" data-url="<?= base_url('AssignRoles/getJSON') ?>" id="rolesTbl">
           <thead class="thead-light">
             <tr>
-              <th>Nomor</th>
+              <th>No. </th>
               <th>Nama User</th>
               <th>Nama Role</th>
               <th>Aksi</th>

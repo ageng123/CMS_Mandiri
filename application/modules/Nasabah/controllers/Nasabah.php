@@ -50,20 +50,19 @@ class Nasabah extends Auth_Guard {
 			$row = array();
 			$row[] = $val->id;
 			$row[] = '';
-			$row[] = $val->sudah_member == 1 ? 'Sudah' : 'Belum';
+			$row[] = $val->sudah_member == 1 ? '<button class="btn btn-primary btn-xs">Sudah</button>' : '<button class="btn btn-danger btn-xs">Belum</button>';
 			$row[] = ucwords($val->full_name);
 			$row[] = $val->email;
 			$row[] = $val->jenis_kelamin;
 			$row[] = $val->no_hp;
 			$row[] = $val->tempat_lahir;
-			$row[] = indonesiaFullDate($val->tanggal_lahir);
-			// $row[] = $val->tanggal_lahir;
-			$row[] = str_replace('/', ',', $val->alamat);
-			$alamat = explode(',', $val->alamat);
-			$alamat2 = explode('/', $val->alamat);
-			$row[] = strtoupper( isset($alamat[6]) ? $alamat[6] : $alamat2[6]);
-			$row[] = $val->last_update;
-			// $row[] = '<a href='.base_url('admin').' class="btn btn-success btn-sm">Edit</a><a href='.base_url('admin').' class="btn btn-danger btn-sm">Hapus</a>';
+			// $row[] = indonesiaFullDate($val->tanggal_lahir);
+			$row[] = date("d/m/Y",strtotime($val->tanggal_lahir));
+			$row[] = str_replace('/', ',', $val->alamat_rumah);
+				$alamat = explode(',', $val->alamat_rumah);
+				$alamat2 = explode('/', $val->alamat_rumah);
+			$row[] = strtoupper( isset($alamat[5]) ? $alamat[5] : $alamat2[5]);
+			$row[] = date("d-m-Y H:i:s", strtotime($val->created_on));
 			$row[] = '<a onclick="NasabahServices.detailEvent('."'".encode($val->id)."'".')" class="btn btn-secondary btn-sm " data-toggle="tooltip" title="Detail"><i class="fa fa-info"></i></span></a>
 			<a href="'.base_url('statuspembayaran/index/').encode($val->kode_nasabah).'" class="btn btn-dark btn-sm " data-toggle="tooltip" title="Payment"><i class="fa fa-credit-card"></i></span></a>
 			<a href='.base_url('nasabah/word/'.$val->id.'').' class="btn btn-info btn-sm" data-toggle="tooltip" title="Download Word"><i class="fa fa-download"></i></span></a>

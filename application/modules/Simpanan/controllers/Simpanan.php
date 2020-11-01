@@ -6,7 +6,7 @@ class Simpanan extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		$this->load->model(['Simpanan_model', 'Profile/Profil_model']);
+		$this->load->model(['Simpanan_model', 'Profile/Profile_model']);
 	}
 	public function index()
 	{
