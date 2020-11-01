@@ -23,7 +23,7 @@
                 <?= date('d/m/Y'); ?>
               </div>
               <a href="<?= base_url('landing/detail_berita/').$val->link ?>">
-                <div class="item-thumbnail background-dark"><img src="<?= site_url('resources/Berita/') ?><?= $val->thumbnail != null ? $val->thumbnail : 'opening.jpg' ?>" alt=""></div>
+                <div class="item-thumbnail background-dark"><img src="<?= site_url('resources/Berita/') ?><?= $val->author.'/'.$val->thumbnail != null ? $val->thumbnail : 'opening.jpg' ?>" alt=""></div>
               </a>
             </div>
             <a href="<?= base_url('landing/detail_berita/').$val->link ?>" class="text-extra-large margin-tb-20px d-block padding-lr-30px"><?= $val->title ?></a>
