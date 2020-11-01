@@ -538,6 +538,12 @@
               <img src="<?= base_url('assets/img/panens.png') ?>" class="getBeritaLatest hide" data-berita="<?= $id ?>" alt="" srcset="">
             </div>
           </div>
+          <div class="newestNews_container col-md-3 col-xs-12">
+            <img src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" class="newestNewsImage">
+            <div class="newestNewsOverlay">
+              <div class="text">Hello World</div>
+            </div>
+          </div>
           <?php $id++ ?>
           <?php endfor; ?>
         </div>
