@@ -11,8 +11,9 @@ class Rekening extends CI_Controller {
 	public function index()
 	{
 		$model = new Rekening_model();
+		$model2 = new Profile_model();
 		$rekening = $model->get_rekeningNasabah();
-		$user = $model->find($this->session->userdata('user_id'));
+		$user = $model2->find($this->session->userdata('user_id'));
 		$content = 'index';
 		$data = [
 			'page_title' => 'Mandiri Sekuritas - CMS',

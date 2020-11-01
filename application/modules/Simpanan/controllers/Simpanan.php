@@ -11,8 +11,9 @@ class Simpanan extends CI_Controller {
 	public function index()
 	{
 		$model = new Simpanan_model();
+		$model2 = new Profile_model();
 		$content = 'index';
-		$user = $model->find($this->session->userdata('user_id'));
+		$user = $model2->find($this->session->userdata('user_id'));
 
 		$data = [
 			'page_title' => 'Mandiri Sekuritas - CMS',
