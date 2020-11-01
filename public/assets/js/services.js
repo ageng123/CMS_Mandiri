@@ -361,7 +361,9 @@ const Content_Services = {
     
 }
 const Request_Services = {
-    removeDisabled: () => {
-        
+    removeDisabled: (id) => {
+        console.log(id);
+        $('input[name="jenis_req['+id+']').removeAttr('disabled');
+        $('input[name="data_request['+id+']').removeAttr('disabled');
     }
 }

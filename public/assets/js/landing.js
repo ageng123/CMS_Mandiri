@@ -287,7 +287,6 @@ $(document).ready(function () {
             // $('.getBeritaLatest[data-berita=' + (index + 1) + ']').attr('src', Content_Services.renderSource(val));
             $('.newestNews_container[data-index='+(index + 1)+']').removeClass('hide');
             $('.newestNewsImage[data-index='+(index + 1)+']').attr('src', Content_Services.renderSource(val));
-            $('.newestNews_container[data-index='+(index + 1)+']').removeClass('hide');
             let ellipsis = '';
             if(val.title.length > 40){
                 ellipsis = '...';
@@ -361,5 +360,11 @@ $(document).ready(function () {
             itemsMobile: false // itemsMobile disabled - inherit from itemsTablet option
         });
     })
-    
+    $('.req').on('click', function(){
+        console.log(this);
+        console.log($(this));
+    })
+    $('.req :input').on('click', function(){
+        console.log(this);
+    })
 })
