@@ -280,15 +280,18 @@
               <div ></div>
               <div id="pagination-container"></div>
               </div>
+              <br><br><br>
               <div class="col-12 row">
                 <h3><b style="color: #f7a91e;">Latest Products</b></h3>
               </div>
+              <br><br>
               <div class="col-12 row getProductLatest">
               <div class="spinner-border" role="status">
                 <span class="sr-only">Loading...</span>
               </div>
               </div>
             </div>
+            <br><br>
           </div>
         </div>
       </div>

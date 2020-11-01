@@ -29,7 +29,7 @@
         <table class="table table-flush initDTOnly" data-url="<?= base_url('Users/getJSON') ?>" id="userTbl">
           <thead class="thead-light">
             <tr>
-              <th>Nomor</th>
+              <th>No.</th>
               <th>Username</th>
               <th>Jabatan</th>
               <th>Status</th>

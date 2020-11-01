@@ -106,13 +106,13 @@
                     <a href="<?= base_url('assignroles') ?>" <?php if( $location1 == 'assignroles') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Pengaturan User</a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url('request') ?>" <?php if($location1 == 'request') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Request List</a>
+                    <a href="<?= base_url('request') ?>" <?php if($location1 == 'request') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Request Nasabah</a>
                   </li>
                   <!-- <li class="nav-item">
                     <a href="<?= base_url('statuspembayaran') ?>" <?php if($location1 == 'statuspembayaran') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Pembayaran Iuran</a>
                   </li> -->
                   <li class="nav-item">
-                    <a href="<?= base_url('gambarslider') ?>" <?php if($location1 == 'gambarslider') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Gambar Slider</a>
+                    <a href="<?= base_url('gambarslider') ?>" <?php if($location1 == 'gambarslider') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Gambar Slider</a>
                   </li>
                   <li class="nav-item">
                     <a href="<?= base_url('email') ?>" <?php if($location1 == 'email') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Email</a>
