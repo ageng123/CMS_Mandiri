@@ -284,6 +284,7 @@ $(document).ready(function () {
         let content = '';
         content_data.map(function (val, index) {
             $('.getBeritaLatest[data-berita=' + (index + 1) + ']').attr('src', Content_Services.renderSource(val));
+            console.log($('.subtitle[data-index='+index+']'));
             $('.newestNewsImage[data-index='+index+']').attr('src', Content_Services.renderSource(val));
             $('.newestNews_container[data-index='+index+']').removeClass('hide');
             $('.title[data-index='+index+']').html('<b>'+val.title+'</b>');
