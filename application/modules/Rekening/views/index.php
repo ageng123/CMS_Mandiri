@@ -15,19 +15,20 @@
             <table style="font-size: 14px;">
               <tr>
                 <td style="width: 20%;"><a href="<?= base_url();?>Profile"
-                    class="btn btn-sm border-2 border-radius-30 btn-block text-white"
-                    style="background-color: #eaa400;">Data Profile</a></td>
+                    class="btn btn-block text-white"
+                    style="background-color: #eaa400;"><b style="color: #806142;">Data Profile</b></a></td>
                 <td></td>
 
-                <td
-                  style="width: 80%;background-color: #eaa400;padding:10px;vertical-align: top;color: white;border-radius: 10px;"
-                  rowspan="7">
+                <td style="width: 80%;background-color: #f8dfa6; padding:10px;vertical-align: top;color: white;border-radius: 10px;" rowspan="7">
 
                   <form action="<?= base_url('request/save_data') ?>" method="post">
                     <table style="border: 0px;">
                       <tr>
+                          <h2 style="color: #806142;"><b>DATA REKENING</b> </h2>
+                      </tr>
+                      <tr>
                         <td style="width: 25%;border: 0px;">
-                          <h3>Nama Rekening </h3>
+                          <h4 style="color: #806142;">Nama Rekening </h4>
                         </td>
                         <td style="border: 0px;">: <input type="hidden" name="jenis_req[1]" value="NAMA_REKENING"><input
                             type="text" name="data_request[1]"
@@ -35,7 +36,7 @@
                       </tr>
                       <tr>
                         <td style="width: 25%;border: 0px;">
-                          <h3>Nomer Rekening </h3>
+                          <h4 style="color: #806142;">Nomer Rekening </h4>
                         </td>
                         <td style="border: 0px;">: <input type="hidden" name="jenis_req[2]"
                             value="NOMOR_REKENING"><input type="text" name="data_request[2]"
@@ -43,42 +44,41 @@
                       </tr>
                       <tr>
                         <td style="width: 25%;border: 0px;">
-                          <h3>Cabang </h3>
+                          <h4 style="color: #806142;">Cabang </h4>
                         </td>
                         <td style="border: 0px;">:<input type="hidden" name="jenis_req[3]" value="CABANG"><input
                             type="text" name="data_request[3]"
                             value="<?= isset($rekening->cabang) ? $rekening->cabang : '' ?>" style="width: 75%;"></td>
                       </tr>
                     </table>
-                    <button type="submit" class="btn btn-lg border-2 border-radius-0 btn-warning btn-block">Request
-                      Ganti Nomer Rekening</button>
+                    <button type="submit" class="btn btn-lg btn-warning btn-block" style="background-color: #eaa400;"><b style="color: #806142;">REQUEST GANTI NOMOR REKENING</b></button>
                   </form>
                 </td>
               </tr>
               <tr>
                 <td style="width: 20%;"><a href="<?= base_url();?>Rekening"
-                    class="btn btn-sm border-2 border-radius-30 btn-block text-white"
-                    style="background-color: #f2c866;">Data Rekening</a></td>
+                    class="btn btn-block text-white"
+                    style="background-color: #f8dfa6;"><b style="color: #806142;">Data Rekening</b></a></td>
               </tr>
               <tr>
                 <td style="width: 20%;"><a href="<?= base_url();?>Simpanan"
-                    class="btn btn-sm border-2 border-radius-30 btn-block text-white"
-                    style="background-color: #806142;">Simpanan</a></td>
+                    class="btn btn-block text-white"
+                    style="background-color: #806142;"><b style="color: white;">Simpanan</b></a></td>
               </tr>
               <tr>
-                <td style="width: 20%;"><a href="#" class="btn btn-sm border-2 border-radius-30 btn-block text-white"
-                    style="background-color: #af9c89;" disable="disable">SHU</a></td>
+                <td style="width: 20%;"><a href="#" class="btn btn-block text-white"
+                    style="background-color: #af9c89;" disable="disable"><b style="color: white;">SHU</b></a></td>
               </tr>
               <tr>
                 <td style="width: 20%;"><a href="<?= base_url();?>Password"
-                    class="btn btn-sm border-2 border-radius-30 btn-block text-white"
-                    style="background-color: #f14950;">Ganti Password</a></td>
+                    class="btn btn-block text-white"
+                    style="background-color: #f14950;"><b style="color: white;">Ganti Password</b></a></td>
               </tr>
 
               <tr>
                 <td style="width: 20%;"><a href="<?= base_url();?>Landing/logout"
-                    class="btn btn-sm border-2 border-radius-30 btn-block text-white"
-                    style="background-color: #7f7f7f;">Logout</a></td>
+                    class="btn btn-block text-white"
+                    style="background-color: #7f7f7f;"><b style="color: white;">Logout</b></a></td>
               </tr>
             </table>
 

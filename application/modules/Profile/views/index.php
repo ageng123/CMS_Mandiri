@@ -15,15 +15,16 @@
         </div>
         <br>
 
-        <table style="border: 0px; font-size: 14px;">
+        <table style="border: 0px; font-size: 17px;">
           <tr>
             <td style="width: 20%;"><a href="<?= base_url();?>Profile" class="btn btn-block text-white" style="background-color: #eaa400;"><b style="color: #806142;">Data Profile</b></a></td>
             <td></td>
-            <td style="width: 80%;background-color: #eaa400;padding:10px;vertical-align: top;color: white;border-radius: 10px;" rowspan="7">
+            <td style="width:80%; background-color:#eaa400; padding:10px; vertical-align:top; font-weight: bold; color:white; border-radius:10px;" rowspan="7">
                 <table style="border: 0px;">
+                  <tr><h2><b>DATA PROFILE</b></h2></tr>
                   <tr><td style="width: 25%;border: 0px;">Nama Lengkap</td><td style="border: 0px;">: </td><td class="border-0"><?= $user->full_name ?></td></tr>
                   <tr><td style="width: 25%;border: 0px;">Jenis Kelamin</td><td style="border: 0px;">: </td><td class="border-0"><?= $user->jenis_kelamin ?></td></tr>
-                  <tr><td style="width: 25%;border: 0px;">Tempat / Tanggal Lahir</td><td style="border: 0px;">: </td><td class="border-0"><?= ucwords($user->tempat_lahir).' / '.indonesiaFullDate(date('Y-m-d', strtotime($user->tanggal_lahir))) ?></td></tr>
+                  <tr><td style="width: 25%;border: 0px;">Tempat / Tanggal Lahir</td><td style="border: 0px;">: </td><td class="border-0"><?= ucwords($user->tempat_lahir).' , '.indonesiaFullDate(date('Y-m-d', strtotime($user->tanggal_lahir))) ?></td></tr>
                   <tr><td style="width: 25%;border: 0px;">Alamat</td><td style="border: 0px;">: </td><td class="border-0"><?= $user->alamat ?></td></tr>
                   <tr><td style="width: 25%;border: 0px;">No. Telepon</td><td style="border: 0px;">: </td><td class="border-0"><?= $user->no_hp ?></td></tr>
                   <tr><td style="width: 25%;border: 0px;">Email</td><td style="border: 0px;">: </td><td class="border-0"><?= $user->email ?></td></tr>
