@@ -285,8 +285,8 @@ $(document).ready(function () {
         content_data.map(function (val, index) {
             $('.getBeritaLatest[data-berita=' + (index + 1) + ']').attr('src', Content_Services.renderSource(val));
             $('.latestNews[data-index='+index+'] img').attr('src', Content_Services.renderSource(val));
-            $('.latestNews[data-index='+index+'] > .newsText > .title > b').html(val.title);
-            $('.latestNews[data-index='+index+'] > .newsText .subtitle').html(val.subtitle);
+            $('.latestNews[data-index='+index+']  .newsText .title > b').html(val.title);
+            $('.latestNews[data-index='+index+'] .newsText .subtitle').html(val.subtitle);
             $('.getBeritaLatest[data-berita=' + (index + 1) + ']').removeClass('hide');
         })
     } else {
