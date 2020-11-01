@@ -90,21 +90,21 @@ class Request extends Auth_Guard {
 			$content = '' ; 
 			switch($val->status_request){
 				case 1:
-					$content = 'Belum di Approve';
+					$content = '<button class="btn btn-warning btn-xs"><i class="fa fa-clock"></i>&nbsp; Belum Di Approve</button>';
 				break;
 				case 2:
-					$content = 'Approved';
+					$content = '<button class="btn btn-success btn-xs"><i class="fa fa-check"></i>&nbsp; Disetujui</button>';
 				break;
 				case 3:
-					$content = 'Declined';
+					$content = '<button class="btn btn-danger btn-xs"><i class="fa fa-times"></i>&nbsp; Ditolak</button>';
 				break;
 			}
 			$row[] = $content ;
 			$content = '';
 			// $row[] = '<a href='.base_url('admin').' class="btn btn-success btn-sm">Edit</a><a href='.base_url('admin').' class="btn btn-danger btn-sm">Hapus</a>';
 			$val->status_request == 1 ? 
-				($content .= '<a href='.base_url('request/accept?code=').encode($val->id_request).' class="btn btn-info btn-sm" data-toggle="tooltip" title="Acccept Request"><i class="fa fa-thumbs-up"></i></span> Accept</a>
-				<a href='.base_url('request/decline?code=').encode($val->id_request).' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Decline Request"><i class="fa fa-thumbs-down"></i></span> Decline</a>')  
+				($content .= '<a href='.base_url('request/accept?code=').encode($val->id_request).' class="btn btn-success btn-sm" data-toggle="tooltip" title="Acccept Request"><i class="fa fa-thumbs-up"></i></span> Setujui</a>
+				<a href='.base_url('request/decline?code=').encode($val->id_request).' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Decline Request"><i class="fa fa-thumbs-down"></i></span> Tolak</a>')  
 				: ''; 
 				$row[] = $content;
 				$result[] = $row;
