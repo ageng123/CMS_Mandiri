@@ -30,25 +30,19 @@
                         <td style="width: 25%;border: 0px;">
                           <h4 style="color: #806142;">Nama Rekening </h4>
                         </td>
-                        <td style="border: 0px;">: <input type="hidden" name="jenis_req[1]" value="NAMA_REKENING"><input
-                            type="text" name="data_request[1]"
-                            value="<?= isset($rekening->nama) ? $rekening->nama : '' ?>" style="width: 75%;"></td>
+                        <td class="req" onclick="Request_Services.removeDisabled(1)"  style="border: 0px;">: <input  type="hidden" name="jenis_req[1]" value="NAMA_REKENING" disabled ><input style="pointer-events: none" type="text" name="data_request[1]" value="<?= isset($rekening->nama) ? $rekening->nama : '' ?>" style="width: 75%;" class="req" disabled onclick="Request_Services.removeDisabled(1)"></td>
                       </tr>
                       <tr>
                         <td style="width: 25%;border: 0px;">
                           <h4 style="color: #806142;">Nomer Rekening </h4>
                         </td>
-                        <td style="border: 0px;">: <input type="hidden" name="jenis_req[2]"
-                            value="NOMOR_REKENING"><input type="text" name="data_request[2]"
-                            value="<?= isset($rekening->nomor) ? $rekening->nomor : '' ?>" style="width: 75%;"></td>
+                        <td class="req" onclick="Request_Services.removeDisabled(2)"  style="border: 0px;">: <input type="hidden" name="jenis_req[2]" value="NOMOR_REKENING"><input style="pointer-events: none"  type="text" name="data_request[2]" onClick="Request_Services.removeDisabled(2)" value="<?= isset($rekening->nomor) ? $rekening->nomor : '' ?>" class="req" style="width: 75%;" disabled></td>
                       </tr>
                       <tr>
                         <td style="width: 25%;border: 0px;">
                           <h4 style="color: #806142;">Cabang </h4>
                         </td>
-                        <td style="border: 0px;">:<input type="hidden" name="jenis_req[3]" value="CABANG"><input
-                            type="text" name="data_request[3]"
-                            value="<?= isset($rekening->cabang) ? $rekening->cabang : '' ?>" style="width: 75%;"></td>
+                        <td class="req" onclick="Request_Services.removeDisabled(3)"  style="border: 0px;">:<input type="hidden" name="jenis_req[3]"  value="CABANG" disabled><input style="pointer-events: none"  type="text" name="data_request[3]" value="<?= isset($rekening->cabang) ? $rekening->cabang : '' ?>" onclick="Request_Services.removeDisabled(3)" class="req" style="width: 75%;" disabled></td>
                       </tr>
                     </table>
                     <button type="submit" class="btn btn-lg btn-warning btn-block" style="background-color: #eaa400;"><b style="color: #806142;">REQUEST GANTI NOMOR REKENING</b></button>

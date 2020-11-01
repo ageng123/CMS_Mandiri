@@ -527,7 +527,7 @@
             <div class="newestNews_container hide latestNews item-thumbnail background-dark" data-index="<?= '1' ?>">
               <img src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" data-index="<?= '1' ?>" class="newestNewsImage">
               <div class="newestNewsOverlay">
-                <div class="newsText"><h3 class="title" data-index="<?= '1' ?>"><b>Hello World</b></h3><p data-index="<?= '1' ?>" class="subtitle">Subtitle</p><p><a data-index="<?= '1' ?>" class="btn btn-detail btn-success btn-md">Lihat Berita</a></p></div>
+                <div class="newsText"><h4 class="title" data-index="<?= '1' ?>"><b>Hello World</b></h4><p data-index="<?= '1' ?>" class="hide">Subtitle</p><p><a data-index="<?= '1' ?>" class="btn btn-detail btn-success btn-md">Lihat Berita</a></p></div>
               </div>
             </div>
           </div>
@@ -535,7 +535,7 @@
             <div class="newestNews_container hide latestNews item-thumbnail background-dark" data-index="<?= '2' ?>">
                 <img style="min-height: 200px;" src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" data-index="<?= '2' ?>" class="newestNewsImage">
                 <div class="newestNewsOverlay">
-                  <div class="newsText"><h3 class="title" data-index="<?= '2' ?>"><b>Hello World</b></h3><p data-index="<?= '2' ?>" class="subtitle">Subtitle</p><p><a data-index="<?= '2' ?>" class="btn btn-detail btn-success btn-md">Lihat Berita</a></p></div>
+                  <div class="newsText"><h4 class="title" data-index="<?= '2' ?>"><b>Hello World</b></h4><p data-index="<?= '2' ?>" class="hide">Subtitle</p><p><a data-index="<?= '2' ?>" class="btn btn-detail btn-success btn-md">Lihat Berita</a></p></div>
                 </div>
               </div>
           </div>

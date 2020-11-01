@@ -29,8 +29,8 @@
                       <tr>
                           <h2 style="color: white;"><b>GANTI PASSWORD</b> </h2>
                       </tr>
-                        <tr><td style="width: 25%;border: 0px;"><h4>Username </h4></td><td style="border: 0px;">: <input type="" name="" style="width: 75%;"></td></tr>
-                        <tr><td style="width: 25%;border: 0px;"><h4>New Password </h4></td><td style="border: 0px;">: <input type="" name="" style="width: 75%;"></td></tr>
+                        <tr><td style="width: 25%;border: 0px;"><h4>Username </h4></td><td style="border: 0px;">: <input readonly value="<?= $user->username ?>" type="text" name="username" style="width: 75%;"></td></tr>
+                        <tr><td style="width: 25%;border: 0px;"><h4>New Password </h4></td><td style="border: 0px;">: <input type="text" name="password" style="width: 75%;"></td></tr>
                       </table>
                       <button type="submit" class="btn btn-lg btn-block" style="background-color: #eaa400;"><b style="color: #806142;">REQUEST GANTI PASSWORD</b></button>
                     </form>
