@@ -103,8 +103,8 @@ class Request extends Auth_Guard {
 			$content = '';
 			// $row[] = '<a href='.base_url('admin').' class="btn btn-success btn-sm">Edit</a><a href='.base_url('admin').' class="btn btn-danger btn-sm">Hapus</a>';
 			$val->status_request == 1 ? 
-				($content .= '<a href='.base_url('request/accept?code=').encode($val->id_request).' class="btn btn-info btn-sm" data-toggle="tooltip" title="Acccept Request"><i class="fa fa-download"></i></span>Accept Incoming Request</a>
-				<a href='.base_url('request/decline?code=').encode($val->id_request).' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Decline Request"><i class="fa fa-download"></i></span>Decline Incoming Request</a>')  
+				($content .= '<a href='.base_url('request/accept?code=').encode($val->id_request).' class="btn btn-info btn-sm" data-toggle="tooltip" title="Acccept Request"><i class="fa fa-thumbs-up"></i></span> Accept</a>
+				<a href='.base_url('request/decline?code=').encode($val->id_request).' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Decline Request"><i class="fa fa-thumbs-down"></i></span> Decline</a>')  
 				: ''; 
 				$row[] = $content;
 				$result[] = $row;
