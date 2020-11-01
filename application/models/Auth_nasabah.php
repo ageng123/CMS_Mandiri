@@ -30,7 +30,7 @@ class Auth_Nasabah extends CI_Model{
     public function login(){
         $login = $this->db->select('*')->where($this->identity, $this->get_Identity())->where('active', 1)->get($this->table)->row_object();
         if(!$login){
-            var_dump($login);
+            // var_dump($login);
         }
         $this->userData = $login;
         $this->password = $login->password;

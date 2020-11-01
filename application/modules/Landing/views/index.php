@@ -515,14 +515,14 @@
 </section>
 <section class="padding-tb-30px">
   <div class="container">
-      <h1 class="widget-title clearfix"><b>BERITA UPDATE</b></h1>
+      <h1 class="widget-title clearfix "><b>BERITA UPDATE</b></h1>
        <hr style="background-color: #f7a91e;width: 12%;height: 4px;" border="0" align="left">
-    <div class="row">
+    <div class="row ">
       <div class="col-12 row">
         <div class="col-3">
           Forum diskusi dan berbagi berita dari dalam maupun luar negeri. Mulai dari ideologi, politik, ekonomi, sosial dan budaya. <b style="color: #f7a91e;">Subforum</b>: berita-dunia-hiburan.
         </div>
-        <div class="col-9 row">
+        <div class="col-9 row getBeritaLatest">
           <div class="card no-border col-8">
             <div class="card-body" >
               <img src="<?= base_url('assets/img/panens.png') ?>" class="getBeritaLatest hide" data-berita="1" alt="" srcset="">
@@ -543,10 +543,10 @@
               <img src="<?= base_url('assets/img/panens.png') ?>" class="getBeritaLatest hide" data-berita="<?= $id ?>" alt="" srcset="">
             </div>
           </div>
-          <div class="newestNews_container col-md-3 col-xs-12">
+          <div class="newestNews_container col-md-3 col-xs-12 latestNews" data-index="<?= $id ?>">
             <img src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" class="newestNewsImage">
             <div class="newestNewsOverlay">
-              <div class="text">Hello World</div>
+              <div class="newsText"><h3 class="title"><b>Hello World</b></h3><p class="subtitle">Subtitle</p><p><button class="btn btn-success btn-md">Lihat Berita</button></p></div>
             </div>
           </div>
           <?php $id++ ?>
