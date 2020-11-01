@@ -6,8 +6,10 @@ Class Auth_Guard extends Auth{
             parent::__construct();
             if($this->ion_auth->logged_in()){
             } elseif($this->session->userdata('id_role') == 3) {
-                return redirect(base_url('admin/login'));
+                return redirect(base_url('landing'));
 
+            } else {
+                return redirect(base_url('admin/login'));
             }
         }
 }
