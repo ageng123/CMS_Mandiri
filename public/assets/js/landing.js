@@ -292,14 +292,13 @@ $(document).ready(function () {
             if(val.title.length > 40){
                 ellipsis = '...';
             }
-            $('.title[data-index='+(index + 1)+']').html('<b>'+val.title.slice(0, 40)+ellipsis+'</b>');
+            $('.title[data-index='+(index + 1)+']').html(val.title.slice(0, 40)+ellipsis);
             ellipsis = '';
             if(val.sub.length > 40){
                 ellipsis = '...';
             }
             $('.subtitle[data-index='+(index + 1)+']').html(val.sub.slice(0, 40)+ellipsis);
             $('.btn-detail[data-index='+(index + 1)+']').attr('href', base_url+'/landing/detail_berita/'+val.link);
-            console.log($('.subtitle[data-index='+(index + 1)+']'));
             // $('.getBeritaLatest[data-berita=' + (index + 1) + ']').removeClass('hide');
         })
     } else {

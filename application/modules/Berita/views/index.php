@@ -28,7 +28,6 @@
             </div>
             <a href="<?= base_url('landing/detail_berita/').$val->link ?>" class="text-extra-large margin-tb-20px d-block padding-lr-30px"><?= $val->title ?></a>
             <hr>
-            <p class="padding-lr-30px opacity-6"><?= $val->sub ?></p>
             <hr>
             <hr class="margin-bottom-0px border-white">
           </div>

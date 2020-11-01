@@ -48,7 +48,7 @@ header ul.dropdown-dark li > ul.sub-menu > li{
 .newestNews_container {
     position: relative;
     width: 100%;
-    height: 15vh;
+    height: 200px;
     overflow: hidden;
   }
   
