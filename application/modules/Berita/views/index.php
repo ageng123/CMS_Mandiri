@@ -16,24 +16,21 @@
       <div class="col-12" style="margin-top: 3vh">
         <div class="row">
           <?php foreach($data as $key => $val): ?>      
-        <div class="col-lg-3">
-          <div class="blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2">
-            <div class="position-relative">
-              <div class="date z-index-10 border-radius-15 width-90px padding-10px background-main-color text-white text-center position-absolute top-20px left-20px">
-                <?= date('d/m/Y'); ?>
+          <div class="col-xs-12 col-lg-3" style="width: 100%; min-height: 400px;">
+            <div class="blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2">
+              <div class="position-relative">
+                <a href="<?= base_url('landing/detail_berita/').$val->link ?>">
+                  <div class="item-thumbnail background-dark"><img style="max-height: 300px;" src="<?= base_url('resources/Berita/') ?><?= $val->author.'/'.$val->thumbnail != null ? $val->thumbnail : 'opening.jpg' ?>"></div>
+                </a>
               </div>
-              <a href="<?= base_url('landing/detail_berita/').$val->link ?>">
-                <div class="item-thumbnail background-dark"><img src="<?= site_url('resources/Berita/') ?><?= $val->author.'/'.$val->thumbnail != null ? $val->thumbnail : 'opening.jpg' ?>" alt=""></div>
-              </a>
+              <a href="<?= base_url('landing/detail_berita/').$val->link ?>" class="text-extra-large margin-tb-20px d-block padding-lr-30px"><?= $val->title ?></a>
+              <hr>
+              <center><a class="btn btn-warning border-radius-30" href="<?= base_url('landing/detail_berita/').$val->link ?>">Read More</a></center>
+              <br>
             </div>
-            <a href="<?= base_url('landing/detail_berita/').$val->link ?>" class="text-extra-large margin-tb-20px d-block padding-lr-30px"><?= $val->title ?></a>
-            <hr>
-            <hr>
-            <hr class="margin-bottom-0px border-white">
           </div>
-        </div>
           <?php endforeach; ?>
-
+        </div>
       </div>
 
 

@@ -45,6 +45,8 @@ class Berita extends CI_Controller {
         //panggil function get_mahasiswa_list yang ada pada mmodel mahasiswa_model. 
         // $data['data'] = $model->getBeritaData();           
 		$content = 'index';
+		$data2 = $model->getBeritaData(); 
+		// echo var_dump($data2); die;
 		$data = [
 			'page_title' => 'Mandiri Sekuritas - CMS',
 			'page' => $page,
