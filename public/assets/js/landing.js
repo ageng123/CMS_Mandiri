@@ -360,10 +360,10 @@ $(document).ready(function () {
             itemsMobile: false // itemsMobile disabled - inherit from itemsTablet option
         });
     })
-    $('.req').on('click', function(){
-        console.log(this);
-        console.log($(this));
-    })
+    // $('.req').on('click', function(){
+    //     console.log(this);
+    //     console.log($(this));
+    // })
     $('.req :input').on('click', function(){
         console.log(this);
     })

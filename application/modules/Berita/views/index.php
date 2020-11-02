@@ -23,7 +23,7 @@
             <div class="blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2">
               <div class="position-relative">
                 <a href="<?= base_url('landing/detail_berita/').$val->link ?>">
-                  <div class="item-thumbnail background-dark"><img style="max-height: 300px;" src="<?= base_url('resources/Berita/') ?><?= $val->author.'/'.$val->thumbnail != null ? $val->thumbnail : 'opening.jpg' ?>"></div>
+                  <div class="item-thumbnail background-dark"><img style="max-height: 140px;min-height: 100px" src="<?= base_url('resources/Berita/') ?><?= $val->author.'/'.$val->thumbnail != null ? $val->thumbnail : 'opening.jpg' ?>"></div>
                 </a>
               </div>
               <a href="<?= base_url('landing/detail_berita/').$val->link ?>" class="text-extra-large margin-tb-20px d-block padding-lr-30px"><?= $val->title ?></a>

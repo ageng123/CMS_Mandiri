@@ -24,13 +24,13 @@
             <td></td>
             <td style="width: 80%;background-color: #f14950;padding:10px;vertical-align: top;color: white;border-radius: 10px;" rowspan="7">
                     
-                    <form action="" method="post">
+                    <form action="<?= base_url('request/save_data') ?>" method="post">
                       <table style="border: 0px;">
                       <tr>
                           <h2 style="color: white;"><b>GANTI PASSWORD</b> </h2>
                       </tr>
                         <tr><td style="width: 25%;border: 0px;"><h4>Username </h4></td><td style="border: 0px;">: <input readonly value="<?= $user->username ?>" type="text" name="username" style="width: 75%;"></td></tr>
-                        <tr><td style="width: 25%;border: 0px;"><h4>New Password </h4></td><td style="border: 0px;">: <input type="text" name="password" style="width: 75%;"></td></tr>
+                        <tr><td style="width: 25%;border: 0px;"><h4>New Password </h4></td><td onclick="Request_Services.removeDisabled(4)" class="req" style="border: 0px;">::<input type="hidden"  name="jenis_req[4]"  value="CHANGE_PASSWORD" disabled> <input style="pointer-events: none" onclick="Request_Services.removeDisabled(4)" disabled type="password" name="data_request[4]" style="width: 75%;"></td></tr>
                       </table>
                       <button type="submit" class="btn btn-lg btn-block" style="background-color: #eaa400;"><b style="color: #806142;">REQUEST GANTI PASSWORD</b></button>
                     </form>

@@ -6,7 +6,7 @@ class Request extends Auth_Guard {
 
 	public function __construct(){
 		parent::__construct();
-		$this->load->model(['Request_model', 'AssignRoles/AssignRoleModel', 'Roles/RoleModel', ]);
+		$this->load->model(['Request_model', 'AssignRoles/AssignRoleModel', 'Roles/RoleModel', 'Users/UserModel']);
 	}
 
 	private function msg($status = null, $msg = ' Data Found', $data = []){
@@ -40,15 +40,27 @@ class Request extends Auth_Guard {
 		switch($data->jenis_request){
 			case 'NOMOR_REKENING':
 				$koperasi->nomor_rekening = $data->data_request;
+				$koperasi->update_data() ? $model->status_request = 2 : '';
+
 			break;
 			case 'NAMA_REKENING':
 				$koperasi->nama_rekening = $data->data_request;
+				$koperasi->update_data() ? $model->status_request = 2 : '';
+
 			break;
 			case 'CABANG':
 				$koperasi->cabang = $data->data_request;
+				$koperasi->update_data() ? $model->status_request = 2 : '';
+
+			break;
+			case 'CHANGE_PASSWORD':
+				$usermodel = new UserModel();
+				$usermodel->password = $this->bcrypt->hash($data->data_request);
+				$usermodel->update($data->id_user) ? $model->status_request = 2 : '';
+
 			break;
 		}
-		$koperasi->update_data() ? $model->status_request = 2 : '';
+		
 		$model->update_data();
 		return redirect(base_url('request'));
 	}

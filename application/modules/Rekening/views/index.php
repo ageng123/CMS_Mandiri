@@ -36,7 +36,7 @@
                         <td style="width: 25%;border: 0px;">
                           <h4 style="color: #806142;">Nomer Rekening </h4>
                         </td>
-                        <td class="req" onclick="Request_Services.removeDisabled(2)"  style="border: 0px;">: <input type="hidden" name="jenis_req[2]" value="NOMOR_REKENING"><input style="pointer-events: none"  type="text" name="data_request[2]" onClick="Request_Services.removeDisabled(2)" value="<?= isset($rekening->nomor) ? $rekening->nomor : '' ?>" class="req" style="width: 75%;" disabled></td>
+                        <td class="req" onclick="Request_Services.removeDisabled(2)"  style="border: 0px;">: <input type="hidden" disabled name="jenis_req[2]" value="NOMOR_REKENING"><input style="pointer-events: none"  type="text" name="data_request[2]" onClick="Request_Services.removeDisabled(2)" value="<?= isset($rekening->nomor) ? $rekening->nomor : '' ?>" class="req" style="width: 75%;" disabled></td>
                       </tr>
                       <tr>
                         <td style="width: 25%;border: 0px;">
