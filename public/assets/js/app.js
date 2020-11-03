@@ -83,9 +83,9 @@ function ActionMessage(type, e, event)
     return confirm;
 }
 const UserServices = {
-    userUriEdit: base_url+'users/edit?session_id=',
-    userUriUpdate: base_url+'users/update?session_id=',
-    uriTambahData: base_url+'users/save',
+    userUriEdit: base_url+'Users/edit?session_id=',
+    userUriUpdate: base_url+'Users/update?session_id=',
+    uriTambahData: base_url+'Users/save',
     userUriData: Array(),
     userInitData: (uri) => {
        let data =  HttpServices.getAjax(uri);
@@ -117,9 +117,9 @@ const UserServices = {
     }
 }
 const NasabahServices = {
-    uriEdit: base_url + 'nasabah/edit?session_id=',
-    uriUpdate: base_url+'nasabah/update?session_id=',
-    uriAdd: base_url+'nasabah/pendaftaran_nasabah',
+    uriEdit: base_url + 'Nasabah/edit?session_id=',
+    uriUpdate: base_url+'Nasabah/update?session_id=',
+    uriAdd: base_url+'Nasabah/pendaftaran_nasabah',
     Form: '#step-form',
     ModalForm: '#modal-form',
     JSON: Array(),
@@ -335,7 +335,7 @@ $(document).ready(function () {
         postData = JSON.parse(postData);
         console.log(postData.kode);
         if(postData.kode == 200){
-            window.location.href = LoginUrl+'/admin';
+            window.location.href = LoginUrl+'/Admin';
         } else {
            let errorMsg = '<div class="alert alert-warning" role="alert">Username atau Password Salah !!!</div>';
            $('#alert-holder').html(errorMsg);

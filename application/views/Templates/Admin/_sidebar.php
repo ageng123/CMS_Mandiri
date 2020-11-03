@@ -58,8 +58,8 @@
             }
           </style>
           <li class="nav-item">
-            <a <?php if($location1 == 'admin') { echo 'class="nav-link active" style="color: white;"';} else { echo 'class="nav-link"';} ?> href="<?= base_url('admin') ?>">
-              <i <?php if($location1 == 'admin') { echo 'class="ni ni-shop text-white"';} else { echo 'class="ni ni-shop" style="color: #eba502;"';} ?> style="color: #eba502;"></i>
+            <a <?php if($location1 == 'Admin') { echo 'class="nav-link active" style="color: white;"';} else { echo 'class="nav-link"';} ?> href="<?= base_url('Admin') ?>">
+              <i <?php if($location1 == 'Admin') { echo 'class="ni ni-shop text-white"';} else { echo 'class="ni ni-shop" style="color: #eba502;"';} ?> style="color: #eba502;"></i>
               <span class="nav-link-text">Dashboard</span>
             </a>
           </li>
@@ -87,69 +87,69 @@
           </li> -->
 
           <li class="nav-item">
-              <a <?php if($location1 == 'users' OR $location1 == 'roles' OR  $location1 == 'assignroles'  OR  $location1 == 'nasabah' OR  $location1 == 'statuspembayaran' OR  $location1 == 'gambarslider' OR  $location1 == 'request' OR  $location1 == 'email') { echo 'class="nav-link active" style="color: white;"';} else { echo 'class="nav-link"';} ?> href="#navbar-admin" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
-                <i <?php if($location1 == 'users' OR $location1 == 'roles' OR  $location1 == 'assignroles'  OR  $location1 == 'nasabah' OR  $location1 == 'statuspembayaran' OR  $location1 == 'gambarslider' OR  $location1 == 'request' OR  $location1 == 'email') { echo 'class="ni ni-archive-2 text-white"';} else { echo 'class="ni ni-archive-2" style="color: #eba502;"';} ?>></i>
+              <a <?php if($location1 == 'Users' OR $location1 == 'Roles' OR  $location1 == 'AssignRoles'  OR  $location1 == 'Nasabah' OR  $location1 == 'StatusPembayaran' OR  $location1 == 'GambarSlider' OR  $location1 == 'Request' OR  $location1 == 'Email') { echo 'class="nav-link active" style="color: white;"';} else { echo 'class="nav-link"';} ?> href="#navbar-admin" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
+                <i <?php if($location1 == 'Users' OR $location1 == 'Roles' OR  $location1 == 'AssignRoles'  OR  $location1 == 'Nasabah' OR  $location1 == 'StatusPembayaran' OR  $location1 == 'GambarSlider' OR  $location1 == 'Request' OR  $location1 == 'Email') { echo 'class="ni ni-archive-2 text-white"';} else { echo 'class="ni ni-archive-2" style="color: #eba502;"';} ?>></i>
                 <span class="nav-link-text">Master Data</span>
               </a>
-              <div <?php if($location1 == 'users' OR $location1 == 'roles' OR  $location1 == 'assignroles'  OR  $location1 == 'nasabah' OR  $location1 == 'statuspembayaran' OR  $location1 == 'gambarslider' OR  $location1 == 'request' OR  $location1 == 'email') { echo 'class="collapse show"';} else { echo 'class="collapse"';} ?> id="navbar-admin">
+              <div <?php if($location1 == 'Users' OR $location1 == 'Roles' OR  $location1 == 'AssignRoles'  OR  $location1 == 'Nasabah' OR  $location1 == 'StatusPembayaran' OR  $location1 == 'GambarSlider' OR  $location1 == 'Request' OR  $location1 == 'Email') { echo 'class="collapse show"';} else { echo 'class="collapse"';} ?> id="navbar-admin">
                 <ul class="nav nav-sm flex-column">
                   <li class="nav-item">
-                    <a href="<?= base_url('nasabah') ?>" <?php if($location1 == 'nasabah') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Nasabah</a>
+                    <a href="<?= base_url('Nasabah') ?>" <?php if($location1 == 'Nasabah') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Nasabah</a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url('request') ?>" <?php if($location1 == 'request') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Request Nasabah</a>
+                    <a href="<?= base_url('Request') ?>" <?php if($location1 == 'Request') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Request Nasabah</a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url('users') ?>" <?php if($location1 == 'users') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar User</a>
+                    <a href="<?= base_url('Users') ?>" <?php if($location1 == 'Users') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar User</a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url('roles') ?>" <?php if($location1 == 'roles') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Role</a>
+                    <a href="<?= base_url('Roles') ?>" <?php if($location1 == 'Roles') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Role</a>
                   </li>
                     <!-- <li class="nav-item">
-                      <a href="<?= base_url('statuspembayaran') ?>" <?php if($location1 == 'statuspembayaran') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Pembayaran Iuran</a>
+                      <a href="<?= base_url('StatusPembayaran') ?>" <?php if($location1 == 'StatusPembayaran') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Pembayaran Iuran</a>
                     </li> -->
                   <li class="nav-item">
-                    <a href="<?= base_url('email') ?>" <?php if($location1 == 'email') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Email</a>
+                    <a href="<?= base_url('Email') ?>" <?php if($location1 == 'Email') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Email</a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url('gambarslider') ?>" <?php if($location1 == 'gambarslider') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Gambar Slider</a>
+                    <a href="<?= base_url('GambarSlider') ?>" <?php if($location1 == 'GambarSlider') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Gambar Slider</a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url('assignroles') ?>" <?php if( $location1 == 'assignroles') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Pengaturan User</a>
+                    <a href="<?= base_url('AssignRoles') ?>" <?php if( $location1 == 'AssignRoles') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Pengaturan User</a>
                   </li>
                 </ul>
               </div>
             </li>
 
             <li class="nav-item">
-              <a <?php if($location1 == 'kategori') { echo 'class="nav-link active" style="color: white;"';} else { echo 'class="nav-link"';} ?> href="#navbar-category" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
-                <i <?php if($location1 == 'kategori') { echo 'class="ni ni-archive-2 text-white"';} else { echo 'class="ni ni-archive-2" style="color: #eba502;"';} ?>></i>
+              <a <?php if($location1 == 'Kategori') { echo 'class="nav-link active" style="color: white;"';} else { echo 'class="nav-link"';} ?> href="#navbar-category" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
+                <i <?php if($location1 == 'Kategori') { echo 'class="ni ni-archive-2 text-white"';} else { echo 'class="ni ni-archive-2" style="color: #eba502;"';} ?>></i>
                 <span class="nav-link-text">Kategori</span>
               </a>
-              <div <?php if($location1 == 'kategori') { echo 'class="collapse show"';} else { echo 'class="collapse"';} ?> id="navbar-category">
+              <div <?php if($location1 == 'Kategori') { echo 'class="collapse show"';} else { echo 'class="collapse"';} ?> id="navbar-category">
                 <ul class="nav nav-sm flex-column">
                   <li class="nav-item">
-                    <a href="<?= base_url('kategori/berita') ?>" <?php if($location1 == 'kategori' AND $location2 == 'berita') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Berita</a>
+                    <a href="<?= base_url('Kategori/Berita') ?>" <?php if($location1 == 'Kategori' AND $location2 == 'Berita') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Berita</a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url('kategori/product') ?>" <?php if($location1 == 'kategori' AND $location2 == 'product') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Produk</a>
+                    <a href="<?= base_url('Kategori/Product') ?>" <?php if($location1 == 'Kategori' AND $location2 == 'Product') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Produk</a>
                   </li>
                 </ul>
               </div>
             </li>
 
             <li class="nav-item">
-              <a <?php if($location1 == 'content') { echo 'class="nav-link active" style="color: white;"';} else { echo 'class="nav-link"';} ?> href="#navbar-content" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
-                <i <?php if($location1 == 'content') { echo 'class="ni ni-archive-2 text-white"';} else { echo 'class="ni ni-archive-2" style="color: #eba502;"';} ?>></i>
+              <a <?php if($location1 == 'Content') { echo 'class="nav-link active" style="color: white;"';} else { echo 'class="nav-link"';} ?> href="#navbar-content" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
+                <i <?php if($location1 == 'Content') { echo 'class="ni ni-archive-2 text-white"';} else { echo 'class="ni ni-archive-2" style="color: #eba502;"';} ?>></i>
                 <span class="nav-link-text">Konten</span>
               </a>
-              <div <?php if($location1 == 'content') { echo 'class="collapse show"';} else { echo 'class="collapse"';} ?> id="navbar-content">
+              <div <?php if($location1 == 'Content') { echo 'class="collapse show"';} else { echo 'class="collapse"';} ?> id="navbar-content">
                 <ul class="nav nav-sm flex-column">
                   <li class="nav-item">
-                    <a href="<?= base_url('content/berita') ?>" <?php if($location1 == 'content' AND $location2 == 'berita') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Berita</a>
+                    <a href="<?= base_url('Content/Berita') ?>" <?php if($location1 == 'Content' AND $location2 == 'Berita') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Berita</a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url('content/product') ?>" <?php if($location1 == 'content' AND $location2 == 'product') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Produk</a>
+                    <a href="<?= base_url('Content/Product') ?>" <?php if($location1 == 'Content' AND $location2 == 'Product') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Produk</a>
                   </li>
                 </ul>
               </div>

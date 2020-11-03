@@ -235,13 +235,13 @@ const Pembayaran_Function = {
 }
 var base_url = $('body').attr('data-server');
 const Content_Services = {
-    TopNewsUrl: base_url+'api/getMostPopularNews',
-    TopProductUrl: base_url+'api/topProduct',
-    NewestProductUrl: base_url+'api/newestProduct',
-    TopKategoriUrl: base_url+'api/getMostPopularTags',
-    NewestNewsUrl: base_url+'api/newestNews',
-    SimpananNasabah: base_url+'api/get_historyPembayaran',
-    sliderUrl: base_url+'api/get_slider',
+    TopNewsUrl: base_url+'API/getMostPopularNews',
+    TopProductUrl: base_url+'API/topProduct',
+    NewestProductUrl: base_url+'API/newestProduct',
+    TopKategoriUrl: base_url+'API/getMostPopularTags',
+    NewestNewsUrl: base_url+'API/newestNews',
+    SimpananNasabah: base_url+'API/get_historyPembayaran',
+    sliderUrl: base_url+'API/get_slider',
     renderSource: function(data){
         return base_url+'/resources/Berita/'+data.thumbnail;
     },
