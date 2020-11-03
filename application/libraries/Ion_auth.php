@@ -59,6 +59,7 @@ class Ion_auth
 	 *
 	 * @author Ben
 	 */
+	public $passwordLink;
 	public function __construct()
 	{
 		$this->config->load('ion_auth', TRUE);
@@ -163,7 +164,7 @@ class Ion_auth
 					$this->email->subject($this->config->item('site_title', 'ion_auth') . ' - ' . $this->lang->line('email_forgotten_password_subject'));
 					$this->email->message($message);
 					send_email($user->email, null, null, $this->config->item('site_title', 'ion_auth') . ' - ' . $this->lang->line('email_forgotten_password_subject'), $message);
-
+					$this->passwordLink = $user->forgotten_password_code;
 					if ($this->email->send())
 					{
 						$this->set_message('forgot_password_successful');

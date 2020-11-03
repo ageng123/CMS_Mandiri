@@ -12,7 +12,7 @@
         <br>
         Welcome Back <b style="color: #f7a91e;"><?= $user->full_name ?></b>
     </div>
-    <form action="<?= base_url('profile/save_changes') ?>" method="POST" enctype="multipart/form-data">
+    <form action="<?= base_url('Profile/save_changes') ?>" method="POST" enctype="multipart/form-data">
         <input type="file" name="profilePhoto" id="profileUpload" style="display:none" />
         <button type="submit" id="profilUploadButton" class="btn btn-primary btn-sm m-t-1 hide">Save</button>
     </form>

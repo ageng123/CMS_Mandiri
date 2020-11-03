@@ -34,7 +34,7 @@ class Profile extends CI_Controller {
 	public function save_changes(){
 		$model = new Profile_model();
 		$model->save_upload();
-		return redirect(base_url('/profile'));
+		return redirect(base_url('/Profile'));
 	}
 
 }

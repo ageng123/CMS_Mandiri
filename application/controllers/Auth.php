@@ -259,6 +259,7 @@ class Auth extends CI_Controller
 			if ($forgotten)
 			{
 				// if there were no errors
+				$message = '<p>Klik Link dibawah ini untuk melakukan reset password ! </p><a href="'.base_url('auth/reset_password/').$this->ion_auth->passwordLink.'">Klik Disini</a>';
 				send_email($this->input->post('identity'), null, null, 'Lupa Password',$this->ion_auth->messages());
 				$this->session->set_flashdata('message', $this->ion_auth->messages());
 				redirect(base_url("auth/login"), 'refresh'); //we should display a confirmation page here instead of the login page

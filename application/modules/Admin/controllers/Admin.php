@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 require_once APPPATH.'controllers/Auth_Guard.php';
-require_once(APPPATH.'controllers\Auth.php');
+require_once(APPPATH.'controllers/Auth.php');
 class Admin extends Auth {
 
 	public function __construct(){
