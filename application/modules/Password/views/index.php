@@ -24,7 +24,7 @@
             <td></td>
             <td style="width: 80%;background-color: #f14950;padding:10px;vertical-align: top;color: white;border-radius: 10px;" rowspan="7">
                     
-                    <form action="<?= base_url('request/save_data') ?>" method="post">
+                    <form action="<?= base_url('API/save_requestData') ?>" method="post">
                       <table style="border: 0px;">
                       <tr>
                           <h2 style="color: white;"><b>GANTI PASSWORD</b> </h2>
