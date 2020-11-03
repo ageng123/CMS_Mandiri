@@ -9,8 +9,10 @@
   <!-- page output -->
   <div class="padding-tb-40px background-light-grey">
     <div class="container">
-            <h1 class="widget-title clearfix"><b>F A Q </b></h1>
-            <hr style="background-color: #f7a91e;width: 12%;height: 4px;" border="0" align="left">
+             <div class="text-left hvr-bob">
+    <h1 class="widget-title clearfix"><b>F A Q </b></h1>
+    <hr style="background-color: #f7a91e;width: 100%;height: 4px;" border="0" align="left">
+  </div>
       <div class="row">
         <!-- sidebar -->
         <div class="col-lg-4 col-md-4">

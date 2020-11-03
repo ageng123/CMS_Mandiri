@@ -8,12 +8,10 @@
             <h1 class="widget-title clearfix"><b>BERITA & MEDIA </b></h1>
             <hr style="background-color: #f7a91e;width: 20%;height: 4px;" border="0" align="left">
       <div class="row">
-        <div class="col-12 row">
-          <div class="col-3">
+          <div class="col-xs-12 col-lg-3">
             Forum diskusi dan berbagi berita dari dalam maupun luar negeri. Mulai dari ideologi, politik, ekonomi, sosial dan budaya. <b style="color: #f7a91e;">Subforum</b>: berita-dunia-hiburan.
           </div>
-        </div>
-
+          
         
 
       <div class="col-12" style="margin-top: 3vh">

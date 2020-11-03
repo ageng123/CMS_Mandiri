@@ -25,28 +25,34 @@
 
 
       <section style="background-color: #432a19;">
-        <section class="padding-tb-50px" style="background-image: url('<?= base_url('assets/img/') ?>bg-pendaftaran.jpg');">
-          <div class="container">
-            <!-- section title -->
-            <div class="row justify-content-left wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-              <div class="col-md-12">
-                <div class="row col-lg-12">
-                  <img src="<?= base_url('assets/img/logo_kjpki _putih.png') ?>" height="100" alt="">
-                  
-                  <p class="text-extra-large margin-tb-50px" style="margin-left: 50px; font-size:40px;">
-                     <b style="color: #f7a91e; ">PENDAFTARAN</b> 
-                  </p>
-                  <div class="col-xl-2 d-none d-xl-block" style="margin-left: 20px;">
-                    <a href="#" class="btn btn-xl border-2 border-radius-30 border-orange btn-block margin-top-43px btn-secondary text-white">Online</a>
-                  </div>
-                  <div class="col-xl-2 d-none d-xl-block">
-                    <a href="#" class="btn btn-xl border-2 border-radius-30 border-orange btn-block margin-top-43px btn-light text-dark">Offline</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+      	<section class="padding-tb-50px" style="background-image: url('<?= base_url('assets/img/') ?>bg-pendaftaran.jpg');">
+      		<div class="container">
+      			<!-- section title -->
+      			<div class="row justify-content-left wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+      				<div class="col-xs-12 col-lg-12">
+      					<img src="<?= base_url('assets/img/logo_kjpki _putih.png') ?>" height="100" alt="">
+      				</div>
+      			</div>
+
+
+      			<div class="row">
+      				<div class="col-xs-12 col-lg-12"> 
+      					<p class="text-extra-large" style="font-size:40px;">
+      						<b style="color: #f7a91e; ">PENDAFTARAN</b> 
+      					</p>
+      				</div>
+      			</div>
+
+      			<div class="row">
+      				<div class="col-xs-12 col-lg-6"> 
+      					<a href="#" class="btn btn-xl border-2 border-radius-30 border-orange btn-block margin-top-23px btn-secondary text-white">Online</a>
+      				</div>
+      				<div class="col-xs-12 col-lg-6"> 
+      					<a href="#" class="btn btn-xl border-2 border-radius-30 border-orange btn-block margin-top-23px btn-light text-dark">Offline</a>
+      				</div>
+      			</div>
+      		</div>
+      	</section>
       </section>
       
       <section class="padding-tb-6px" style="background-image: url('<?= base_url('assets/img/') ?>list2.jpg');">
@@ -678,7 +684,7 @@
   </div>
 </section>
 
-  <label style="margin-left: 230px;"><h5><i>Bermasalah dengan Pendaftaran Online ? Daftar melalui Form</i> <b style="color: #f7a91e;">Pendaftaran Offline</b></h5></label>
+  <label style="margin-left: 20px;text-align: center;><h5><i>Bermasalah dengan Pendaftaran Online ? Daftar melalui Form</i> <b style="color: #f7a91e;">Pendaftaran Offline</b></h5></label>
   <br/>
   <br/>
   <div class="" style="background-color: #efebe8;">
@@ -703,15 +709,17 @@
       </div>
     </section>
     <br>
+
+
     <section style="background-color: #efebe8;">
-      <div class="col-lg-12 col-md-12" style="margin-left: 180px;">
+      <div class="col-xs-12 col-lg-12" style="text-align: center;">
         <label for=""><h5>Daftar dengan mengisi Form Pendaftaran 
              <b style="color: #432a19;">Koperasi Jasa</b> <br/> <b style="color: #f7a91e;">Komunitas PanenSaham Indonesia</b> yang dapat di Download di bawah ini:</h5></label><br>
       </div>
-      <div style="width: 50%; margin: 0 auto;">
-        <a href="#" class="btn btn-xl border-2 border-radius-30 border-orange btn-block margin-top-43px margin-bottom-43px btn-warning text-white"><h1 class="margin-top-10px"><b>DOWNLOAD FORM PENDAFTARAN</b></h1></a>
+      <div style="width: 80%; margin: 0 auto;text-align: center;">
+        <a href="#" class="btn btn-xl border-2 border-radius-30 border-orange btn-block margin-top-33px margin-bottom-33px btn-warning text-white"><b>DOWNLOAD FORM PENDAFTARAN</b></a>
       </div>
-      <div class="col-lg-12 col-md-12" style="margin-left: 180px;">
+     <div class="col-xs-12 col-lg-12" style="text-align: center;">
         <label for=""><h5>Kirimkan Formulir Pendaftaran yang telah di isi ke alamat kami: <br/> <br/>
              <b style="color: #432a19;">Koperasi Jasa</b>  <b style="color: #f7a91e;">Komunitas PanenSaham Indonesia</b> <br/> Rukan Gading Bukit Indah Blok A No 27 <br/>
              Kelapa Gading Jakarta Utara 14240
@@ -719,6 +727,8 @@
              Tel:  021-45852710</h5></label><br>
       </div>
     </section>
+
+
   </div> 
 
 

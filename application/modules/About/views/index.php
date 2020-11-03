@@ -51,23 +51,23 @@
                 <table style="border: 0px white solid;width: 100%;">
                   <tr>
                     <td style="border: 0px white solid;width: 10%;vertical-align: top;"><img  src="<?= base_url('assets/img/about/') ?>ceklis.png"></td>
-                    <td style="border: 0px white solid;width: 90%;vertical-align: top;vertical-align: top;"><b style="font-size: 19px;">Mendidik</b> para anggotanya agar dapat menemukan potensinya dan memberdayakan diri melalui koperasi.</td>
+                    <td style="border: 0px white solid;width: 90%;vertical-align: top;text-align: justify;"><b style="font-size: 19px;">Mendidik</b> para anggotanya agar dapat menemukan potensinya dan memberdayakan diri melalui koperasi.</td>
                   </tr>
                   <tr>
                     <td style="border: 0px white solid;vertical-align: top;"><img  src="<?= base_url('assets/img/about/') ?>ceklis.png"></td>
-                    <td style="border: 0px white solid;vertical-align: top;"><b style="font-size: 19px;">Menciptakan</b> kesejahteraan bagi para anggota yang berkesinambungan. </td>
+                    <td style="border: 0px white solid;vertical-align: top;text-align: justify;"><b style="font-size: 19px;">Menciptakan</b> kesejahteraan bagi para anggota yang berkesinambungan. </td>
                   </tr>
                   <tr>
                     <td style="border: 0px white solid;vertical-align: top;"><img  src="<?= base_url('assets/img/about/') ?>ceklis.png"></td>
-                    <td style="border: 0px white solid;vertical-align: top;"><b style="font-size: 19px;">Memberikan</b> kontribusi bagi perkembangan koperasi di Indonesia. </td>
+                    <td style="border: 0px white solid;vertical-align: top;text-align: justify;"><b style="font-size: 19px;">Memberikan</b> kontribusi bagi perkembangan koperasi di Indonesia. </td>
                   </tr>
                   <tr>
                     <td style="border: 0px white solid;vertical-align: top;"><img  src="<?= base_url('assets/img/about/') ?>ceklis.png"></td>
-                    <td style="border: 0px white solid;vertical-align: top;"><b style="font-size: 19px;">Mengelola</b> unit-unit usahanya secara professional dan akuntabel dengan menerapkan prinsip-prinsip pengelolaan perusahaan yang baik. </td>
+                    <td style="border: 0px white solid;vertical-align: top;text-align: justify;"><b style="font-size: 19px;">Mengelola</b> unit-unit usahanya secara professional dan akuntabel dengan menerapkan prinsip-prinsip pengelolaan perusahaan yang baik. </td>
                   </tr>
                   <tr>
                     <td style="border: 0px white solid;vertical-align: top;"><img  src="<?= base_url('assets/img/about/') ?>ceklis.png"></td>
-                    <td style="border: 0px white solid;vertical-align: top;"><b style="font-size: 19px;">Menjadi Mitra</b> terpercaya dan strategis bagi setiap anggota KJKPI </td>
+                    <td style="border: 0px white solid;vertical-align: top;text-align: justify;"><b style="font-size: 19px;">Menjadi Mitra</b> terpercaya dan strategis bagi setiap anggota KJKPI </td>
                   </tr>
                 </table>
                 </div>
@@ -83,18 +83,18 @@
                 <table style="border: 0px white solid;width: 100%;">
                   <tr>
                     <td style="border: 0px white solid;width: 8%;vertical-align: top;"><img  src="<?= base_url('assets/img/about/') ?>ceklis.png"></td>
-                    <td style="border: 0px white solid;width: 90%;vertical-align: top;vertical-align: top;"><b style="font-size: 19px;">Koperasi bertujuan</b> meningkatkan kesejahteraan anggota pada khususnya dan masyarakat pada umumnya, sekaligus pada bagian yang tidak terpisahkan dari <b style="font-size: 19px;">tatanan perekonomian nasional demokratis dan berkeadilan.</b></td>
+                    <td style="border: 0px white solid;width: 90%;vertical-align: top;text-align: justify;"><b style="font-size: 19px;">Koperasi bertujuan</b> meningkatkan kesejahteraan anggota pada khususnya dan masyarakat pada umumnya, sekaligus pada bagian yang tidak terpisahkan dari <b style="font-size: 19px;">tatanan perekonomian nasional demokratis dan berkeadilan.</b></td>
                   </tr>
                   <tr>
                     <td style="border: 0px white solid;vertical-align: top;"><img  src="<?= base_url('assets/img/about/') ?>ceklis.png"></td>
-                    <td style="border: 0px white solid;vertical-align: top;">Dalam mencapai tujuan yang ditetapkan, Koperasi secara langsung maupun melalui unit-unitnya dapat melakukan <b style="font-size: 19px;">kegiatan sebagai berikut:</b>
+                    <td style="border: 0px white solid;vertical-align: top;text-align: justify;">Dalam mencapai tujuan yang ditetapkan, Koperasi secara langsung maupun melalui unit-unitnya dapat melakukan <b style="font-size: 19px;">kegiatan sebagai berikut:</b>
                 <ul>
-                  <li style="color: #f7a91e;"><font color="black">Menyediakan jasa pendidikan dan pelatihan baik Pendidikan formal dan non formal.</font></li>
-                  <li style="color: #f7a91e;"><font color="black">Memberikan jasa konsultasi bisnis baik untuk anggotanya dan pihak ketiga.</font></li>
-                  <li style="color: #f7a91e;"><font color="black">Memberikan jasa konsultasi bisnis bagi entitas bisnis para anggota atau pihak ketiga</font></li>
-                  <li style="color: #f7a91e;"><font color="black">Melakukan penyertaan usah/modal pada bisnis yang dilakukan oleh para anggotanya atau pihak ketiga.</font></li>
-                  <li style="color: #f7a91e;"><font color="black">Melakukan kerjasama bisnis atau patungan dengan pihak ketiga dan/atau</font></li>
-                  <li style="color: #f7a91e;"><font color="black">Kegiatan jasa lainnya yang diperbolehkan sesuai dengan ketentuan peraturan perundang-undangan yang berlaku</font></li>
+                  <li style="color: #f7a91e;text-align: justify;"><font color="black">Menyediakan jasa pendidikan dan pelatihan baik Pendidikan formal dan non formal.</font></li>
+                  <li style="color: #f7a91e;text-align: justify;"><font color="black">Memberikan jasa konsultasi bisnis baik untuk anggotanya dan pihak ketiga.</font></li>
+                  <li style="color: #f7a91e;text-align: justify;"><font color="black">Memberikan jasa konsultasi bisnis bagi entitas bisnis para anggota atau pihak ketiga</font></li>
+                  <li style="color: #f7a91e;text-align: justify;"><font color="black">Melakukan penyertaan usah/modal pada bisnis yang dilakukan oleh para anggotanya atau pihak ketiga.</font></li>
+                  <li style="color: #f7a91e;text-align: justify;"><font color="black">Melakukan kerjasama bisnis atau patungan dengan pihak ketiga dan/atau</font></li>
+                  <li style="color: #f7a91e;text-align: justify;"><font color="black">Kegiatan jasa lainnya yang diperbolehkan sesuai dengan ketentuan peraturan perundang-undangan yang berlaku</font></li>
                 </ul> </td>
                   </tr>
                 </table>

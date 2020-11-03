@@ -127,16 +127,14 @@
         <div style="background-color: transparent; width: 100%; height: 100%">
           <div class="d-flex flex-column container">
             <div class="row" style="padding-top: 50px">
-              <div class="col-12 row">
-                <div class="col-5 p-2">
+                <div class="col-xs-12 col-lg-5">
                   <h1 style="color: #432a19;"> <b><?= $berita->title ?></b> </h1>
                   <hr style="background-color: #f7a91e;width: 100%;height: 4px;" border="0" align="left">
                   <h2 style="color: #6f6c6a;"><?= $berita->sub ?> </h2>
                 </div>
-                <div class="col-7 p-2">
+                <div class="col-xs-12 col-lg-7">
                 <p><?= $berita->content ?></p>
                 </div>
-              </div>
             </div>
           </div>
         </div>

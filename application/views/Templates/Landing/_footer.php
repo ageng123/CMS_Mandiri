@@ -1,23 +1,23 @@
 <footer class="padding-top-60px section-bg2">
-		<div class="container">
+<div class="container">
 			<div class="row">
-				<div class="col-5">
-					<h2 class="text-primary">Subscribe to Our Newsletter ... </h2>
-					
-          <form action="<?= base_url('landing/proses_add');?>" method="POST">
+				<div class="col-lg-5 col-md-6 sm-mb-30px wow fadeInUp" style="text-align: center;">
+					<h2 class="text-primary">Subscribe to Our Newsletter </h2>
+					<form action="<?= base_url('landing/proses_add');?>" method="POST">
 						<div class="form-group">
 							<input type="text" name="email" placeholder="Enter Your Email Address ..." class="form-control">
 						</div>
 					</form>
 				</div>
-				<div class="col-1"></div>
-				<div class="col-4">
+
+				
+				<div class="col-lg-3  col-md-6 sm-mb-30px wow fadeInUp" data-wow-delay="0.4s" style="text-align: center;">
 					<h2 class="text-primary">Contact Us</h2>
 					<b class="text-primary">Rukan Gading Bukit Indah</b>
 					<br class="text-primary">Blok A No. 27. Kelapa Gading.
 					<br class="text-primary">Jakarta Utara 14240
 				</div>
-				<div class="col-2">
+				<div class="col-lg-3 col-md-6 sm-mb-30px wow fadeInUp" data-wow-delay="0.6s" style="text-align: center;">
 					<h3 class='text-primary'>Get Connected </h3>
 				<ul class="list-inline margin-0px text-black">
 							<li class="list-inline-item"><a class="facebook" href="#"><img
@@ -32,10 +32,13 @@
 										style="object-fit: cover;width: 40px; height: 40px" alt="" srcset=""></a></li>
 						</ul>
 				</div>
+
 			</div>
-			<br>
+
 		</div>
 	</footer>
+
+		
 
 	<!--  <script type="text/javascript" src="assets/js/numscroller-1.0.js"></script> -->
 	<script type="text/javascript" src="<?= base_url('assets/landing_template/') ?>assets/js/sticky-sidebar.js"></script>

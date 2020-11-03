@@ -19,7 +19,7 @@
       <div class="col-12 sm-mb-30px text-center hvr-float wow fadeInUp">
         <span class="fa fa-map-marker" style="font-size: 72px; color: yellow" aria-hidden="true"></span>
         <br>
-        <a href="https://goo.gl/maps/xqwezwXATf3ijMiS6" style="margin-top: 2vh;background-color: white;" class="btn btn-lg btn-default" target="_blank"> Show on Map</a>
+        <a href="https://goo.gl/maps/xqwezwXATf3ijMiS6" style="margin-top: 2vh;background-color: white;" class="btn btn-lg btn-default hvr-bob" target="_blank"> Show on Map</a>
       </div>
 
     </div>
@@ -48,8 +48,10 @@
   <!-- page output -->
   <div class="padding-tb-40px background-light-grey">
     <div class="container">
-            <h1 class="widget-title clearfix"><b>KONTAK </b></h1>
-            <hr style="background-color: #f7a91e;width: 12%;height: 4px;" border="0" align="left">
+            <div class="text-left hvr-bob">
+    <h1 class="widget-title clearfix"><b>KONTAK </b></h1>
+    <hr style="background-color: #f7a91e;width: 100%;height: 4px;" border="0" align="left">
+  </div>
       <div class="row">
         <!-- sidebar -->
         <div class="col-lg-4 col-md-4">
