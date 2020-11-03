@@ -42,7 +42,7 @@
           </tr>
 
           <tr>
-            <td style="width: 20%;"><a href="<?= base_url();?>Landing/logout" class="btn btn-block text-white" style="background-color: #7f7f7f;"><b style="color: white;">Logout</b></a></td>
+            <td style="width: 20%;"><a href="<?= base_url();?>auth/logout" class="btn btn-block text-white" style="background-color: #7f7f7f;"><b style="color: white;">Logout</b></a></td>
           </tr>
         </table>
 
