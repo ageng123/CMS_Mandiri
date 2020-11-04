@@ -7,6 +7,11 @@ class Profile extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('Profile_model');
+		if($this->session->userdata('id_role') == 3){
+
+		} else {
+			return redirect(base_url(''));
+		}
 	}
 	public function index()
 	{

@@ -85,14 +85,13 @@
 														<li><a href="<?= base_url();?>Faq">FAQ</a></li>
 														<li><a href="<?= base_url();?>Berita">Berita & Media</a></li>
 														<li><a href="<?= base_url();?>Kontak">Kontak</a></li>
-									<?php if(!($this->session->userdata('full_name'))): ?>
+									<?php if(!($this->session->userdata('full_name') or $this->session->userdata('id_role') == 3)): ?>
 											<!-- <li><a href="<?= base_url();?>Profile"><img
 											src="<?= base_url('assets/img/profil.png') ?>"
 											style="object-fit: cover;width: 24px; height: 24px" alt="" srcset="">&nbsp;Profile</a>
 										</li> -->
 										
 									<?php else: ?>
-									<?php if($this->session->userdata('id_role') == 3): ?>
 										<li class="has-dropdown">
 											<a href="<?= base_url();?>Profile">
 											<img src="<?= base_url('assets/img/profil.png') ?>"
@@ -102,7 +101,6 @@
 												<li><a href="<?= base_url('auth/logout') ?>">Logout</a></li>
 											</ul>
 										</li>
-										<?php endif; ?>
 										<?php endif; ?>
 									</ul>
 								</div>
