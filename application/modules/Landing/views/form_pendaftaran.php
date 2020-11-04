@@ -1,4 +1,5 @@
-      <style>
+    
+  <style>
         .wizard > .actions .disabled a, .wizard > .actions .disabled a:hover, .wizard > .actions .disabled a:active {
             background: #aaa;
             color: #aaa;
@@ -25,34 +26,34 @@
 
 
       <section style="background-color: #432a19;">
-      	<section class="padding-tb-50px" style="background-image: url('<?= base_url('assets/img/') ?>bg-pendaftaran.jpg');">
-      		<div class="container">
-      			<!-- section title -->
-      			<div class="row justify-content-left wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-      				<div class="col-xs-12 col-lg-12">
-      					<img src="<?= base_url('assets/img/logo_kjpki _putih.png') ?>" height="100" alt="">
-      				</div>
-      			</div>
+        <section class="padding-tb-50px" style="background-image: url('<?= base_url('assets/img/') ?>bg-pendaftaran.jpg');">
+          <div class="container">
+            <!-- section title -->
+            <div class="row justify-content-left wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+              <div class="col-xs-12 col-lg-12">
+                <img src="<?= base_url('assets/img/logo_kjpki _putih.png') ?>" height="100" alt="">
+              </div>
+            </div>
 
 
-      			<div class="row">
-      				<div class="col-xs-12 col-lg-12"> 
-      					<p class="text-extra-large" style="font-size:40px;">
-      						<b style="color: #f7a91e; ">PENDAFTARAN</b> 
-      					</p>
-      				</div>
-      			</div>
+            <div class="row">
+              <div class="col-xs-12 col-lg-12"> 
+                <p class="text-extra-large" style="font-size:40px;">
+                  <b style="color: #f7a91e; ">PENDAFTARAN</b> 
+                </p>
+              </div>
+            </div>
 
-      			<div class="row">
-      				<div class="col-xs-12 col-lg-6"> 
-      					<a href="#" class="btn btn-xl border-2 border-radius-30 border-orange btn-block margin-top-23px btn-secondary text-white">Online</a>
-      				</div>
-      				<div class="col-xs-12 col-lg-6"> 
-      					<a href="#" class="btn btn-xl border-2 border-radius-30 border-orange btn-block margin-top-23px btn-light text-dark">Offline</a>
-      				</div>
-      			</div>
-      		</div>
-      	</section>
+            <div class="row">
+              <div class="col-xs-12 col-lg-6"> 
+                <a href="#" class="btn btn-xl border-2 border-radius-30 border-orange btn-block margin-top-23px btn-secondary text-white">Online</a>
+              </div>
+              <div class="col-xs-12 col-lg-6"> 
+                <a href="#" class="btn btn-xl border-2 border-radius-30 border-orange btn-block margin-top-23px btn-light text-dark">Offline</a>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
       
       <section class="padding-tb-6px" style="background-image: url('<?= base_url('assets/img/') ?>list2.jpg');">
@@ -349,11 +350,10 @@
         </section>
 
         <h3>STEP 2</h3>
-
         <section style="background-color: #ffffff;">
           <h2><b style="color: #432a19;">DATA</b> <b style="color: #f7a91e;">PEKERJAAN</b></h2>
           <div class="form row">
-            <div class="col">
+            <div class="col-xs-12 col-md-6">
               <label for=""><h5>Pekerjaan</h5></label>
               <select class="form-control" data-bind="jenis_pekerjaan" name="pekerjaan[jenis]" id="pekerjaan">
                 <option value="">Pilih Pekerjaan</option>
@@ -366,7 +366,7 @@
                 <option value="Lainnya">Lainnya</option>
               </select>
             </div>
-            <div class="col">
+            <div class="col-xs-12 col-md-6">
               <label for=""><h5 style="color: #ffffff;">Pekerjaan Lainnya</h5></label>
               <input type="text" class="form-control hide" data-bind="jenis_pekerjaan" id="detail_pekerjaan" placeholder="Pekerjaan Lainnya"
                 name="pekerjaan[jenis_detail]">
@@ -375,16 +375,16 @@
           <br/>
           <div id="alamat_perusahaan_section">
           <div class="form row">
-            <div class="col">
+            <div class="col-xs-12 col-md-4">
               <label for=""><h5>Nama Perusahaan</h5></label>
               <input type="text" class="form-control" data-bind="nama_perusahaan" name="pekerjaan[perusahaan]" id="">
             </div>
             <br/><br/>
-            <div class="col">
+            <div class="col-xs-12 col-md-4">
               <label for=""><h5>Divisi</h5></label>
               <input type="text" class="form-control" data-bind="divisi" name="pekerjaan[divisi]" id="">
             </div>
-            <div class="col">
+            <div class="col-xs-12 col-md-4">
               <label for=""><h5>Lama Bekerja</h5></label>
               <input type="text" class="form-control" data-bind="lama" name="pekerjaan[lama]" placeholder="12 Tahun / 2012 / Maret"
                 id="">
@@ -465,32 +465,36 @@
             <input type="text" name="waris[hubungan]" data-bind="hubungan_ahli_waris" id="" class="form-control">
           </div>
           <br/>
+
+          <div class="row">
+            <div class="col-xs-12 col-md-12">
           <h2><b style="color: #432a19;">DATA</b> <b style="color: #f7a91e;">SIMPANAN</b></h2>
           <table style="width: 100%">
             <tr>
-              <td style="width: 70%" colspan="2"><h5><b>1. Simpanan Pokok</b></h5></td>
-              <td><h5>RP. 100.000</h5></td>
+              <td style="width: 80%" colspan="2"><h7><b>1. Simpanan Pokok</b></h7></td>
+              <td style="width: 20%"><h7>RP. 100.000</h7></td>
             </tr>
             <tr>
-              <td><h5><b>2. Simpanan Wajib</b></h5></td>
-              <td style="float: right">
-                <select data-bind="simpanan_wajib" name="simpanan[wajib]" id="select_wajib" class="form-control-sm">
+              <td><h7><b>2. Simpanan Wajib</b></h7></td>
+              <td style="text-align: right">
+                <select data-bind="simpanan_wajib" name="simpanan[wajib]" id="select_wajib" >
                   <?php for($i = 1; $i <= 12; $i++): ?>
                   <option value="<?= $i ?>"> <?= $i.' Bulan' ?> </option>
                   <?php endfor; ?>
                 </select>
               </td>
-              <td id="wajib" data-biaya="15000" data-bind="total_biaya_wajib"><h5>Rp. 15.000</h5></td>
+              <td id="wajib" data-biaya="15000" data-bind="total_biaya_wajib"><h7>Rp. 15.000</h7></td>
             </tr>
             <tr>
-              <td colspan="2"><h5><b>3. Simpanan Sukarela</b></h5></td>
-              <td class="row p-3"><h5>RP.</h5> <input id="sukarela" type="text" data-bind="simpanan_sukarela" class="form-control-sm" name="simpanan[sukarela]"></td>
+              <td colspan="2"><h7><b>3. Simpanan Sukarela</b></h7></td>
+              <td class="row p-3"><h7>RP.</h7> <input id="sukarela" type="text" data-bind="simpanan_sukarela" class="form-control-sm" name="simpanan[sukarela]"></td>
             </tr>
             <tr>
-              <td colspan="2"><h5><b>Total Pembayaran</b></h5></td>
-              <td data-bind="total_biaya"><h5 id="biaya-total">RP. 115.000 </h5><input type="hidden" name="total_pembayaran" data-bind="biaya_total"></td>
+              <td colspan="2"><h7><b>Total Pembayaran</b></h5></td>
+              <td data-bind="total_biaya"><h7 id="biaya-total">RP. 115.000 </h7><input type="hidden" name="total_pembayaran" data-bind="biaya_total"></td>
             </tr>
           </table>
+          </div></div>
           <br/>
           <div class="daftar-radio">
             <div class="form-check form-check-inline">
