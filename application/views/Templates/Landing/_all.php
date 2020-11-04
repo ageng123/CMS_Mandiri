@@ -89,15 +89,6 @@
 								<!-- <li><a href="<?= base_url();?>Profile"><img
 											src="<?= base_url('assets/img/profil.png') ?>"
 											style="object-fit: cover;width: 24px; height: 24px" alt="" srcset="">&nbsp;Profile</a>
-								</li> -->
-								<?php else: ?>
-								<li class="has-dropdown" style="position: absolute">
-									<a style="display: flex; flex-direction: row" href="<?= base_url();?>Profile"><img
-											src="<?= base_url('assets/img/profil.png') ?>"
-											style="object-fit: cover;width: 24px; height: 24px" alt="" srcset="">&nbsp;<div><?= $this->session->userdata('full_name') ?></div></a>
-									<ul class="sub-menu">
-										<li><a href="<?= base_url('Profile') ?>">Profile User</a></li>
-										<li><a href="<?= base_url('auth/logout') ?>">Logout</a></li>
 										</li> -->
 									<?php else: ?>
 										<li class="has-dropdown">
