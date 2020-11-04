@@ -161,7 +161,7 @@ class Product extends Auth_Guard {
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'card_title' => "Edit Data Konten Produk",
-			'form_url' => base_url('content/product/edit?session_id='.encode($id)),
+			'form_url' => base_url('Content/Product/edit?session_id='.encode($id)),
 			'form_data' => $model->find($id),
 			'attachment' => $attach->Attachment_List($id),
 			'kategori_list' => $this->KategoriModel->findBy(['jenis_kategori' => 2]),
