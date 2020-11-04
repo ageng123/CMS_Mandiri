@@ -1,5 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
-require_once(APPPATH.'controllers\Auth.php');
+require_once(APPPATH.'controllers/Auth.php');
 Class Auth_api extends Auth{
     protected $request;
     function __construct(){

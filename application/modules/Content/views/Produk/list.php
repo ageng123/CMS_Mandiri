@@ -32,7 +32,7 @@
         <?php endif; ?>
 
       <div class="table-responsive py-4">
-        <table class="table table-flush initDTOnly" data-url="<?= base_url('content/product/getJSON') ?>" id="userTbl">
+        <table class="table table-flush initDTOnly" data-url="<?= base_url('Content/Product/getJSON') ?>" id="userTbl">
           <thead class="thead-light">
             <tr>
               <th>No.</th>

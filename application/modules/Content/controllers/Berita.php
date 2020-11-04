@@ -81,7 +81,7 @@ class Berita extends Auth_Guard {
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'card_title' => "Tambah Data Konten Berita",
-			'form_url' => base_url('content/berita/add'),
+			'form_url' => base_url('Content/Berita/add'),
 			'kategori_list' => $this->KategoriModel->findBy(['jenis_kategori' => 1]),
 			'status_list' => $this->status
 		];
