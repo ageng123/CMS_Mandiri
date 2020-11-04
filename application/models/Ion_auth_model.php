@@ -1042,7 +1042,7 @@ class Ion_auth_model extends CI_Model
 
 		$this->trigger_events('extra_where');
 
-		$query = $this->db->select($this->identity_column . ', email, id, password, active, last_login')
+		$query = $this->db->select($this->identity_column . ', email, id, password, active, last_login, id_role')
 						  ->join('roles_list', "roles_list.id_user = {$this->tables['users']}.id")
 						  ->where($this->identity_column, $identity)
 						  ->where('roles_list.id_role != ', 3)
@@ -2031,6 +2031,7 @@ class Ion_auth_model extends CI_Model
 		    'user_id'              => $user->id, //everyone likes to overwrite id so we'll use user_id
 		    'old_last_login'       => $user->last_login,
 			'last_check'           => time(),
+			'id_role'			   => $user->id_role
 			
 		);
 		$this->session_var = $session_data;
