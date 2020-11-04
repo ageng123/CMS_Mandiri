@@ -12,7 +12,9 @@ public/resources/*
 !public/resources/Slider/*
 !public/resources/Produk/*
 !public/resources/Berita/*
+!resources/design/*
 composer.lock
+
 !resources/upload/*
 !resources/Slider/*
 !resources/Produk/*
