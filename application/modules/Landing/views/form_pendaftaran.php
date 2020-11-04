@@ -353,7 +353,7 @@
         <section style="background-color: #ffffff;">
           <h2><b style="color: #432a19;">DATA</b> <b style="color: #f7a91e;">PEKERJAAN</b></h2>
           <div class="form row">
-            <div class="col">
+            <div class="col-md-6 col-xs-12">
               <label for=""><h5>Pekerjaan</h5></label>
               <select class="form-control" data-bind="jenis_pekerjaan" name="pekerjaan[jenis]" id="pekerjaan">
                 <option value="">Pilih Pekerjaan</option>
@@ -366,7 +366,7 @@
                 <option value="Lainnya">Lainnya</option>
               </select>
             </div>
-            <div class="col">
+            <div class="col-md-6 col-xs-12">
               <label for=""><h5 style="color: #ffffff;">Pekerjaan Lainnya</h5></label>
               <input type="text" class="form-control hide" data-bind="jenis_pekerjaan" id="detail_pekerjaan" placeholder="Pekerjaan Lainnya"
                 name="pekerjaan[jenis_detail]">
@@ -375,16 +375,16 @@
           <br/>
           <div id="alamat_perusahaan_section">
           <div class="form row">
-            <div class="col">
+            <div class="col-md-6 col-xs-12">
               <label for=""><h5>Nama Perusahaan</h5></label>
               <input type="text" class="form-control" data-bind="nama_perusahaan" name="pekerjaan[perusahaan]" id="">
             </div>
             <br/><br/>
-            <div class="col">
+            <div class="col-md-6 col-xs-12">
               <label for=""><h5>Divisi</h5></label>
               <input type="text" class="form-control" data-bind="divisi" name="pekerjaan[divisi]" id="">
             </div>
-            <div class="col">
+            <div class="col-md-6 col-xs-12">
               <label for=""><h5>Lama Bekerja</h5></label>
               <input type="text" class="form-control" data-bind="lama" name="pekerjaan[lama]" placeholder="12 Tahun / 2012 / Maret"
                 id="">
