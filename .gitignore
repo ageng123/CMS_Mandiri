@@ -12,13 +12,14 @@ public/resources/*
 !public/resources/Slider/*
 !public/resources/Produk/*
 !public/resources/Berita/*
-!resources/design/*
+
 composer.lock
 
 !resources/upload/*
 !resources/Slider/*
 !resources/Produk/*
 !resources/Berita/*
+!resources/design/*
 
 user_guide_src/build/*
 user_guide_src/cilexer/build/*
