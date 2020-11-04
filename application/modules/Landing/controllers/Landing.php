@@ -43,9 +43,11 @@ class Landing extends CI_Controller {
 		$user = $model->findBy(['active' => '1']);
 		$content = 'index';
 		$user = $model->find($this->session->userdata('user_id'));
+		$data_slider = $model->data_slider();
 		$data = [
 			'page_title' => 'Mandiri Sekuritas - CMS',
-			'user' => $user
+			'user' => $user,
+			'data_slider' => $data_slider
 		];
 		landing_parse($content, $data);
 		// admin_parse($content, null);

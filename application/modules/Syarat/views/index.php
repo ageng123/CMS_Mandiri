@@ -1,22 +1,52 @@
-  <div class="padding-tb-40px background-light-grey">
-  <div class="container">
-      <h1 class="widget-title clearfix"><b>SYARAT & KETENTUAN</b></h1>
-       <hr style="background-color: #f7a91e;width: 12%;height: 4px;" border="0" align="left">
-    <div class="row">
+  
+  <div class="container padding-tb-30px" >
+          <div class="row">
+            <div class="col-lg-9 margin-bottom-30px wow fadeInUp">
+              <div class="text-left hvr-bob">
+                <h1 class="widget-title clearfix"><font color="black"><b>SYARAT KETENTUAN</b></font></h1>
 
-      <div class="col-12">
-         <table cellpadding="5" cellspacing="5">
-           <tr>
-             <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">1)</h2><img src="<?= base_url('assets/img/Home/') ?>formulir.png" width="50%"><p ><b>Mengisi</b> dan <b>Melengkapi</b><br> Form Pendaftaran</p></td>
-             <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">2)</h2><img src="<?= base_url('assets/img/Home/') ?>kai.png" width="50%"><p>Mendapat <br><b>Pesan Konformasi</b></p></td>
-             <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">3)</h2><img src="<?= base_url('assets/img/Home/') ?>dana.png" width="50%"><p><b>Melakukan</b><br> Penyetoran Tunai</p></td>
-             <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">4)</h2><img src="<?= base_url('assets/img/') ?>kon.png" width="50%"><p><b>Konfirmasi</b><br> Pembayaran</p></td>
-             <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">5)</h2><img src="<?= base_url('assets/img/') ?>kartu.png" width="50%"><p><b>Mendapatkan</b><br> Kartu Anggota</p></td>
-           </tr>
-         </table>
-      </div>
+       <hr style="background-color: #f7a91e;width: 100%;height: 4px;" border="0" align="left">
+              </div>
+            </div>
+            <div class="col-lg-3 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s">
+              <div class="text-left hvr-bob">
+                <h3 class="widget-title clearfix" style="background-color: #ecc15d;text-align: center;color: black;padding-left: 3px;padding-right: 3px;">DUKUNGAN BANTUAN <br> 021 - 4582 5710</h3>
+              </div>
+            </div>
+            </div>
 
-      <style>
+            <div class="row">
+            <div class="col-lg-1 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s"></div>
+            <div class="col-lg-2 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s">
+              <div class="text-center hvr-bob">
+                <h2  style="text-align: center;">1)</h2><img src="<?= base_url('assets/img/Home/') ?>formulir.png" width="50%" align="center"><p style="text-align: center;"><b>Mengisi</b> dan <b>Melengkapi</b><br> Form Pendaftaran</p>
+              </div>
+            </div>
+            <div class="col-lg-2 margin-bottom-30px  wow fadeInUp" data-wow-delay="0.2s">
+              <div class="text-center hvr-bob">
+                <h2>2)</h2><img src="<?= base_url('assets/img/Home/') ?>kai.png" width="50%"><p>Mendapat <br><b>Pesan Konformasi</b></p>
+              </div>
+            </div>
+            <div class="col-lg-2 margin-bottom-30px  wow fadeInUp" data-wow-delay="0.2s">
+              <div class="text-center hvr-bob">
+                <h2>3)</h2><img src="<?= base_url('assets/img/Home/') ?>dana.png" width="50%"><p><b>Melakukan</b><br> Penyetoran Tunai</p>
+              </div>
+            </div>
+            <div class="col-lg-2 margin-bottom-30px  wow fadeInUp" data-wow-delay="0.2s">
+              <div class="text-center hvr-bob">
+                <h2>4)</h2><img src="<?= base_url('assets/img/') ?>kon.png" width="50%"><p><b>Konfirmasi</b><br> Pembayaran</p>
+              </div>
+            </div>
+            <div class="col-lg-2 margin-bottom-30px  wow fadeInUp" data-wow-delay="0.2s">
+              <div class="text-center hvr-bob">
+                <h2>5)</h2><img src="<?= base_url('assets/img/') ?>kartu.png" width="50%"><p><b>Mendapatkan</b><br> Kartu Anggota</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-1 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s"></div>
+
+</div>
+           <style>
         .product-tabs .product-link.active{
           background-color: transparent !important;
           font-weight: bold !important;
@@ -36,9 +66,6 @@
         }
       </style>
 
-    </div>
-  </div>
-  </div>
 
   <style>
     .no-border {

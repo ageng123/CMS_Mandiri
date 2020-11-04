@@ -1,21 +1,62 @@
     <!-- page output -->
   <div class="padding-tb-40px background-light-grey">
     <div class="container">
-            <h1 class="widget-title clearfix"><b>PROFILE </b></h1>
-            <hr style="background-color: #f7a91e;width: 12%;height: 4px;" border="0" align="left">
+  <div class="text-left hvr-bob">
+    <h1 class="widget-title clearfix"><b>PROFILE </b></h1>
+    <hr style="background-color: #f7a91e;width: 100%;height: 4px;" border="0" align="left">
+  </div>
+
+
+            
       <div class="row">
      
-      <div class="col-12" style="margin-top: 3vh;">
 
-     <div class="col-lg-3">
+     
+    <div class="col-xs-12 col-lg-3" style="margin-top: 3vh;">
           <?php $this->load->view('Component/profile_photo') ?>
         </div>
         <br>
+        </div>
 
+      <div class="row">
+    <div class="col-xs-12 col-lg-3">    
         <table style="border: 0px; font-size: 14px;">
+           <tr>
+                <td style="width: 20%;"><a href="<?= base_url();?>Profile"
+                    class="btn btn-block text-white"
+                    style="background-color: #eaa400;"><b style="color: #806142;">Data Profile</b></a></td>
+              </tr>
+              <tr>
+                <td style="width: 20%;"><a href="<?= base_url();?>Rekening"
+                    class="btn btn-block text-white"
+                    style="background-color: #f8dfa6;"><b style="color: #806142;">Data Rekening</b></a></td>
+              </tr>
+              <tr>
+                <td style="width: 20%;"><a href="<?= base_url();?>Simpanan"
+                    class="btn btn-block text-white"
+                    style="background-color: #806142;"><b style="color: white;">Simpanan</b></a></td>
+              </tr>
+              <tr>
+                <td style="width: 20%;"><a class="btn btn-block text-white"
+                    style="background-color: #af9c89;" disable="disable"><b style="color: white;">SHU</b></a></td>
+              </tr>
+              <tr>
+                <td style="width: 20%;"><a href="<?= base_url();?>Password"
+                    class="btn btn-block text-white"
+                    style="background-color: #f14950;"><b style="color: #806142;">Ganti Password</b></a></td>
+              </tr>
+
+              <tr>
+                <td style="width: 20%;"><a href="<?= base_url();?>auth/logout"
+                    class="btn btn-block text-white"
+                    style="background-color: #7f7f7f;"><b style="color: white;">Logout</b></a></td>
+              </tr>
+        </table>
+</div>
+
+<div class="col-xs-12 col-lg-9">    
+        <table style="border: 0px; font-size: 12px;">
           <tr>
-            <td style="width: 20%;"><a href="<?= base_url();?>Profile" class="btn btn-block text-white" style="background-color: #eaa400;"><b style="color: #806142;">Data Profile</b></a></td>
-            <td></td>
             <td style="width:80%; background-color:#eaa400; padding:10px; vertical-align:top; font-weight: bold; color:white; border-radius:10px;" rowspan="7">
                 <table style="border: 0px;">
                   <tr><h2><b>DATA PROFILE</b></h2></tr>
@@ -28,31 +69,14 @@
                 </table>
             </td>
           </tr>
-          <tr>
-            <td style="width: 20%;"><a href="<?= base_url();?>Rekening" class="btn btn-block text-white" style="background-color: #f2c866;"><b style="color: #806142;">Data Rekening</b></a></td>
-          </tr>
-          <tr>
-            <td style="width: 20%;"><a href="<?= base_url();?>Simpanan" class="btn btn-block text-white" style="background-color: #806142;"><b style="color: white;">Simpanan</b></a></td>
-          </tr>
-          <tr>
-            <td style="width: 20%;"><a class="btn btn-block text-white" style="background-color: #af9c89;" disable="disable"><b style="color: white;">SHU</b></a></td>
-          </tr>
-          <tr>
-            <td style="width: 20%;"><a href="<?= base_url();?>Password" class="btn btn-block text-white" style="background-color: #f14950;"><b style="color: #806142;">Ganti Password</b></a></td>
-          </tr>
-
-          <tr>
-            <td style="width: 20%;"><a href="<?= base_url();?>auth/logout" class="btn btn-block text-white" style="background-color: #7f7f7f;"><b style="color: white;">Logout</b></a></td>
-          </tr>
         </table>
+</div>
 
       </div>
     </div>
 
 
       </div>
-    </div>
-  </div>
   <!-- //  page output -->
   
   <style>

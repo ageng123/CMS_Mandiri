@@ -1,70 +1,22 @@
-<!-- <div id="rev_slider_18_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="the-nile-1"
-  data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;"> -->
-  <!-- START REVOLUTION SLIDER 5.4.1 fullwidth mode -->
-  <!-- <div id="rev_slider_18_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
-    <ul> -->
-      <!-- SLIDE  -->
-      <!-- <li data-index="rs-64" data-transition="3dcurtain-horizontal" data-slotamount="default" data-hideafterloop="0"
-        data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default"
-        data-thumb="<?= base_url('assets/landing_template/') ?>assets/revslider/assets/100x50_a033c-1.jpg"
-        data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3=""
-        data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10=""
-        data-description=""> -->
-        <!-- MAIN IMAGE -->
-        <!-- <img src="<?= base_url('assets/img/') ?>header.png" alt="" data-bgposition="center center" data-kenburns="on"
-          data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110"
-          data-rotatestart="0" data-rotateend="0" data-blurstart="-2" data-blurend="0" data-offsetstart="2 2"
-          data-offsetend="0 0" class="rev-slidebg" height="800" data-no-retina> -->
-        <!-- LAYERS -->
+<div id="rev_slider_18_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="the-nile-1" data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+    <!-- START REVOLUTION SLIDER 5.4.1 fullwidth mode -->
+    <div id="rev_slider_18_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
+      <ul>
+        
+          <?php foreach($data_slider->result() as $assets){ ?>
+          <li data-index="rs-65" data-transition="3dcurtain-horizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="<?= base_url('resources/Slider/') ?><?= $assets->nama_file ?>" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+          <!-- MAIN IMAGE -->
+          <img src="<?= base_url('resources/Slider/') ?><?= $assets->nama_file ?>" alt="" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Power0.easeIn" data-scalestart="115" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="2 3" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+          <!-- LAYERS -->
 
-        <!-- LAYER NR. 1 -->
-        <!-- <div class="tp-caption   tp-resizeme" id="slide-64-layer-4" data-x="['left','left','left','center']"
-          data-hoffset="['657','575','259','0']" data-y="['top','top','top','top']"
-          data-voffset="['123','123','57','57']" data-width="none" data-height="none" data-whitespace="normal"
-          data-type="text" data-responsive_offset="on"
-          data-frames='[{"delay":10,"speed":750,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-          data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
-          data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-          style="z-index: 5; white-space: normal; font-size: 71px; line-height: 22px; font-weight: 400; color: #757575;font-family:Open Sans;"> </div> -->
-
-
-      <!-- </li>
-      <li data-index="rs-64" data-transition="3dcurtain-horizontal" data-slotamount="default" data-hideafterloop="0"
-        data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default"
-        data-thumb="<?= base_url('assets/landing_template/') ?>assets/revslider/assets/100x50_a033c-1.jpg"
-        data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3=""
-        data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10=""
-        data-description=""> -->
-        <!-- MAIN IMAGE -->
-        <!-- <img src="<?= base_url('assets/img/') ?>opening.jpg" alt="" data-bgposition="center center" data-kenburns="on"
-          data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110"
-          data-rotatestart="0" data-rotateend="0" data-blurstart="-2" data-blurend="0" data-offsetstart="2 2"
-          data-offsetend="0 0" height="800" class="rev-slidebg" data-no-retina> -->
-        <!-- LAYERS -->
-
-        <!-- LAYER NR. 1 -->
-        <!-- <div class="tp-caption   tp-resizeme" id="slide-64-layer-4" data-x="['left','left','left','center']"
-          data-hoffset="['657','575','259','0']" data-y="['top','top','top','top']"
-          data-voffset="['123','123','57','57']" data-width="none" data-height="none" data-whitespace="normal"
-          data-type="text" data-responsive_offset="on"
-          data-frames='[{"delay":10,"speed":750,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-          data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
-          data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-          style="z-index: 5; white-space: normal; font-size: 71px; line-height: 22px; font-weight: 400; color: #757575;font-family:Open Sans;"> </div> -->
-
-
-      <!-- </li> -->
-      <!-- SLIDE  -->
-      
-    <!-- </ul> -->
-    <!-- <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+          <!-- LAYER NR. 5 -->
+          
+        </li>
+        <?php } ?>
+      </ul>
+      <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+    </div>
   </div>
-</div> -->
-<!-- END REVOLUTION SLIDER -->
-<div class="" id="slider" style="margin-top: 2vh">
-  <div> <img src="<?= base_url('assets/img/opening.jpg') ?>" alt=""> </div>
-  <div> <img src="<?= base_url('assets/img/header.png') ?>" alt=""> </div>
-</div>
 <script type="text/javascript">
   var tpj = jQuery;
 
@@ -78,76 +30,79 @@
         sliderType: "standard",
         jsFileLocation: "//localhost/revslider-standalone/revslider/public/assets/revslider/assets/js/",
         sliderLayout: "fullwidth",
-        dottedOverlay: "none",
-        delay: 9000,
-        navigation: {
-          keyboardNavigation: "off",
-          keyboard_direction: "horizontal",
-          mouseScrollNavigation: "off",
-          mouseScrollReverse: "default",
-          onHoverStop: "off",
-          arrows: {
-            style: "uranus",
-            enable: true,
-            hide_onmobile: false,
-            hide_onleave: true,
-            hide_delay: 200,
-            hide_delay_mobile: 1200,
-            tmp: '',
-            left: {
-              h_align: "left",
-              v_align: "center",
-              h_offset: 20,
-              v_offset: 0
+          dottedOverlay: "none",
+          delay: 9000,
+          navigation: {
+            keyboardNavigation: "off",
+            keyboard_direction: "horizontal",
+            mouseScrollNavigation: "off",
+            mouseScrollReverse: "default",
+            onHoverStop: "off",
+            arrows: {
+              style: "uranus",
+              enable: true,
+              hide_onmobile: false,
+              hide_onleave: true,
+              hide_delay: 200,
+              hide_delay_mobile: 1200,
+              tmp: '',
+              left: {
+                h_align: "left",
+                v_align: "center",
+                h_offset: 20,
+                v_offset: 0
+              },
+              right: {
+                h_align: "right",
+                v_align: "center",
+                h_offset: 20,
+                v_offset: 0
+              }
             },
-            right: {
-              h_align: "right",
-              v_align: "center",
-              h_offset: 20,
-              v_offset: 0
+            bullets: {
+              enable: false,
+              hide_onmobile: false,
+              style: "hermes",
+              hide_onleave: false,
+              direction: "horizontal",
+              h_align: "center",
+              v_align: "bottom",
+              h_offset: 0,
+              v_offset: 60,
+              space: 5,
+              tmp: ''
             }
           },
-          bullets: {
-            enable: true,
-            hide_onmobile: false,
-            style: "hermes",
-            hide_onleave: false,
-            direction: "horizontal",
-            h_align: "center",
-            v_align: "bottom",
-            h_offset: 0,
-            v_offset: 60,
-            space: 5,
-            tmp: ''
+          //responsiveLevels: [1240, 1024, 778, 480],
+          //visibilityLevels: [1240, 1024, 778, 480],
+          //gridwidth: [1110, 1024, 778, 480],
+          //gridheight: [720, 720, 500, 500],
+          lazyType: "none",
+          shadow: 0,
+          spinner: "spinner0",
+          stopLoop: "off",
+          stopAfterLoops: -1,
+          stopAtSlide: -1,
+          shuffle: "off",
+          autoHeight: "off",
+          disableProgressBar: "on",
+          hideThumbsOnMobile: "off",
+          hideSliderAtLimit: 0,
+          hideCaptionAtLimit: 0,
+          hideAllCaptionAtLilmit: 0,
+          debugMode: false,
+          fallbacks: {
+            simplifyAll: "off",
+            nextSlideOnWindowFocus: "off",
+            disableFocusListener: false,
           }
-        },
-        responsiveLevels: [1240, 1024, 778, 480],
-        visibilityLevels: [1240, 1024, 778, 480],
-        gridwidth: [1110, 1024, 778, 480],
-        gridheight: [720, 720, 500, 500],
-        lazyType: "none",
-        shadow: 0,
-        spinner: "spinner0",
-        stopLoop: "off",
-        stopAfterLoops: -1,
-        stopAtSlide: -1,
-        shuffle: "off",
-        autoHeight: "off",
-        disableProgressBar: "on",
-        hideThumbsOnMobile: "off",
-        hideSliderAtLimit: 0,
-        hideCaptionAtLimit: 0,
-        hideAllCaptionAtLilmit: 0,
-        debugMode: false,
-        fallbacks: {
-          simplifyAll: "off",
-          nextSlideOnWindowFocus: "off",
-          disableFocusListener: false,
-        }
-      });
-    }
-  }); /*ready*/
-</script>
+        });
+      }
+    }); /*ready*/
+
+  </script>
+
+
 <div class="modal" id="welcome-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
   aria-hidden="true">
   <div class="modal-body" style="display: flex; flex-direction: column">
@@ -156,15 +111,9 @@
       class="modal-close">
       <span aria-hidden="true">&times;</span>
     </button>
-    <table style="border: 0px;">
-      <tr>
-      <td width="17%" style="border: 0px;">&nbsp;</td>
-      <td width="70%" style="border: 0px;">
-    <a href="<?= base_url();?>pendaftaran"><img src="<?= base_url('assets/img/') ?>opening.jpg" style="height: auto ; width: 93%;text-align: center;" alt=""></a></td>
-      <td width="10%" style="border: 0px;">&nbsp;</td>
+   
+    <a href="<?= base_url();?>pendaftaran" style="text-align: center;"><img src="<?= base_url('assets/img/') ?>opening.jpg" style="text-align: center;" alt=""></a>
 
-      </tr>
-    </table>
   </div>
 </div>
 <div class="modal" id="modalPendaftaran" tabindex="-1" role="dialog">
@@ -238,11 +187,16 @@
   })
 </script>
 <?php endif; ?>
-<section class="pb-3">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <div style="background-color: transparent; width: 100%; height: 100%">
+
+
+
+  <div class="padding-tb-10px">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-8 col-sm-6 sm-mb-30px wow fadeInUp">
+          <div style="background-color: transparent; width: 100%; height: 100%">
           <div class="d-flex flex-column container">
             <div class="row" style="padding-top: 50px">
               <div class="col-12 row" style="border-bottom: 4px solid orange">
@@ -271,6 +225,8 @@
                   border: 0px transparent;
                 }
               </style>
+
+
               <div class="col-12 p-2 pl-4 row getTopProduct" id="data-container">
               <div class="spinner-border" role="status">
                 <span class="sr-only">Loading...</span>
@@ -294,8 +250,10 @@
             <br><br>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
+        </div>
+
+        <div class="col-lg-4 col-sm-6 sm-mb-30px wow fadeInUp">
+          
         <div class="col-12 mb-3" style="">
           <div class="card">
             <div class="card-header landing-login-form">
@@ -386,11 +344,12 @@
             <span class="sr-only">Loading...</span>
           </div>
         </div>
+        </div>
+
       </div>
+
     </div>
   </div>
-</section>
-
 
 
 <section class="padding-tb-6px" style="background-image: url('<?= base_url('assets/img/') ?>list2.jpg');">
@@ -398,31 +357,58 @@
     <div class="row justify-content-center wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;"></div>
   </div>
 </section>
-<section class="padding-tb-30px section-bg2">
-  <div class="container">
-      <h1 class="widget-title clearfix"><b>PRODUK</b></h1>
+
+  <div class="container padding-tb-30px" >
+  <div class="text-left hvr-bob">
+    <h1 class="widget-title clearfix"><font color="black"><b>PRODUK</b></font></h1>
+  </div>
+
        <hr style="background-color: #f7a91e;width: 12%;height: 4px;" border="0" align="left">
-    <div class="row">
+          <div class="row">
+            <div class="col-lg-9 margin-bottom-30px wow fadeInUp">
+              <div class="text-left hvr-bob">
+                <h1 class="widget-title clearfix"><font color="black"><b>PENDAFTARAN ANGGOTA</b></font></h1>
+              </div>
+            </div>
+            <div class="col-lg-3 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s">
+              <div class="text-left hvr-bob">
+                <h3 class="widget-title clearfix" style="background-color: #ecc15d;text-align: center;color: black;padding-left: 3px;padding-right: 3px;">DUKUNGAN BANTUAN <br> 021 - 4582 5710</h3>
+              </div>
+            </div>
+            </div>
 
-      <table>
-           <tr>
-             <td><h1 class="widget-title clearfix"><b>PENDAFTARAN ANGGOTA</b></h1></td>             
-             <td style="background-color: #ecc15d;width: 20%;text-align: center;color: white;"><h3 class="widget-title clearfix">DUKUNGAN BANTUAN <br> 021 - 4582 5710</h3></td>
-           </tr>
-      </table>
-      <div class="col-12">
-         <table cellpadding="5" cellspacing="5">
-           <tr>
-             <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">1)</h2><img src="<?= base_url('assets/img/Home/') ?>formulir.png" width="50%"><p ><b>Mengisi</b> dan <b>Melengkapi</b><br> Form Pendaftaran</p></td>
-             <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">2)</h2><img src="<?= base_url('assets/img/Home/') ?>kai.png" width="50%"><p>Mendapat <br><b>Pesan Konformasi</b></p></td>
-             <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">3)</h2><img src="<?= base_url('assets/img/Home/') ?>dana.png" width="50%"><p><b>Melakukan</b><br> Penyetoran Tunai</p></td>
-             <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">4)</h2><img src="<?= base_url('assets/img/') ?>kon.png" width="50%"><p><b>Konfirmasi</b><br> Pembayaran</p></td>
-             <td style="border: 0px;font-size: 16px;text-align: center;"><h2 class="text-primary">5)</h2><img src="<?= base_url('assets/img/') ?>kartu.png" width="50%"><p><b>Mendapatkan</b><br> Kartu Anggota</p></td>
-           </tr>
-         </table>
-      </div>
+            <div class="row">
+            <div class="col-lg-1 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s"></div>
+            <div class="col-lg-2 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s">
+              <div class="text-center hvr-bob">
+                <h2  style="text-align: center;">1)</h2><img src="<?= base_url('assets/img/Home/') ?>formulir.png" width="50%" align="center"><p style="text-align: center;"><b>Mengisi</b> dan <b>Melengkapi</b><br> Form Pendaftaran</p>
+              </div>
+            </div>
+            <div class="col-lg-2 margin-bottom-30px  wow fadeInUp" data-wow-delay="0.2s">
+              <div class="text-center hvr-bob">
+                <h2>2)</h2><img src="<?= base_url('assets/img/Home/') ?>kai.png" width="50%"><p>Mendapat <br><b>Pesan Konformasi</b></p>
+              </div>
+            </div>
+            <div class="col-lg-2 margin-bottom-30px  wow fadeInUp" data-wow-delay="0.2s">
+              <div class="text-center hvr-bob">
+                <h2>3)</h2><img src="<?= base_url('assets/img/Home/') ?>dana.png" width="50%"><p><b>Melakukan</b><br> Penyetoran Tunai</p>
+              </div>
+            </div>
+            <div class="col-lg-2 margin-bottom-30px  wow fadeInUp" data-wow-delay="0.2s">
+              <div class="text-center hvr-bob">
+                <h2>4)</h2><img src="<?= base_url('assets/img/') ?>kon.png" width="50%"><p><b>Konfirmasi</b><br> Pembayaran</p>
+              </div>
+            </div>
+            <div class="col-lg-2 margin-bottom-30px  wow fadeInUp" data-wow-delay="0.2s">
+              <div class="text-center hvr-bob">
+                <h2>5)</h2><img src="<?= base_url('assets/img/') ?>kartu.png" width="50%"><p><b>Mendapatkan</b><br> Kartu Anggota</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-1 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s"></div>
 
-      <style>
+
+           <style>
         .product-tabs .product-link.active{
           background-color: transparent !important;
           font-weight: bold !important;
@@ -447,23 +433,23 @@
         <ul class="nav nav-pills product-tabs mb-3" id="pills-tab" role="tablist" style="width: 100%;display: flex;justify-content: inherit;">
           <li class="nav-item">
             <a class="nav-link product-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
-              aria-controls="pills-home" aria-selected="true"><h2 style="padding-right: 95px;">Semua</h2></a>
+              aria-controls="pills-home" aria-selected="true"><h2 style="padding-right: 95px;" class="text-left hvr-bob">Semua</h2></a>
           </li>
           <li class="nav-item">
             <a class="nav-link product-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
-              aria-controls="pills-profile" aria-selected="false"><h2 style="padding-right: 95px;">Komersial</h2></a>
+              aria-controls="pills-profile" aria-selected="false"><h2 style="padding-right: 95px;" class="text-left hvr-bob">Komersial</h2></a>
           </li>
           <li class="nav-item">
             <a class="nav-link product-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-              aria-controls="pills-contact" aria-selected="false"><h2 style="padding-right: 95px;">Housing</h2></a>
+              aria-controls="pills-contact" aria-selected="false"><h2 style="padding-right: 95px;" class="text-left hvr-bob">Housing</h2></a>
           </li>
           <li class="nav-item">
             <a class="nav-link product-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-              aria-controls="pills-contact" aria-selected="false"><h2 style="padding-right: 95px;">Keluarga</h2></a>
+              aria-controls="pills-contact" aria-selected="false"><h2 style="padding-right: 95px;" class="text-left hvr-bob">Keluarga</h2></a>
           </li>
           <li class="nav-item">
             <a class="nav-link product-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-              aria-controls="pills-contact" aria-selected="false"><h2>Khusus</h2></a>
+              aria-controls="pills-contact" aria-selected="false"><h2 class="text-left hvr-bob">Khusus</h2></a>
           </li>
         </ul>        
        <hr style="background-color: #f7a91e;width: 100%;height: 4px;" border="0" align="left">
@@ -501,11 +487,10 @@
         </div>
 
       </div>
-    </div>
-</section>
 
+        </div>
 
-
+      
 
 
 <section class="padding-tb-6px" style="background-image: url('<?= base_url('assets/img/') ?>list2.jpg');">
@@ -513,9 +498,12 @@
     <div class="row justify-content-center wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;"></div>
   </div>
 </section>
-<section class="padding-tb-30px">
-  <div class="container">
-      <h1 class="widget-title clearfix "><b>BERITA UPDATE</b></h1>
+
+  <div class="container padding-tb-30px" >
+  <div class="text-left hvr-bob">
+    <h1 class="widget-title clearfix"><font color="black"><b>BERITA UPDATE</b></font></h1>
+  </div>
+
        <hr style="background-color: #f7a91e;width: 12%;height: 4px;" border="0" align="left">
     <div class="row ">
       <div class="col-12 row">
@@ -568,42 +556,11 @@
         </div>
       </div>
     </div>
-</section>
-<!-- <section class="video wow fadeInUp">
-  <h1 class="kontak-heading text-primary">Keluarga</h1>
-    <div class="row">
-      <div class="col-4">
-        <div class="card no-border no-bg">
-          <div class="card-header no-border no-bg">
-            <img src="<?= base_url('assets/img/panens.png') ?>" alt="">
-          </div>
-          <div class="card-body no-border no-bg">
-            <div class="container">TEsting</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-4">
-      <div class="card no-border no-bg">
-          <div class="card-header no-border no-bg">
-            <img src="<?= base_url('assets/img/panen.png') ?>" alt="">
-          </div>
-          <div class="card-body no-border bo-bg">
-            <div class="container">TEsting</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-4">
-      <div class="card no-border no-bg">
-          <div class="card-header no-border no-bg">
-            <img src="<?= base_url('assets/img/radio.png') ?>" alt="">
-          </div>
-          <div class="card-body no-border no-bg">
-            <div class="container">TEsting</div>
-          </div>
-        </div>
-      </div>
     </div>
-</section> -->
+  </section>
+
+
+
 <section class="section-bg2">
   <style>
     .no-border {
@@ -620,20 +577,26 @@
   </style>
 
 
-  <section class="padding-tb-6px" style="background-image: url('<?= base_url('assets/img/') ?>list2.jpg');">
-    <div class="container">
-      <div class="row justify-content-center wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;"></div>
-    </div>
-  </section>
-<section class="padding-tb-30px section-bg2">
+
+<section class="padding-tb-6px" style="background-image: url('<?= base_url('assets/img/') ?>list2.jpg');">
   <div class="container">
-      <h1 class="widget-title clearfix"><b>KELUARGA</b></h1>
+    <div class="row justify-content-center wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;"></div>
+  </div>
+</section>
+
+  <div class="container padding-tb-30px" >
+  <div class="text-left hvr-bob">
+    <h1 class="widget-title clearfix"><font color="black"><b>KELUARGA</b></font></h1>
+  </div>
+
        <hr style="background-color: #f7a91e;width: 12%;height: 4px;" border="0" align="left">
-    <div class="row">
-      <div class="col-4">
+    <div class="row ">
+      <div class="col-12 row">
+     
+<div class="col-lg-4 col-md-6 margin-bottom-30px wow fadeInUp">
         <div class="card no-border no-bg">
           <div class="card-header no-border no-bg">
-            <img src="<?= base_url('assets/img/panens.png') ?>" alt="">
+            <img src="<?= base_url('assets/img/panens.png') ?>" alt="" >
           </div>
           <div class="card-body no-border no-bg">
              <div class="background-white padding-20px" style="text-align: center;font-size: 14px;">
@@ -642,7 +605,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-lg-4 col-md-6 margin-bottom-30px wow fadeInUp">
         <div class="card no-border no-bg">
           <div class="card-header no-border no-bg">
             <img src="<?= base_url('assets/img/panenbersama_2.png') ?>" alt="">
@@ -654,7 +617,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-lg-4 col-md-6 margin-bottom-30px wow fadeInUp">
         <div class="card no-border no-bg">
           <div class="card-header no-border no-bg">
             <img src="<?= base_url('assets/img/radio3.png') ?>" alt="" >
@@ -665,8 +628,11 @@
             </div>
         </div>
       </div>
+
+
     </div>
-</section>
+</div>
+</div>  
 
 
 <section class="padding-tb-6px" style="background-image: url('<?= base_url('assets/img/') ?>list2.jpg');">
@@ -689,6 +655,7 @@
           <h1 class="text-white widget-title clearfix"><b>KONTAK</b></h1>
        <hr style="background-color: #f7a91e;width: 12%;height: 4px;" border="0" align="left">
     <div class="row text-center">
+    <div class="col-lg-12 col-md-6 sm-mb-30px text-center hvr-float wow fadeInUp">
       <div class="col-12 sm-mb-30px text-center hvr-float wow fadeInUp">
         <span class="fa fa-map-marker" style="font-size: 72px; color: yellow" aria-hidden="true"></span>
         <br>

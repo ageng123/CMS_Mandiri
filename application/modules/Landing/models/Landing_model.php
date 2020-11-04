@@ -13,6 +13,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             return $this->db->insert($this->model, $data);
         }
 
+        public function data_slider(){
+            $query = $this->db->query("SELECT * FROM attachment_list WHERE tipe_attachment = 3 and status_slider = 1 ");
+        
+        return $query;
+        }
+
+
     }
     // @table user berisi tentang data umum nasabah pada form step 1
     class Nasabah_Model extends Main{
