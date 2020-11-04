@@ -7,19 +7,19 @@ application/logs/*
 !application/logs/index.html
 application/config/*
 !application/*/.htaccess
-public/resources/*
-!public/resources/upload/*
-!public/resources/Slider/*
-!public/resources/Produk/*
-!public/resources/Berita/*
+!public/resources/*
+public/resources/upload/*
+public/resources/Slider/*
+public/resources/Produk/*
+public/resources/Berita/*
 
 composer.lock
 
-!resources/upload/*
-!resources/Slider/*
-!resources/Produk/*
-!resources/Berita/*
-!resources/design/*
+resources/upload/*
+resources/Slider/*
+resources/Produk/*
+resources/Berita/*
+resources/design/*
 
 user_guide_src/build/*
 user_guide_src/cilexer/build/*
