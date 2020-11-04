@@ -92,6 +92,7 @@
 										</li> -->
 										
 									<?php else: ?>
+										<?php if($this->session->userdata('id_role') == 3): ?>
 										<li class="has-dropdown">
 											<a href="<?= base_url();?>Profile">
 											<img src="<?= base_url('assets/img/profil.png') ?>"
@@ -101,6 +102,7 @@
 												<li><a href="<?= base_url('auth/logout') ?>">Logout</a></li>
 											</ul>
 										</li>
+										<?php endif; ?>
 										<?php endif; ?>
 									</ul>
 								</div>
