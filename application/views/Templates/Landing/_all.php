@@ -85,20 +85,20 @@
 														<li><a href="<?= base_url();?>Faq">FAQ</a></li>
 														<li><a href="<?= base_url();?>Berita">Berita & Media</a></li>
 														<li><a href="<?= base_url();?>Kontak">Kontak</a></li>
-														<?php if(!($this->session->userdata('full_name'))): ?>
-								<!-- <li><a href="<?= base_url();?>Profile"><img
+									<?php if(!($this->session->userdata('full_name'))): ?>
+											<!-- <li><a href="<?= base_url();?>Profile"><img
 											src="<?= base_url('assets/img/profil.png') ?>"
 											style="object-fit: cover;width: 24px; height: 24px" alt="" srcset="">&nbsp;Profile</a>
 										</li> -->
+										
 									<?php else: ?>
 										<li class="has-dropdown">
-											
 											<a href="<?= base_url();?>Profile">
-										<img src="<?= base_url('assets/img/profil.png') ?>"
+											<img src="<?= base_url('assets/img/profil.png') ?>"
 												style="object-fit: cover;width: 24px; height: 24px" alt="" srcset=""> &nbsp;<?= $this->session->userdata('full_name') ?></a>
 											<ul class="sub-menu">
-												<<li><a href="<?= base_url('profile') ?>">Profile User</a></li>
-													<li><a href="<?= base_url('auth/logout') ?>">Logout</a></li>
+												<li><a href="<?= base_url('profile') ?>">Profile User</a></li>
+												<li><a href="<?= base_url('auth/logout') ?>">Logout</a></li>
 											</ul>
 										</li>
 										<?php endif; ?>
