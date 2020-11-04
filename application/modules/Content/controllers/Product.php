@@ -191,7 +191,7 @@ class Product extends Auth_Guard {
 					$attach->update($val);
 				}	
 				$this->session->set_flashdata('message', 'Data Konten Produk Telah Di Update');
-				return redirect(base_url('content/product'));
+				return redirect(base_url('Content/Product'));
 			else:
 				echo $this->db->error();
 				die;
@@ -205,7 +205,7 @@ class Product extends Auth_Guard {
 		$model = new ProdukModel;
 		$model->delete($id);
 		$this->session->set_flashdata('message', 'Data Konten Produk Telah Di Hapus');
-		return redirect(base_url('content/product'));
+		return redirect(base_url('Content/Product'));
 	}
 	// Export 
 	public function tes()

@@ -14,7 +14,7 @@ class Berita extends Auth_Guard {
 	}
 	public function index()
 	{
-		$content = 'content/berita/list';
+		$content = 'Content/Berita/List';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'card_title' => "Data Konten Berita",
@@ -100,7 +100,7 @@ class Berita extends Auth_Guard {
 			$model->author = $this->user; //must-edit
 			if($model->save()):
 				$this->session->set_flashdata('message', 'Data Konten Berita Telah Di Input');
-				return redirect(base_url('content/berita'));
+				return redirect(base_url('Content/Berita'));
 			else:
 				echo $this->db->error();
 			endif;
@@ -148,7 +148,7 @@ class Berita extends Auth_Guard {
 		$model = new BeritaModel;
 		$model->delete($id);
 		$this->session->set_flashdata('message', 'Data Konten Berita Telah Di Hapus');
-		return redirect(base_url('content/berita'));
+		return redirect(base_url('Content/Berita'));
 	}
 	// Export 
 	public function tes()

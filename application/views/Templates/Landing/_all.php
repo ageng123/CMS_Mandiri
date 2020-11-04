@@ -91,6 +91,7 @@
 											style="object-fit: cover;width: 24px; height: 24px" alt="" srcset="">&nbsp;Profile</a>
 										</li> -->
 									<?php else: ?>
+									<?php if($this->session->userdata('id_role') == 3): ?>
 										<li class="has-dropdown">
 											
 											<a href="<?= base_url();?>Profile">
@@ -101,6 +102,7 @@
 													<li><a href="<?= base_url('auth/logout') ?>">Logout</a></li>
 											</ul>
 										</li>
+										<?php endif; ?>
 										<?php endif; ?>
 									</ul>
 								</div>
