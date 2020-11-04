@@ -71,7 +71,7 @@ jQuery.validator.addMethod("passwordCheck",
 
             return true;
         },
-        "Harus Mengandung Angka, Huruf Kapital, dan Simbol");
+        "Harus Mengandung Angka, Huruf Kapital, dan Huruf Kecil");
 const PendaftaranServices = {
     renderFormData: (data, bind) => {
         $('p[data-update='+ bind +']').html(data);
