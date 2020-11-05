@@ -13,7 +13,7 @@ class Product extends Auth_Guard {
 	}
 	public function index()
 	{
-		$content = 'content/produk/list';
+		$content = 'Content/Produk/list';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'card_title' => "Data Konten Produk"
@@ -35,8 +35,8 @@ class Product extends Auth_Guard {
 			$row[] = '<i class="fa fa-eye"></i> '.$val->view;
 			$row[] = $model->status($val->status);
 			$row[] = '<h4>'.$model->kategori_list($val->tag_id).'</h4>';
-			$row[] = '<a href="'.base_url('content/product/edit').'?session_id='.encode($val->id_product).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
-					  <a href="'.base_url('content/product/destroy').'?session_id='.encode($val->id_product).'" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" title="Delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Konten Produk : '.$val->title.' ? "><i class="fa fa-trash"></i></span></a>';
+			$row[] = '<a href="'.base_url('Content/Product/edit').'?session_id='.encode($val->id_product).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
+					  <a href="'.base_url('Content/Product/destroy').'?session_id='.encode($val->id_product).'" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" title="Delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Konten Produk : '.$val->title.' ? "><i class="fa fa-trash"></i></span></a>';
 			$result[] = $row;
 		endforeach;
 		$data = json_output(200, null, $result);
@@ -44,7 +44,7 @@ class Product extends Auth_Guard {
 		echo JSON_ENCODE($data, JSON_PRETTY_PRINT);
 	}
 	public function get_attachment(){
-		$folder = APPPATH.'../public/resources/produk/'.$this->session->userdata('user_id');
+		$folder = APPPATH.'../resources/produk/'.$this->session->userdata('user_id');
 		$id = decode($_GET['id']);
 		$model = new Attachment_Model;
 		$output = $model->findBy(['refid' => $id, 'nama_attachment !=' => null]);
@@ -63,7 +63,7 @@ class Product extends Auth_Guard {
 	public function delete_attachment(){
 		$nama_file = $this->input->post('name');
 		$id = $this->input->post('id');
-		$directory =  APPPATH.'../public/resources/produk/'.$this->session->userdata('user_id');
+		$directory =  APPPATH.'../resources/produk/'.$this->session->userdata('user_id');
 		if(unlink($directory.'/'.$nama_file)){
 			$model = new Attachment_Model;
 			if($model->delete($id)){
@@ -80,7 +80,7 @@ class Product extends Auth_Guard {
 	}
 	// Form Url
 	private function upload($params){
-		$folder = APPPATH.'../public/resources/produk/'.$this->session->userdata('user_id');
+		$folder = APPPATH.'../resources/produk/'.$this->session->userdata('user_id');
 		$config['upload_path']          = $folder;
 		$config['allowed_types']        = '*';
 		// $config['max_size']             = 100;
@@ -106,7 +106,7 @@ class Product extends Auth_Guard {
 	}
 	public function add()
 	{
-		$content = 'content/produk/add';
+		$content = 'Content/Produk/add';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'card_title' => "Tambah Data Konten Produk",
@@ -139,7 +139,7 @@ class Product extends Auth_Guard {
 					$attach->update($val);
 				}
 
-				return redirect(base_url('content/product'));
+				return redirect(base_url('Content/Product'));
 			else:
 				echo $this->db->error();
 			endif;
@@ -148,7 +148,7 @@ class Product extends Auth_Guard {
 		if(count($dataTemp) > 0):
 			foreach($dataTemp as $key => $val): 
 				$tempData->delete($val->id_attachment);
-				unlink(APPPATH.'../public/resources/produk/'.$this->session->userdata('user_id').'/'.$val->nama_file);
+				unlink(APPPATH.'../resources/produk/'.$this->session->userdata('user_id').'/'.$val->nama_file);
 			endforeach;
 		endif;
 		admin_parse($content, $data);
@@ -157,7 +157,7 @@ class Product extends Auth_Guard {
 		$model = new ProdukModel();
 		$attach = new Attachment_Model;
 		$id = decode($_GET['session_id']);
-		$content = 'content/produk/add';
+		$content = 'Content/Produk/add';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'card_title' => "Edit Data Konten Produk",

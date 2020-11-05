@@ -14,7 +14,7 @@ class Product extends CI_Controller {
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'card_title' => "Data Kategori Produk",
-			'form_url' => base_url('kategori/product/add')
+			'form_url' => base_url('Kategori/Product/add')
 		];
 		admin_parse($content, $data);
 		// $this->load->view('welcome_message');

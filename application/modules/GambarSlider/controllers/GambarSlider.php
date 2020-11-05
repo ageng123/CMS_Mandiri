@@ -38,8 +38,8 @@
 				$row[] = $val->nama_attachment;
 				$row[] = '<img src="'.base_url('resources/Slider/'.$val->nama_file).'" alt="Image placeholder" width="50%">';
 				$row[] = $val->status_slider == 1 ? 'Aktif' : 'Tidak Aktif';
-				$row[] = '<a href="'.base_url('Gambarslider/edit').'?session_id='.encode($val->id_attachment).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
-						<a href="'.base_url('Gambarslider/destroy').'?session_id='.encode($val->id_attachment).'" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" title="Delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Gambar : '.$val->nama_attachment.' ? "><i class="fa fa-trash"></i></span></a>';
+				$row[] = '<a href="'.base_url('GambarSlider/edit').'?session_id='.encode($val->id_attachment).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
+						<a href="'.base_url('GambarSlider/destroy').'?session_id='.encode($val->id_attachment).'" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" title="Delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Gambar : '.$val->nama_attachment.' ? "><i class="fa fa-trash"></i></span></a>';
 				$result[] = $row;
 			endforeach;
 			$data = json_output(200, null, $result);
@@ -100,7 +100,7 @@
 
 				if($model->save()):
 					$this->session->set_flashdata('message', 'Data Gambar Slider Telah Di Input');
-					return redirect(base_url('gambarslider'));
+					return redirect(base_url('GambarSlider'));
 				else:
 					echo $this->db->error();
 				endif;
@@ -116,7 +116,7 @@
 			$data = [
 				'title' => 'Mandiri Sekuritas - CMS',
 				'card_title' => "Edit Data Gambar Slider",
-				'form_url' => base_url('gambarslider/edit?session_id='.encode($id)),
+				'form_url' => base_url('GambarSlider/edit?session_id='.encode($id)),
 				'form_data' => $model->find($id),
 				'status_list' => $this->status_slider
 			];
@@ -133,7 +133,7 @@
 
 				if($model->update($id)):
 					$this->session->set_flashdata('message', 'Data Gambar Slider Telah Di Update');
-					return redirect(base_url('gambarslider'));
+					return redirect(base_url('GambarSlider'));
 				else:
 					echo $this->db->error();
 				endif;

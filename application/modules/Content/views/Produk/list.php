@@ -18,7 +18,7 @@
             <h3><?= isset($card_title) ? $card_title : 'Tabel' ?></h3>
             </div>
             <div class="col-6 text-right"> 
-              <a class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="Tambah Data" href="<?= base_url('content/product/add') ?>"> <i class="fa fa-plus"></i></a>
+              <a class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="Tambah Data" href="<?= base_url('Content/Product/add') ?>"> <i class="fa fa-plus"></i></a>
             </div>
         </div>
       </div>

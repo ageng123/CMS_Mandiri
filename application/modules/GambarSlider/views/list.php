@@ -18,7 +18,7 @@
               <h3><?= isset($card_title) ? $card_title : 'Tabel Contoh' ?></h3>
             </div>
             <div class="col-6 text-right">
-              <a class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="Tambah Data" href="<?= base_url('gambarslider/add') ?>"> <i class="fa fa-plus"></i></a>
+              <a class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="Tambah Data" href="<?= base_url('GambarSlider/add') ?>"> <i class="fa fa-plus"></i></a>
             </div>
           </div>
         </div>
@@ -32,7 +32,7 @@
         <?php endif; ?>
 
         <div class="table-responsive py-4">
-          <table class="table table-flush initDTOnly" data-url="<?= base_url('gambarslider/getJSON') ?>"
+          <table class="table table-flush initDTOnly" data-url="<?= base_url('GambarSlider/getJSON') ?>"
             id="userTbl">
             <thead class="thead-light">
               <tr>

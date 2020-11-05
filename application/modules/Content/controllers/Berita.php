@@ -14,7 +14,7 @@ class Berita extends Auth_Guard {
 	}
 	public function index()
 	{
-		$content = 'Content/Berita/List';
+		$content = 'Content/Berita/list';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'card_title' => "Data Konten Berita",
@@ -37,8 +37,8 @@ class Berita extends Auth_Guard {
 			$row[] = '<i class="fa fa-eye"></i> '.$val->view;
 			$row[] = $model->status($val->status);
 			$row[] = '<h4>'.$model->kategori_list($val->tag_id).'</h4>';
-			$row[] = '<a href="'.base_url('content/berita/edit').'?session_id='.encode($val->id_news).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
-					  <a href="'.base_url('content/berita/destroy').'?session_id='.encode($val->id_news).'" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" title="Delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Konten Berita : '.$val->title.' ? "><i class="fa fa-trash"></i></span></a>';
+			$row[] = '<a href="'.base_url('Content/Berita/edit').'?session_id='.encode($val->id_news).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
+					  <a href="'.base_url('Content/Berita/destroy').'?session_id='.encode($val->id_news).'" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" title="Delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Konten Berita : '.$val->title.' ? "><i class="fa fa-trash"></i></span></a>';
 			$result[] = $row;
 		endforeach;
 		$data = json_output(200, null, $result);
@@ -52,7 +52,7 @@ class Berita extends Auth_Guard {
 	}
 	// Form Url
 	private function upload($params){
-		$folder = APPPATH.'../public/resources/Berita/';
+		$folder = APPPATH.'../resources/Berita/';
 		$config['upload_path']          = $folder;
 		$config['allowed_types']        = '*';
 		// $config['max_size']             = 100;
@@ -77,7 +77,7 @@ class Berita extends Auth_Guard {
 	}
 	public function add()
 	{
-		$content = 'content/berita/add';
+		$content = 'Content/Berita/add';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'card_title' => "Tambah Data Konten Berita",
@@ -110,7 +110,7 @@ class Berita extends Auth_Guard {
 	public function edit(){
 		$model = new BeritaModel();
 		$id = decode($_GET['session_id']);
-		$content = 'content/berita/add';
+		$content = 'Content/Berita/add';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'card_title' => "Edit Data Konten Berita",

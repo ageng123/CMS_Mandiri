@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="table-responsive py-4">
-        <table class="table table-flush initDTOnly" data-url="<?= base_url('request/getJSON') ?>" id="userTbl">
+        <table class="table table-flush initDTOnly" data-url="<?= base_url('Request/getJSON') ?>" id="userTbl">
           <thead class="thead-light">
             <tr align="center">
               <th>No.</th>

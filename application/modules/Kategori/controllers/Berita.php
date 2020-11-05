@@ -15,7 +15,7 @@ class Berita extends Auth_Guard {
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'card_title' => "Data Kategori Berita",
-			'form_url' => base_url('kategori/berita/add')
+			'form_url' => base_url('Kategori/Berita/add')
 		];
 		admin_parse($content, $data);
 		// $this->load->view('welcome_message');
