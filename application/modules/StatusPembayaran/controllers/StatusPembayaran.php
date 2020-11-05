@@ -20,7 +20,7 @@ class StatusPembayaran extends Auth_Guard {
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'card_title' => "Data Pembayaran",
-			'form_url' => base_url('statuspembayaran/add'),
+			'form_url' => base_url('StatusPembayaran/add'),
 			'status_list' => $this->status,
 			'id_user' => $id
 		];

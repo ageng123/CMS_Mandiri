@@ -64,7 +64,7 @@ class Nasabah extends Auth_Guard {
 			$row[] = strtoupper( isset($alamat[5]) ? $alamat[5] : $alamat2[5]);
 			$row[] = date("d-m-Y H:i:s", strtotime($val->created_on));
 			$row[] = '<a onclick="NasabahServices.detailEvent('."'".encode($val->id)."'".')" class="btn btn-secondary btn-sm " data-toggle="tooltip" title="Detail"><i class="fa fa-info"></i></span></a>
-			<a href="'.base_url('statuspembayaran/index/').encode($val->kode_nasabah).'" class="btn btn-dark btn-sm " data-toggle="tooltip" title="Payment"><i class="fa fa-credit-card"></i></span></a>
+			<a href="'.base_url('StatusPembayaran/index/').encode($val->kode_nasabah).'" class="btn btn-dark btn-sm " data-toggle="tooltip" title="Payment"><i class="fa fa-credit-card"></i></span></a>
 			<a href='.base_url('Nasabah/word/'.$val->id.'').' class="btn btn-info btn-sm" data-toggle="tooltip" title="Download Word"><i class="fa fa-download"></i></span></a>
 			<a onclick="NasabahServices.updateEvent('."'".encode($val->id)."'".')" class="btn btn-warning btn-sm text-white" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
 			<a href='.base_url('Nasabah/delete?session_id=').encode($val->id).' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>';
