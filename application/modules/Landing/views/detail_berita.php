@@ -300,7 +300,7 @@
       <div class="commentInput">
         <?php if(!empty($this->session->userdata('user_id'))){ ?>
         <form
-          action="<?= base_url('landing/addComment?code=').encode($berita->id_news).'&auth='.encode($this->session->userdata('user_id')) ?>"
+          action="<?= base_url('Landing/addComment?code=').encode($berita->id_news).'&auth='.encode($this->session->userdata('user_id')) ?>"
           method="POST">
           <div class="form-group">
             <input type="hidden" name="slug" value="<?= $this->uri->segment(3) ?>">

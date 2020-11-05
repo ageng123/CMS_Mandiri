@@ -297,7 +297,7 @@ $(document).ready(function () {
                 ellipsis = '...';
             }
             $('.subtitle[data-index='+(index + 1)+']').html(val.sub.slice(0, 40)+ellipsis);
-            $('.btn-detail[data-index='+(index + 1)+']').attr('href', base_url+'/landing/detail_berita/'+val.link);
+            $('.btn-detail[data-index='+(index + 1)+']').attr('href', base_url+'/Landing/detail_berita/'+val.link);
             // $('.getBeritaLatest[data-berita=' + (index + 1) + ']').removeClass('hide');
         })
     } else {

@@ -86,7 +86,7 @@
   </style>
 
   <div class="container">
-    <form id="step-form" method="post" enctype="multipart/form-data" action="<?= base_url('landing/pendaftaran_nasabah') ?>">
+    <form id="step-form" method="post" enctype="multipart/form-data" action="<?= base_url('Landing/pendaftaran_nasabah') ?>">
       <div>
         <h3>Data Diri</h3>
         <section style="background-color: #ffffff;">
