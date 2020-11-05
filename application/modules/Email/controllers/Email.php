@@ -21,7 +21,7 @@ class Email extends Auth_Guard {
 
 	public function index()
 	{
-		$content = 'email/list';
+		$content = 'Email/list';
 		$this->formUrl = base_url('Email/save');
 
 		$data = [
@@ -44,7 +44,7 @@ class Email extends Auth_Guard {
 			$row[] = $key+1;
 			$row[] = $val->email;
 			$row[] = '
-			<a href='.base_url('email/delete?session_id=').encode($val->id).' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"  onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Email : '.$val->email.' ? "><i class="fa fa-trash"></i></span></a>';
+			<a href='.base_url('Email/delete?session_id=').encode($val->id).' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"  onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Email : '.$val->email.' ? "><i class="fa fa-trash"></i></span></a>';
 			$result[] = $row;
 		endforeach;
 		$data = json_output(200, null, $result);
@@ -56,7 +56,7 @@ class Email extends Auth_Guard {
 		$id = decode($_GET['session_id']);
 		$model = new EmailModel;
 		$model->delete($id);
-		return redirect(base_url('/email'));
+		return redirect(base_url('/Email'));
 	}
 
 
@@ -67,7 +67,7 @@ class Email extends Auth_Guard {
 			'data_email' => $this->EmailModel->get_Email()
 		];
 		
-		$this->load->view('email/excel',$data);
+		$this->load->view('Email/excel',$data);
 	}
 	
 }

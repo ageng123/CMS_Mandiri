@@ -20,8 +20,8 @@ class Request extends Auth_Guard {
 
 	public function index()
 	{
-		$content = 'request/list';
-		$this->formUrl = base_url('request/save');
+		$content = 'Request/list';
+		$this->formUrl = base_url('Request/save');
 
 		$data = [
 			'form_url' => $this->formUrl,
@@ -62,7 +62,7 @@ class Request extends Auth_Guard {
 		}
 		
 		$model->update_data();
-		return redirect(base_url('request'));
+		return redirect(base_url('Request'));
 	}
 	public function decline(){
 		$id = $_GET['code'];
@@ -70,7 +70,7 @@ class Request extends Auth_Guard {
 		$model = new Request_model($id);
 		$model->status_request = 3;
 		$model->update_data();
-		return redirect(base_url('request'));
+		return redirect(base_url('Request'));
 	}
 	public function save_data()
 	{
@@ -115,8 +115,8 @@ class Request extends Auth_Guard {
 			$content = '';
 			// $row[] = '<a href='.base_url('admin').' class="btn btn-success btn-sm">Edit</a><a href='.base_url('admin').' class="btn btn-danger btn-sm">Hapus</a>';
 			$val->status_request == 1 ? 
-				($content .= '<a href='.base_url('request/accept?code=').encode($val->id_request).' class="btn btn-success btn-sm" data-toggle="tooltip" title="Acccept Request"><i class="fa fa-thumbs-up"></i></span> Setujui</a>
-				<a href='.base_url('request/decline?code=').encode($val->id_request).' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Decline Request"><i class="fa fa-thumbs-down"></i></span> Tolak</a>')  
+				($content .= '<a href='.base_url('Request/accept?code=').encode($val->id_request).' class="btn btn-success btn-sm" data-toggle="tooltip" title="Acccept Request"><i class="fa fa-thumbs-up"></i></span> Setujui</a>
+				<a href='.base_url('Request/decline?code=').encode($val->id_request).' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Decline Request"><i class="fa fa-thumbs-down"></i></span> Tolak</a>')  
 				: ''; 
 				$row[] = $content;
 				$result[] = $row;
@@ -138,7 +138,7 @@ class Request extends Auth_Guard {
 	}
 
 	private function upload($params, $id){
-				$folder = APPPATH.'../public/resources/upload/'.$id;
+				$folder = APPPATH.'../resources/upload/'.$id;
 				$config['upload_path']          = $folder;
                 $config['allowed_types']        = '*';
                 // $config['max_size']             = 100;
@@ -192,7 +192,7 @@ class Request extends Auth_Guard {
 
 	public function testing()
 	{
-		echo APPPATH.'../public/resources/upload';
+		echo APPPATH.'./resources/upload';
 	}
 	public function getRoleNamaByIDUser($id_user){
 		$roleModel = new AssignRoleModel();

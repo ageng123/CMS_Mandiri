@@ -39,7 +39,7 @@ class Kontak extends CI_Controller {
 			$sqlinsert = $this->Kontak_model->simpan($data);
 			if($sqlinsert) {
 				$this->session->set_flashdata('message', 'Pesan Berhasil Dikirim');
-				return redirect(base_url().'kontak');
+				return redirect(base_url().'Kontak');
 			}
 
 		}

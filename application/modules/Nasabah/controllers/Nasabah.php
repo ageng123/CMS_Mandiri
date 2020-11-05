@@ -20,8 +20,8 @@ class Nasabah extends Auth_Guard {
 
 	public function index()
 	{
-		$content = 'nasabah/list';
-		$this->formUrl = base_url('nasabah/save');
+		$content = 'Nasabah/list';
+		$this->formUrl = base_url('Nasabah/save');
 
 		$data = [
 			'form_url' => $this->formUrl,
@@ -65,9 +65,9 @@ class Nasabah extends Auth_Guard {
 			$row[] = date("d-m-Y H:i:s", strtotime($val->created_on));
 			$row[] = '<a onclick="NasabahServices.detailEvent('."'".encode($val->id)."'".')" class="btn btn-secondary btn-sm " data-toggle="tooltip" title="Detail"><i class="fa fa-info"></i></span></a>
 			<a href="'.base_url('statuspembayaran/index/').encode($val->kode_nasabah).'" class="btn btn-dark btn-sm " data-toggle="tooltip" title="Payment"><i class="fa fa-credit-card"></i></span></a>
-			<a href='.base_url('nasabah/word/'.$val->id.'').' class="btn btn-info btn-sm" data-toggle="tooltip" title="Download Word"><i class="fa fa-download"></i></span></a>
+			<a href='.base_url('Nasabah/word/'.$val->id.'').' class="btn btn-info btn-sm" data-toggle="tooltip" title="Download Word"><i class="fa fa-download"></i></span></a>
 			<a onclick="NasabahServices.updateEvent('."'".encode($val->id)."'".')" class="btn btn-warning btn-sm text-white" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
-			<a href='.base_url('nasabah/delete?session_id=').encode($val->id).' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>';
+			<a href='.base_url('Nasabah/delete?session_id=').encode($val->id).' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>';
 			$result[] = $row;
 		endforeach;
 		$data = json_output(200, null, $result);
@@ -87,7 +87,7 @@ class Nasabah extends Auth_Guard {
 	}
 
 	private function upload($params, $id){
-				$folder = APPPATH.'../public/resources/upload/'.$id;
+				$folder = APPPATH.'../resources/upload/'.$id;
 				$config['upload_path']          = $folder;
                 $config['allowed_types']        = '*';
                 // $config['max_size']             = 100;
@@ -165,7 +165,7 @@ class Nasabah extends Auth_Guard {
 			'data_user' => $this->UserModel->get_data_user()
 		];
 		
-		$this->load->view('nasabah/excel',$data);
+		$this->load->view('Nasabah/excel',$data);
 	}
 
 	public function word(){
@@ -176,7 +176,7 @@ class Nasabah extends Auth_Guard {
 			'data_user' => $this->UserModel->get_data_nasabah($id)
 		];
 		
-		$this->load->view('nasabah/word',$data);
+		$this->load->view('Nasabah/word',$data);
 	}
 	public function edit(){
 		$id = decode($_GET['session_id']);
@@ -190,13 +190,15 @@ class Nasabah extends Auth_Guard {
 		$this->nasabahId = $id;
 		$this->trigger_save_event('UPDATE_DATA_DIRI', $this->input->post('data_diri'));
 		$this->session->set_flashdata('daftar_sukses', true);
-		return redirect(base_url('landing'));
+		return redirect(base_url('Nasabah'));
 
 	}
 	public function delete(){
 		$id = decode($_GET['session_id']);
 		$model = new UserModel;
 		$model->softDelete($id);
+		return redirect(base_url('Nasabah'));
+
 	}
 	public function pendaftaran_nasabah(){
 		$this->trigger_save_event('SAVE_DATA_DIRI', $this->input->post('data_diri'));
@@ -261,7 +263,7 @@ class Nasabah extends Auth_Guard {
 			$model->update($this->nasabahId);
 			$pekerjaan = $this->update_pekerjaanNasabah('SAVE_PEKERJAAN', $this->input->post('pekerjaan'));
 			$koperasi = $this->update_koperasiNasabah('SAVE_KOPERASI_DATA', $this->input->post('koperasi'));
-			return redirect(base_url('nasabah'));
+			return redirect(base_url('Nasabah'));
 		endif;
 	}
 	
@@ -452,7 +454,7 @@ class Nasabah extends Auth_Guard {
 		$model->isi = $this->input->post('comment_content');
 		$model->last_update = date('Y-m-d H:i:s');
 		$model->save();
-		return redirect(base_url('landing/detail_berita/').$this->input->post('slug'));
+		return redirect(base_url('Landing/detail_berita/').$this->input->post('slug'));
 	}
 	function clean($string) {
 		$string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.

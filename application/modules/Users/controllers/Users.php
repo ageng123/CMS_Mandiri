@@ -21,7 +21,7 @@ class Users extends Auth_Guard {
 
 	public function index()
 	{
-		$content = 'users/list';
+		$content = 'Users/list';
 		$this->formUrl = base_url('Users/save');
 
 		$data = [
@@ -54,7 +54,7 @@ class Users extends Auth_Guard {
 			$row[] = $val->active == 1 ? 'aktif' : ' tidak aktif';
 			// $row[] = '<a href='.base_url('admin').' class="btn btn-success btn-sm">Edit</a><a href='.base_url('admin').' class="btn btn-danger btn-sm">Hapus</a>';
 			$row[] = '<a onclick="UserServices.buttonUpdateClicked('."'".encode($val->id)."'".')" class="btn btn-warning btn-sm text-white" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
-			<a href='.base_url('users/delete?session_id=').encode($val->id).' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>';
+			<a href='.base_url('Users/delete?session_id=').encode($val->id).' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>';
 			$result[] = $row;
 		endforeach;
 		$data = json_output(200, null, $result);
@@ -83,10 +83,10 @@ class Users extends Auth_Guard {
 		$id = decode($_GET['session_id']);
 		$model = new UserModel;
 		$model->delete($id);
-		return redirect(base_url('/users'));
+		return redirect(base_url('Users'));
 	}
 	private function upload($params, $id){
-				$folder = APPPATH.'../public/resources/upload/'.$id;
+				$folder = APPPATH.'../resources/upload/'.$id;
 				$config['upload_path']          = $folder;
                 $config['allowed_types']        = '*';
                 // $config['max_size']             = 100;
@@ -130,7 +130,7 @@ class Users extends Auth_Guard {
 		$model->photo = $photo->file_name;
 		$model->active = 1;
 		$model->update($id);
-		return redirect(base_url('users'));
+		return redirect(base_url('Users'));
 	}
 	public function update(){
 		$id = decode($_GET['session_id']);
@@ -156,7 +156,7 @@ class Users extends Auth_Guard {
 		}
 		$model->active = 1;
 		$model->update($id);
-		return redirect(base_url('users'));
+		return redirect(base_url('Users'));
 	}
 	public function testing()
 	{

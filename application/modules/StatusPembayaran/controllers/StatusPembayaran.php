@@ -44,8 +44,8 @@ class StatusPembayaran extends Auth_Guard {
 			$row[] = 'Rp '.$val->jml_pembayaran;
 			$row[] = date('d-m-Y', strtotime($val->tgl_pembayaran));
 			$row[] = $val->status == 1 ? 'Aktif' : 'Tidak Aktif';
-			$row[] = '<a href="'.base_url('statuspembayaran/edit').'?session_id='.encode($val->id).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
-					 <a href="'.base_url('statuspembayaran/destroy').'?session_id='.encode($val->id).'" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" title="Delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Jenis Pembayaran : '.$val->jenis_bayar.' ? "><i class="fa fa-trash"></i></span></a>
+			$row[] = '<a href="'.base_url('StatusPembayaran/edit').'?session_id='.encode($val->id).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
+					 <a href="'.base_url('StatusPembayaran/destroy').'?session_id='.encode($val->id).'" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" title="Delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Jenis Pembayaran : '.$val->jenis_bayar.' ? "><i class="fa fa-trash"></i></span></a>
 					 ';
 			$result[] = $row;
 		endforeach;
@@ -61,7 +61,7 @@ class StatusPembayaran extends Auth_Guard {
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'card_title' => "Tambah Data Pembayaran",
-			'form_url' => base_url('statuspembayaran/add')
+			'form_url' => base_url('StatusPembayaran/add')
 		];
 		if(!empty($this->input->post())):
 			$model = new StatusPembayaranModel();
@@ -72,7 +72,7 @@ class StatusPembayaran extends Auth_Guard {
 			$model->status = $this->input->post('status');
 			if($model->save()):
 				$this->session->set_flashdata('message', 'Data Status Pembayaran Telah Di Input');
-				return redirect(base_url('statuspembayaran/index/').encode($this->input->post('id_nasabah')));
+				return redirect(base_url('StatusPembayaran/index/').encode($this->input->post('id_nasabah')));
 			else:
 				echo $this->db->error();
 			endif;
@@ -88,7 +88,7 @@ class StatusPembayaran extends Auth_Guard {
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'card_title' => "Edit Data Pembayaran",
-			'form_url' => base_url('statuspembayaran/edit?session_id='.encode($id)),
+			'form_url' => base_url('StatusPembayaran/edit?session_id='.encode($id)),
 			'status_list' => $this->status,
 			'form_data' => $model->find($id)
 		];
@@ -100,7 +100,7 @@ class StatusPembayaran extends Auth_Guard {
 			$model->status = $this->input->post('status');
 			if($model->update($id)):
 				$this->session->set_flashdata('message', 'Data Status Pembayaran Telah Di Update');
-				return redirect(base_url('statuspembayaran/index/').encode($this->input->post('id_nasabah')));
+				return redirect(base_url('StatusPembayaran/index/').encode($this->input->post('id_nasabah')));
 			else:
 				echo $this->db->error();
 			endif;
@@ -114,7 +114,7 @@ class StatusPembayaran extends Auth_Guard {
 		$model = new StatusPembayaranModel;
 		$model->delete($id);
 		$this->session->set_flashdata('message', 'Data Status Pembayaran Telah Di Hapus');
-		return redirect(base_url('statuspembayaran/index/').encode($id));
+		return redirect(base_url('StatusPembayaran/index/').encode($id));
 	}
 	// Export 
 

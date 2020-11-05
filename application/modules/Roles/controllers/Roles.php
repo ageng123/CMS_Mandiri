@@ -12,11 +12,11 @@ class Roles extends Auth_Guard {
 
 	public function index()
 	{
-		$content = 'roles/list';
+		$content = 'Roles/list';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'card_title' => "Data Role",
-			'form_url' => base_url('roles/add')
+			'form_url' => base_url('Roles/add')
 		];
 		admin_parse($content, $data);
 		// $this->load->view('welcome_message');
@@ -32,8 +32,8 @@ class Roles extends Auth_Guard {
 			$row = array();
 			$row[] = $key+1;
 			$row[] = $val->nama_role;
-			$row[] = '<a href="'.base_url('roles/edit').'?session_id='.encode($val->id_role).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
-					 <a href="'.base_url('roles/destroy').'?session_id='.encode($val->id_role).'" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" title="Delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Role : '.$val->nama_role.' ? "><i class="fa fa-trash"></i></span></a>
+			$row[] = '<a href="'.base_url('Roles/edit').'?session_id='.encode($val->id_role).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
+					 <a href="'.base_url('Roles/destroy').'?session_id='.encode($val->id_role).'" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" title="Delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Role : '.$val->nama_role.' ? "><i class="fa fa-trash"></i></span></a>
 					 ';
 			$result[] = $row;
 		endforeach;
@@ -56,7 +56,7 @@ class Roles extends Auth_Guard {
 			$model->nama_role = $this->input->post('nama_role');
 			if($model->save()):
 				$this->session->set_flashdata('message', 'Data Role Telah Di Input');
-				return redirect(base_url('roles'));
+				return redirect(base_url('Roles'));
 			else:
 				echo $this->db->error();
 			endif;
@@ -67,11 +67,11 @@ class Roles extends Auth_Guard {
 	public function edit(){
 		$model = new RoleModel();
 		$id = decode($_GET['session_id']);
-		$content = 'roles/add';
+		$content = 'Roles/add';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'card_title' => "Edit Data Role",
-			'form_url' => base_url('roles/edit?session_id='.encode($id)),
+			'form_url' => base_url('Roles/edit?session_id='.encode($id)),
 			'form_data' => $model->find($id)
 		];
 		if(!empty($this->input->post())):
@@ -79,7 +79,7 @@ class Roles extends Auth_Guard {
 			$model->nama_role = $this->input->post('nama_role');
 			if($model->update($id)):
 				$this->session->set_flashdata('message', 'Data Role Telah Di Update');
-				return redirect(base_url('roles'));
+				return redirect(base_url('Roles'));
 			else:
 				echo $this->db->error();
 			endif;
@@ -93,7 +93,7 @@ class Roles extends Auth_Guard {
 		$model = new RoleModel;
 		$model->delete($id);
 		$this->session->set_flashdata('message', 'Data Role Telah Di Hapus');
-		return redirect(base_url('roles'));
+		return redirect(base_url('Roles'));
 	}
 	// Export 
 

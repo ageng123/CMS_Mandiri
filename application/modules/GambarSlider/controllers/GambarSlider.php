@@ -38,8 +38,8 @@
 				$row[] = $val->nama_attachment;
 				$row[] = '<img src="'.base_url('resources/Slider/'.$val->nama_file).'" alt="Image placeholder" width="50%">';
 				$row[] = $val->status_slider == 1 ? 'Aktif' : 'Tidak Aktif';
-				$row[] = '<a href="'.base_url('gambarslider/edit').'?session_id='.encode($val->id_attachment).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
-						<a href="'.base_url('gambarslider/destroy').'?session_id='.encode($val->id_attachment).'" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" title="Delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Gambar : '.$val->nama_attachment.' ? "><i class="fa fa-trash"></i></span></a>';
+				$row[] = '<a href="'.base_url('Gambarslider/edit').'?session_id='.encode($val->id_attachment).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
+						<a href="'.base_url('Gambarslider/destroy').'?session_id='.encode($val->id_attachment).'" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" title="Delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Gambar : '.$val->nama_attachment.' ? "><i class="fa fa-trash"></i></span></a>';
 				$result[] = $row;
 			endforeach;
 			$data = json_output(200, null, $result);
@@ -50,7 +50,7 @@
 
 		// Form Url
 		private function upload($params){
-			$folder = APPPATH.'../public/resources/Slider/';
+			$folder = APPPATH.'../resources/Slider/';
 			$config['upload_path']          = $folder;
 			$config['allowed_types']        = '*';
 			// $config['max_size']             = 100;
@@ -68,10 +68,10 @@
 				return $this->upload->display_errors();
 			} else {
 				$upload_data = (object)$this->upload->data();
-				$config['source_image']=  APPPATH.'../public/resources/Slider/'.$upload_data->file_name;
+				$config['source_image']=  APPPATH.'../resources/Slider/'.$upload_data->file_name;
 				$config['width']= 1260;
                 $config['height']= 800;
-                $config['new_image']=  APPPATH.'../public/resources/Slider/'.$upload_data->file_name;
+                $config['new_image']=  APPPATH.'../resources/Slider/'.$upload_data->file_name;
                 $this->load->library('image_lib', $config);
                 $this->image_lib->resize();
 				return (object)$this->upload->data();
@@ -84,7 +84,7 @@
 			$data = [
 				'title' => 'Mandiri Sekuritas - CMS',
 				'card_title' => "Tambah Data Gambar Slider",
-				'form_url' => base_url('gambarslider/add'),
+				'form_url' => base_url('Gambarslider/add'),
 				'status_list' => $this->status_slider
 			];
 			if(!empty($this->input->post())):
@@ -147,7 +147,7 @@
 			$model = new GambarSliderModel;
 			$model->delete($id);
 			$this->session->set_flashdata('message', 'Data Gambar Slider Di Hapus');
-			return redirect(base_url('gambarslider'));
+			return redirect(base_url('Gambarslider'));
 		}
 
 

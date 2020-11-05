@@ -11,7 +11,7 @@ class Berita extends Auth_Guard {
 	}
 	public function index()
 	{
-		$content = 'kategori/berita/list';
+		$content = 'Kategori/Berita/list';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'card_title' => "Data Kategori Berita",
@@ -31,8 +31,8 @@ class Berita extends Auth_Guard {
 			$row[] = $key+1;
 			$row[] = $val->nama_kategori;
 			$row[] = $val->deskripsi_kategori;
-			$row[] = '<a href="'.base_url('kategori/berita/edit').'?session_id='.encode($val->id_kategori).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
-					  <a href="'.base_url('kategori/berita/destroy').'?session_id='.encode($val->id_kategori).'" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" title="Delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Kategori Berita : '.$val->nama_kategori.' ? "><i class="fa fa-trash"></i></span></a> ';
+			$row[] = '<a href="'.base_url('Kategori/Berita/edit').'?session_id='.encode($val->id_kategori).'" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
+					  <a href="'.base_url('Kategori/Berita/destroy').'?session_id='.encode($val->id_kategori).'" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" title="Delete" onclick="return ActionMessage(1, this, event)" data-msg="Yakin Mau Hapus Kategori Berita : '.$val->nama_kategori.' ? "><i class="fa fa-trash"></i></span></a> ';
 			$result[] = $row;
 		endforeach;
 		$data = json_output(200, null, $result);
@@ -43,11 +43,11 @@ class Berita extends Auth_Guard {
 	// Form Url
 	public function add()
 	{
-		$content = 'kategori/berita/add';
+		$content = 'Kategori/Berita/add';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'card_title' => "Tambah Data Kategori Berita",
-			'form_url' => base_url('kategori/berita/add')
+			'form_url' => base_url('Kategori/Berita/add')
 		];
 		if(!empty($this->input->post())):
 			$model = new KategoriModel();
@@ -56,7 +56,7 @@ class Berita extends Auth_Guard {
 			$model->jenis_kategori = 1;
 			if($model->save()):
 				$this->session->set_flashdata('message', 'Data Kategori Berita Telah Di Input');
-				return redirect(base_url('kategori/berita'));
+				return redirect(base_url('Kategori/Berita'));
 			else:
 				echo $this->db->error();
 			endif;
@@ -66,11 +66,11 @@ class Berita extends Auth_Guard {
 	public function edit(){
 		$model = new KategoriModel();
 		$id = decode($_GET['session_id']);
-		$content = 'kategori/berita/add';
+		$content = 'Kategori/Berita/add';
 		$data = [
 			'title' => 'Mandiri Sekuritas - CMS',
 			'card_title' => "Edit Data Kategori Berita",
-			'form_url' => base_url('kategori/berita/edit?session_id='.encode($id)),
+			'form_url' => base_url('Kategori/Berita/edit?session_id='.encode($id)),
 			'form_data' => $model->find($id)
 		];
 		if(!empty($this->input->post())):
@@ -80,7 +80,7 @@ class Berita extends Auth_Guard {
 			$model->jenis_kategori = 1;
 			if($model->update($id)):
 				$this->session->set_flashdata('message', 'Data Kategori Berita Telah Di Update');
-				return redirect(base_url('kategori/berita'));
+				return redirect(base_url('Kategori/Berita'));
 			else:
 				echo $this->db->error();
 			endif;
@@ -93,7 +93,7 @@ class Berita extends Auth_Guard {
 		$model = new KategoriModel;
 		$model->delete($id);
 		$this->session->set_flashdata('message', 'Data Kategori Berita Telah Di Hapus');
-		return redirect(base_url('kategori/berita'));
+		return redirect(base_url('Kategori/Berita'));
 	}
 	// Export 
 

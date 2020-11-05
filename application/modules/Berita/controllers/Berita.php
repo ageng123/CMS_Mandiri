@@ -12,7 +12,7 @@ class Berita extends CI_Controller {
 	{
 		$model = new Berita_model();
 		$this->load->library('pagination');
-		$config['base_url'] = site_url('berita/index/'); //site url
+		$config['base_url'] = site_url('Berita/index/'); //site url
         $config['total_rows'] = $model->getTotalBerita(); //total row
         $config['per_page'] = 8;  //show record per halaman
         $config["uri_segment"] = 3;  // uri parameter
