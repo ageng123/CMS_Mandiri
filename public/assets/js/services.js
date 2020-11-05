@@ -261,7 +261,7 @@ const Content_Services = {
         return output
     },
     latestProductData: function(data){
-       let content =  `<div class="col-2"><a href="">
+       let content =  `<div class="col-md-2 col-xs-4"><a href="">
                     <div class="card card-product">
                       <div class="card-body" style="padding: 0px; background: black">
                         <img style="width: 100% !important; object-fit: cover;" src="`+base_url+'/resources/Produk/'+data.uploader+'/'+data.nama_file+`" height="75" alt="">
