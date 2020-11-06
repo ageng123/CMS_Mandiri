@@ -84,7 +84,7 @@
 			$data = [
 				'title' => 'Mandiri Sekuritas - CMS',
 				'card_title' => "Tambah Data Gambar Slider",
-				'form_url' => base_url('Gambarslider/add'),
+				'form_url' => base_url('GambarSlider/add'),
 				'status_list' => $this->status_slider
 			];
 			if(!empty($this->input->post())):

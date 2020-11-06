@@ -3,7 +3,7 @@
 			<div class="row">
 				<div class="col-lg-5 col-md-6 sm-mb-30px wow fadeInUp" style="text-align: center;">
 					<h2 class="text-primary">Subscribe to Our Newsletter </h2>
-					<form action="<?= base_url('landing/proses_add');?>" method="POST">
+					<form action="<?= base_url('Landing/proses_add');?>" method="POST">
 						<div class="form-group">
 							<input type="text" name="email" placeholder="Enter Your Email Address ..." class="form-control">
 						</div>
