@@ -59,9 +59,10 @@ class Nasabah extends Auth_Guard {
 			// $row[] = indonesiaFullDate($val->tanggal_lahir);
 			$row[] = date("d/m/Y",strtotime($val->tanggal_lahir));
 			$row[] = str_replace('/', ',', $val->alamat_rumah);
-				$alamat = explode(',', $val->alamat_rumah);
-				$alamat2 = explode('/', $val->alamat_rumah);
-			$row[] = strtoupper( isset($alamat[5]) ? $alamat[5] : $alamat2[5]);
+				// $alamat = explode(',', $val->alamat_rumah);
+				// $alamat2 = explode('/', $val->alamat_rumah);
+			$alamat = json_decode($val->additional);
+			$row[] = strtoupper( isset($alamat->alamat_provinsi) ? $alamat->alamat_provinsi : '');
 			$row[] = date("d-m-Y H:i:s", strtotime($val->created_on));
 			$row[] = '<a onclick="NasabahServices.detailEvent('."'".encode($val->id)."'".')" class="btn btn-secondary btn-sm " data-toggle="tooltip" title="Detail"><i class="fa fa-info"></i></span></a>
 			<a href="'.base_url('StatusPembayaran/index/').encode($val->kode_nasabah).'" class="btn btn-dark btn-sm " data-toggle="tooltip" title="Payment"><i class="fa fa-credit-card"></i></span></a>
