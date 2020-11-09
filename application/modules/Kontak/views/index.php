@@ -72,7 +72,7 @@
         
          <div class="alert alert-warning"><?= $this->session->flashdata('message'); ?></div>
         <?php endif; ?>
-          <form action="<?= base_url('kontak/proses_add');?>" method="POST">
+          <form action="<?= base_url('Kontak/proses_add');?>" method="POST">
             <table>
                 <tr>
                 <td><label >Name *</label></td>

@@ -241,10 +241,10 @@ class Nasabah extends Auth_Guard {
 		$additional = [
 			'pendidikan' => $request->pendidikan,
 			'client_id' => $request->client_id,
-			'provinsi' => $request->provinsi,
-			'kabupaten' => $request->kabupaten,
-			'RT' => $rtrw[0],
-			'RW' => $rtrw[1]
+			'alamat_provinsi' => $request->provinsi,
+			'alamat_kabupaten' => $request->kabupaten,
+			'alamat_RT' => $rtrw[0],
+			'alamat_RW' => $rtrw[1]
 		];
 		$model->additional = json_encode($additional);
 		if($model->update($this->nasabahId)):

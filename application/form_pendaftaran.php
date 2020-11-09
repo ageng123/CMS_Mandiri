@@ -353,9 +353,13 @@
         <section style="background-color: #ffffff;">
           <h2><b style="color: #432a19;">DATA</b> <b style="color: #f7a91e;">PEKERJAAN</b></h2>
           <div class="form row">
+<<<<<<< HEAD
+            <div class="col-md-6 col-xs-12">
+=======
             <div class="col-xs-12 col-md-6">
+>>>>>>> 9e2555a58568892da57415bf79786782c77f7554
               <label for=""><h5>Pekerjaan</h5></label>
-              <select class="form-control required" data-bind="jenis_pekerjaan" name="pekerjaan[jenis]" id="pekerjaan">
+              <select class="form-control" data-bind="jenis_pekerjaan" name="pekerjaan[jenis]" id="pekerjaan">
                 <option value="">Pilih Pekerjaan</option>
                 <option value="Ibu Rumah Tangga">Ibu Rumah Tangga</option>
                 <option value="Wiraswasta">Wiraswasta</option>
@@ -689,7 +693,7 @@
   </div>
 </section>
 
-  <!-- <label style="margin-left: 20px;text-align: center;><h5><i>Bermasalah dengan Pendaftaran Online ? Daftar melalui Form</i> <b style="color: #f7a91e;">Pendaftaran Offline</b></h5></label> -->
+  <label style="margin-left: 20px;text-align: center;><h5><i>Bermasalah dengan Pendaftaran Online ? Daftar melalui Form</i> <b style="color: #f7a91e;">Pendaftaran Offline</b></h5></label>
   <br/>
   <br/>
   <div class="" style="background-color: #efebe8;">

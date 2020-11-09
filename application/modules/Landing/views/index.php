@@ -535,7 +535,7 @@
             <div class="col-xs-12 newestNews_container hide col-lg-3" style="width: 100%; min-height: 400px;" data-index="<?= $id ?>">
               <div class="blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2">
                 <div class="position-relative">
-                  <a class="btn-detail" data-index="<?= $id ?>" href="<?= base_url('landing/detail_berita/')?>">
+                  <a class="btn-detail" data-index="<?= $id ?>" href="<?= base_url('Landing/detail_berita/')?>">
                     <div class="item-thumbnail background-dark"><img style="max-height: 140px;" data-index="<?= $id ?>" class="newestNewsImage" src="<?= site_url('resources/Berita/') ?>" alt=""></div>
                   </a>
                 </div>
@@ -543,7 +543,7 @@
                 <center><p data-index="<?= $id ?>" class="subtitle">Subtitle</p></center>
                 <hr>
                 <center>
-                  <a class="btn btn-warning border-radius-30 btn-detail" data-index="<?= $id ?>" href="<?= base_url('landing/detail_berita/')?>">
+                  <a class="btn btn-warning border-radius-30 btn-detail" data-index="<?= $id ?>" href="<?= base_url('Landing/detail_berita/')?>">
                     Read More
                   </a>
                 </center>

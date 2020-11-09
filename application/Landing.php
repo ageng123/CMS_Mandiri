@@ -11,7 +11,7 @@ class Landing extends CI_Controller {
 		$this->kode_nasabah = 'YYYYMMDD[IDNASABAH]His';
 	}
 	private function upload($params, $id){
-		$folder = APPPATH.'../resources/upload/';
+		$folder = APPPATH.'../public/resources/upload/';
 		$config['upload_path']          = $folder;
 		$config['allowed_types']        = '*';
 		$config['file_name']			= encode($id.date('Ymdhis'));
@@ -144,7 +144,7 @@ class Landing extends CI_Controller {
 		';
 		$send = send_email($this->data_email['to'], null, null, 'Status Pendaftaran Akun KJKPI ANDA',$content);
 		$this->session->set_flashdata('daftar_sukses', true);
-		return redirect(base_url(''));
+		return redirect(base_url('landing'));
 	}
 	private function saveData_diri($request){
 		$model = new Nasabah_Model;
@@ -250,7 +250,7 @@ class Landing extends CI_Controller {
 		$model->total_pembayaran = (15000 * (int)$simpanan->wajib ) + 100000 + (int)$sukarela;
 		$model->kode_pembayaran = $random_number;
 		$this->kode_pendaf = $random_number;
-		$this->data_email['total_pembayaran'] = rupiah((15000 * (int)$simpanan->wajib ) + 100000 + (int)$sukarela + (int)$random_number);
+		$this->data_email['total_pembayaran'] = (15000 * (int)$simpanan->wajib ) + 100000 + (int)$sukarela + (int)$random_number;
 		if($model->save()):
 			return true;
 		endif;
@@ -277,7 +277,7 @@ class Landing extends CI_Controller {
 			$sqlinsert = $this->Landing_model->simpan($data);
 			if($sqlinsert) {
 				$this->session->set_flashdata('message', 'Pesan Berhasil Dikirim');
-				return redirect(base_url().'Landing');
+				return redirect(base_url().'landing');
 			}
 
 		}
@@ -290,7 +290,7 @@ class Landing extends CI_Controller {
 		$model->isi = $this->input->post('comment_content');
 		$model->last_update = date('Y-m-d H:i:s');
 		$model->save();
-		return redirect(base_url('Landing/detail_berita/').$this->input->post('slug'));
+		return redirect(base_url('landing/detail_berita/').$this->input->post('slug'));
 	}
 	function clean($string) {
 		$string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.

@@ -147,7 +147,7 @@
 			$model = new GambarSliderModel;
 			$model->delete($id);
 			$this->session->set_flashdata('message', 'Data Gambar Slider Di Hapus');
-			return redirect(base_url('Gambarslider'));
+			return redirect(base_url('GambarSlider'));
 		}
 
 
