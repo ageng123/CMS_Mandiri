@@ -39,7 +39,7 @@
             <div class="row">
               <div class="col-xs-12 col-lg-12"> 
                 <p class="text-extra-large" style="font-size:40px;">
-                  <b style="color: #f7a91e; ">PENDAFTARAN</b> 
+                  <b style="color: #f7a91e; ">PENDAFTARAN asdasd</b> 
                 </p>
               </div>
             </div>
