@@ -179,9 +179,12 @@ class Landing extends CI_Controller {
 			'pendidikan' => $request->pendidikan,
 			'client_id' => $request->client_id,
 			'alamat_provinsi' => $request->provinsi,
-			'alamat_kabupaten' => $request->kabupaten,
+			'alamat_kota' => $request->kabupaten,
 			'alamat_RT' => $rtrw[0],
-			'alamat_RW' => $rtrw[1]
+			'alamat_RW' => $rtrw[1],
+			'alamat_kecamatan' => $request->kecamatan,
+			'alamat_kelurahan' => $request->kelurahan,
+			'kode_pos' => $request->kodepos
 		];
 		$model->additional = json_encode($additional);
 		if($model->save()):

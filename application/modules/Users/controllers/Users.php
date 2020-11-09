@@ -142,9 +142,11 @@ class Users extends Auth_Guard {
 		$model->tanggal_lahir = $request->tanggal_lahir;
 		$model->jenis_kelamin = $request->jenis_kelamin;
 		$model->username = $request->username;
+
 		if($request->password != ''){
 			$model->password = $this->bcrypt->hash($request->password);
 		}
+
 		$model->email = $request->email;
 		$model->active = 1;
 		$model->created_on = time();
