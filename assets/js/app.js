@@ -368,6 +368,8 @@ $(document).ready(function () {
         }
     })
     Dropzone.autoDiscover = false;
+    let id = '';
+    let filename = '';
     var myDropZone = new Dropzone('.produkDrop',{
         addRemoveLinks: true, 
         init: function(){
@@ -377,10 +379,13 @@ $(document).ready(function () {
                 let current = $('#attch_list').val();
                 if(current == ''){
                     $('#attch_list').val(data.id_upload);
+                    file.previewElement.id = data.id_upload;
+                    file.previewElement.setAttribute('data-name', data.nama);
                 } else {
                     $('#attch_list').val(current + ',' + data.id_upload);
                     console.log($('#attch_list').val());
-
+                    file.previewElement.id = data.id_upload;
+                    file.previewElement.setAttribute('data-name', data.nama);
                 }
             })
             this.on('addedfile', function(file){
@@ -413,7 +418,6 @@ $(document).ready(function () {
         },
         removedfile: function(file) {
             let DropZone = this;
-            console.log(file);
             let element = DropZone.element;
             let url_data = element.getAttribute('data-delete');
             x = confirm('Do you want to delete?');
@@ -422,11 +426,12 @@ $(document).ready(function () {
                 url: url_data,
                 method: 'POST',
                 data: {
-                    name : file.files,
-                    id : file.id
+                    name : file.previewElement.getAttribute('data-name'),
+                    id : file.previewElement.id
                 },
-                dataType: 'text/html',
+                dataType: 'json',
                 success: function(response){
+                    console.log(response);
                     window.location.reload();
                 }
             })
