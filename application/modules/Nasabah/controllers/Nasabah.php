@@ -265,8 +265,8 @@ class Nasabah extends Auth_Guard {
 			$user = explode(' ', $request->nama);
 			$model->username = strtolower($user[0]).'-'.$this->nasabahId;
 			$model->update($this->nasabahId);
-			$pekerjaan = $this->update_pekerjaanNasabah('SAVE_PEKERJAAN', $this->input->post('pekerjaan'));
-			$koperasi = $this->update_koperasiNasabah('SAVE_KOPERASI_DATA', $this->input->post('koperasi'));
+			$pekerjaan = $this->update_pekerjaanNasabah($this->input->post('pekerjaan'));
+			$koperasi = $this->update_koperasiNasabah($this->input->post('koperasi'));
 			return redirect(base_url('Nasabah'));
 		endif;
 	}
