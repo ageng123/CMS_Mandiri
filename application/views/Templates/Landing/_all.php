@@ -98,7 +98,7 @@
 											<img src="<?= base_url('assets/img/profil.png') ?>"
 												style="object-fit: cover;width: 24px; height: 24px" alt="" srcset=""> &nbsp;<?= $this->session->userdata('full_name') ?></a>
 											<ul class="sub-menu">
-												<li><a href="<?= base_url('profile') ?>">Profile User</a></li>
+												<li><a href="<?= base_url('Profile') ?>">Profile User</a></li>
 												<li><a href="<?= base_url('auth/logout') ?>">Logout</a></li>
 											</ul>
 										</li>
