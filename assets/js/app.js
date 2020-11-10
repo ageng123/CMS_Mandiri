@@ -93,6 +93,7 @@ const UserServices = {
        UserServices.userRenderToForm(data.data);
     },
     userRenderToForm: (data) => {
+        console.log(data);
         $('#userModal-form').modal('show');
         $('#userForm input select').val('');
         $('input[name=full_name]').val(data.full_name);
@@ -130,7 +131,7 @@ const NasabahServices = {
         NasabahServices.renderToForm(data);
     },
     renderToForm: (data) => {
-        console.log(data);
+        let additional_data = JSON.parse(data.additional);
         let form_data = data.sudah_member;
         if(form_data == 1){
             $('input[name="data_diri[member]"][value="sudah"]').prop('checked', true);
@@ -144,12 +145,17 @@ const NasabahServices = {
             $('input[name="data_diri[punya_ktp]"][value="belum"]').prop('checked', true);
             // $('input[name="ktp_ahli"]').val(data.foto_ktp_ahli_waris);
             // $('#kk input[name="kk"]').val(data.foto_kk);
+            $('#ktpwaris_preview').attr('src', base_url+'resources/upload/'+data.foto_ktp_ahli_waris);
+            $('#kk2_preview').attr('src', base_url+'resources/upload/'+data.foto_kk);
+            
             $('input[name="data_diri[nomor_identity]"]').val(data.no_kk);
 
         } else {
             $('input[name="data_diri[punya_ktp]"][value="sudah"]').prop('checked', true);
             // $('input[name="ktp"]').val(data.foto_ktp);
             // $('#kk2 input[name="ktp"]').val(data.foto_kk);
+            $('#ktp_preview').attr('src', base_url+'resources/upload/'+data.foto_ktp);
+            $('#kk1_preview').attr('src', base_url+'resources/upload/'+data.foto_kk);
             $('input[name="data_diri[nomor_identity]"]').val(data.ektp);
 
         }
@@ -164,7 +170,27 @@ const NasabahServices = {
         $('select[name="data_diri[tanggal]"]').val(parseInt(form_data[2]));
         $('select[name="data_diri[jenis_kelamin]"]').val(data.jenis_kelamin);
         form_data = data.alamat.split('/');
-        $('textarea[name="data_diri[alamat]"]').val(form_data[0]);
+        $('textarea[name="data_diri[alamat]"]').val(form_data);
+        function toTitleCase(str) {
+            return str.replace(/\w\S*/g, function(txt){
+                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            });
+        }
+        if(form_data[6] == undefined){
+            form_data[6] = toTitleCase(additional_data.alamat_provinsi);
+        }
+        if(form_data[5] == undefined){
+            form_data[5] = toTitleCase(additional_data.alamat_kota);
+        }
+        if(form_data[4] == undefined){
+            form_data[4] = additional_data.alamat_kecamatan;
+        }
+        if(form_data[3] == undefined){
+            form_data[3] = additional_data.alamat_kelurahan;
+        } 
+        if(form_data[7] == undefined){
+            form_data[7] = additional_data.kode_pos;
+        }        
         $('select[name="data_diri[provinsi]"]').val(form_data[6]);
         $('select[name="data_diri[provinsi]"]').trigger('change');
         $('select[name="data_diri[kabupaten]"]').val(form_data[5]);
@@ -367,16 +393,19 @@ $(document).ready(function () {
             })
             let DropZone = this;
             let element = DropZone.element;
+            console.log(element);
             let url_data = element.getAttribute('data-get');
             let id = element.getAttribute('session_token');
             // if(url_data !== 'undefined'){
+                console.log(url_data);
                 $.get(url_data, function(data) {
+                    console.log(data);
                     data = JSON.parse(data);
                     $.each(data.data, function(key,value){
                         var mockFile = { name: value.nama, size: value.size, id: value.id, files: value.file };
                         DropZone.options.addedfile.call(DropZone, mockFile);
                         DropZone.emit("complete", mockFile);
-                        DropZone.options.thumbnail.call(DropZone, mockFile, "http://localhost:8000/resources/Produk/"+id+"/"+value.file);
+                        DropZone.options.thumbnail.call(DropZone, mockFile, base_url+"/resources/Produk/"+id+"/"+value.file);
                          
                     });
                 })
@@ -384,6 +413,7 @@ $(document).ready(function () {
         },
         removedfile: function(file) {
             let DropZone = this;
+            console.log(file);
             let element = DropZone.element;
             let url_data = element.getAttribute('data-delete');
             x = confirm('Do you want to delete?');

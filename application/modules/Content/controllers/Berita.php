@@ -135,7 +135,7 @@ class Berita extends Auth_Guard {
 			$model->author = $this->user; //must-edit
 			if($model->update($id)):
 				$this->session->set_flashdata('message', 'Data Konten Berita Telah Di Update');
-				return redirect(base_url('content/berita'));
+				return redirect(base_url('Content/berita'));
 			else:
 				echo $this->db->error();
 			endif;

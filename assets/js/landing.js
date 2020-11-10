@@ -37,6 +37,8 @@ $(document).ready(function () {
                     })
                     let content = $('#alamat_rumah').val();
                     $('p[data-update=alamat_rumah]').html(content);
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
                     return form.valid();
                     // return true;
                 } else if (currentIndex === 1) {
@@ -45,6 +47,8 @@ $(document).ready(function () {
                     })
                     let content = $('input[name=total_pembayaran]').val();
                     $('p[data-update=total_biaya]').html(content);
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
                     return form.valid();
                     // return true;
 

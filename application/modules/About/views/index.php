@@ -15,8 +15,8 @@
 
           <!-- Mail list -->
           <div class="widget">
-           <p align="center"> <img src="<?= base_url('assets/img/about/') ?>owner.png" style="text-align: center;"></p>
-            <h4 class="widget-title clearfix"><span><font color="#f7a91e">ABRAR MIR</font></span></h4>
+           <p align="center"> <img src="<?= base_url('assets/img/about/') ?>owner2.jpeg" style="text-align: center;"></p>
+            <h4 class="widget-title clearfix"><span><font color="#f7a91e">FATH ALIANSYAH BUDIMAN</font></span></h4>
             <p></p>
             <p align="center">Founder and Managing Patner Of Koperasi Jasa Komunitas Panen Saham Indonesia</p><hr>
 

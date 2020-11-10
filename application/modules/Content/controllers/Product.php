@@ -44,7 +44,7 @@ class Product extends Auth_Guard {
 		echo JSON_ENCODE($data, JSON_PRETTY_PRINT);
 	}
 	public function get_attachment(){
-		$folder = APPPATH.'../resources/produk/'.$this->session->userdata('user_id');
+		$folder = APPPATH.'../resources/Produk/'.$this->session->userdata('user_id');
 		$id = decode($_GET['id']);
 		$model = new Attachment_Model;
 		$output = $model->findBy(['refid' => $id, 'nama_attachment !=' => null]);
@@ -63,7 +63,7 @@ class Product extends Auth_Guard {
 	public function delete_attachment(){
 		$nama_file = $this->input->post('name');
 		$id = $this->input->post('id');
-		$directory =  APPPATH.'../resources/produk/'.$this->session->userdata('user_id');
+		$directory =  APPPATH.'../resources/Produk/'.$this->session->userdata('user_id');
 		if(unlink($directory.'/'.$nama_file)){
 			$model = new Attachment_Model;
 			if($model->delete($id)){
@@ -80,7 +80,7 @@ class Product extends Auth_Guard {
 	}
 	// Form Url
 	private function upload($params){
-		$folder = APPPATH.'../resources/produk/'.$this->session->userdata('user_id');
+		$folder = APPPATH.'../resources/Produk/'.$this->session->userdata('user_id');
 		$config['upload_path']          = $folder;
 		$config['allowed_types']        = '*';
 		// $config['max_size']             = 100;
@@ -144,7 +144,7 @@ class Product extends Auth_Guard {
 				echo $this->db->error();
 			endif;
 		endif;
-		$dataTemp = $tempData->findBy(['uploader' => $this->session->userdata('user_id'), 'refid' => null]);
+		$dataTemp = $tempData->findBy(['uploader' => $this->session->userdata('user_id'), 'refid' => null, 'tipe_attachment' == 2]);
 		if(count($dataTemp) > 0):
 			foreach($dataTemp as $key => $val): 
 				$tempData->delete($val->id_attachment);

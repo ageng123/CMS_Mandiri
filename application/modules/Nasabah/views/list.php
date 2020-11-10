@@ -166,6 +166,7 @@
                           <h5>Upload <b style="color: #f7a91e;">E-KTP</b></h5>
                         </label>
                         <input type="file" name="ktp" id="">
+                        <img id="ktp_preview" src="<?= base_url() ?>" height="110" alt="">
                       </div>
                       <div class="col show" id="kk2">
                         <img src="<?= base_url('assets/img/ktpkk.png') ?>" height="110" alt="">
@@ -173,6 +174,7 @@
                           <h5>Upload <b style="color: #f7a91e;">KK</b>* (Optional)</h5>
                         </label>
                         <input type="file" name="kk" id="">
+                        <img id="kk1_preview" src="<?= base_url() ?>" height="110" alt="">
                       </div>
                       <div class="col hide" id="ktp_ahli">
                         <img src="<?= base_url('assets/img/ktpkk.png') ?>" height="110" alt="">
@@ -180,6 +182,7 @@
                           <h5>Upload <b style="color: #f7a91e;">E-KTP AHLI WARIS</h4></b>
                         </label>
                         <input type="file" name="ktp_ahli" id="">
+                         <img id="ktpwaris_preview" src="<?= base_url() ?>" height="110" alt="">
                       </div>
                       <div class="col hide" id="kk">
                         <img src="<?= base_url('assets/img/ktpkk.png') ?>" height="110" alt="">
@@ -190,6 +193,7 @@
                           <h6>*Wajib Upload jika belum memiliki KTP</h6>
                         </label>
                         <input type="file" name="kk" id="">
+                        <img id="kk2_waris" src="<?= base_url() ?>" height="110" alt="">
                       </div>
                     </div>
 

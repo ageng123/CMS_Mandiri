@@ -86,7 +86,7 @@ class Request extends Auth_Guard {
 				$model->save();
 			endif;
 		}
-		return redirect(base_url('rekening'));		
+		return redirect(base_url('Rekening'));		
 	}
 	
 	public function getJSON(){

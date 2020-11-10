@@ -68,7 +68,7 @@ class Nasabah extends Auth_Guard {
 			<a href="'.base_url('StatusPembayaran/index/').encode($val->kode_nasabah).'" class="btn btn-dark btn-sm " data-toggle="tooltip" title="Payment"><i class="fa fa-credit-card"></i></span></a>
 			<a href='.base_url('Nasabah/word/'.$val->id.'').' class="btn btn-info btn-sm" data-toggle="tooltip" title="Download Word"><i class="fa fa-download"></i></span></a>
 			<a onclick="NasabahServices.updateEvent('."'".encode($val->id)."'".')" class="btn btn-warning btn-sm text-white" data-toggle="tooltip" title="Edit"><i class="fa fa-edit"></i></span></a>
-			<a href='.base_url('Nasabah/delete?session_id=').encode($val->id).' class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>';
+			<a href='.base_url('Nasabah/delete?session_id=').encode($val->id).' onclick="confirm('."'".'Apakah Kamu yakin?'."'".')" class="btn btn-danger btn-sm" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></span></a>';
 			$result[] = $row;
 		endforeach;
 		$data = json_output(200, null, $result);
@@ -435,7 +435,8 @@ class Nasabah extends Auth_Guard {
 				$this->saveData_koperasi($data);
 			break;
 			case 'UPDATE_DATA_DIRI':
-				$this->update_dataDiri($id, $data);
+				$id = $this->nasabahId;
+				$this->update_dataDiri($data);
 			break;
 		}
 	}

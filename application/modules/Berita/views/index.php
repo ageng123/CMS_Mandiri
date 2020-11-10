@@ -25,9 +25,9 @@
                 </a>
               </div>
               <div class="col-12">
-                  <a href="<?= base_url('landing/detail_berita/').$val->link ?>" class="margin-tb-20px d-block padding-lr-30px" style="font-size: 14px;text-align: justify;"><?= substr($val->title,0,70) ?>...</a>
+                  <a href="<?= base_url('Landing/detail_berita/').$val->link ?>" class="margin-tb-20px d-block padding-lr-30px" style="font-size: 14px;text-align: justify;"><?= substr($val->title,0,70) ?>...</a>
               </div>              <hr>
-              <center><a class="btn btn-warning border-radius-30" href="<?= base_url('landing/detail_berita/').$val->link ?>">Read More</a></center>
+              <center><a class="btn btn-warning border-radius-30" href="<?= base_url('Landing/detail_berita/').$val->link ?>">Read More</a></center>
               <br>
             </div>
           </div>

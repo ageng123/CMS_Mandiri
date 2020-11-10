@@ -6,6 +6,15 @@
 .daftar-radio > .form-check-inline{
     margin-right: 5rem !important;
 }
+@media only screen and (max-width: 600px) {
+  .mobile-select{
+        margin-bottom: 10px;
+        margin-top: 10px;
+  }
+}
+.mobile-select{
+    
+}
 .hide{
     Display: none !important
 }

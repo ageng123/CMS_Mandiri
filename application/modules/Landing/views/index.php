@@ -298,7 +298,7 @@
                     <button class="btn btn-danger btn-block"
                       style="border-radius: 2% !Important; background: #603913; color: white;">Continue</button>
                   </form>
-                  
+                  <a class="btn btn-link" href="<?= base_url('auth/forgot_password') ?>">Forgot Password</a>
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
               </div>

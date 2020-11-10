@@ -15,7 +15,7 @@ require_once(APPPATH.'/models/Main.php');
             return $this->db->insert($this->model, $data);
         }
         public function getTotalBerita(){
-            return $this->db->where('status', 2)->from($this->table)->count_all_results();
+            return $this->db->where('status', 1)->from($this->table)->count_all_results();
         }
         public function set_limit($val){
             $this->limit = $val;

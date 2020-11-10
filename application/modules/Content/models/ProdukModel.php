@@ -28,8 +28,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $result = [];
             $parameter = explode(',', $params);
             foreach($parameter as $val):
+                if(!empty($val)):
                 $model = $this->db->where('id_kategori', $val)->get('kategori_list')->row_object();
                 array_push($result, '<span class="badge badge-pill p-2 text-white badge-primary">'.$model->nama_kategori.'</span>');
+                endif;
             endforeach;
             return implode(' ',$result);
         }

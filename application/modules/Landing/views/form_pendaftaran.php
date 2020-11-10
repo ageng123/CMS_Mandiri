@@ -210,21 +210,21 @@
             </div>
             <div class="col">
               <label for=""><h5>Nomor Identitas (E-KTP/KTP AHLI WARIS/KK)</h5></label>
-              <input type="text" class="form-control" id="colFormLabelSm" name="data_diri[nomor_identity]" data-bind="nomor_identity" placeholder="">
+              <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" class="form-control" id="colFormLabelSm" name="data_diri[nomor_identity]" data-bind="nomor_identity" placeholder="">
             </div>
           </div>
           <br/>
           <div class="form row">
-            <div class="col">
+            <div class="col-md-12">
               <div class="form-group">
                 <label for=""><h5>Tempat/Tanggal/Bulan/Tahun Lahir</h5></label>
                 <div class="row">
                   <div class="col-md-3">
-                    <input type="text" name="data_diri[tempat]" placeholder="PLACE" class="form-control" data-bind="tempat">
+                    <input type="text" name="data_diri[tempat]" placeholder="PLACE" class="form-control mobile-select" data-bind="tempat">
                   </div>
                   <div class="col-md-3">
                     <!-- <input type="text" name="data_diri[tanggal]" placeholder="DD" class="form-control haripicker" data-bind="hari"> -->
-                    <select name="data_diri[tanggal]" class="form-control" id="" data-bind="hari">
+                    <select name="data_diri[tanggal]" class="form-control mobile-select" id="" data-bind="hari">
                       <option value="">DD</option>
                       <?php for($i = 1; $i <= 31; $i++): ?>
                         <option value="<?= $i ?>"><?= $i ?></option>
@@ -233,7 +233,7 @@
                   </div>
                   <div class="col-md-3">
                     <!-- <input type="text" name="data_diri[bulan]" placeholder="MM" class="form-control bulanpicker" data-bind="bulan"> -->
-                    <select name="data_diri[bulan]" data-bind="bulan" class="form-control" id="">
+                    <select name="data_diri[bulan]" data-bind="bulan" class="form-control mobile-select" id="">
                       <option value="">MM</option>
                       <?php for($i = 1; $i <= 12; $i++): ?>
                         <option value="<?= $i ?>"><?= $i ?></option>
@@ -241,7 +241,7 @@
                     </select>
                   </div>
                   <div class="col-md-3">
-                    <input type="text" name="data_diri[tahun]" placeholder="YYYY" class="form-control tahunpicker"
+                    <input type="text" name="data_diri[tahun]" placeholder="YYYY" class="form-control mobile-select tahunpicker"
                       data-bind="tahun">
                   </div>
                 </div>
@@ -320,7 +320,8 @@
           <div class="form-group row">
             <label class="col-form-label col-md-2" for=""><h5>Pendidikan</h5></label>
             <div class="col-md-4">
-              <select name="data_diri[pendidikan]" data-bind="pendidikan" class="form-control" id="">
+              <select name="data_diri[pendidikan]" data-bind="pendidikan" class="form-control required" id="">
+                <option value="">Pilih Pendidikan</option>
                 <option value="Belum Sekolah">Belum Sekolah</option>
                 <option value="TK">TK</option>
                 <option value="SD">SD</option>

@@ -11,7 +11,7 @@ class Landing extends CI_Controller {
 		$this->kode_nasabah = 'YYYYMMDD[IDNASABAH]His';
 	}
 	private function upload($params, $id){
-		$folder = APPPATH.'../resources/upload/';
+		$folder = APPPATH.'../resources/upload/'.$id;
 		$config['upload_path']          = $folder;
 		$config['allowed_types']        = '*';
 		$config['file_name']			= encode($id.date('Ymdhis'));
@@ -172,8 +172,9 @@ class Landing extends CI_Controller {
 		$this->data_email['to'] = $request->email;
 		$model->password = $this->bcrypt->hash($request->password);
 		$code =  encode($request->nomor_identity.$request->nama);
-		$model->activation_code = $this->clean($code);
-		$this->data_email['kode_aktivasi'] = $this->clean($code);
+		$code = substr($this->clean($code), 0, 200);
+		$model->activation_code = $code;
+		$this->data_email['kode_aktivasi'] = $code;
 		$rtrw = explode('/', $request->rt);
 		$additional = [
 			'pendidikan' => $request->pendidikan,
