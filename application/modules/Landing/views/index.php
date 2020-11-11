@@ -600,7 +600,7 @@
           </div>
           <div class="card-body no-border no-bg">
              <div class="background-white padding-20px" style="text-align: center;font-size: 14px;">
-                Media layanan berupa jasa kepada <b>investor saham</b>, edukasi para investor, mengenai bagaimana menjalankan trading saham yang sehat serta mengimplementasikannya secara mandiri ke <font color="#f7a91e">Bursa Efek Indonesia</font>
+                Media layanan berupa jasa kepada <b>investor saham</b>, edukasi para investor, mengenai bagaimana menjalankan trading saham yang sehat serta mengimplementasikannya secara mandiri ke <b><font color="#f7a91e">Bursa Efek Indonesia</font></b>
             </div>
           </div>
         </div>
@@ -612,7 +612,7 @@
           </div>
           <div class="card-body no-border bo-bg">
              <div class="background-white padding-20px" style="text-align: center;font-size: 14px;">
-                <font color="#f7a91e">Forum jual beli online</font> perlengkapan dan peralatan hobi. Belanja murah, lengkap, aman, bisa nego dan COD.
+                <b><font color="#f7a91e">Forum jual beli online</font></b> perlengkapan dan peralatan hobi. Belanja murah, lengkap, aman, bisa nego dan COD.
             </div>
           </div>
         </div>
@@ -624,7 +624,7 @@
           </div>
           <br>
             <div class="background-white padding-20px" style="text-align: center;font-size: 14px;">
-                <font color="#f7a91e">Forum jual beli online</font> perlengkapan dan peralatan hobi. Belanja murah, lengkap, aman, bisa nego dan COD.
+                <b><font color="#f7a91e">Radio PanenSaham</font></b> adalah Radio Streaming di Jakarta dan Semarang yang membahas tentang pasar modal, bisnis dan informasi lainnya dengan jam tayang setiap Senin - Jumat adalah pukul 06:00 sampai 00:00 WIB.
             </div>
         </div>
       </div>
