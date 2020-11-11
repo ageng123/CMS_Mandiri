@@ -3,7 +3,7 @@
           <div class="row">
             <div class="col-lg-9 margin-bottom-30px wow fadeInUp">
               <div class="text-left hvr-bob">
-                <h1 class="widget-title clearfix"><font color="black"><b>SYARAT KETENTUAN</b></font></h1>
+                <h1 class="widget-title clearfix"><font color="black"><b>SYARAT & KETENTUAN</b></font></h1>
 
        <hr style="background-color: #f7a91e;width: 100%;height: 4px;" border="0" align="left">
               </div>
