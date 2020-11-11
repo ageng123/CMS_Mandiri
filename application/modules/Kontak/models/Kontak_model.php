@@ -5,15 +5,14 @@ require_once(APPPATH.'/models/Main.php');
         protected $table = 'tb_user';
         protected $primaryKey = 'id_user';
         protected $model;
+
         public function __construct(){
             parent::__construct();
-		$this->model = 'dat_kontak';
+		    $this->model = 'dat_kontak';
         }
 
-
-
-	public function simpan($data){
-		return $this->db->insert($this->model, $data);
-	}
+        public function simpan($data){
+            return $this->db->insert($this->model, $data);
+        }
 
     }

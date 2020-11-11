@@ -26,7 +26,7 @@ class Users extends Auth_Guard {
 
 		$data = [
 			'form_url' => $this->formUrl,
-			'title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Data User',
 			'card_title' => "Data User"
 		];
 		admin_parse($content, $data);

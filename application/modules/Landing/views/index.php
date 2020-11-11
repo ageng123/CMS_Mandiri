@@ -513,7 +513,7 @@
         <div class="col-9 row getBeritaLatest">
           <div class="card no-border col-md-6 col-xs-12">
             <div class="newestNews_container hide latestNews blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2" data-index="<?= '1' ?>">
-              <img src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" data-index="<?= '1' ?>" class="">
+              <img class="newestNewsImage" src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" data-index="<?= '1' ?>" class="">
               <div class="newestNewsOverlay">
                 <div class="newsText" style="margin-top: 15px;"><h4 class="title" data-index="<?= '1' ?>"><b>Hello World</b></h4><div data-index="<?= '1' ?>" class="subtitle">Subtitle</div><p><a data-index="<?= '1' ?>" class="btn btn-detail btn-warning border-radius-30 btn-md">Read More</a></p></div>
               </div>
@@ -521,7 +521,7 @@
           </div>
           <div class="card no-border col-md-6 col-xs-12">
             <div class="newestNews_container hide latestNews blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2" data-index="<?= '2' ?>">
-                <img src="" alt="Avatar" data-index="<?= '2' ?>" class="">
+                <img class="newestNewsImage" src="" alt="Avatar" data-index="<?= '2' ?>" class="">
                 <div class="newestNewsOverlay">
                   <div class="newsText" style="margin-top: 15px;"><h4 class="title" data-index="<?= '2' ?>"><b>Hello World</b></h4><div data-index="<?= '2' ?>" class="subtitle">Subtitle</div><p><a data-index="<?= '2' ?>" class="btn btn-detail btn-warning border-radius-30 btn-md">Read More</a></p></div>
                 </div>

@@ -12,7 +12,7 @@ class Product extends CI_Controller {
 	{
 		$content = 'Kategori/Produk/list';
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Data Kategori Produk',
 			'card_title' => "Data Kategori Produk",
 			'form_url' => base_url('Kategori/Product/add')
 		];
@@ -44,7 +44,7 @@ class Product extends CI_Controller {
 	{
 		$content = 'Kategori/Produk/add';
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Data Kategori Produk',
 			'card_title' => "Tambah Data Kategori Produk",
 			'form_url' => base_url('Kategori/Product/add')
 		];
@@ -67,7 +67,7 @@ class Product extends CI_Controller {
 		$id = decode($_GET['session_id']);
 		$content = 'Kategori/Produk/add';
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Data Kategori Produk',
 			'card_title' => "Edit Data Kategori Produk",
 			'form_url' => base_url('Kategori/Product/edit?session_id='.encode($id)),
 			'form_data' => $model->find($id)

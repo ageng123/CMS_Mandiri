@@ -13,7 +13,7 @@ class Berita extends Auth_Guard {
 	{
 		$content = 'Kategori/Berita/list';
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Data Kategori Berita',
 			'card_title' => "Data Kategori Berita",
 			'form_url' => base_url('Kategori/Berita/add')
 		];
@@ -45,7 +45,7 @@ class Berita extends Auth_Guard {
 	{
 		$content = 'Kategori/Berita/add';
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Data Kategori Berita',
 			'card_title' => "Tambah Data Kategori Berita",
 			'form_url' => base_url('Kategori/Berita/add')
 		];
@@ -68,7 +68,7 @@ class Berita extends Auth_Guard {
 		$id = decode($_GET['session_id']);
 		$content = 'Kategori/Berita/add';
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Data Kategori Berita',
 			'card_title' => "Edit Data Kategori Berita",
 			'form_url' => base_url('Kategori/Berita/edit?session_id='.encode($id)),
 			'form_data' => $model->find($id)

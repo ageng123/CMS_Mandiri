@@ -14,7 +14,7 @@ class Roles extends Auth_Guard {
 	{
 		$content = 'Roles/list';
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Data Role',
 			'card_title' => "Data Role",
 			'form_url' => base_url('Roles/add')
 		];
@@ -47,7 +47,7 @@ class Roles extends Auth_Guard {
 	{
 		$content = 'roles/add';
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Data Role',
 			'card_title' => "Tambah Data Roles",
 			'form_url' => base_url('roles/add')
 		];
@@ -69,7 +69,7 @@ class Roles extends Auth_Guard {
 		$id = decode($_GET['session_id']);
 		$content = 'Roles/add';
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Data Role',
 			'card_title' => "Edit Data Role",
 			'form_url' => base_url('Roles/edit?session_id='.encode($id)),
 			'form_data' => $model->find($id)
