@@ -52,7 +52,7 @@ class Berita extends Auth_Guard {
 	}
 	// Form Url
 	private function upload($params){
-		$folder = APPPATH.'../resources/Berita/';
+		$folder = APPPATH.'../public/resources/Berita/';
 		$config['upload_path']          = $folder;
 		$config['allowed_types']        = '*';
 		// $config['max_size']             = 100;

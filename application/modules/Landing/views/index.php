@@ -513,7 +513,7 @@
         <div class="col-9 row getBeritaLatest">
           <div class="card no-border col-md-6 col-xs-12">
             <div class="newestNews_container hide latestNews blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2" data-index="<?= '1' ?>">
-              <img src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" data-index="<?= '1' ?>" class="newestNewsImage">
+              <img src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" data-index="<?= '1' ?>" class="">
               <div class="newestNewsOverlay">
                 <div class="newsText" style="margin-top: 15px;"><h4 class="title" data-index="<?= '1' ?>"><b>Hello World</b></h4><div data-index="<?= '1' ?>" class="subtitle">Subtitle</div><p><a data-index="<?= '1' ?>" class="btn btn-detail btn-warning border-radius-30 btn-md">Read More</a></p></div>
               </div>
@@ -521,7 +521,7 @@
           </div>
           <div class="card no-border col-md-6 col-xs-12">
             <div class="newestNews_container hide latestNews blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2" data-index="<?= '2' ?>">
-                <img style="min-height: 200px;" src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" data-index="<?= '2' ?>" class="newestNewsImage">
+                <img src="" alt="Avatar" data-index="<?= '2' ?>" class="">
                 <div class="newestNewsOverlay">
                   <div class="newsText" style="margin-top: 15px;"><h4 class="title" data-index="<?= '2' ?>"><b>Hello World</b></h4><div data-index="<?= '2' ?>" class="subtitle">Subtitle</div><p><a data-index="<?= '2' ?>" class="btn btn-detail btn-warning border-radius-30 btn-md">Read More</a></p></div>
                 </div>
@@ -529,33 +529,29 @@
           </div>
         </div>
       </div>
+      </div>
+       
       <div class="col-12" style="margin-top: 3vh">
         <div class="row">
-          <?php $id = 3; for($i = 1; $i <= 8 ; $i++): ?>
-            <div class="col-xs-12 newestNews_container hide col-lg-3" style="width: 100%; min-height: 400px;" data-index="<?= $id ?>">
-              <div class="blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2">
-                <div class="position-relative">
-                  <a class="btn-detail" data-index="<?= $id ?>" href="<?= base_url('Landing/detail_berita/')?>">
-                    <div class="item-thumbnail background-dark"><img style="max-height: 140px;" data-index="<?= $id ?>" class="newestNewsImage" src="<?= site_url('resources/Berita/') ?>" alt=""></div>
-                  </a>
-                </div>
-                <b><a data-index="<?= $id ?>" class="btn-detail title text-extra-large margin-tb-20px d-block padding-lr-30px"></a></b>
-                <center><p data-index="<?= $id ?>" class="subtitle">Subtitle</p></center>
-                <hr>
-                <center>
-                  <a class="btn btn-warning border-radius-30 btn-detail" data-index="<?= $id ?>" href="<?= base_url('Landing/detail_berita/')?>">
-                    Read More
-                  </a>
-                </center>
-                <hr class="margin-bottom-0px border-white">
-
+          <?php foreach($data_berita->result() as $val): ?>      
+          <div class="col-xs-12 col-lg-3" style="width: 100%; min-height: 400px;">
+            <div class="blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2">
+              <div class="position-relative">
+                <a href="<?= base_url('landing/detail_berita/').$val->link ?>">
+                  <div class="item-thumbnail background-dark"><img style="max-height: 190px; min-height: 100px; min-width: 200px; object-fit: cover;" src="<?= base_url('resources/Berita/') ?><?= $val->author.'/'.$val->thumbnail != null ? $val->thumbnail : 'opening.jpg' ?>"></div>
+                </a>
               </div>
+              <div class="col-12">
+                  <a href="<?= base_url('Landing/detail_berita/').$val->link ?>" class="margin-tb-20px d-block padding-lr-30px" style="font-size: 14px;text-align: justify;"><?= substr($val->title,0,70) ?>...</a>
+              </div>              <hr>
+              <center><a class="btn btn-warning border-radius-30" href="<?= base_url('Landing/detail_berita/').$val->link ?>">Read More</a></center>
+              <br>
             </div>
-          <?php $id++ ?>
-          <?php endfor; ?>
+          </div>
+          <?php endforeach; ?>
         </div>
       </div>
-    </div>
+       
     </div>
   </section>
 
