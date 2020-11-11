@@ -507,10 +507,10 @@
        <hr style="background-color: #f7a91e;width: 12%;height: 4px;" border="0" align="left">
     <div class="row ">
       <div class="col-12 row">
-        <div class="col-3">
+        <div class="col-md-3 col-xs-12">
           Forum diskusi dan berbagi berita dari dalam maupun luar negeri. Mulai dari ideologi, politik, ekonomi, sosial dan budaya. <b style="color: #f7a91e;">Subforum</b>: berita-dunia-hiburan.
         </div>
-        <div class="col-9 row getBeritaLatest">
+        <div class="col-md-9 col-xs-12 row getBeritaLatest">
           <div class="card no-border col-md-6 col-xs-12">
             <div class="newestNews_container hide latestNews blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2" data-index="<?= '1' ?>">
               <img class="newestNewsImage" src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" data-index="<?= '1' ?>" class="">
