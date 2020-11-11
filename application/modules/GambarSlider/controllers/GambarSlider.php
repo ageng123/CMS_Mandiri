@@ -18,7 +18,7 @@
 		public function index(){
 			$content = 'GambarSlider/list';
 			$data = [
-				'title' => 'Mandiri Sekuritas - CMS',
+				'page_title' => 'KJKPI - Data Gambar Slider',
 				'card_title' => "Data Gambar Slider",
 			];
 			admin_parse($content, $data);
@@ -82,7 +82,7 @@
 		public function add(){
 			$content = 'GambarSlider/add';
 			$data = [
-				'title' => 'Mandiri Sekuritas - CMS',
+				'page_title' => 'KJKPI - Data Gambar Slider',
 				'card_title' => "Tambah Data Gambar Slider",
 				'form_url' => base_url('GambarSlider/add'),
 				'status_list' => $this->status_slider
@@ -114,7 +114,7 @@
 			$id = decode($_GET['session_id']);
 			$content = 'GambarSlider/add';
 			$data = [
-				'title' => 'Mandiri Sekuritas - CMS',
+				'page_title' => 'KJKPI - Data Gambar Slider',
 				'card_title' => "Edit Data Gambar Slider",
 				'form_url' => base_url('GambarSlider/edit?session_id='.encode($id)),
 				'form_data' => $model->find($id),

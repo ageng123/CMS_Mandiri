@@ -2,16 +2,11 @@
     <!-- START REVOLUTION SLIDER 5.4.1 fullwidth mode -->
     <div id="rev_slider_18_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
       <ul>
-        
-          <?php foreach($data_slider->result() as $assets){ ?>
+        <?php foreach($data_slider->result() as $assets){ ?>
           <li data-index="rs-65" data-transition="3dcurtain-horizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="<?= base_url('resources/Slider/') ?><?= $assets->nama_file ?>" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-          <!-- MAIN IMAGE -->
-          <img src="<?= base_url('resources/Slider/') ?><?= $assets->nama_file ?>" alt="" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Power0.easeIn" data-scalestart="115" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="2 3" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
-          <!-- LAYERS -->
-
-          <!-- LAYER NR. 5 -->
-          
-        </li>
+            <img src="<?= base_url('resources/Slider/') ?><?= $assets->nama_file ?>" alt="" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Power0.easeIn" data-scalestart="115" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="2 3" data-offsetend="0 0" class="rev-slidebg" data-no-retina width="1600" height="1070">
+            <!-- <img src="<?= base_url('resources/Slider/') ?><?= $assets->nama_file ?>" style="position: absolute; height: 508px; width: 759px; transform: translate3d(0px, 0px, 0px) scale(1.1, 1.1); transform-origin: 0% 0% 0px;" width="1600" height="1070"> -->
+          </li>
         <?php } ?>
       </ul>
       <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
@@ -298,13 +293,14 @@
                     <button class="btn btn-danger btn-block"
                       style="border-radius: 2% !Important; background: #603913; color: white;">Continue</button>
                   </form>
-                  <a class="btn btn-link" href="<?= base_url('auth/forgot_password') ?>">Forgot Password</a>
+                  <br>
+                  <center><a class="btn btn-danger btn-sm" href="<?= base_url('auth/forgot_password') ?>" style="border-radius: 2% !Important; background: #603913; color: white;"">Forgot Password</a></center>
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
               </div>
                 <?php else: ?>
                    <div class="position-relative" style="background-color: white;">
-                    <center><div class="item-thumbnail rounded-circle" style="height: 10vw; width: 10vw; overflow: hidden">
+                    <center><div class="item-thumbnail" style="height: 10vw; width: 10vw; overflow: hidden">
                         <?php if(empty($user->photo)): ?>
                              <img src="<?= base_url('assets/img/');?>user.png" style="height: 100%" id="profilePreview">
                         <?php else: ?>
@@ -600,7 +596,7 @@
           </div>
           <div class="card-body no-border no-bg">
              <div class="background-white padding-20px" style="text-align: center;font-size: 14px;">
-                Media layanan berupa jasa kepada <b>investor saham</b>, edukasi para investor, mengenai bagaimana menjalankan trading saham yang sehat serta mengimplementasikannya secara mandiri ke <font color="#f7a91e">Bursa Efek Indonesia</font>
+                Media layanan berupa jasa kepada <b>investor saham</b>, edukasi para investor, mengenai bagaimana menjalankan trading saham yang sehat serta mengimplementasikannya secara mandiri ke <b><font color="#f7a91e">Bursa Efek Indonesia</font></b>
             </div>
           </div>
         </div>
@@ -612,7 +608,7 @@
           </div>
           <div class="card-body no-border bo-bg">
              <div class="background-white padding-20px" style="text-align: center;font-size: 14px;">
-                <font color="#f7a91e">Forum jual beli online</font> perlengkapan dan peralatan hobi. Belanja murah, lengkap, aman, bisa nego dan COD.
+                <b><font color="#f7a91e">Forum jual beli online</font></b> perlengkapan dan peralatan hobi. Belanja murah, lengkap, aman, bisa nego dan COD.
             </div>
           </div>
         </div>
@@ -624,7 +620,7 @@
           </div>
           <br>
             <div class="background-white padding-20px" style="text-align: center;font-size: 14px;">
-                <font color="#f7a91e">Forum jual beli online</font> perlengkapan dan peralatan hobi. Belanja murah, lengkap, aman, bisa nego dan COD.
+                <b><font color="#f7a91e">Radio PanenSaham</font></b> adalah Radio Streaming di Jakarta dan Semarang yang membahas tentang pasar modal, bisnis dan informasi lainnya dengan jam tayang setiap Senin - Jumat adalah pukul 06:00 sampai 00:00 WIB.
             </div>
         </div>
       </div>

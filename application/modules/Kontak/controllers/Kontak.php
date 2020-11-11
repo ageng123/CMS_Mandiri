@@ -14,7 +14,7 @@ class Kontak extends CI_Controller {
 		$user = $model->findBy(['active' => '1']);
 		$content = 'index';
 		$data = [
-			'page_title' => 'Mandiri Sekuritas - CMS'
+			'page_title' => 'KJKPI - Kontak'
 		];
 		landing_parse($content, $data);
 	}
@@ -27,20 +27,20 @@ class Kontak extends CI_Controller {
 	}
 
 
-		public function proses_add()
-		{
-			$data = [
-				'nama' => $this->input->post('nama'),
-				'email'  => $this->input->post('email'),
-				'subject'  => $this->input->post('subject'),
-				'message'  => $this->input->post('message')
-			];
-		
-			$sqlinsert = $this->Kontak_model->simpan($data);
-			if($sqlinsert) {
-				$this->session->set_flashdata('message', 'Pesan Berhasil Dikirim');
-				return redirect(base_url().'Kontak');
-			}
-
+	public function proses_add()
+	{
+		$data = [
+			'nama' => $this->input->post('nama'),
+			'email'  => $this->input->post('email'),
+			'subject'  => $this->input->post('subject'),
+			'message'  => $this->input->post('message')
+		];
+	
+		$sqlinsert = $this->Kontak_model->simpan($data);
+		if($sqlinsert) {
+			$this->session->set_flashdata('message', 'Pesan Berhasil Dikirim');
+			return redirect(base_url().'Kontak');
 		}
+
+	}
 }

@@ -15,7 +15,7 @@ class Product extends Auth_Guard {
 	{
 		$content = 'Content/Produk/list';
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Data Konten Produk',
 			'card_title' => "Data Konten Produk"
 		];
 		admin_parse($content, $data);
@@ -108,7 +108,7 @@ class Product extends Auth_Guard {
 	{
 		$content = 'Content/Produk/add';
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Data Konten Produk',
 			'card_title' => "Tambah Data Konten Produk",
 			'form_url' => base_url('Content/Product/add'),
 			'kategori_list' => $this->KategoriModel->findBy(['jenis_kategori' => 2]),
@@ -159,7 +159,7 @@ class Product extends Auth_Guard {
 		$id = decode($_GET['session_id']);
 		$content = 'Content/Produk/add';
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Data Konten Produk',
 			'card_title' => "Edit Data Konten Produk",
 			'form_url' => base_url('Content/Product/edit?session_id='.encode($id)),
 			'form_data' => $model->find($id),

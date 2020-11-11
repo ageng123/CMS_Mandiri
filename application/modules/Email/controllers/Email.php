@@ -26,7 +26,7 @@ class Email extends Auth_Guard {
 
 		$data = [
 			'form_url' => $this->formUrl,
-			'title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Data Email',
 			'card_title' => "Data Email"
 		];
 		admin_parse($content, $data);
@@ -62,7 +62,7 @@ class Email extends Auth_Guard {
 
 	public function excel(){
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Data Email',
 			'card_title' => "Data Email",
 			'data_email' => $this->EmailModel->get_Email()
 		];

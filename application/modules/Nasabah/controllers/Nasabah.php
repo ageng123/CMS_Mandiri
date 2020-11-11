@@ -25,7 +25,7 @@ class Nasabah extends Auth_Guard {
 
 		$data = [
 			'form_url' => $this->formUrl,
-			'title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Data Nasabah',
 			'card_title' => "Data Nasabah"
 		];
 		admin_parse($content, $data);

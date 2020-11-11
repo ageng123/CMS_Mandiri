@@ -48,7 +48,7 @@ class Berita extends CI_Controller {
 		$data2 = $model->getBeritaData(); 
 		// echo var_dump($data2); die;
 		$data = [
-			'page_title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Berita & Media',
 			'page' => $page,
 			'data' => $model->getBeritaData(),
 			'paginate' => $this->pagination->create_links()

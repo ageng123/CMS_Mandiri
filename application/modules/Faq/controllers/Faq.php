@@ -14,7 +14,7 @@ class Faq extends CI_Controller {
 		$user = $model->findBy(['active' => '1']);
 		$content = 'index';
 		$data = [
-			'page_title' => 'Mandiri Sekuritas - CMS'
+			'page_title' => 'KJKPI - FAQ'
 		];
 		landing_parse($content, $data);
 	}
