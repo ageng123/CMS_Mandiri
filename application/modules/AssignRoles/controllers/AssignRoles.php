@@ -15,7 +15,7 @@ class AssignRoles extends Auth_Guard {
 		// $user_data = $this->UserModel->all();
 		// echo JSON_ENCODE($user_data); die;
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Data Pengaturan User',
 			'form_url' => base_url('AssignRoles/add'),
 			'user_data' => $this->UserModel->all(),
 			'role_data' => $this->RoleModel->all(),
@@ -59,7 +59,7 @@ class AssignRoles extends Auth_Guard {
 	{
 		$content = 'AssignRoles/add';
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Data Pengaturan User',
 			'card_title' => "Assign User to Roles",
 			'form_url' => base_url('AssignRoles/add'),
 			'user_data' => $this->UserModel->all(),
@@ -84,7 +84,7 @@ class AssignRoles extends Auth_Guard {
 		$id = decode($_GET['session_id']);
 		$content = 'AssignRoles/add';
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Data Pengaturan User',
 			'card_title' => "Edit Data Pengaturan User",
 			'form_url' => base_url('AssignRoles/edit?session_id='.encode($id)),
 			'form_data' => $model->find($id),

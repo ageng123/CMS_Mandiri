@@ -25,7 +25,7 @@ class Request extends Auth_Guard {
 
 		$data = [
 			'form_url' => $this->formUrl,
-			'title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Data Request Nasabah',
 			'card_title' => "Data Request Nasabah"
 		];
 		admin_parse($content, $data);

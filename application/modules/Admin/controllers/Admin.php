@@ -21,15 +21,15 @@ class Admin extends Auth {
 		$user = $model->findBy(['active' => '1']);
 		$content = 'index';
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS'
+			'page_title' => 'KJKPI - Admin'
 		];
-		admin_parse($content, null);
+		admin_parse($content, $data);
 		// $this->load->view('login', $data);
 	}
 
 	public function login(){
 		$data = [
-			'title' => 'Mandiri Sekuritas - CMS'
+			'page_title' => 'KJKPI - Login'
 		];
 		$this->load->view('login', $data);
 	}
