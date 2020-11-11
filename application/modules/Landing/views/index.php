@@ -2,11 +2,16 @@
     <!-- START REVOLUTION SLIDER 5.4.1 fullwidth mode -->
     <div id="rev_slider_18_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
       <ul>
-        <?php foreach($data_slider->result() as $assets){ ?>
+        
+          <?php foreach($data_slider->result() as $assets){ ?>
           <li data-index="rs-65" data-transition="3dcurtain-horizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="<?= base_url('resources/Slider/') ?><?= $assets->nama_file ?>" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-            <img src="<?= base_url('resources/Slider/') ?><?= $assets->nama_file ?>" alt="" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Power0.easeIn" data-scalestart="115" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="2 3" data-offsetend="0 0" class="rev-slidebg" data-no-retina width="1600" height="1070">
-            <!-- <img src="<?= base_url('resources/Slider/') ?><?= $assets->nama_file ?>" style="position: absolute; height: 508px; width: 759px; transform: translate3d(0px, 0px, 0px) scale(1.1, 1.1); transform-origin: 0% 0% 0px;" width="1600" height="1070"> -->
-          </li>
+          <!-- MAIN IMAGE -->
+          <img src="<?= base_url('resources/Slider/') ?><?= $assets->nama_file ?>" alt="" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Power0.easeIn" data-scalestart="115" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="2 3" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+          <!-- LAYERS -->
+
+          <!-- LAYER NR. 5 -->
+          
+        </li>
         <?php } ?>
       </ul>
       <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
@@ -293,14 +298,13 @@
                     <button class="btn btn-danger btn-block"
                       style="border-radius: 2% !Important; background: #603913; color: white;">Continue</button>
                   </form>
-                  <br>
-                  <center><a class="btn btn-danger btn-sm" href="<?= base_url('auth/forgot_password') ?>" style="border-radius: 2% !Important; background: #603913; color: white;"">Forgot Password</a></center>
+                  <a class="btn btn-link" href="<?= base_url('auth/forgot_password') ?>">Forgot Password</a>
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
               </div>
                 <?php else: ?>
                    <div class="position-relative" style="background-color: white;">
-                    <center><div class="item-thumbnail" style="height: 10vw; width: 10vw; overflow: hidden">
+                    <center><div class="item-thumbnail rounded-circle" style="height: 10vw; width: 10vw; overflow: hidden">
                         <?php if(empty($user->photo)): ?>
                              <img src="<?= base_url('assets/img/');?>user.png" style="height: 100%" id="profilePreview">
                         <?php else: ?>
@@ -509,7 +513,7 @@
         <div class="col-9 row getBeritaLatest">
           <div class="card no-border col-md-6 col-xs-12">
             <div class="newestNews_container hide latestNews blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2" data-index="<?= '1' ?>">
-              <img src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" data-index="<?= '1' ?>" class="newestNewsImage">
+              <img src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" data-index="<?= '1' ?>" class="">
               <div class="newestNewsOverlay">
                 <div class="newsText" style="margin-top: 15px;"><h4 class="title" data-index="<?= '1' ?>"><b>Hello World</b></h4><div data-index="<?= '1' ?>" class="subtitle">Subtitle</div><p><a data-index="<?= '1' ?>" class="btn btn-detail btn-warning border-radius-30 btn-md">Read More</a></p></div>
               </div>
@@ -517,7 +521,7 @@
           </div>
           <div class="card no-border col-md-6 col-xs-12">
             <div class="newestNews_container hide latestNews blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2" data-index="<?= '2' ?>">
-                <img style="min-height: 200px;" src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" data-index="<?= '2' ?>" class="newestNewsImage">
+                <img src="" alt="Avatar" data-index="<?= '2' ?>" class="">
                 <div class="newestNewsOverlay">
                   <div class="newsText" style="margin-top: 15px;"><h4 class="title" data-index="<?= '2' ?>"><b>Hello World</b></h4><div data-index="<?= '2' ?>" class="subtitle">Subtitle</div><p><a data-index="<?= '2' ?>" class="btn btn-detail btn-warning border-radius-30 btn-md">Read More</a></p></div>
                 </div>
@@ -525,33 +529,29 @@
           </div>
         </div>
       </div>
+      </div>
+       
       <div class="col-12" style="margin-top: 3vh">
         <div class="row">
-          <?php $id = 3; for($i = 1; $i <= 8 ; $i++): ?>
-            <div class="col-xs-12 newestNews_container hide col-lg-3" style="width: 100%; min-height: 400px;" data-index="<?= $id ?>">
-              <div class="blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2">
-                <div class="position-relative">
-                  <a class="btn-detail" data-index="<?= $id ?>" href="<?= base_url('Landing/detail_berita/')?>">
-                    <div class="item-thumbnail background-dark"><img style="max-height: 140px;" data-index="<?= $id ?>" class="newestNewsImage" src="<?= site_url('resources/Berita/') ?>" alt=""></div>
-                  </a>
-                </div>
-                <b><a data-index="<?= $id ?>" class="btn-detail title text-extra-large margin-tb-20px d-block padding-lr-30px"></a></b>
-                <center><p data-index="<?= $id ?>" class="subtitle">Subtitle</p></center>
-                <hr>
-                <center>
-                  <a class="btn btn-warning border-radius-30 btn-detail" data-index="<?= $id ?>" href="<?= base_url('Landing/detail_berita/')?>">
-                    Read More
-                  </a>
-                </center>
-                <hr class="margin-bottom-0px border-white">
-
+          <?php foreach($data_berita->result() as $val): ?>      
+          <div class="col-xs-12 col-lg-3" style="width: 100%; min-height: 400px;">
+            <div class="blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2">
+              <div class="position-relative">
+                <a href="<?= base_url('landing/detail_berita/').$val->link ?>">
+                  <div class="item-thumbnail background-dark"><img style="max-height: 190px; min-height: 100px; min-width: 200px; object-fit: cover;" src="<?= base_url('resources/Berita/') ?><?= $val->author.'/'.$val->thumbnail != null ? $val->thumbnail : 'opening.jpg' ?>"></div>
+                </a>
               </div>
+              <div class="col-12">
+                  <a href="<?= base_url('Landing/detail_berita/').$val->link ?>" class="margin-tb-20px d-block padding-lr-30px" style="font-size: 14px;text-align: justify;"><?= substr($val->title,0,70) ?>...</a>
+              </div>              <hr>
+              <center><a class="btn btn-warning border-radius-30" href="<?= base_url('Landing/detail_berita/').$val->link ?>">Read More</a></center>
+              <br>
             </div>
-          <?php $id++ ?>
-          <?php endfor; ?>
+          </div>
+          <?php endforeach; ?>
         </div>
       </div>
-    </div>
+       
     </div>
   </section>
 
