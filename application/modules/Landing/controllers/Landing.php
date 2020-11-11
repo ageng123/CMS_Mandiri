@@ -44,10 +44,14 @@ class Landing extends CI_Controller {
 		$content = 'index';
 		$user = $model->find($this->session->userdata('user_id'));
 		$data_slider = $model->data_slider();
+		$data_berita = $model->data_berita();
+		//$data_berita_last = $model->data_berita_last();
 		$data = [
 			'page_title' => 'KJKPI - Home',
 			'user' => $user,
-			'data_slider' => $data_slider
+			'data_slider' => $data_slider,
+			'data_berita' => $data_berita,
+			//'data_berita_last' => $data_berita_last
 		];
 		landing_parse($content, $data);
 		// admin_parse($content, null);

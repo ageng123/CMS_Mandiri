@@ -5,9 +5,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         protected $table = 'tb_user';
         protected $primaryKey = 'id';
         
-         public function __construct(){
+        public function __construct(){
             parent::__construct();
-		    $this->model = 'dat_subscribe';
+            $this->model = 'dat_subscribe';
         }
         public function simpan($data){
             return $this->db->insert($this->model, $data);
@@ -15,10 +15,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         public function data_slider(){
             $query = $this->db->query("SELECT * FROM attachment_list WHERE tipe_attachment = 3 and status_slider = 1 ");
-        
-        return $query;
+
+            return $query;
         }
 
+        public function data_berita(){
+            $query = $this->db->query("SELECT * FROM news_dat order by id_news desc limit 8 ");        
+            return $query;
+        }
+
+   
 
     }
     // @table user berisi tentang data umum nasabah pada form step 1
