@@ -14,7 +14,7 @@ class Kontak extends CI_Controller {
 		$user = $model->findBy(['active' => '1']);
 		$content = 'index';
 		$data = [
-			'page_title' => 'Mandiri Sekuritas - CMS'
+			'page_title' => 'KJKPI - Kontak'
 		];
 		landing_parse($content, $data);
 	}

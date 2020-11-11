@@ -21,7 +21,7 @@ class Password extends CI_Controller {
 
 		$content = 'index';
 		$data = [
-			'page_title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Ganti Password',
 			'user' => $user
 		];
 		landing_parse($content, $data);

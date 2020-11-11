@@ -19,7 +19,7 @@ class Profile extends CI_Controller {
 		$user = $model->find($this->session->userdata('user_id'));
 		$content = 'index';
 		$data = [
-			'page_title' => 'KJKPI',
+			'page_title' => 'KJKPI - Profile',
 			'user' => $user
 		];
 		landing_parse($content, $data);
@@ -32,7 +32,7 @@ class Profile extends CI_Controller {
 		$user = $model->findBy(['active' => '1']);
 		$content = 'edit';
 		$data = [
-			'page_title' => 'Mandiri Sekuritas - CMS'
+			'page_title' => 'KJKPI - Edit Foto Profile'
 		];
 		landing_parse($content, $data);
 	}

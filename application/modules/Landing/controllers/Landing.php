@@ -45,7 +45,7 @@ class Landing extends CI_Controller {
 		$user = $model->find($this->session->userdata('user_id'));
 		$data_slider = $model->data_slider();
 		$data = [
-			'page_title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Home',
 			'user' => $user,
 			'data_slider' => $data_slider
 		];
@@ -60,7 +60,7 @@ class Landing extends CI_Controller {
 		$berita = $model->getBerita();
 		$content = 'detail_berita';
 		$data = [
-			'page_title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Detail Berita',
 			'berita' => $berita,
 			'comment' => $model->getComment()
 		];
@@ -78,7 +78,7 @@ class Landing extends CI_Controller {
 	{
 		$content = 'form_pendaftaran';
 		$data = [
-			'page_title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Pendaftaran Anggota',
 			'form_url' => 'users/add'
 		];
 		landing_parse($content, $data);

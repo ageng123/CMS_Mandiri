@@ -21,7 +21,7 @@ class Simpanan extends CI_Controller {
 		$user = $model2->find($this->session->userdata('user_id'));
 
 		$data = [
-			'page_title' => 'Mandiri Sekuritas - CMS',
+			'page_title' => 'KJKPI - Simpanan',
 			'user' => $user
 		];
 		landing_parse($content, $data);
