@@ -298,13 +298,14 @@
                     <button class="btn btn-danger btn-block"
                       style="border-radius: 2% !Important; background: #603913; color: white;">Continue</button>
                   </form>
-                  <a class="btn btn-link" href="<?= base_url('auth/forgot_password') ?>">Forgot Password</a>
+                  <br>
+                  <center><a class="btn btn-danger btn-sm" href="<?= base_url('auth/forgot_password') ?>" style="border-radius: 2% !Important; background: #603913; color: white;"">Forgot Password</a></center>
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
               </div>
                 <?php else: ?>
                    <div class="position-relative" style="background-color: white;">
-                    <center><div class="item-thumbnail rounded-circle" style="height: 10vw; width: 10vw; overflow: hidden">
+                    <center><div class="item-thumbnail" style="height: 10vw; width: 10vw; overflow: hidden">
                         <?php if(empty($user->photo)): ?>
                              <img src="<?= base_url('assets/img/');?>user.png" style="height: 100%" id="profilePreview">
                         <?php else: ?>
