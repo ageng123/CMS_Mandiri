@@ -5,6 +5,7 @@
         
           <?php foreach($data_slider->result() as $assets){ ?>
           <li data-index="rs-65" data-transition="3dcurtain-horizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="<?= base_url('resources/Slider/') ?><?= $assets->nama_file ?>" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+<<<<<<< HEAD
           <!-- MAIN IMAGE -->
           <img src="<?= base_url('resources/Slider/') ?><?= $assets->nama_file ?>" alt="" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Power0.easeIn" data-scalestart="115" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="2 3" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
           <!-- LAYERS -->
@@ -12,6 +13,10 @@
           <!-- LAYER NR. 5 -->
           
         </li>
+=======
+            <img src="<?= base_url('resources/Slider/') ?><?= $assets->nama_file ?>" alt="" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Power0.easeIn" data-scalestart="115" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="2 3" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+          </li>
+>>>>>>> 9e4eeaf360b342b6ed83a61eacd9faf05d86b5bc
         <?php } ?>
       </ul>
       <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
