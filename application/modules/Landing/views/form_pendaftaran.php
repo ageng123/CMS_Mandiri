@@ -723,11 +723,7 @@
              <b style="color: #432a19;">Koperasi Jasa</b> <br/> <b style="color: #f7a91e;">Komunitas PanenSaham Indonesia</b> yang dapat di Download di bawah ini:</h5></label><br>
       </div>
       <div style="width: 80%; margin: 0 auto;text-align: center;">
-<<<<<<< HEAD
-        <a href="<?= base_url() ?>assets/download-formulir-pendaftaran-anggota-koperasi.pdf" class="btn btn-xl border-2 border-radius-30 border-orange btn-block margin-top-33px margin-bottom-33px btn-warning text-white"><b>DOWNLOAD FORM PENDAFTARAN</b></a>
-=======
         <a href="<?= base_url() ?>assets/download-formulir-pendaftaran-anggota-koperasi.pdf" class="btn btn-lg border-2 border-radius-30 border-orange btn-block margin-top-33px margin-bottom-33px btn-warning text-white" target="_blank"><b>DOWNLOAD FORM PENDAFTARAN</b></a>
->>>>>>> 9e4eeaf360b342b6ed83a61eacd9faf05d86b5bc
       </div>
      <div class="col-xs-12 col-lg-12" style="text-align: center;">
         <label for=""><h5>Kirimkan Formulir Pendaftaran yang telah di isi ke alamat kami: <br/> <br/>
