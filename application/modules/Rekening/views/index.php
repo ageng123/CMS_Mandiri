@@ -83,6 +83,7 @@
                         </td>
                         <td class="req" onclick="Request_Services.removeDisabled(3)"  style="border: 0px;">:<input type="hidden" name="jenis_req[3]"  value="CABANG" disabled><input style="pointer-events: none"  type="text" name="data_request[3]" value="<?= isset($rekening->cabang) ? $rekening->cabang : '' ?>" onclick="Request_Services.removeDisabled(3)" class="req" style="width: 55%;" disabled></td>
                       </tr>
+                      <input type="hidden" name="asal" value="<?= $this->uri->segment(1) ?>">
                        <tr>
                         <td style="width: 20%;border: 0px;" colspan="2">
                           <button type="submit" class="btn btn-warning btn-block" style="background-color: #eaa400;"><b style="color: #806142;">REQUEST GANTI NOMOR REKENING</b></button>
