@@ -15,34 +15,91 @@
             </div>
             </div>
 
-            <div class="row">
-            <div class="col-lg-1 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s"></div>
-            <div class="col-lg-2 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s">
-              <div class="text-center hvr-bob">
-                <h2  style="text-align: center;">1)</h2><img src="<?= base_url('assets/img/Home/') ?>formulir.png" width="50%" align="center"><p style="text-align: center;"><b>Mengisi</b> dan <b>Melengkapi</b><br> Form Pendaftaran</p>
+<div class="row">
+            <div class="col-lg-9 margin-bottom-30px wow fadeInUp">
+              <div class="text-left hvr-bob">
+                <h1 class="widget-title clearfix"><font color="black"><b>SYARAT</b></font></h1>
               </div>
             </div>
-            <div class="col-lg-2 margin-bottom-30px  wow fadeInUp" data-wow-delay="0.2s">
-              <div class="text-center hvr-bob">
-                <h2>2)</h2><img src="<?= base_url('assets/img/Home/') ?>kai.png" width="50%"><p>Mendapat <br><b>Pesan Konformasi</b></p>
+            </div>
+
+          <div class="row"> 
+              <div class="col-lg-12"  style="border: 0px white solid;">
+                
+                <table style="border: 0px white solid;width: 100%;">
+                  <tr>
+                    <td style="border: 0px white solid;width: 10%;vertical-align: top;"><img  src="<?= base_url('assets/img/about/') ?>ceklis.png" style="width:50%;"></td>
+                    <td style="border: 0px white solid;width: 90%;vertical-align: top;text-align: justify;"><b style="font-size: 16px;">Warga Negara Indonesia;</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 0px white solid;vertical-align: top;"><img  src="<?= base_url('assets/img/about/') ?>ceklis.png" style="width:50%;"></td>
+                    <td style="border: 0px white solid;vertical-align: top;text-align: justify;"><b style="font-size: 16px;">Mempunyai keyakinan penuh untuk melakukan tindakan hukum (dewasa dan tidak dalam perwakilan dan sebagainya); </td>
+                  </tr>
+                  <tr>
+                    <td style="border: 0px white solid;vertical-align: top;"><img  src="<?= base_url('assets/img/about/') ?>ceklis.png" style="width:50%;"></td>
+                    <td style="border: 0px white solid;vertical-align: top;text-align: justify;"><b style="font-size: 16px;">Bertempat tinggal di seluruh wilayah Indonesia;</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 0px white solid;vertical-align: top;"><img  src="<?= base_url('assets/img/about/') ?>ceklis.png" style="width:50%;"></td>
+                    <td style="border: 0px white solid;vertical-align: top;text-align: justify;"><b style="font-size: 16px;">Telah menyatakan kesanggupan tertulis untuk melunasi simpanan pokok dan simpanan wajib yang besarnya berdasarkan hasil Keputusan Rapat Anggota;</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 0px white solid;vertical-align: top;"><img  src="<?= base_url('assets/img/about/') ?>ceklis.png" style="width:50%;"></td>
+                    <td style="border: 0px white solid;vertical-align: top;text-align: justify;"><b style="font-size: 16px;">Telah menyetujui isi Anggaran Dasar dan ketentuan yang berlaku;</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 0px white solid;vertical-align: top;"><img  src="<?= base_url('assets/img/about/') ?>ceklis.png" style="width:50%;"></td>
+                    <td style="border: 0px white solid;vertical-align: top;text-align: justify;"><b style="font-size: 16px;">Tidak diputuskan bersalah oleh peradilan di Indonesia melakukan perbuatan suatu pidana kejahatan dengan hukum minimal 5 (lima) tahun atau tindakan pidana narkotika dan obat obatan terlarang;</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 0px white solid;vertical-align: top;"><img  src="<?= base_url('assets/img/about/') ?>ceklis.png" style="width:50%;"></td>
+                    <td style="border: 0px white solid;vertical-align: top;text-align: justify;"><b style="font-size: 16px;">Tidak menunggak selama 6 (enam) kali atas kewajiban membayar simpanan wajib;</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 0px white solid;vertical-align: top;"><img  src="<?= base_url('assets/img/about/') ?>ceklis.png" style="width:50%;"></td>
+                    <td style="border: 0px white solid;vertical-align: top;text-align: justify;"><b style="font-size: 16px;">Keanggotaan koperasi diperoleh jika seluruh persyaratan telah dipenuhi, simpanan pokok telah dilunasi dan bersangkutan  didaftar dan telah menandatangani Buku Daftar Anggota Koperasi;</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 0px white solid;vertical-align: top;"><img  src="<?= base_url('assets/img/about/') ?>ceklis.png" style="width:50%;"></td>
+                    <td style="border: 0px white solid;vertical-align: top;text-align: justify;"><b style="font-size: 16px;">Koperasi secara terbuka dapat menerima Anggota lain sebagai Anggota luar biasa;</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 0px white solid;vertical-align: top;"><img  src="<?= base_url('assets/img/about/') ?>ceklis.png" style="width:50%;"></td>
+                    <td style="border: 0px white solid;vertical-align: top;text-align: justify;"><b style="font-size: 16px;">Tata cara penerimaan Anggota sebagaimana dimaksud ayat (4) diatur dalam Anggaran Rumah Tangga;</td>
+                  </tr>
+                </table>
+                </div>
+                </div>
+
+                <div class="row">
+            <div class="col-lg-9 margin-bottom-30px wow fadeInUp">
+              <div class="text-left hvr-bob">
+                <h1 class="widget-title clearfix"><font color="black"><b>Ketentuan Anggota</b></font></h1>
               </div>
             </div>
-            <div class="col-lg-2 margin-bottom-30px  wow fadeInUp" data-wow-delay="0.2s">
-              <div class="text-center hvr-bob">
-                <h2>3)</h2><img src="<?= base_url('assets/img/Home/') ?>dana.png" width="50%"><p><b>Melakukan</b><br> Penyetoran Tunai</p>
-              </div>
             </div>
-            <div class="col-lg-2 margin-bottom-30px  wow fadeInUp" data-wow-delay="0.2s">
-              <div class="text-center hvr-bob">
-                <h2>4)</h2><img src="<?= base_url('assets/img/') ?>kon.png" width="50%"><p><b>Konfirmasi</b><br> Pembayaran</p>
-              </div>
-            </div>
-            <div class="col-lg-2 margin-bottom-30px  wow fadeInUp" data-wow-delay="0.2s">
-              <div class="text-center hvr-bob">
-                <h2>5)</h2><img src="<?= base_url('assets/img/') ?>kartu.png" width="50%"><p><b>Mendapatkan</b><br> Kartu Anggota</p>
-              </div>
-            </div>
-          </div>
+                <div class="row"> 
+              <div class="col-lg-12"  style="border: 0px white solid;">                
+                <table style="border: 0px white solid;width: 100%;">
+                  <tr>
+                    <td style="border: 0px white solid;width: 10%;vertical-align: top;"><img  src="<?= base_url('assets/img/about/') ?>ceklis.png" style="width:50%;"></td>
+                    <td style="border: 0px white solid;width: 90%;vertical-align: top;text-align: justify;"><b style="font-size: 16px;">Melunasi Simpanan pokok untuk menjadi anggota dan membayar simpanan wajib secara rutin;</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 0px white solid;vertical-align: top;"><img  src="<?= base_url('assets/img/about/') ?>ceklis.png" style="width:50%;"></td>
+                    <td style="border: 0px white solid;vertical-align: top;text-align: justify;"><b style="font-size: 16px;">Berpartisipasi dalam kegiatan usaha Koperasi; </td>
+                  </tr>
+                  <tr>
+                    <td style="border: 0px white solid;vertical-align: top;"><img  src="<?= base_url('assets/img/about/') ?>ceklis.png" style="width:50%;"></td>
+                    <td style="border: 0px white solid;vertical-align: top;text-align: justify;"><b style="font-size: 16px;">Mentaati ketentuan anggaran dasar, anggaran rumah tangga, keputusan rapat anggota dan ketentuan lainnya yang berlaku dalam koperasi;</td>
+                  </tr>
+                  <tr>
+                    <td style="border: 0px white solid;vertical-align: top;"><img  src="<?= base_url('assets/img/about/') ?>ceklis.png" style="width:50%;"></td>
+                    <td style="border: 0px white solid;vertical-align: top;text-align: justify;"><b style="font-size: 16px;">Memeliharan dan menjaga nama baik dan kebersamaan dalam Koperasi;</td>
+                  </tr>
+                </table>
+                </div>
+                </div>
           <div class="col-lg-1 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s"></div>
 
 </div>
