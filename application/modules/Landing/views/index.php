@@ -1,123 +1,99 @@
-<div id="rev_slider_18_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="the-nile-1"
-  data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
-    <!-- START REVOLUTION SLIDER 5.4.1 fullwidth mode -->
-  <div id="rev_slider_18_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
-    <ul>
-      <?php foreach($data_slider->result() as $assets){ ?>
-      <li data-index="rs-64" data-transition="3dcurtain-horizontal" data-slotamount="default" data-hideafterloop="0"
-        data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default"
-        data-thumb="<?= base_url('resources/Slider/') ?><?= $assets->nama_file ?>" data-rotate="0" data-saveperformance="off"
-        data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6=""
-        data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+<div id="rev_slider_18_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="the-nile-1" data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+		<!-- START REVOLUTION SLIDER 5.4.1 fullwidth mode -->
+		<div id="rev_slider_18_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
+			<ul>
+			<?php foreach($data_slider->result() as $assets){ ?>
+				<!-- SLIDE  -->
+				<li data-index="rs-64" data-transition="3dcurtain-horizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="<?= base_url('resources/Slider/') ?><?= $assets->nama_file ?>" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+					<!-- MAIN IMAGE -->
+					<img src="<?= base_url('resources/Slider/') ?><?= $assets->nama_file ?>" alt="" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110" data-rotatestart="0" data-rotateend="0" data-blurstart="-2" data-blurend="0" data-offsetstart="2 2" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+					<!-- LAYERS -->
 
-        <img src="<?= base_url('resources/Slider/') ?><?= $assets->nama_file ?>" alt="" data-bgposition="center center"
-          data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110"
-          data-rotatestart="0" data-rotateend="0" data-blurstart="-2" data-blurend="0" data-offsetstart="2 2"
-          data-offsetend="0 0" class="rev-slidebg" data-no-retina>
-
-
-
-        <div class="tp-caption   tp-resizeme" id="slide-64-layer-4" data-x="['left','left','left','center']"
-          data-hoffset="['657','575','259','0']" data-y="['top','top','top','top']"
-          data-voffset="['123','123','57','57']" data-width="none" data-height="none" data-whitespace="normal"
-          data-type="text" data-responsive_offset="on"
-          data-frames='[{"delay":10,"speed":750,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-          data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
-          data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-          style="z-index: 5; white-space: normal; font-size: 71px; line-height: 22px; font-weight: 400; color: #757575;font-family:Open Sans;">
-        </div>
-      </li>
-      <?php } ?>
-
-    </ul>
-
-    <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
-  </div>
-  </div>
+				</li>
+			<?php } ?>
+			</ul>
+			<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+		</div>
+	</div>
 <script type="text/javascript">
-  var tpj = jQuery;
+		var tpj = jQuery;
 
-  var revapi18;
-  tpj(document).ready(function () {
-    
-    if (tpj("#rev_slider_18_1").revolution == undefined) {
-      revslider_showDoubleJqueryError("#rev_slider_18_1");
-    } else {
-      revapi18 = tpj("#rev_slider_18_1").show().revolution({
-        sliderType: "standard",
-        jsFileLocation: "//localhost/revslider-standalone/revslider/public/assets/revslider/assets/js/",
-        sliderLayout: "fullwidth",
-          dottedOverlay: "none",
-          delay: 9000,
-          navigation: {
-            keyboardNavigation: "off",
-            keyboard_direction: "horizontal",
-            mouseScrollNavigation: "off",
-            mouseScrollReverse: "default",
-            onHoverStop: "off",
-            arrows: {
-              style: "uranus",
-              enable: true,
-              hide_onmobile: false,
-              hide_onleave: true,
-              hide_delay: 200,
-              hide_delay_mobile: 1200,
-              tmp: '',
-              left: {
-                h_align: "left",
-                v_align: "center",
-                h_offset: 20,
-                v_offset: 0
-              },
-              right: {
-                h_align: "right",
-                v_align: "center",
-                h_offset: 20,
-                v_offset: 0
-              }
-            },
-            bullets: {
-              enable: false,
-              hide_onmobile: false,
-              style: "hermes",
-              hide_onleave: false,
-              direction: "horizontal",
-              h_align: "center",
-              v_align: "bottom",
-              h_offset: 0,
-              v_offset: 60,
-              space: 5,
-              tmp: ''
-            }
-          },
-          //responsiveLevels: [1240, 1024, 778, 480],
-          //visibilityLevels: [1240, 1024, 778, 480],
-          //gridwidth: [1110, 1024, 778, 480],
-          //gridheight: [720, 720, 500, 500],
-          lazyType: "none",
-          shadow: 0,
-          spinner: "spinner0",
-          stopLoop: "off",
-          stopAfterLoops: -1,
-          stopAtSlide: -1,
-          shuffle: "off",
-          autoHeight: "off",
-          disableProgressBar: "on",
-          hideThumbsOnMobile: "off",
-          hideSliderAtLimit: 0,
-          hideCaptionAtLimit: 0,
-          hideAllCaptionAtLilmit: 0,
-          debugMode: false,
-          fallbacks: {
-            simplifyAll: "off",
-            nextSlideOnWindowFocus: "off",
-            disableFocusListener: false,
-          }
-        });
-      }
-    }); /*ready*/
+		var revapi18;
+		tpj(document).ready(function() {
+			if (tpj("#rev_slider_18_1").revolution == undefined) {
+				revslider_showDoubleJqueryError("#rev_slider_18_1");
+			} else {
+				revapi18 = tpj("#rev_slider_18_1").show().revolution({
+					sliderType: "standard",
+					jsFileLocation: "//localhost/revslider-standalone/revslider/public/assets/revslider/assets/js/",
+					sliderLayout: "fullwidth",
+					dottedOverlay: "none",
+					delay: 9000,
+					navigation: {
+						keyboardNavigation: "off",
+						keyboard_direction: "horizontal",
+						mouseScrollNavigation: "off",
+						mouseScrollReverse: "default",
+						onHoverStop: "off",
+						arrows: {
+							style: "uranus",
+							enable: true,
+							hide_onmobile: false,
+							hide_onleave: true,
+							hide_delay: 200,
+							hide_delay_mobile: 1200,
+							tmp: '',
+							left: {
+								h_align: "left",
+								v_align: "center",
+								h_offset: 20,
+								v_offset: 0
+							},
+							right: {
+								h_align: "right",
+								v_align: "center",
+								h_offset: 20,
+								v_offset: 0
+							}
+						},
+						bullets: {
+							enable: true,
+							hide_onmobile: false,
+							style: "hermes",
+							hide_onleave: false,
+							direction: "horizontal",
+							h_align: "center",
+							v_align: "bottom",
+							h_offset: 0,
+							v_offset: 60,
+							space: 5,
+							tmp: ''
+						}
+					},
+					lazyType: "none",
+					shadow: 0,
+					spinner: "spinner0",
+					stopLoop: "off",
+					stopAfterLoops: -1,
+					stopAtSlide: -1,
+					shuffle: "off",
+					autoHeight: "on",
+					disableProgressBar: "on",
+					hideThumbsOnMobile: "off",
+					hideSliderAtLimit: 0,
+					hideCaptionAtLimit: 0,
+					hideAllCaptionAtLilmit: 0,
+					debugMode: false,
+					fallbacks: {
+						simplifyAll: "off",
+						nextSlideOnWindowFocus: "off",
+						disableFocusListener: false,
+					}
+				});
+			}
+		}); /*ready*/
 
-  </script>
+	</script>
 
 
 <div class="modal" id="welcome-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
