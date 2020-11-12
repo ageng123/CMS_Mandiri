@@ -91,6 +91,11 @@
       <div>
         <h3>Data Diri</h3>
         <section style="background-color: #ffffff;">
+          <?php if(isset($this->session->flashdata('register_error'))):  ?>
+            <div class="alert alert-danger" role="alert">
+              <?= $this->session->flashdata('register_error') ?>
+            </div>
+          <?php endif; ?>
           <div class="form-group">
             <label for=""><h5>Apakah Sudah Menjadi Member <b style="color: #432a19;">Komunitas</b> <b style="color: #f7a91e;">PanenSaham</b> ?</h5></label><br>
             <div class="w-50 daftar-radio">

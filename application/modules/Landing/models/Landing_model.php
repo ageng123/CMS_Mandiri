@@ -31,9 +31,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     class Nasabah_Model extends Main{
         protected $table = 'tb_user';
         protected $primaryKey = 'id';
-        
+        protected $email = '';
+        protected $phone = '';
         public function __construct(){
             parent::__construct();
+        }
+        public function setEmail($val){
+            return $this->email = $val;
+        }
+        public function setPhone($val){
+            return $this->phone = $val;
+        }
+        public function getPhone(){
+            return $this->phone;
+        }
+        public function getEmail(){
+            return $this->email;
+        }
+        public function checkEmailAndPhone(){
+            $row = $this->db->where('email', $this->getEmail())->or_where('no_hp', $this->getPhone)->get($this->table)->result_array();
+            if(count($row) > 0){
+                return FALSE;
+            }
+            return TRUE;
         }
     }
     // @table tb_nasabah_pekerjaan Berisi tentang detail pekerjaan nasabah

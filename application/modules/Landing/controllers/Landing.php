@@ -153,68 +153,75 @@ class Landing extends CI_Controller {
 	private function saveData_diri($request){
 		$model = new Nasabah_Model;
 		$request = (object)$request;
-		$model->sudah_member = $request->member == 'sudah' ? 1 : 0;
-		$model->member = $request->member == 'sudah' ? $request->client_id : 0;
-		$model->full_name = $request->nama;
-		$this->nama_pendaftaran = $request->nama;
-		$this->session->set_flashdata('nama_pendaftaran', $request->nama);
-		if($request->punya_ktp == 'sudah'): 
-			$model->ektp = $request->nomor_identity;
-		else:
-			$model->no_kk = $request->nomor_identity;
-		endif;
-		$model->jenis_kelamin = $request->jenis_kelamin;
-		$model->tempat_lahir = $request->tempat;
-		$tanggal = $request->tahun.'-'.$request->bulan.'-'.$request->tanggal;
-		$model->tanggal_lahir = date('Y-m-d', strtotime($tanggal));
-		$model->no_hp = $request->hp;
-		$this->no_hp = $request->hp;
-		$model->alamat = $request->alamat.','.$request->rumah.','.$request->rt.','.$request->kelurahan.','.$request->kecamatan.','.$request->kabupaten.','.$request->provinsi.','.$request->kodepos;
-		$model->alamat_rumah = $request->alamat_rumah;
-		$model->email = $request->email;
-		$this->session->set_flashdata('email_nasabah', $request->email);
-		$this->data_email['to'] = $request->email;
-		$model->password = $this->bcrypt->hash($request->password);
-		$code =  encode($request->nomor_identity.$request->nama);
-		$code = substr($this->clean($code), 0, 200);
-		$model->activation_code = $code;
-		$this->data_email['kode_aktivasi'] = $code;
-		$rtrw = explode('/', $request->rt);
-		$additional = [
-			'pendidikan' => $request->pendidikan,
-			'client_id' => $request->client_id,
-			'alamat_provinsi' => $request->provinsi,
-			'alamat_kota' => $request->kabupaten,
-			'alamat_RT' => $rtrw[0],
-			'alamat_RW' => $rtrw[1],
-			'alamat_kecamatan' => $request->kecamatan,
-			'alamat_kelurahan' => $request->kelurahan,
-			'kode_pos' => $request->kodepos
-		];
-		$model->additional = json_encode($additional);
-		if($model->save()):
-			$this->nasabahId = $model->get_lastId();
-			$ktp = $this->upload('ktp', $this->nasabahId);
-			$ktp_ahli = $this->upload('ktp_ahli', $this->nasabahId);
-			$kk = $this->upload('kk', $this->nasabahId);
-			$prefix = $this->nasabahId.'/';
-			if(isset($ktp->file_name)):
-				$model->foto_ktp = isset($ktp->file_name) ? $prefix.$ktp->file_name : 'ktp_'.$prefix;
-				$model->foto_kk = isset($kk->file_name) ? $prefix.$kk->file_name : 'ktp_'.$prefix;
+		$model->setEmail($request->email);
+		$model->setPhone($request->hp);
+		if($model->checkEmailAndPhone == true):
+			$model->sudah_member = $request->member == 'sudah' ? 1 : 0;
+			$model->member = $request->member == 'sudah' ? $request->client_id : 0;
+			$model->full_name = $request->nama;
+			$this->nama_pendaftaran = $request->nama;
+			$this->session->set_flashdata('nama_pendaftaran', $request->nama);
+			if($request->punya_ktp == 'sudah'): 
+				$model->ektp = $request->nomor_identity;
 			else:
-				$model->foto_kk = isset($kk->file_name) ? $prefix.$kk->file_name : 'ktp_'.$prefix;
-				$model->foto_ktp_ahli_waris = isset($ktp_ahli->file_name) ? $prefix.$ktp_ahli->file_name : 'ktp_'.$prefix;
+				$model->no_kk = $request->nomor_identity;
 			endif;
-			$user = explode(' ', $request->nama);
-			$model->username = strtolower($user[0]).'-'.$this->nasabahId;
-			$model->update($this->nasabahId);
-			$role = new AssignRoleModel;
-			$role->id_user = $this->nasabahId;
-			$role->id_role = '3';
-			$role->last_update = date('Y-m-d H:i:s');
-			$role->save();
-			$pekerjaan = $this->trigger_save_event('SAVE_PEKERJAAN', $this->input->post('pekerjaan'));
-			$koperasi = $this->trigger_save_event('SAVE_KOPERASI_DATA', $this->input->post('koperasi'));
+			$model->jenis_kelamin = $request->jenis_kelamin;
+			$model->tempat_lahir = $request->tempat;
+			$tanggal = $request->tahun.'-'.$request->bulan.'-'.$request->tanggal;
+			$model->tanggal_lahir = date('Y-m-d', strtotime($tanggal));
+			$model->no_hp = $request->hp;
+			$this->no_hp = $request->hp;
+			$model->alamat = $request->alamat.','.$request->rumah.','.$request->rt.','.$request->kelurahan.','.$request->kecamatan.','.$request->kabupaten.','.$request->provinsi.','.$request->kodepos;
+			$model->alamat_rumah = $request->alamat_rumah;
+			$model->email = $request->email;
+			$this->session->set_flashdata('email_nasabah', $request->email);
+			$this->data_email['to'] = $request->email;
+			$model->password = $this->bcrypt->hash($request->password);
+			$code =  encode($request->nomor_identity.$request->nama);
+			$code = substr($this->clean($code), 0, 200);
+			$model->activation_code = $code;
+			$this->data_email['kode_aktivasi'] = $code;
+			$rtrw = explode('/', $request->rt);
+			$additional = [
+				'pendidikan' => $request->pendidikan,
+				'client_id' => $request->client_id,
+				'alamat_provinsi' => $request->provinsi,
+				'alamat_kota' => $request->kabupaten,
+				'alamat_RT' => $rtrw[0],
+				'alamat_RW' => $rtrw[1],
+				'alamat_kecamatan' => $request->kecamatan,
+				'alamat_kelurahan' => $request->kelurahan,
+				'kode_pos' => $request->kodepos
+			];
+			$model->additional = json_encode($additional);
+			if($model->save()):
+				$this->nasabahId = $model->get_lastId();
+				$ktp = $this->upload('ktp', $this->nasabahId);
+				$ktp_ahli = $this->upload('ktp_ahli', $this->nasabahId);
+				$kk = $this->upload('kk', $this->nasabahId);
+				$prefix = $this->nasabahId.'/';
+				if(isset($ktp->file_name)):
+					$model->foto_ktp = isset($ktp->file_name) ? $prefix.$ktp->file_name : 'ktp_'.$prefix;
+					$model->foto_kk = isset($kk->file_name) ? $prefix.$kk->file_name : 'ktp_'.$prefix;
+				else:
+					$model->foto_kk = isset($kk->file_name) ? $prefix.$kk->file_name : 'ktp_'.$prefix;
+					$model->foto_ktp_ahli_waris = isset($ktp_ahli->file_name) ? $prefix.$ktp_ahli->file_name : 'ktp_'.$prefix;
+				endif;
+				$user = explode(' ', $request->nama);
+				$model->username = strtolower($user[0]).'-'.$this->nasabahId;
+				$model->update($this->nasabahId);
+				$role = new AssignRoleModel;
+				$role->id_user = $this->nasabahId;
+				$role->id_role = '3';
+				$role->last_update = date('Y-m-d H:i:s');
+				$role->save();
+				$pekerjaan = $this->trigger_save_event('SAVE_PEKERJAAN', $this->input->post('pekerjaan'));
+				$koperasi = $this->trigger_save_event('SAVE_KOPERASI_DATA', $this->input->post('koperasi'));
+			endif;
+		else:
+			$this->session->set_flashdata('register_error', 'Nomor HP/Email Sudah digunakan');
+			return redirect(base_url('pendaftaran'));
 		endif;
 	}
 	private function saveData_pekerjaan($request){
