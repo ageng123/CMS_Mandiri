@@ -155,7 +155,7 @@ class Landing extends CI_Controller {
 		$request = (object)$request;
 		$model->setEmail($request->email);
 		$model->setPhone($request->hp);
-		if($model->checkEmailAndPhone == true):
+		if($model->checkEmailAndPhone() == true):
 			$model->sudah_member = $request->member == 'sudah' ? 1 : 0;
 			$model->member = $request->member == 'sudah' ? $request->client_id : 0;
 			$model->full_name = $request->nama;
