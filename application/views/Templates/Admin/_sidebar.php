@@ -112,6 +112,9 @@
                     <a href="<?= base_url('Email') ?>" <?php if($location1 == 'Email') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Email</a>
                   </li>
                   <li class="nav-item">
+                    <a href="<?= base_url('Admin/Kontak') ?>" <?php if($location1 == 'Kontak') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Kontak</a>
+                  </li>
+                  <li class="nav-item">
                     <a href="<?= base_url('GambarSlider') ?>" <?php if($location1 == 'GambarSlider') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Gambar Slider</a>
                   </li>
                   <li class="nav-item">

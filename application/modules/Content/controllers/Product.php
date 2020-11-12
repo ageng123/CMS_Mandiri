@@ -144,7 +144,7 @@ class Product extends Auth_Guard {
 				echo $this->db->error();
 			endif;
 		endif;
-		$dataTemp = $tempData->findBy(['uploader' => $this->session->userdata('user_id'), 'refid' => null, 'tipe_attachment' == 2]);
+		$dataTemp = $tempData->findBy(['uploader' => $this->session->userdata('user_id'), 'refid' => null, 'tipe_attachment' => 2]);
 		if(count($dataTemp) > 0):
 			foreach($dataTemp as $key => $val): 
 				$tempData->delete($val->id_attachment);
