@@ -26,8 +26,8 @@ class Kontak extends Auth_Guard {
 
 		$data = [
 			'form_url' => $this->formUrl,
-			'page_title' => 'KJKPI - Data Email',
-			'card_title' => "Data Email"
+			'page_title' => 'KJKPI - Data Kontak',
+			'card_title' => "Data Kontak"
 		];
 		admin_parse($content, $data);
 		// $this->load->view('welcome_message');

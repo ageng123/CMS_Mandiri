@@ -105,9 +105,6 @@
                   <li class="nav-item">
                     <a href="<?= base_url('Roles') ?>" <?php if($location1 == 'Roles') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Role</a>
                   </li>
-                    <!-- <li class="nav-item">
-                      <a href="<?= base_url('StatusPembayaran') ?>" <?php if($location1 == 'StatusPembayaran') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Pembayaran Iuran</a>
-                    </li> -->
                   <li class="nav-item">
                     <a href="<?= base_url('Email') ?>" <?php if($location1 == 'Email') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Email</a>
                   </li>
