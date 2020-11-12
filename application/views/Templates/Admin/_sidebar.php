@@ -87,11 +87,11 @@
           </li> -->
 
           <li class="nav-item">
-              <a <?php if($location1 == 'Users' OR $location1 == 'Roles' OR  $location1 == 'AssignRoles'  OR  $location1 == 'Nasabah' OR  $location1 == 'StatusPembayaran' OR  $location1 == 'GambarSlider' OR  $location1 == 'Request' OR  $location1 == 'Email') { echo 'class="nav-link active" style="color: white;"';} else { echo 'class="nav-link"';} ?> href="#navbar-admin" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
-                <i <?php if($location1 == 'Users' OR $location1 == 'Roles' OR  $location1 == 'AssignRoles'  OR  $location1 == 'Nasabah' OR  $location1 == 'StatusPembayaran' OR  $location1 == 'GambarSlider' OR  $location1 == 'Request' OR  $location1 == 'Email') { echo 'class="ni ni-archive-2 text-white"';} else { echo 'class="ni ni-archive-2" style="color: #eba502;"';} ?>></i>
+              <a <?php if($location1 == 'Users' OR $location1 == 'kontak' OR $location1 == 'Roles' OR  $location1 == 'AssignRoles'  OR  $location1 == 'Nasabah' OR  $location1 == 'StatusPembayaran' OR  $location1 == 'GambarSlider' OR  $location1 == 'Request' OR  $location1 == 'Email') { echo 'class="nav-link active" style="color: white;"';} else { echo 'class="nav-link"';} ?> href="#navbar-admin" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
+                <i <?php if($location1 == 'Users' OR $location1 == 'kontak' OR $location1 == 'kontak' OR $location1 == 'Roles' OR  $location1 == 'AssignRoles'  OR  $location1 == 'Nasabah' OR  $location1 == 'StatusPembayaran' OR  $location1 == 'GambarSlider' OR  $location1 == 'Request' OR  $location1 == 'Email') { echo 'class="ni ni-archive-2 text-white"';} else { echo 'class="ni ni-archive-2" style="color: #eba502;"';} ?>></i>
                 <span class="nav-link-text">Master Data</span>
               </a>
-              <div <?php if($location1 == 'Users' OR $location1 == 'Roles' OR  $location1 == 'AssignRoles'  OR  $location1 == 'Nasabah' OR  $location1 == 'StatusPembayaran' OR  $location1 == 'GambarSlider' OR  $location1 == 'Request' OR  $location1 == 'Email') { echo 'class="collapse show"';} else { echo 'class="collapse"';} ?> id="navbar-admin">
+              <div <?php if($location1 == 'Users' OR $location1 == 'kontak' OR $location1 == 'Roles' OR  $location1 == 'AssignRoles'  OR  $location1 == 'Nasabah' OR  $location1 == 'StatusPembayaran' OR  $location1 == 'GambarSlider' OR  $location1 == 'Request' OR  $location1 == 'Email') { echo 'class="collapse show"';} else { echo 'class="collapse"';} ?> id="navbar-admin">
                 <ul class="nav nav-sm flex-column">
                   <li class="nav-item">
                     <a href="<?= base_url('Nasabah') ?>" <?php if($location1 == 'Nasabah') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Nasabah</a>
@@ -109,7 +109,7 @@
                     <a href="<?= base_url('Email') ?>" <?php if($location1 == 'Email') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Email</a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url('Admin/Kontak') ?>" <?php if($location1 == 'Kontak') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Kontak</a>
+                    <a href="<?= base_url('kontak/admin') ?>" <?php if($location1 == 'kontak') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Kontak</a>
                   </li>
                   <li class="nav-item">
                     <a href="<?= base_url('GambarSlider') ?>" <?php if($location1 == 'GambarSlider') { echo 'class="nav-link active" style="color: #eba502; font-weight: bold;"';} else { echo 'class="nav-link"';} ?>>Daftar Gambar Slider</a>
