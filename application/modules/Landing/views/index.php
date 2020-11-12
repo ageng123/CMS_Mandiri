@@ -1,14 +1,34 @@
-<div id="rev_slider_18_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="the-nile-1" data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+<div id="rev_slider_18_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="the-nile-1"
+  data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
     <!-- START REVOLUTION SLIDER 5.4.1 fullwidth mode -->
     <div id="rev_slider_18_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
       <ul>
-        
           <?php foreach($data_slider->result() as $assets){ ?>
-          <li data-index="rs-65" data-transition="3dcurtain-horizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="<?= base_url('resources/Slider/') ?><?= $assets->nama_file ?>" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-            <img src="<?= base_url('resources/Slider/') ?><?= $assets->nama_file ?>" alt="" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Power0.easeIn" data-scalestart="115" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="2 3" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+          <li data-index="rs-65" data-transition="3dcurtain-horizontal" data-slotamount="default" data-hideafterloop="0"
+              data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default"
+              data-thumb="<?= base_url('resources/Slider/') ?><?= $assets->nama_file ?>" data-rotate="0" data-saveperformance="off"
+              data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6=""
+              data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+
+            <img src="<?= base_url('resources/Slider/') ?><?= $assets->nama_file ?>" alt="" data-bgposition="center center"
+              data-kenburns="on" data-duration="10000" data-ease="Power0.easeIn" data-scalestart="115" data-scaleend="100"
+              data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="2 3"
+               data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+
+               <div class="tp-caption   tp-resizeme" id="slide-64-layer-4" data-x="['left','left','left','center']"
+                  data-hoffset="['657','575','259','0']" data-y="['top','top','top','top']"
+                  data-voffset="['123','123','57','57']" data-width="none" data-height="none" data-whitespace="normal"
+                  data-type="text" data-responsive_offset="on"
+                  data-frames='[{"delay":10,"speed":750,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                  data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+                  data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                  style="z-index: 5; white-space: normal; font-size: 71px; line-height: 22px; font-weight: 400; color: #757575;font-family:Open Sans;">
+              </div>
           </li>
         <?php } ?>
+
       </ul>
+
       <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
     </div>
   </div>
@@ -161,190 +181,190 @@
     })
   })
 </script> -->
-<?php if($this->session->flashdata('daftar_sukses')): ?>
-  <script>
-  $(document).ready(function () {
-    $('#modalPendaftaran').modal('show');
-    $('.modal-close').on('click', function () {
-      $('.modal').modal('hide');
-      console.log('modal');
-    })
-  })
-</script>
-<?php else: ?>
-  <script>
-  $(document).ready(function () {
-    $('#welcome-modal').modal('show');
-    $('.modal-close').on('click', function () {
-      $('#welcome-modal').modal('hide');
-      console.log('modal');
-    })
-  })
-</script>
-<?php endif; ?>
+    <?php if($this->session->flashdata('daftar_sukses')): ?>
+        <script>
+          $(document).ready(function () {
+            $('#modalPendaftaran').modal('show');
+            $('.modal-close').on('click', function () {
+              $('.modal').modal('hide');
+              console.log('modal');
+            })
+          })
+        </script>
+    <?php else: ?>
+        <script>
+          $(document).ready(function () {
+            $('#welcome-modal').modal('show');
+            $('.modal-close').on('click', function () {
+              $('#welcome-modal').modal('hide');
+              console.log('modal');
+            })
+          })
+        </script>
+    <?php endif; ?>
 
 
 
-  <div class="padding-tb-10px">
-    <div class="container">
-
-      <div class="row">
-
-        <div class="col-lg-8 col-sm-6 sm-mb-30px wow fadeInUp">
-          <div style="background-color: transparent; width: 100%; height: 100%">
-          <div class="d-flex flex-column container">
-            <div class="row" style="padding-top: 50px">
-              <div class="col-12 row" style="border-bottom: 4px solid orange">
-                <div class="col-4 p-2"><img class="pl-2" src="<?= base_url('assets/img/panen.png') ?>"  alt=""></div>
-                <div class="col-8 p-2"">
-                  <p class="pt-2" style="margin-top: 25px;"><b style="color:#f7a91e;">Pusat jual beli online</b> perlengkapan dan peralatan hobi. 
-                    Belanja murah, lengkap, aman, bisa nego dan COD. </p>
-                </div>
-              </div>
-              <div class="col-12 p-2">
-                Udah check <b style="color: #f7a91e;"> Panen Bersama</b> belum hari ini ? Banyak cerita seru dan informasi terbaru di sini. Berbagi Hobi. Berita Terbaru. Berkomunitas.
-              </div>
-              <style>
-                .price-list {
-                  display: flex;
-                  flex-direction: column;
-                  text-align: center;
-                  justify-content: middle;
-                }
-
-                .price-list>h4 {
-                  margin-top: 15px;
-                }
-
-                .card-product {
-                  border: 0px transparent;
-                }
-              </style>
-
-
-              <div class="col-12 p-2 pl-4 row getTopProduct" id="data-container">
-              <div class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
-              </div>
-              </div>
-              <div class="col-12">
-              <div ></div>
-              <div id="pagination-container"></div>
-              </div>
-              <br><br><br>
-              <div class="col-12 row">
-                <h3><b style="color: #f7a91e;">Latest Products</b></h3>
-              </div>
-              <br><br>
-              <div class="col-12 row getProductLatest">
-              <div class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
-              </div>
-              </div>
-            </div>
-            <br><br>
-          </div>
-        </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6 sm-mb-30px wow fadeInUp">
-          
-        <div class="col-12 mb-3" style="">
-          <div class="card">
-            <div class="card-header landing-login-form">
-              <ul class="nav nav-pils" id="myTab" role="tablist">
-                <style>
-                  .login-button {
-                    background: #603913;
-                    width: 50%;
-                    padding: 2px 5px;
-                    text-align: center;
-
-                  }
-                  .login-button > a {
-                    color: #ffe276; 
-                  }
-                  .landing-login-form {
-                    background: transparent !important;
-                    border-bottom: 0px;
-                    padding-left: 0px;
-                    padding-right: 0px;
-                  }
-                </style>
-
-              </ul>
-            </div>
-            <div class="card-body">
-              <?php if(!($this->session->userdata('full_name'))): ?>
-                <div class="text-center">
-                <a href="#"><b style="color: #432a19;">LOGIN</b></a> &nbsp; <b style="color: #f7a91e;">|</b> <a href="<?= base_url();?>pendaftaran"> &nbsp; <b style="color: grey;">REGISTER</b></a>
-              </div>
-              <br/>
-              <div class="tab-content" id="myTabContent">
-                  <?php if($this->session->flashdata('error_login') != null): ?>
-                  <div class="alert alert-danger" role="alert">
-                    <?= $this->session->flashdata('error_login') ?>
+  <section>
+      <div class="padding-tb-10px">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-sm-6 sm-mb-30px wow fadeInUp">
+              <div style="background-color: transparent; width: 100%; height: 100%">
+              <div class="d-flex flex-column container">
+                <div class="row" style="padding-top: 50px">
+                  <div class="col-12 row" style="border-bottom: 4px solid orange">
+                    <div class="col-4 p-2"><img class="pl-2" src="<?= base_url('assets/img/panen.png') ?>"  alt=""></div>
+                    <div class="col-8 p-2"">
+                      <p class="pt-2" style="margin-top: 25px;"><b style="color:#f7a91e;">Pusat jual beli online</b> perlengkapan dan peralatan hobi. 
+                        Belanja murah, lengkap, aman, bisa nego dan COD. </p>
+                    </div>
                   </div>
-                  <?php endif; ?>
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                  <form action="<?= base_url('auth_api/login_nasabah') ?>" method="POST" style="border: 6px solid #fcb11a; border-radius: 2%; overflow: hidden">
-                    <input type="email" name="email" class="form-control" placeholder="Email" id="">
-                    <input type="password" name="password" class="form-control" placeholder="Password" id="">
-                    <button class="btn btn-danger btn-block"
-                      style="border-radius: 2% !Important; background: #603913; color: white;">Continue</button>
-                  </form>
-                  <a class="btn btn-link" href="<?= base_url('auth/forgot_password') ?>">Forgot Password</a>
+                  <div class="col-12 p-2">
+                    Udah check <b style="color: #f7a91e;"> Panen Bersama</b> belum hari ini ? Banyak cerita seru dan informasi terbaru di sini. Berbagi Hobi. Berita Terbaru. Berkomunitas.
+                  </div>
+                  <style>
+                    .price-list {
+                      display: flex;
+                      flex-direction: column;
+                      text-align: center;
+                      justify-content: middle;
+                    }
+
+                    .price-list>h4 {
+                      margin-top: 15px;
+                    }
+
+                    .card-product {
+                      border: 0px transparent;
+                    }
+                  </style>
+
+
+                  <div class="col-12 p-2 pl-4 row getTopProduct" id="data-container">
+                  <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                  </div>
+                  <div class="col-12">
+                  <div ></div>
+                  <div id="pagination-container"></div>
+                  </div>
+                  <br><br><br>
+                  <div class="col-12 row">
+                    <h3><b style="color: #f7a91e;">Latest Products</b></h3>
+                  </div>
+                  <br><br>
+                  <div class="col-12 row getProductLatest">
+                  <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                  </div>
                 </div>
-                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                <br><br>
               </div>
-                <?php else: ?>
-                   <div class="position-relative" style="background-color: white;">
-                    <center><div class="item-thumbnail rounded-circle" style="height: 10vw; width: 10vw; overflow: hidden">
-                        <?php if(empty($user->photo)): ?>
-                             <img src="<?= base_url('assets/img/');?>user.png" style="height: 100%" id="profilePreview">
-                        <?php else: ?>
-                            <img src="<?= base_url('resources/upload/').$this->session->userdata('user_id').'/'.$user->photo;?>" style="height: 100%" id="profilePreview">
-                        <?php endif; ?>
-                    </div></center>
-                    <br>
-                    <center>Welcome <b style="color: #f7a91e;"><?= $user->full_name ?></b></center>
-                    <br>
-                    <center> <a href="<?= base_url('auth/logout') ?>" class="btn btn-sm btn-danger">Logout</a></center>
-                </div>
-               
-                <?php endif; ?>
-
-              
-
-
             </div>
-          </div>
-        </div>
-        <div class="col-12">
-          <h2><b><i style="color: #603913;">BERITA POPULAR</i> <i style="color: #f7a91e;">KATEGORI</i></b></h2>
-        </div>
-        <div class="col-12 row getTagsPopular" style="margin-left: 0px;">
-          <div class="spinner-border" role="status">
-            <span class="sr-only">Loading...</span>
-          </div>
-        </div>
-        <br/><br/>
-        <div class="col-12">
-          <h2><b><i style="color: #603913;">BERITA POPULAR</i> <i style="color: #f7a91e;">HARI INI</i>
-          <br>
-          </b></h2> <h4><?= indonesiaFullDate(date('Y-m-d')); ?></h4>
-        </div>
-        <div class="col-12 topNews">
-          <div class="spinner-border" role="status">
-            <span class="sr-only">Loading...</span>
-          </div>
-        </div>
-        </div>
+            </div>
 
+            <div class="col-lg-4 col-sm-6 sm-mb-30px wow fadeInUp">
+              
+            <div class="col-12 mb-3" style="">
+              <div class="card">
+                <div class="card-header landing-login-form">
+                  <ul class="nav nav-pils" id="myTab" role="tablist">
+                    <style>
+                      .login-button {
+                        background: #603913;
+                        width: 50%;
+                        padding: 2px 5px;
+                        text-align: center;
+
+                      }
+                      .login-button > a {
+                        color: #ffe276; 
+                      }
+                      .landing-login-form {
+                        background: transparent !important;
+                        border-bottom: 0px;
+                        padding-left: 0px;
+                        padding-right: 0px;
+                      }
+                    </style>
+
+                  </ul>
+                </div>
+                <div class="card-body">
+                  <?php if(!($this->session->userdata('full_name'))): ?>
+                    <div class="text-center">
+                    <a href="#"><b style="color: #432a19;">LOGIN</b></a> &nbsp; <b style="color: #f7a91e;">|</b> <a href="<?= base_url();?>pendaftaran"> &nbsp; <b style="color: grey;">REGISTER</b></a>
+                  </div>
+                  <br/>
+                  <div class="tab-content" id="myTabContent">
+                      <?php if($this->session->flashdata('error_login') != null): ?>
+                      <div class="alert alert-danger" role="alert">
+                        <?= $this->session->flashdata('error_login') ?>
+                      </div>
+                      <?php endif; ?>
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                      <form action="<?= base_url('auth_api/login_nasabah') ?>" method="POST" style="border: 6px solid #fcb11a; border-radius: 2%; overflow: hidden">
+                        <input type="email" name="email" class="form-control" placeholder="Email" id="">
+                        <input type="password" name="password" class="form-control" placeholder="Password" id="">
+                        <button class="btn btn-danger btn-block"
+                          style="border-radius: 2% !Important; background: #603913; color: white;">Continue</button>
+                      </form>
+                      <a class="btn btn-link" href="<?= base_url('auth/forgot_password') ?>">Forgot Password</a>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                  </div>
+                    <?php else: ?>
+                      <div class="position-relative" style="background-color: white;">
+                        <center><div class="item-thumbnail rounded-circle" style="height: 10vw; width: 10vw; overflow: hidden">
+                            <?php if(empty($user->photo)): ?>
+                                <img src="<?= base_url('assets/img/');?>user.png" style="height: 100%" id="profilePreview">
+                            <?php else: ?>
+                                <img src="<?= base_url('resources/upload/').$this->session->userdata('user_id').'/'.$user->photo;?>" style="height: 100%" id="profilePreview">
+                            <?php endif; ?>
+                        </div></center>
+                        <br>
+                        <center>Welcome <b style="color: #f7a91e;"><?= $user->full_name ?></b></center>
+                        <br>
+                        <center> <a href="<?= base_url('auth/logout') ?>" class="btn btn-sm btn-danger">Logout</a></center>
+                    </div>
+                  
+                    <?php endif; ?>
+
+                  
+
+
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <h2><b><i style="color: #603913;">BERITA POPULAR</i> <i style="color: #f7a91e;">KATEGORI</i></b></h2>
+            </div>
+            <div class="col-12 row getTagsPopular" style="margin-left: 0px;">
+              <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+            <br/><br/>
+            <div class="col-12">
+              <h2><b><i style="color: #603913;">BERITA POPULAR</i> <i style="color: #f7a91e;">HARI INI</i>
+              <br>
+              </b></h2> <h4><?= indonesiaFullDate(date('Y-m-d')); ?></h4>
+            </div>
+            <div class="col-12 topNews">
+              <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+            </div>
+
+          </div>
+
+        </div>
       </div>
-
-    </div>
-  </div>
+  </section>
 
 
 <section class="padding-tb-6px" style="background-image: url('<?= base_url('assets/img/') ?>list2.jpg');">
