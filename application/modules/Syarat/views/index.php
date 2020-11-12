@@ -24,7 +24,6 @@
           <h1 class="widget-title clearfix">
             <font color="black"><b>SYARAT</b></font>
           </h1>
-          <hr style="background-color: #f7a91e;width: 60%;height: 4px;" border="0" align="left">
         </div>
       </div>
     </div>
@@ -115,7 +114,6 @@
           <h1 class="widget-title clearfix">
             <font color="black"><b>Ketentuan Anggota</b></font>
           </h1>
-          <hr style="background-color: #f7a91e;width: 40%;height: 4px;" border="0" align="left">
         </div>
       </div>
     </div>
