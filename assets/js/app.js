@@ -141,12 +141,14 @@ const NasabahServices = {
             $('input[name="data_diri[member]"][value="belum"]').prop('checked', true);
             $('#client_id').addClass('hide');
         }
-        if(data.foto_ktp == 'ktp_'+data.id+'/'){
+        if(data.foto_ktp == 'ktp_'+data.id+'/' || data.foto_ktp == ''){
             $('input[name="data_diri[punya_ktp]"][value="belum"]').prop('checked', true);
             // $('input[name="ktp_ahli"]').val(data.foto_ktp_ahli_waris);
             // $('#kk input[name="kk"]').val(data.foto_kk);
             $('#ktpwaris_preview').attr('src', base_url+'resources/upload/'+data.foto_ktp_ahli_waris);
             $('#kk2_preview').attr('src', base_url+'resources/upload/'+data.foto_kk);
+            document.getElementById('ktpwaris_preview').style.marginTop = '10px';
+            document.getElementById('kk2_preview').style.marginTop = '10px';
             
             $('input[name="data_diri[nomor_identity]"]').val(data.no_kk);
 
@@ -155,7 +157,9 @@ const NasabahServices = {
             // $('input[name="ktp"]').val(data.foto_ktp);
             // $('#kk2 input[name="ktp"]').val(data.foto_kk);
             $('#ktp_preview').attr('src', base_url+'resources/upload/'+data.foto_ktp);
+            document.getElementById('ktp_preview').style.marginTop = '10px';
             $('#kk1_preview').attr('src', base_url+'resources/upload/'+data.foto_kk);
+            document.getElementById('kk1_preview').style.marginTop = '10px';
             $('input[name="data_diri[nomor_identity]"]').val(data.ektp);
 
         }
