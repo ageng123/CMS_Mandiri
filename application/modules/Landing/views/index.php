@@ -374,11 +374,12 @@
 </section>
 
   <div class="container padding-tb-30px" >
-  <div class="text-left hvr-bob">
-    <h1 class="widget-title clearfix"><font color="black"><b>PRODUK</b></font></h1>
+  <div class="text-center hvr-bob">
+    <h1 class="widget-title text-center clearfix"><font color="black"><b>PRODUK</b></font></h1>
   </div>
 
        <hr style="background-color: #f7a91e;width: 12%;height: 4px;" border="0" align="left">
+       <br>
           <div class="row">
             <div class="col-lg-9 margin-bottom-30px wow fadeInUp">
               <div class="text-left hvr-bob">
@@ -386,8 +387,8 @@
               </div>
             </div>
             <div class="col-lg-3 margin-bottom-30px wow fadeInUp" data-wow-delay="0.2s">
-              <div class="text-left hvr-bob">
-                <h3 class="widget-title clearfix" style="background-color: #ecc15d;text-align: center;color: black;padding-left: 3px;padding-right: 3px;">DUKUNGAN BANTUAN <br> 021 - 4582 5710</h3>
+              <div class="text-center hvr-bob">
+                <h3 class="widget-title clearfix" style="background-color: #ecc15d; color: black;">DUKUNGAN BANTUAN <br> 021 - 4582 5710</h3>
               </div>
             </div>
             </div>
@@ -445,29 +446,32 @@
       <div class="col-12 text-center">
 
        <hr style="background-color: #f7a91e;width: 100%;height: 4px;" border="0" align="left">
-        <ul class="nav nav-pills product-tabs mb-3" id="pills-tab" role="tablist" style="width: 100%;display: flex;justify-content: inherit;">
-          <li class="nav-item">
+
+        <ul class="nav nav-pills product-tabs mb-3" id="pills-tab" role="tablist" style="width: 100%;display: flex; text-align: center;">
+          <li class="nav-item text-center">
             <a class="nav-link product-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
-              aria-controls="pills-home" aria-selected="true"><h2 style="padding-right: 95px;" class="text-left hvr-bob">Semua</h2></a>
+              aria-controls="pills-home" aria-selected="true"><h2 style="padding-right: 95px;" class="text-center hvr-bob">Semua</h2></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item text-center">
             <a class="nav-link product-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
-              aria-controls="pills-profile" aria-selected="false"><h2 style="padding-right: 95px;" class="text-left hvr-bob">Komersial</h2></a>
+              aria-controls="pills-profile" aria-selected="false"><h2 style="padding-right: 95px;" class="text-center hvr-bob">Komersial</h2></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item text-center">
             <a class="nav-link product-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-              aria-controls="pills-contact" aria-selected="false"><h2 style="padding-right: 95px;" class="text-left hvr-bob">Housing</h2></a>
+              aria-controls="pills-contact" aria-selected="false"><h2 style="padding-right: 95px;" class="text-center hvr-bob">Housing</h2></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item text-center">
             <a class="nav-link product-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-              aria-controls="pills-contact" aria-selected="false"><h2 style="padding-right: 95px;" class="text-left hvr-bob">Keluarga</h2></a>
+              aria-controls="pills-contact" aria-selected="false"><h2 style="padding-right: 95px;" class="text-center hvr-bob">Keluarga</h2></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item text-center">
             <a class="nav-link product-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-              aria-controls="pills-contact" aria-selected="false"><h2 class="text-left hvr-bob">Khusus</h2></a>
+              aria-controls="pills-contact" aria-selected="false"><h2 class="text-center hvr-bob">Khusus</h2></a>
           </li>
         </ul>        
+
        <hr style="background-color: #f7a91e;width: 100%;height: 4px;" border="0" align="left">
+       
       </div>
       <div class="col-12">
         <div class="testimonial-carousel" id="slider2">
@@ -544,7 +548,8 @@
           </div>
         </div> -->
       </div>
-      </div>
+    </div>
+    <br>
        
       <div class="col-12" style="margin-top: 3vh">
         <div class="row">
