@@ -525,7 +525,7 @@
         <div class="col-md-3 col-xs-12">
           Forum diskusi dan berbagi berita dari dalam maupun luar negeri. Mulai dari ideologi, politik, ekonomi, sosial dan budaya. <b style="color: #f7a91e;">Subforum</b>: berita-dunia-hiburan.
         </div>
-        <div class="col-md-9 col-xs-12 row getBeritaLatest">
+        <!-- <div class="col-md-9 col-xs-12 row getBeritaLatest">
           <div class="card no-border col-md-6 col-xs-12">
             <div class="newestNews_container hide latestNews blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2" data-index="<?= '1' ?>">
               <img class="newestNewsImage" src="<?= base_url('assets/img/panens.png') ?>" alt="Avatar" data-index="<?= '1' ?>" class="">
@@ -542,7 +542,7 @@
                 </div>
               </div>
           </div>
-        </div>
+        </div> -->
       </div>
       </div>
        
@@ -552,7 +552,7 @@
           <div class="col-xs-12 col-lg-3" style="width: 100%; min-height: 400px;">
             <div class="blog-item thum-hover border-radius-15 hidden background-white hvr-float hvr-sh2">
               <div class="position-relative">
-                <a href="<?= base_url('landing/detail_berita/').$val->link ?>">
+                <a href="<?= base_url('Landing/detail_berita/').$val->link ?>">
                   <div class="item-thumbnail background-dark"><img style="max-height: 190px; min-height: 100px; min-width: 200px; object-fit: cover;" src="<?= base_url('resources/Berita/') ?><?= $val->author.'/'.$val->thumbnail != null ? $val->thumbnail : 'opening.jpg' ?>"></div>
                 </a>
               </div>
