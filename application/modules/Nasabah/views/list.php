@@ -31,6 +31,15 @@
             </div>
           </div>
         </div>
+
+        <div class="flash-data" data-flashdata="<?= $this->session->flashdata('message'); ?>"></div>
+        <?php if($this->session->flashdata('message')) : ?>
+        <!-- <div class="alert alert-block alert-success fade in block-inner">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="icon-cancel-circle"></i></button>
+                  <h6><?php echo $this->session->flashdata('message') ?></h6>
+              </div> -->
+        <?php endif; ?>
+
         <div class="table-responsive py-4">
           <table class="table table-flush init-DataTable" data-url="<?= base_url('Nasabah/getJSON') ?>" id="userTbl">
             <thead class="thead-light">
@@ -166,7 +175,8 @@
                           <h5>Upload <b style="color: #f7a91e;">E-KTP</b></h5>
                         </label>
                         <input type="file" name="ktp" id="">
-                        <img id="ktp_preview" src="<?= base_url() ?>" height="110" alt="">
+                        <br><br>
+                        <img id="ktp_preview" src="<?= base_url() ?>" height="200" alt="">
                       </div>
                       <div class="col show" id="kk2">
                         <img src="<?= base_url('assets/img/ktpkk.png') ?>" height="110" alt="">
