@@ -59,14 +59,14 @@ class Kontak extends Auth_Guard {
 		$id = decode($_GET['session_id']);
 		$model = new Kontak_model;
 		$model->delete($id);
-		return redirect(base_url('/Admin/Kontak'));
+		return redirect(base_url('/kontak/admin'));
 	}
 
 
 	public function excel(){
 		$data = [
-			'page_title' => 'KJKPI - Data Email',
-			'card_title' => "Data Email",
+			'page_title' => 'KJKPI - Data Kontak',
+			'card_title' => "Data Kontak",
 			'data_email' => $this->EmailModel->get_Email()
 		];
 		
